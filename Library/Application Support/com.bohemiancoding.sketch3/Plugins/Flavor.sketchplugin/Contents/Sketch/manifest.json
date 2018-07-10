@@ -1,0 +1,42 @@
+{
+	"name": "PxCook Flavor",
+	"description": "PxCook Flavor",
+	"author": "PxCook",
+	"authorEmail": "pxcook@fancynode.com",
+	"homepage": "http://www.fancynode.com.cn/pxcook",
+	"identifier": "com.fancynode.flavor",
+	"compatibleVersion": "3.6.1",
+	"version": "1.2.2",
+	"commands": [
+		{
+			 "name": "切换显示",
+			 "identifier": "export-toggle-command",
+			 "shortcut": "",
+			 "script": "PxCookUI.framework/PxCookUI.js",
+			 "handler": "toggleDisplay"
+		},
+		{
+			 "name": "🚚检测更新",
+			 "identifier": "export-update-command",
+			 "shortcut": "",
+			 "script": "PxCookUI.framework/PxCookUI.js",
+			 "handler": "checkUpdate"
+		},
+		{
+			"script": "PxCookUI.framework/PxCookUI.js",
+			"handlers": {
+				"actions": {
+					"Startup": "onStartup",
+					"OpenDocument": "onOpenDocument",
+					"SelectionChanged.finish":"onSelectionChanged",
+					"DocumentSaved":"onDocumentSaved"
+				}
+			}
+		}	 
+	],
+	"menu": {
+		"title": "PxCook Flavor",
+		"isRoot": true,
+		"items": []
+	}
+}

@@ -1,0 +1,44 @@
+{
+  "lastUpgradeScriptRun": "v3.6.2",
+  "appId": "2cab9faa21cfaf47b958a499e7c02b8082b5c21a",
+  "registration": {
+    "email": "liyi8576@gmail.com",
+    "name": null,
+    "status": "activated",
+    "trialStatus": null,
+    "loginType": "github",
+    "providerToken": {
+      "access_token": "c086035ef910ac250210821fa471dc6cf5d62f16",
+      "token_type": "bearer",
+      "scope": "admin:public_key,repo,user:email",
+      "expires_at": null
+    },
+    "date": "2018-06-07T12:16:30.726Z",
+    "EULA": {
+      "version": "1.5.0",
+      "status": "agree_verified"
+    }
+  },
+  "userId": "a048699c-478b-41c4-b315-f38f2a9606f0",
+  "licensedFeatures": [],
+  "userFeatures": [
+    {
+      "betaFeaturesEnabled": false,
+      "name": "gitkraken"
+    },
+    {
+      "betaFeaturesEnabled": false,
+      "name": "glo"
+    }
+  ],
+  "windowSettings": {
+    "x": -21,
+    "y": 23,
+    "width": 1440,
+    "height": 877,
+    "fullScreen": false,
+    "maximized": true
+  },
+  "hasSeenNewUserOnboarding": true,
+  "plugins": {}
+}

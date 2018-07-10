@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>license</key>
+	<string>c388e60e5db4cb24fe9ebd0cae6bae99</string>
+	<key>machine</key>
+	<string>54465ff2eec1fb36f6e067aeaa7189ef</string>
+	<key>masked</key>
+	<string>НОМЕРОК-БЛАТНОЙ-ТРИ-СЕМЕРОЧКИ</string>
+	<key>name</key>
+	<string>liyi</string>
+	<key>product</key>
+	<string>tower2-mac</string>
+	<key>type</key>
+	<string>SINGLE</string>
+	<key>version</key>
+	<string>2.0</string>
+</dict>
+</plist>

@@ -1,0 +1,26 @@
+"*":
+  core:
+    customFileTypes:
+      "source.ini": [
+        ".hgrc"
+        ".buckconfig"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "tree-view"
+      "image-view"
+    ]
+    telemetryConsent: "no"
+  "exception-reporting":
+    userId: "8d02a07a-5a70-41d3-8665-61f0accaeb7b"
+  "spell-check":
+    locales: [
+      "en-US"
+    ]
+  welcome:
+    showOnStartup: false

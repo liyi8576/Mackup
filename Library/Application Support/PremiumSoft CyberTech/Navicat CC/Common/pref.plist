@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>connpref</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>0</key>
+			<dict>
+				<key>MariaDB</key>
+				<dict/>
+				<key>MySQL</key>
+				<dict>
+					<key>10.1.235.173</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>10.1.48.60</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>10.13.6.103</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>10.4.56.226</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>192.168.0.103</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>COC-FRONT</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict>
+									<key>markercolor</key>
+									<data>
+								BAtzdHJlYW10
+								eXBlZIHoA4QB
+								QIU=
+									</data>
+								</dict>
+							</dict>
+						</dict>
+					</dict>
+					<key>MDP</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>coc-front</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>mysql-210</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>mysql-dev</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>mysqldev</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+					<key>tas</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+				<key>Oracle</key>
+				<dict/>
+				<key>PostgreSQL</key>
+				<dict/>
+				<key>SQL Server</key>
+				<dict/>
+				<key>SQLite</key>
+				<dict/>
+			</dict>
+		</dict>
+	</dict>
+	<key>detailviewpref</key>
+	<dict>
+		<key>customizedcolumns</key>
+		<dict/>
+		<key>mainobjecttab</key>
+		<dict>
+			<key>BackupFile</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Access Time</key>
+					<integer>150</integer>
+					<key>Created Date</key>
+					<integer>150</integer>
+					<key>File Size</key>
+					<integer>120</integer>
+					<key>Modified Date</key>
+					<integer>150</integer>
+				</dict>
+			</dict>
+			<key>Event_MYSQL</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Comment</key>
+					<integer>200</integer>
+					<key>Created Date</key>
+					<integer>150</integer>
+					<key>Definer</key>
+					<integer>120</integer>
+					<key>Last Executed Time</key>
+					<integer>150</integer>
+					<key>Modified Date</key>
+					<integer>150</integer>
+					<key>Status</key>
+					<integer>120</integer>
+					<key>Type</key>
+					<integer>120</integer>
+				</dict>
+			</dict>
+			<key>Function_MYSQL</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Comment</key>
+					<integer>200</integer>
+					<key>Created Date</key>
+					<integer>150</integer>
+					<key>Definer</key>
+					<integer>120</integer>
+					<key>Modified Date</key>
+					<integer>150</integer>
+					<key>SQL Security</key>
+					<integer>120</integer>
+					<key>Type</key>
+					<integer>120</integer>
+				</dict>
+			</dict>
+			<key>Model</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Access Time</key>
+					<integer>150</integer>
+					<key>Created Date</key>
+					<integer>150</integer>
+					<key>File Size</key>
+					<integer>120</integer>
+					<key>Modified Date</key>
+					<integer>150</integer>
+				</dict>
+			</dict>
+			<key>Project</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key></key>
+					<integer>658</integer>
+				</dict>
+			</dict>
+			<key>Query</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Access Time</key>
+					<integer>150</integer>
+					<key>Created Date</key>
+					<integer>150</integer>
+					<key>Created User</key>
+					<integer>150</integer>
+					<key>File Size</key>
+					<integer>120</integer>
+					<key>Modified Date</key>
+					<integer>150</integer>
+					<key>Modified User</key>
+					<integer>150</integer>
+				</dict>
+			</dict>
+			<key>Schedule</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Access Time</key>
+					<integer>150</integer>
+					<key>Created Date</key>
+					<integer>150</integer>
+					<key>File Size</key>
+					<integer>120</integer>
+					<key>Modified Date</key>
+					<integer>150</integer>
+				</dict>
+			</dict>
+			<key>Schema_MYSQL</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key></key>
+					<integer>792</integer>
+				</dict>
+			</dict>
+			<key>Server_MYSQL</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key></key>
+					<integer>792</integer>
+				</dict>
+			</dict>
+			<key>Table_MYSQL</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Collation</key>
+					<integer>120</integer>
+					<key>Comment</key>
+					<integer>50</integer>
+					<key>Created Date</key>
+					<integer>120</integer>
+					<key>Created Time</key>
+					<integer>150</integer>
+					<key>Data Length</key>
+					<integer>120</integer>
+					<key>Engine</key>
+					<integer>80</integer>
+					<key>Modified Date</key>
+					<integer>120</integer>
+					<key>Modified Time</key>
+					<integer>150</integer>
+					<key>Name</key>
+					<integer>290</integer>
+					<key>Rows</key>
+					<integer>50</integer>
+				</dict>
+			</dict>
+			<key>User_MYSQL</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Expire Password Policy</key>
+					<integer>180</integer>
+					<key>Host</key>
+					<integer>120</integer>
+					<key>Issuer</key>
+					<integer>120</integer>
+					<key>Maximum Connections</key>
+					<integer>150</integer>
+					<key>Maximum Queries</key>
+					<integer>150</integer>
+					<key>Maximum Updates</key>
+					<integer>150</integer>
+					<key>Maximum User Connections</key>
+					<integer>180</integer>
+					<key>Plugin</key>
+					<integer>120</integer>
+					<key>SSL Cipher</key>
+					<integer>120</integer>
+					<key>SSL Type</key>
+					<integer>120</integer>
+					<key>Subject</key>
+					<integer>120</integer>
+					<key>User</key>
+					<integer>120</integer>
+				</dict>
+			</dict>
+			<key>View_MYSQL</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Check Option</key>
+					<integer>150</integer>
+					<key>Definer</key>
+					<integer>421</integer>
+					<key>SQL Security</key>
+					<integer>150</integer>
+					<key>Updatable</key>
+					<integer>120</integer>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>servermonitorpref</key>
+	<dict>
+		<key>MariaDB</key>
+		<dict/>
+		<key>MySQL</key>
+		<dict/>
+		<key>Oracle</key>
+		<dict/>
+		<key>PostgreSQL</key>
+		<dict/>
+		<key>SQL Server</key>
+		<dict/>
+		<key>SQLite</key>
+		<dict/>
+	</dict>
+</dict>
+</plist>

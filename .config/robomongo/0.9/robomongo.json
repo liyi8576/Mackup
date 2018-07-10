@@ -1,0 +1,22 @@
+{
+ "autoExec" : false,
+ "autoExpand" : false,
+ "autocompletionMode" : 1,
+ "batchSize" : 50,
+ "connections" : [
+
+ ],
+ "disableConnectionShortcuts" : false,
+ "lineNumbers" : false,
+ "loadMongoRcJs" : false,
+ "style" : "",
+ "textFontFamily" : "",
+ "textFontPointSize" : -1,
+ "timeZone" : 0,
+ "toolbars" : {
+  
+ },
+ "uuidEncoding" : 0,
+ "version" : "2.0",
+ "viewMode" : 1
+}

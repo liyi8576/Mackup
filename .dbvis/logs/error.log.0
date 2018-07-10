@@ -1,0 +1,1719 @@
+2016-07-03 10:02:14.742 CONFIG 109 [AWT-EventQueue-0 - D.ā] Product: DbVisualizer 9.5 [Build #2574]
+2016-07-03 10:02:14.743 CONFIG 109 [AWT-EventQueue-0 - D.ā] OS: Mac OS X
+2016-07-03 10:02:14.743 CONFIG 109 [AWT-EventQueue-0 - D.ā] OS Version: 10.11.5
+2016-07-03 10:02:14.743 CONFIG 109 [AWT-EventQueue-0 - D.ā] OS Arch: x86_64
+2016-07-03 10:02:14.743 CONFIG 109 [AWT-EventQueue-0 - D.ā] Java Version: 1.8.0_92
+2016-07-03 10:02:14.743 CONFIG 109 [AWT-EventQueue-0 - D.ā] Java VM: Java HotSpot(TM) 64-Bit Server VM
+2016-07-03 10:02:14.743 CONFIG 109 [AWT-EventQueue-0 - D.ā] Java Vendor: Oracle Corporation
+2016-07-03 10:02:14.744 CONFIG 109 [AWT-EventQueue-0 - D.ā] Java Home: /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+2016-07-03 10:02:14.744 CONFIG 109 [AWT-EventQueue-0 - D.ā] DbVis Home: /Applications/DbVisualizer.app/Contents/java/app
+2016-07-03 10:02:14.744 CONFIG 109 [AWT-EventQueue-0 - D.ā] User Home: /Users/liyi
+2016-07-03 10:02:14.744 CONFIG 109 [AWT-EventQueue-0 - D.ā] PrefsDir: /Users/liyi/.dbvis
+2016-07-03 10:02:14.744 CONFIG 109 [AWT-EventQueue-0 - D.ā] SessionId: 109
+2016-07-03 10:02:14.855 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/Bookmarks
+2016-07-03 10:02:14.856 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/config70
+2016-07-03 10:02:14.856 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/config70/borders
+2016-07-03 10:02:14.856 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/config70/keymaps
+2016-07-03 10:02:14.856 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/config70/layouts
+2016-07-03 10:02:14.856 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/ext
+2016-07-03 10:02:14.857 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/ext/images
+2016-07-03 10:02:14.857 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/ext/images/16x16
+2016-07-03 10:02:14.857 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/ext/images/24x24
+2016-07-03 10:02:14.857 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/ext/profiles
+2016-07-03 10:02:14.859 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/History
+2016-07-03 10:02:14.859 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/jdbc
+2016-07-03 10:02:14.859 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/Monitors
+2016-07-03 10:02:14.859 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/Workspace
+2016-07-03 10:02:14.860 INFO   109 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/.dbvis/Workspace/default
+2016-07-03 10:02:14.885 INFO   109 [AWT-EventQueue-0 - A.ā] Files in: /Users/liyi/.dbvis/config70
+2016-07-03 10:02:14.885 INFO   109 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/borders (writable: true, readable: true)
+2016-07-03 10:02:14.886 INFO   109 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/keymaps (writable: true, readable: true)
+2016-07-03 10:02:14.886 INFO   109 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/layouts (writable: true, readable: true)
+2016-07-03 10:02:14.901 INFO   109 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:02:14.901 INFO   109 [AWT-EventQueue-0 - A.Č]    Looking for backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-07-03 10:02:14.901 INFO   109 [AWT-EventQueue-0 - A.Č]       No backup file found or it is zero length: /Users/liyi/.dbvis/config70/dbvis.xml.bak. Will use default setup
+2016-07-03 10:02:15.651 INFO   109 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:02:15.652 INFO   109 [AWT-EventQueue-0 - A.Č]    Looking for backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-07-03 10:02:15.652 INFO   109 [AWT-EventQueue-0 - A.Č]       No backup file found or it is zero length: /Users/liyi/.dbvis/config70/tablefilters.xml.bak. Will use default setup
+2016-07-03 10:02:15.652 INFO   109 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:02:15.652 INFO   109 [AWT-EventQueue-0 - A.Č]    Looking for backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-07-03 10:02:15.652 INFO   109 [AWT-EventQueue-0 - A.Č]       No backup file found or it is zero length: /Users/liyi/.dbvis/config70/favorites.xml.bak. Will use default setup
+2016-07-03 10:02:15.652 INFO   109 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:02:15.652 INFO   109 [AWT-EventQueue-0 - A.Č]    Looking for backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-07-03 10:02:15.653 INFO   109 [AWT-EventQueue-0 - A.Č]       No backup file found or it is zero length: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak. Will use default setup
+2016-07-03 10:02:15.653 INFO   109 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:02:15.653 INFO   109 [AWT-EventQueue-0 - A.Č]    Looking for backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-07-03 10:02:15.653 INFO   109 [AWT-EventQueue-0 - A.Č]       No backup file found or it is zero length: /Users/liyi/.dbvis/config70/templates.xml.bak. Will use default setup
+2016-07-03 10:02:15.656 INFO   109 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/workingset.xml
+2016-07-03 10:02:15.656 INFO   109 [AWT-EventQueue-0 - A.Č]    Looking for backup file: /Users/liyi/.dbvis/config70/workingset.xml.bak
+2016-07-03 10:02:15.656 INFO   109 [AWT-EventQueue-0 - A.Č]       No backup file found or it is zero length: /Users/liyi/.dbvis/config70/workingset.xml.bak. Will use default setup
+2016-07-03 10:02:15.657 INFO   109 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:02:15.657 INFO   109 [AWT-EventQueue-0 - A.Č]    Looking for backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-07-03 10:02:15.657 INFO   109 [AWT-EventQueue-0 - A.Č]       No backup file found or it is zero length: /Users/liyi/.dbvis/config70/mp.xml.bak. Will use default setup
+2016-07-03 10:02:15.657 INFO   109 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:02:15.657 INFO   109 [AWT-EventQueue-0 - A.Č]    Looking for backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-07-03 10:02:15.657 INFO   109 [AWT-EventQueue-0 - A.Č]       No backup file found or it is zero length: /Users/liyi/.dbvis/config70/recentpaths.xml.bak. Will use default setup
+2016-07-03 10:02:49.252 INFO   109 [AWT-EventQueue-0 - DbVisualizerGUI.initialize] Startup time: 34.827
+2016-07-03 10:02:49.650 INFO   109 [AWT-EventQueue-0 - i.Ą] Workspace auto saver thread started. Interval: 30 sec
+2016-07-03 10:02:49.651 INFO   109 [AWT-EventQueue-0 - e.Ă] Connection keep-alive thread started. Interval: 10 sec
+2016-07-03 10:03:29.310 INFO   109 [pool-4-thread-2 - Q.flush] Sun Jul 03 10:03:29 CST 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2016-07-03 10:04:55.293 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:04:55.295 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/dbvis.xml-20160703-100214888.tmp
+2016-07-03 10:04:55.311 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 35747 bytes
+2016-07-03 10:04:55.313 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:04:55.313 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-07-03 10:04:55.314 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:04:55.314 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/tablefilters.xml-20160703-100214893.tmp
+2016-07-03 10:04:55.315 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2016-07-03 10:04:55.315 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:04:55.316 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-07-03 10:04:55.316 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:04:55.316 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/favorites.xml-20160703-100214893.tmp
+2016-07-03 10:04:55.316 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2016-07-03 10:04:55.317 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:04:55.317 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-07-03 10:04:55.318 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:04:55.318 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/editorstyles91.xml-20160703-100214894.tmp
+2016-07-03 10:04:55.318 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 1057 bytes
+2016-07-03 10:04:55.319 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:04:55.319 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-07-03 10:04:55.319 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:04:55.320 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/templates.xml-20160703-100214895.tmp
+2016-07-03 10:04:55.320 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2016-07-03 10:04:55.320 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:04:55.321 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-07-03 10:04:55.321 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/workingset.xml
+2016-07-03 10:04:55.321 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/workingset.xml-20160703-100214896.tmp
+2016-07-03 10:04:55.322 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 88 bytes
+2016-07-03 10:04:55.322 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/workingset.xml
+2016-07-03 10:04:55.322 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/workingset.xml.bak
+2016-07-03 10:04:55.323 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:04:55.323 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/mp.xml-20160703-100214897.tmp
+2016-07-03 10:04:55.323 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2016-07-03 10:04:55.323 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:04:55.323 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-07-03 10:04:55.324 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:04:55.324 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/recentpaths.xml-20160703-100214899.tmp
+2016-07-03 10:04:55.325 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 373 bytes
+2016-07-03 10:04:55.325 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:04:55.325 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-07-03 10:05:02.137 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:05:02.138 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/dbvis.xml-20160703-100214888.tmp
+2016-07-03 10:05:02.144 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 35789 bytes
+2016-07-03 10:05:02.146 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:05:02.147 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-07-03 10:05:02.147 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:05:02.147 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/tablefilters.xml-20160703-100214893.tmp
+2016-07-03 10:05:02.148 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2016-07-03 10:05:02.148 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:05:02.148 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-07-03 10:05:02.149 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:05:02.149 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/favorites.xml-20160703-100214893.tmp
+2016-07-03 10:05:02.149 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2016-07-03 10:05:02.149 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:05:02.149 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-07-03 10:05:02.150 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:05:02.150 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/editorstyles91.xml-20160703-100214894.tmp
+2016-07-03 10:05:02.150 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 1057 bytes
+2016-07-03 10:05:02.150 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:05:02.151 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-07-03 10:05:02.151 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:05:02.151 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/templates.xml-20160703-100214895.tmp
+2016-07-03 10:05:02.152 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2016-07-03 10:05:02.152 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:05:02.152 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-07-03 10:05:02.152 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/workingset.xml
+2016-07-03 10:05:02.152 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/workingset.xml-20160703-100214896.tmp
+2016-07-03 10:05:02.153 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 88 bytes
+2016-07-03 10:05:02.153 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/workingset.xml
+2016-07-03 10:05:02.153 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/workingset.xml.bak
+2016-07-03 10:05:02.153 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:05:02.154 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/mp.xml-20160703-100214897.tmp
+2016-07-03 10:05:02.154 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2016-07-03 10:05:02.154 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:05:02.154 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-07-03 10:05:02.155 INFO   109 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:05:02.155 INFO   109 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/recentpaths.xml-20160703-100214899.tmp
+2016-07-03 10:05:02.155 INFO   109 [AWT-EventQueue-0 - A.ā]    Temp file written: 373 bytes
+2016-07-03 10:05:02.155 INFO   109 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:05:02.156 INFO   109 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-07-03 10:05:02.156 INFO   109 [AWT-EventQueue-0 - C$2.run] Restarting: open -n /Applications/DbVisualizer.app
+2016-07-03 10:05:02.167 INFO   109 [AWT-EventQueue-0 - DbVisualizerGUI.shutdown] Shutdown time: 5.545
+2016-07-03 10:05:02.799 CONFIG 254 [AWT-EventQueue-0 - D.ā] Product: DbVisualizer 9.5 [Build #2574]
+2016-07-03 10:05:02.800 CONFIG 254 [AWT-EventQueue-0 - D.ā] OS: Mac OS X
+2016-07-03 10:05:02.801 CONFIG 254 [AWT-EventQueue-0 - D.ā] OS Version: 10.11.5
+2016-07-03 10:05:02.801 CONFIG 254 [AWT-EventQueue-0 - D.ā] OS Arch: x86_64
+2016-07-03 10:05:02.801 CONFIG 254 [AWT-EventQueue-0 - D.ā] Java Version: 1.8.0_92
+2016-07-03 10:05:02.801 CONFIG 254 [AWT-EventQueue-0 - D.ā] Java VM: Java HotSpot(TM) 64-Bit Server VM
+2016-07-03 10:05:02.801 CONFIG 254 [AWT-EventQueue-0 - D.ā] Java Vendor: Oracle Corporation
+2016-07-03 10:05:02.801 CONFIG 254 [AWT-EventQueue-0 - D.ā] Java Home: /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+2016-07-03 10:05:02.801 CONFIG 254 [AWT-EventQueue-0 - D.ā] DbVis Home: /Applications/DbVisualizer.app/Contents/java/app
+2016-07-03 10:05:02.801 CONFIG 254 [AWT-EventQueue-0 - D.ā] User Home: /Users/liyi
+2016-07-03 10:05:02.802 CONFIG 254 [AWT-EventQueue-0 - D.ā] PrefsDir: /Users/liyi/.dbvis
+2016-07-03 10:05:02.802 CONFIG 254 [AWT-EventQueue-0 - D.ā] SessionId: 254
+2016-07-03 10:05:02.901 INFO   254 [AWT-EventQueue-0 - A.ā] Files in: /Users/liyi/.dbvis/config70
+2016-07-03 10:05:02.901 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/borders (writable: true, readable: true)
+2016-07-03 10:05:02.901 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/dbvis.xml (length: 35789, writable: true, readable: true)
+2016-07-03 10:05:02.902 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/dbvis.xml.bak (length: 35789, writable: true, readable: true)
+2016-07-03 10:05:02.902 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/editorstyles91.xml (length: 1057, writable: true, readable: true)
+2016-07-03 10:05:02.902 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/editorstyles91.xml.bak (length: 1057, writable: true, readable: true)
+2016-07-03 10:05:02.902 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/favorites.xml (length: 86, writable: true, readable: true)
+2016-07-03 10:05:02.902 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/favorites.xml.bak (length: 86, writable: true, readable: true)
+2016-07-03 10:05:02.902 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/keymaps (writable: true, readable: true)
+2016-07-03 10:05:02.903 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/layouts (writable: true, readable: true)
+2016-07-03 10:05:02.903 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/mp.xml (length: 91, writable: true, readable: true)
+2016-07-03 10:05:02.903 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/mp.xml.bak (length: 91, writable: true, readable: true)
+2016-07-03 10:05:02.903 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/recentpaths.xml (length: 373, writable: true, readable: true)
+2016-07-03 10:05:02.903 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/recentpaths.xml.bak (length: 373, writable: true, readable: true)
+2016-07-03 10:05:02.904 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/tablefilters.xml (length: 93, writable: true, readable: true)
+2016-07-03 10:05:02.904 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/tablefilters.xml.bak (length: 93, writable: true, readable: true)
+2016-07-03 10:05:02.904 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/templates.xml (length: 155, writable: true, readable: true)
+2016-07-03 10:05:02.904 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/templates.xml.bak (length: 155, writable: true, readable: true)
+2016-07-03 10:05:02.904 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/workingset.xml (length: 88, writable: true, readable: true)
+2016-07-03 10:05:02.904 INFO   254 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/workingset.xml.bak (length: 88, writable: true, readable: true)
+2016-07-03 10:05:02.916 INFO   254 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:05:02.917 INFO   254 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/dbvis.xml (35789 bytes)
+2016-07-03 10:05:02.975 INFO   254 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-07-03 10:05:04.500 INFO   254 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:05:04.501 INFO   254 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/tablefilters.xml (93 bytes)
+2016-07-03 10:05:04.502 INFO   254 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-07-03 10:05:04.502 INFO   254 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:05:04.502 INFO   254 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/favorites.xml (86 bytes)
+2016-07-03 10:05:04.503 INFO   254 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-07-03 10:05:04.503 INFO   254 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:05:04.504 INFO   254 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/editorstyles91.xml (1057 bytes)
+2016-07-03 10:05:04.505 INFO   254 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-07-03 10:05:04.506 INFO   254 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:05:04.506 INFO   254 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/templates.xml (155 bytes)
+2016-07-03 10:05:04.508 INFO   254 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-07-03 10:05:04.511 INFO   254 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/workingset.xml
+2016-07-03 10:05:04.511 INFO   254 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/workingset.xml (88 bytes)
+2016-07-03 10:05:04.512 INFO   254 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/workingset.xml.bak
+2016-07-03 10:05:04.513 INFO   254 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:05:04.513 INFO   254 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/mp.xml (91 bytes)
+2016-07-03 10:05:04.513 INFO   254 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-07-03 10:05:04.514 INFO   254 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:05:04.514 INFO   254 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/recentpaths.xml (373 bytes)
+2016-07-03 10:05:04.515 INFO   254 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-07-03 10:05:07.353 INFO   254 [AWT-EventQueue-0 - DbVisualizerGUI.initialize] Startup time: 4.817
+2016-07-03 10:05:07.965 INFO   254 [AWT-EventQueue-0 - i.Ą] Workspace auto saver thread started. Interval: 30 sec
+2016-07-03 10:05:07.967 INFO   254 [AWT-EventQueue-0 - e.Ă] Connection keep-alive thread started. Interval: 10 sec
+2016-07-03 10:06:11.967 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:06:11.968 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/dbvis.xml-20160703-100502908.tmp
+2016-07-03 10:06:11.988 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 35843 bytes
+2016-07-03 10:06:11.988 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:06:11.989 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-07-03 10:06:11.989 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:06:11.990 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/tablefilters.xml-20160703-100502911.tmp
+2016-07-03 10:06:11.990 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2016-07-03 10:06:11.990 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:06:11.991 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-07-03 10:06:11.991 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:06:11.991 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/favorites.xml-20160703-100502911.tmp
+2016-07-03 10:06:11.991 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2016-07-03 10:06:11.992 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:06:11.992 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-07-03 10:06:11.993 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:06:11.993 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/editorstyles91.xml-20160703-100502912.tmp
+2016-07-03 10:06:11.993 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 1057 bytes
+2016-07-03 10:06:11.994 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:06:11.994 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-07-03 10:06:11.995 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:06:11.995 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/templates.xml-20160703-100502913.tmp
+2016-07-03 10:06:11.995 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2016-07-03 10:06:11.996 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:06:11.996 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-07-03 10:06:11.997 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:06:11.997 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/mp.xml-20160703-100502915.tmp
+2016-07-03 10:06:11.997 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2016-07-03 10:06:11.997 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:06:11.997 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-07-03 10:06:11.998 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:06:11.999 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/recentpaths.xml-20160703-100502915.tmp
+2016-07-03 10:06:11.999 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 373 bytes
+2016-07-03 10:06:11.999 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:06:12.000 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-07-03 10:06:17.658 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:06:17.659 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/dbvis.xml-20160703-100502908.tmp
+2016-07-03 10:06:17.664 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 35844 bytes
+2016-07-03 10:06:17.665 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:06:17.665 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-07-03 10:06:17.666 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:06:17.666 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/tablefilters.xml-20160703-100502911.tmp
+2016-07-03 10:06:17.666 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2016-07-03 10:06:17.666 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:06:17.667 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-07-03 10:06:17.667 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:06:17.667 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/favorites.xml-20160703-100502911.tmp
+2016-07-03 10:06:17.667 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2016-07-03 10:06:17.667 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:06:17.668 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-07-03 10:06:17.668 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:06:17.669 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/editorstyles91.xml-20160703-100502912.tmp
+2016-07-03 10:06:17.669 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 1057 bytes
+2016-07-03 10:06:17.669 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:06:17.670 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-07-03 10:06:17.670 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:06:17.670 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/templates.xml-20160703-100502913.tmp
+2016-07-03 10:06:17.670 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2016-07-03 10:06:17.671 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:06:17.671 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-07-03 10:06:17.671 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:06:17.671 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/mp.xml-20160703-100502915.tmp
+2016-07-03 10:06:17.671 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2016-07-03 10:06:17.672 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:06:17.672 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-07-03 10:06:17.672 INFO   254 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:06:17.673 INFO   254 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/recentpaths.xml-20160703-100502915.tmp
+2016-07-03 10:06:17.673 INFO   254 [AWT-EventQueue-0 - A.ā]    Temp file written: 373 bytes
+2016-07-03 10:06:17.673 INFO   254 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:06:17.673 INFO   254 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-07-03 10:06:17.674 INFO   254 [AWT-EventQueue-0 - C$2.run] Restarting: open -n /Applications/DbVisualizer.app
+2016-07-03 10:06:17.684 INFO   254 [AWT-EventQueue-0 - DbVisualizerGUI.shutdown] Shutdown time: 4.495
+2016-07-03 10:06:18.321 CONFIG 706 [AWT-EventQueue-0 - D.ā] Product: DbVisualizer 9.5 [Build #2574]
+2016-07-03 10:06:18.322 CONFIG 706 [AWT-EventQueue-0 - D.ā] OS: Mac OS X
+2016-07-03 10:06:18.322 CONFIG 706 [AWT-EventQueue-0 - D.ā] OS Version: 10.11.5
+2016-07-03 10:06:18.322 CONFIG 706 [AWT-EventQueue-0 - D.ā] OS Arch: x86_64
+2016-07-03 10:06:18.322 CONFIG 706 [AWT-EventQueue-0 - D.ā] Java Version: 1.8.0_92
+2016-07-03 10:06:18.322 CONFIG 706 [AWT-EventQueue-0 - D.ā] Java VM: Java HotSpot(TM) 64-Bit Server VM
+2016-07-03 10:06:18.322 CONFIG 706 [AWT-EventQueue-0 - D.ā] Java Vendor: Oracle Corporation
+2016-07-03 10:06:18.322 CONFIG 706 [AWT-EventQueue-0 - D.ā] Java Home: /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+2016-07-03 10:06:18.323 CONFIG 706 [AWT-EventQueue-0 - D.ā] DbVis Home: /Applications/DbVisualizer.app/Contents/java/app
+2016-07-03 10:06:18.323 CONFIG 706 [AWT-EventQueue-0 - D.ā] User Home: /Users/liyi
+2016-07-03 10:06:18.323 CONFIG 706 [AWT-EventQueue-0 - D.ā] PrefsDir: /Users/liyi/.dbvis
+2016-07-03 10:06:18.323 CONFIG 706 [AWT-EventQueue-0 - D.ā] SessionId: 706
+2016-07-03 10:06:18.427 INFO   706 [AWT-EventQueue-0 - A.ā] Files in: /Users/liyi/.dbvis/config70
+2016-07-03 10:06:18.427 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/borders (writable: true, readable: true)
+2016-07-03 10:06:18.427 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/dbvis.xml (length: 35844, writable: true, readable: true)
+2016-07-03 10:06:18.428 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/dbvis.xml.bak (length: 35844, writable: true, readable: true)
+2016-07-03 10:06:18.428 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/editorstyles91.xml (length: 1057, writable: true, readable: true)
+2016-07-03 10:06:18.428 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/editorstyles91.xml.bak (length: 1057, writable: true, readable: true)
+2016-07-03 10:06:18.428 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/favorites.xml (length: 86, writable: true, readable: true)
+2016-07-03 10:06:18.428 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/favorites.xml.bak (length: 86, writable: true, readable: true)
+2016-07-03 10:06:18.429 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/keymaps (writable: true, readable: true)
+2016-07-03 10:06:18.429 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/layouts (writable: true, readable: true)
+2016-07-03 10:06:18.429 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/mp.xml (length: 91, writable: true, readable: true)
+2016-07-03 10:06:18.431 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/mp.xml.bak (length: 91, writable: true, readable: true)
+2016-07-03 10:06:18.431 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/recentpaths.xml (length: 373, writable: true, readable: true)
+2016-07-03 10:06:18.431 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/recentpaths.xml.bak (length: 373, writable: true, readable: true)
+2016-07-03 10:06:18.431 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/tablefilters.xml (length: 93, writable: true, readable: true)
+2016-07-03 10:06:18.431 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/tablefilters.xml.bak (length: 93, writable: true, readable: true)
+2016-07-03 10:06:18.431 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/templates.xml (length: 155, writable: true, readable: true)
+2016-07-03 10:06:18.432 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/templates.xml.bak (length: 155, writable: true, readable: true)
+2016-07-03 10:06:18.432 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/workingset.xml (length: 88, writable: true, readable: true)
+2016-07-03 10:06:18.432 INFO   706 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/workingset.xml.bak (length: 88, writable: true, readable: true)
+2016-07-03 10:06:18.443 INFO   706 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:06:18.443 INFO   706 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/dbvis.xml (35844 bytes)
+2016-07-03 10:06:18.501 INFO   706 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-07-03 10:06:19.717 INFO   706 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:06:19.717 INFO   706 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/tablefilters.xml (93 bytes)
+2016-07-03 10:06:19.718 INFO   706 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-07-03 10:06:19.718 INFO   706 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:06:19.718 INFO   706 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/favorites.xml (86 bytes)
+2016-07-03 10:06:19.719 INFO   706 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-07-03 10:06:19.720 INFO   706 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:06:19.720 INFO   706 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/editorstyles91.xml (1057 bytes)
+2016-07-03 10:06:19.722 INFO   706 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-07-03 10:06:19.722 INFO   706 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:06:19.723 INFO   706 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/templates.xml (155 bytes)
+2016-07-03 10:06:19.723 INFO   706 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-07-03 10:06:19.726 INFO   706 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/workingset.xml
+2016-07-03 10:06:19.726 INFO   706 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/workingset.xml (88 bytes)
+2016-07-03 10:06:19.727 INFO   706 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/workingset.xml.bak
+2016-07-03 10:06:19.727 INFO   706 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:06:19.728 INFO   706 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/mp.xml (91 bytes)
+2016-07-03 10:06:19.728 INFO   706 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-07-03 10:06:19.729 INFO   706 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:06:19.729 INFO   706 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/recentpaths.xml (373 bytes)
+2016-07-03 10:06:19.730 INFO   706 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-07-03 10:06:23.119 INFO   706 [AWT-EventQueue-0 - DbVisualizerGUI.initialize] Startup time: 5.084
+2016-07-03 10:06:23.788 INFO   706 [AWT-EventQueue-0 - i.Ą] Workspace auto saver thread started. Interval: 30 sec
+2016-07-03 10:06:23.789 INFO   706 [AWT-EventQueue-0 - e.Ă] Connection keep-alive thread started. Interval: 10 sec
+2016-07-03 10:07:16.011 INFO   706 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:07:16.013 INFO   706 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/dbvis.xml-20160703-100618434.tmp
+2016-07-03 10:07:16.032 INFO   706 [AWT-EventQueue-0 - A.ā]    Temp file written: 35877 bytes
+2016-07-03 10:07:16.032 INFO   706 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-07-03 10:07:16.033 INFO   706 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-07-03 10:07:16.033 INFO   706 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:07:16.033 INFO   706 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/tablefilters.xml-20160703-100618437.tmp
+2016-07-03 10:07:16.034 INFO   706 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2016-07-03 10:07:16.034 INFO   706 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-07-03 10:07:16.034 INFO   706 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-07-03 10:07:16.034 INFO   706 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:07:16.035 INFO   706 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/favorites.xml-20160703-100618438.tmp
+2016-07-03 10:07:16.035 INFO   706 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2016-07-03 10:07:16.035 INFO   706 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/favorites.xml
+2016-07-03 10:07:16.036 INFO   706 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-07-03 10:07:16.036 INFO   706 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:07:16.037 INFO   706 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/editorstyles91.xml-20160703-100618438.tmp
+2016-07-03 10:07:16.037 INFO   706 [AWT-EventQueue-0 - A.ā]    Temp file written: 1057 bytes
+2016-07-03 10:07:16.037 INFO   706 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-07-03 10:07:16.037 INFO   706 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-07-03 10:07:16.038 INFO   706 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:07:16.038 INFO   706 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/templates.xml-20160703-100618439.tmp
+2016-07-03 10:07:16.038 INFO   706 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2016-07-03 10:07:16.039 INFO   706 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/templates.xml
+2016-07-03 10:07:16.039 INFO   706 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-07-03 10:07:16.039 INFO   706 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:07:16.040 INFO   706 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/mp.xml-20160703-100618441.tmp
+2016-07-03 10:07:16.040 INFO   706 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2016-07-03 10:07:16.040 INFO   706 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/mp.xml
+2016-07-03 10:07:16.040 INFO   706 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-07-03 10:07:16.041 INFO   706 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:07:16.042 INFO   706 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/recentpaths.xml-20160703-100618442.tmp
+2016-07-03 10:07:16.042 INFO   706 [AWT-EventQueue-0 - A.ā]    Temp file written: 373 bytes
+2016-07-03 10:07:16.042 INFO   706 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-07-03 10:07:16.042 INFO   706 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-07-03 10:07:16.043 INFO   706 [AWT-EventQueue-0 - DbVisualizerGUI.shutdown] Shutdown time: 0.121
+2016-09-21 23:25:04.375 CONFIG 903 [AWT-EventQueue-0 - D.ā] Product: DbVisualizer 9.5 [Build #2574]
+2016-09-21 23:25:04.377 CONFIG 903 [AWT-EventQueue-0 - D.ā] OS: Mac OS X
+2016-09-21 23:25:04.377 CONFIG 903 [AWT-EventQueue-0 - D.ā] OS Version: 10.12
+2016-09-21 23:25:04.377 CONFIG 903 [AWT-EventQueue-0 - D.ā] OS Arch: x86_64
+2016-09-21 23:25:04.377 CONFIG 903 [AWT-EventQueue-0 - D.ā] Java Version: 1.8.0_92
+2016-09-21 23:25:04.377 CONFIG 903 [AWT-EventQueue-0 - D.ā] Java VM: Java HotSpot(TM) 64-Bit Server VM
+2016-09-21 23:25:04.377 CONFIG 903 [AWT-EventQueue-0 - D.ā] Java Vendor: Oracle Corporation
+2016-09-21 23:25:04.377 CONFIG 903 [AWT-EventQueue-0 - D.ā] Java Home: /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+2016-09-21 23:25:04.378 CONFIG 903 [AWT-EventQueue-0 - D.ā] DbVis Home: /Applications/DbVisualizer.app/Contents/java/app
+2016-09-21 23:25:04.378 CONFIG 903 [AWT-EventQueue-0 - D.ā] User Home: /Users/liyi
+2016-09-21 23:25:04.378 CONFIG 903 [AWT-EventQueue-0 - D.ā] PrefsDir: /Users/liyi/.dbvis
+2016-09-21 23:25:04.378 CONFIG 903 [AWT-EventQueue-0 - D.ā] SessionId: 903
+2016-09-21 23:25:04.514 INFO   903 [AWT-EventQueue-0 - A.ā] Files in: /Users/liyi/.dbvis/config70
+2016-09-21 23:25:04.515 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/borders (writable: true, readable: true)
+2016-09-21 23:25:04.515 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/dbvis.xml (length: 35877, writable: true, readable: true)
+2016-09-21 23:25:04.515 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/dbvis.xml.bak (length: 35877, writable: true, readable: true)
+2016-09-21 23:25:04.515 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/editorstyles91.xml (length: 1057, writable: true, readable: true)
+2016-09-21 23:25:04.516 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/editorstyles91.xml.bak (length: 1057, writable: true, readable: true)
+2016-09-21 23:25:04.516 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/favorites.xml (length: 86, writable: true, readable: true)
+2016-09-21 23:25:04.516 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/favorites.xml.bak (length: 86, writable: true, readable: true)
+2016-09-21 23:25:04.516 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/keymaps (writable: true, readable: true)
+2016-09-21 23:25:04.517 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/layouts (writable: true, readable: true)
+2016-09-21 23:25:04.517 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/mp.xml (length: 91, writable: true, readable: true)
+2016-09-21 23:25:04.519 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/mp.xml.bak (length: 91, writable: true, readable: true)
+2016-09-21 23:25:04.519 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/recentpaths.xml (length: 373, writable: true, readable: true)
+2016-09-21 23:25:04.519 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/recentpaths.xml.bak (length: 373, writable: true, readable: true)
+2016-09-21 23:25:04.520 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/tablefilters.xml (length: 93, writable: true, readable: true)
+2016-09-21 23:25:04.520 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/tablefilters.xml.bak (length: 93, writable: true, readable: true)
+2016-09-21 23:25:04.520 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/templates.xml (length: 155, writable: true, readable: true)
+2016-09-21 23:25:04.520 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/templates.xml.bak (length: 155, writable: true, readable: true)
+2016-09-21 23:25:04.520 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/workingset.xml (length: 88, writable: true, readable: true)
+2016-09-21 23:25:04.520 INFO   903 [AWT-EventQueue-0 - A.ā]    /Users/liyi/.dbvis/config70/workingset.xml.bak (length: 88, writable: true, readable: true)
+2016-09-21 23:25:04.536 INFO   903 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-09-21 23:25:04.536 INFO   903 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/dbvis.xml (35877 bytes)
+2016-09-21 23:25:04.622 INFO   903 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-09-21 23:25:06.687 INFO   903 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-09-21 23:25:06.688 INFO   903 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/tablefilters.xml (93 bytes)
+2016-09-21 23:25:06.689 INFO   903 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-09-21 23:25:06.689 INFO   903 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-09-21 23:25:06.690 INFO   903 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/favorites.xml (86 bytes)
+2016-09-21 23:25:06.690 INFO   903 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-09-21 23:25:06.691 INFO   903 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-09-21 23:25:06.691 INFO   903 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/editorstyles91.xml (1057 bytes)
+2016-09-21 23:25:06.694 INFO   903 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-09-21 23:25:06.695 INFO   903 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/templates.xml
+2016-09-21 23:25:06.696 INFO   903 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/templates.xml (155 bytes)
+2016-09-21 23:25:06.697 INFO   903 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-09-21 23:25:06.699 INFO   903 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/workingset.xml
+2016-09-21 23:25:06.700 INFO   903 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/workingset.xml (88 bytes)
+2016-09-21 23:25:06.701 INFO   903 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/workingset.xml.bak
+2016-09-21 23:25:06.701 INFO   903 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/mp.xml
+2016-09-21 23:25:06.702 INFO   903 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/mp.xml (91 bytes)
+2016-09-21 23:25:06.702 INFO   903 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-09-21 23:25:06.703 INFO   903 [AWT-EventQueue-0 - A.ą] Loading file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-09-21 23:25:06.703 INFO   903 [AWT-EventQueue-0 - A.ą]    Load/parse file: /Users/liyi/.dbvis/config70/recentpaths.xml (373 bytes)
+2016-09-21 23:25:06.705 INFO   903 [AWT-EventQueue-0 - A.ą]    Creating backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-09-21 23:25:09.960 INFO   903 [AWT-EventQueue-0 - DbVisualizerGUI.initialize] Startup time: 5.954
+2016-09-21 23:25:10.074 INFO   903 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-09-21 23:25:10.074 INFO   903 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/dbvis.xml-20160921-232504524.tmp
+2016-09-21 23:25:10.093 INFO   903 [AWT-EventQueue-0 - A.ā]    Temp file written: 35877 bytes
+2016-09-21 23:25:10.093 INFO   903 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/dbvis.xml
+2016-09-21 23:25:10.094 INFO   903 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/dbvis.xml.bak
+2016-09-21 23:25:10.094 INFO   903 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-09-21 23:25:10.095 INFO   903 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/tablefilters.xml-20160921-232504529.tmp
+2016-09-21 23:25:10.095 INFO   903 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2016-09-21 23:25:10.095 INFO   903 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/tablefilters.xml
+2016-09-21 23:25:10.096 INFO   903 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/tablefilters.xml.bak
+2016-09-21 23:25:10.096 INFO   903 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/favorites.xml
+2016-09-21 23:25:10.096 INFO   903 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/favorites.xml-20160921-232504529.tmp
+2016-09-21 23:25:10.097 INFO   903 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2016-09-21 23:25:10.097 INFO   903 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/favorites.xml
+2016-09-21 23:25:10.098 INFO   903 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/favorites.xml.bak
+2016-09-21 23:25:10.099 INFO   903 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-09-21 23:25:10.099 INFO   903 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/editorstyles91.xml-20160921-232504530.tmp
+2016-09-21 23:25:10.100 INFO   903 [AWT-EventQueue-0 - A.ā]    Temp file written: 1057 bytes
+2016-09-21 23:25:10.100 INFO   903 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/editorstyles91.xml
+2016-09-21 23:25:10.101 INFO   903 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/editorstyles91.xml.bak
+2016-09-21 23:25:10.101 INFO   903 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/templates.xml
+2016-09-21 23:25:10.101 INFO   903 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/templates.xml-20160921-232504531.tmp
+2016-09-21 23:25:10.102 INFO   903 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2016-09-21 23:25:10.102 INFO   903 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/templates.xml
+2016-09-21 23:25:10.103 INFO   903 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/templates.xml.bak
+2016-09-21 23:25:10.103 INFO   903 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/mp.xml
+2016-09-21 23:25:10.103 INFO   903 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/mp.xml-20160921-232504533.tmp
+2016-09-21 23:25:10.103 INFO   903 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2016-09-21 23:25:10.104 INFO   903 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/mp.xml
+2016-09-21 23:25:10.104 INFO   903 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/mp.xml.bak
+2016-09-21 23:25:10.105 INFO   903 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-09-21 23:25:10.106 INFO   903 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/.dbvis/config70/recentpaths.xml-20160921-232504534.tmp
+2016-09-21 23:25:10.106 INFO   903 [AWT-EventQueue-0 - A.ā]    Temp file written: 373 bytes
+2016-09-21 23:25:10.106 INFO   903 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/.dbvis/config70/recentpaths.xml
+2016-09-21 23:25:10.107 INFO   903 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/.dbvis/config70/recentpaths.xml.bak
+2016-09-21 23:25:10.107 INFO   903 [AWT-EventQueue-0 - DbVisualizerGUI.shutdown] Shutdown time: 0.136
+2018-07-10 11:19:13.079 CONFIG 976 [AWT-EventQueue-0 - E.ā] Product: DbVisualizer 10.0.13 [Build #2858]
+2018-07-10 11:19:13.082 CONFIG 976 [AWT-EventQueue-0 - E.ā] OS: Mac OS X
+2018-07-10 11:19:13.082 CONFIG 976 [AWT-EventQueue-0 - E.ā] OS Version: 10.13.5
+2018-07-10 11:19:13.082 CONFIG 976 [AWT-EventQueue-0 - E.ā] OS Arch: x86_64
+2018-07-10 11:19:13.082 CONFIG 976 [AWT-EventQueue-0 - E.ā] Java Version: 1.8.0_171
+2018-07-10 11:19:13.082 CONFIG 976 [AWT-EventQueue-0 - E.ā] Java VM: Java HotSpot(TM) 64-Bit Server VM
+2018-07-10 11:19:13.083 CONFIG 976 [AWT-EventQueue-0 - E.ā] Java Vendor: Oracle Corporation
+2018-07-10 11:19:13.083 CONFIG 976 [AWT-EventQueue-0 - E.ā] Java Home: /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+2018-07-10 11:19:13.083 CONFIG 976 [AWT-EventQueue-0 - E.ā] DbVis Home: /Applications/DbVisualizer.app/Contents/java/app
+2018-07-10 11:19:13.083 CONFIG 976 [AWT-EventQueue-0 - E.ā] User Home: /Users/liyi
+2018-07-10 11:19:13.083 CONFIG 976 [AWT-EventQueue-0 - E.ā] PrefsDir: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis
+2018-07-10 11:19:13.084 CONFIG 976 [AWT-EventQueue-0 - E.ā] SessionId: 976
+2018-07-10 11:19:13.086 CONFIG 976 [AWT-EventQueue-0 - E.ā] Java Arguments: <none>
+2018-07-10 11:19:13.086 CONFIG 976 [AWT-EventQueue-0 - E.ā] Java Properties: -Dfile.encoding=UTF-8 -Ddbvis.home=/Applications/DbVisualizer.app/Contents/Resources/app -Dinstall4j.launcherId=3074 -Dinstall4j.swt=false -Djava.library.path=/Applications/DbVisualizer.app/Contents/Resources/app/ -Dexe4j.moduleName=/Applications/DbVisualizer.app -Xmx768m -XX:StringTableSize=1000003 -Dsun.locale.formatasdefault=true -Di4j.ownBundlePath=/Applications/DbVisualizer.app -Di4j.jreBundle=/Library/Internet Plug-Ins/JavaAppletPlugin.plugin
+2018-07-10 11:19:13.087 CONFIG 976 [AWT-EventQueue-0 - E.ā] CLASSPATH: /Applications/DbVisualizer.app/Contents/Resources/app/.install4j/i4jruntime.jar:/Applications/DbVisualizer.app/Contents/Resources/app/resources/:/Applications/DbVisualizer.app/Contents/Resources/app/lib/proxy-vole.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/ysvg.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/synthetica.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/graphml.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/darcula.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jsch.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-lang.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jgoodies-forms.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/xmlbeans.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi-ooxml.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/slf4j-api.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/xlsx-streamer.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-io.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/slf4j-nop.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/miglayout.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-databind.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jgoodies-common.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/ognl.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/batik.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/dbvis.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jaxen.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/yexport.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-annotations.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi-ooxml-schemas.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-collections.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/crimson.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/dom4j.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/icepdf-viewer.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/yFiles.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-text.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/vectorgraphics.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/forms.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jide.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/icepdf-core.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-core.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jdom.jar
+2018-07-10 11:19:13.197 INFO   976 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes
+2018-07-10 11:19:13.198 INFO   976 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/ext/keywords
+2018-07-10 11:19:13.198 INFO   976 [AWT-EventQueue-0 - B.ā] Directory created: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/sqllogs
+2018-07-10 11:19:13.231 INFO   976 [AWT-EventQueue-0 - A.Ă] Files in: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70
+2018-07-10 11:19:13.231 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak (length: 93, writable: true, readable: true)
+2018-07-10 11:19:13.231 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml (length: 91, writable: true, readable: true)
+2018-07-10 11:19:13.231 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml (length: 155, writable: true, readable: true)
+2018-07-10 11:19:13.232 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recentpaths.xml (length: 373, writable: true, readable: true)
+2018-07-10 11:19:13.232 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recentpaths.xml.bak (length: 373, writable: true, readable: true)
+2018-07-10 11:19:13.232 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak (length: 86, writable: true, readable: true)
+2018-07-10 11:19:13.233 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/borders (writable: true, readable: true)
+2018-07-10 11:19:13.233 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml.bak (length: 88, writable: true, readable: true)
+2018-07-10 11:19:13.233 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml (length: 88, writable: true, readable: true)
+2018-07-10 11:19:13.233 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/keymaps (writable: true, readable: true)
+2018-07-10 11:19:13.234 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/layouts (writable: true, readable: true)
+2018-07-10 11:19:13.236 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak (length: 91, writable: true, readable: true)
+2018-07-10 11:19:13.236 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/editorstyles91.xml.bak (length: 1057, writable: true, readable: true)
+2018-07-10 11:19:13.237 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak (length: 35877, writable: true, readable: true)
+2018-07-10 11:19:13.237 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml (length: 35877, writable: true, readable: true)
+2018-07-10 11:19:13.237 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak (length: 155, writable: true, readable: true)
+2018-07-10 11:19:13.237 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml (length: 93, writable: true, readable: true)
+2018-07-10 11:19:13.237 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml (length: 86, writable: true, readable: true)
+2018-07-10 11:19:13.238 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/editorstyles91.xml (length: 1057, writable: true, readable: true)
+2018-07-10 11:19:13.238 INFO   976 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes (writable: true, readable: true)
+2018-07-10 11:19:13.257 INFO   976 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 11:19:13.257 INFO   976 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml (35877 bytes)
+2018-07-10 11:19:13.331 INFO   976 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-10 11:19:15.672 INFO   976 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 11:19:15.673 INFO   976 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml (93 bytes)
+2018-07-10 11:19:15.674 INFO   976 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-10 11:19:15.674 INFO   976 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 11:19:15.675 INFO   976 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml (86 bytes)
+2018-07-10 11:19:15.676 INFO   976 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-10 11:19:15.676 INFO   976 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 11:19:15.677 INFO   976 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml (155 bytes)
+2018-07-10 11:19:15.678 INFO   976 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-10 11:19:15.682 INFO   976 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml
+2018-07-10 11:19:15.683 INFO   976 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml (88 bytes)
+2018-07-10 11:19:15.684 INFO   976 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml.bak
+2018-07-10 11:19:15.685 INFO   976 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 11:19:15.685 INFO   976 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml (91 bytes)
+2018-07-10 11:19:15.686 INFO   976 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-10 11:19:15.687 INFO   976 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 11:19:15.687 INFO   976 [AWT-EventQueue-0 - A.Ď]    Looking for backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-10 11:19:15.687 INFO   976 [AWT-EventQueue-0 - A.Ď]       No backup file found or it is zero length: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak. Will use default setup
+2018-07-10 11:19:15.690 INFO   976 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-macos.xml
+2018-07-10 11:19:15.690 INFO   976 [AWT-EventQueue-0 - A.Ď]    Looking for backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-macos.xml.bak
+2018-07-10 11:19:15.690 INFO   976 [AWT-EventQueue-0 - A.Ď]       No backup file found or it is zero length: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-macos.xml.bak. Will use default setup
+2018-07-10 11:19:15.759 INFO   976 [AWT-EventQueue-0 - OraTNSUtil.getTNSDirectory] The TNS_ADMIN environment variable is not set. Trying ORACLE_HOME
+2018-07-10 11:19:15.759 INFO   976 [AWT-EventQueue-0 - OraTNSUtil.getTNSDirectory] The ORACLE_HOME environment variable is not set. TNS names cannot be used for Oracle connections
+2018-07-10 11:19:26.303 INFO   976 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-darcula.xml
+2018-07-10 11:19:26.315 INFO   976 [AWT-EventQueue-0 - A.Ď]    Looking for backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-darcula.xml.bak
+2018-07-10 11:19:26.316 INFO   976 [AWT-EventQueue-0 - A.Ď]       No backup file found or it is zero length: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-darcula.xml.bak. Will use default setup
+2018-07-10 11:19:29.967 INFO   976 [AWT-EventQueue-0 - DbVisualizerGUI.initialize] Startup time: 17.239
+2018-07-10 11:19:30.407 INFO   976 [AWT-EventQueue-0 - i.Ą] Workspace auto saver thread started. Interval: 30 sec
+2018-07-10 11:19:30.408 INFO   976 [AWT-EventQueue-0 - d.ă] Connection keep-alive thread started. Interval: 10 sec
+2018-07-10 12:57:47.547 INFO   976 [pool-3-thread-2 - S.flush] Tue Jul 10 12:57:47 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-10 12:57:47.738 INFO   976 [ExecutorRunner-pool-2-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: ipms
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 12:57:47.738 INFO   976 [ExecutorRunner-pool-2-thread-1 - H.Ĵ] Exception while connecting mysql
+java.sql.SQLException: Access denied for user 'ipms'@'172.18.0.1' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-10 12:58:30.223 INFO   976 [pool-3-thread-2 - S.flush] Tue Jul 10 12:58:30 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-10 12:58:30.267 INFO   976 [ExecutorRunner-pool-2-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: ipms
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 12:58:30.267 INFO   976 [ExecutorRunner-pool-2-thread-1 - H.Ĵ] Exception while connecting mysql
+java.sql.SQLException: Access denied for user 'ipms'@'172.18.0.1' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-10 12:59:42.331 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 12:59:42.334 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml-20180710-111913242.tmp
+2018-07-10 12:59:42.352 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 37639 bytes
+2018-07-10 12:59:42.353 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 12:59:42.355 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-10 12:59:42.356 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 12:59:42.356 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml-20180710-111913248.tmp
+2018-07-10 12:59:42.357 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2018-07-10 12:59:42.357 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 12:59:42.358 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-10 12:59:42.358 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 12:59:42.358 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml-20180710-111913249.tmp
+2018-07-10 12:59:42.359 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2018-07-10 12:59:42.359 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 12:59:42.359 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-10 12:59:42.361 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 12:59:42.361 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml-20180710-111913250.tmp
+2018-07-10 12:59:42.362 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2018-07-10 12:59:42.362 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 12:59:42.363 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-10 12:59:42.364 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 12:59:42.364 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml-20180710-111913252.tmp
+2018-07-10 12:59:42.364 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2018-07-10 12:59:42.365 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 12:59:42.365 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-10 12:59:42.366 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 12:59:42.366 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml-20180710-111913254.tmp
+2018-07-10 12:59:42.366 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 55 bytes
+2018-07-10 12:59:42.367 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 12:59:42.367 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-10 13:00:16.133 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:00:16.133 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml-20180710-111913242.tmp
+2018-07-10 13:00:16.139 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 37638 bytes
+2018-07-10 13:00:16.139 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:00:16.141 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-10 13:00:16.142 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:00:16.142 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml-20180710-111913248.tmp
+2018-07-10 13:00:16.142 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2018-07-10 13:00:16.143 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:00:16.143 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-10 13:00:16.144 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:00:16.144 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml-20180710-111913249.tmp
+2018-07-10 13:00:16.145 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2018-07-10 13:00:16.145 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:00:16.146 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-10 13:00:16.147 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:00:16.147 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml-20180710-111913250.tmp
+2018-07-10 13:00:16.148 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2018-07-10 13:00:16.148 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:00:16.149 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-10 13:00:16.150 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:00:16.150 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml-20180710-111913252.tmp
+2018-07-10 13:00:16.150 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2018-07-10 13:00:16.151 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:00:16.151 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-10 13:00:16.152 INFO   976 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:00:16.152 INFO   976 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml-20180710-111913254.tmp
+2018-07-10 13:00:16.152 INFO   976 [AWT-EventQueue-0 - A.ā]    Temp file written: 55 bytes
+2018-07-10 13:00:16.153 INFO   976 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:00:16.153 INFO   976 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-10 13:00:16.154 INFO   976 [AWT-EventQueue-0 - D$3.run] Restarting: open -n /Applications/DbVisualizer.app
+2018-07-10 13:00:16.173 INFO   976 [AWT-EventQueue-0 - DbVisualizerGUI.ā] Shutdown time: 0.199
+2018-07-10 13:00:16.966 CONFIG 388 [AWT-EventQueue-0 - E.ā] Product: DbVisualizer 10.0.13 [Build #2858]
+2018-07-10 13:00:16.967 CONFIG 388 [AWT-EventQueue-0 - E.ā] OS: Mac OS X
+2018-07-10 13:00:16.968 CONFIG 388 [AWT-EventQueue-0 - E.ā] OS Version: 10.13.5
+2018-07-10 13:00:16.968 CONFIG 388 [AWT-EventQueue-0 - E.ā] OS Arch: x86_64
+2018-07-10 13:00:16.968 CONFIG 388 [AWT-EventQueue-0 - E.ā] Java Version: 1.8.0_171
+2018-07-10 13:00:16.968 CONFIG 388 [AWT-EventQueue-0 - E.ā] Java VM: Java HotSpot(TM) 64-Bit Server VM
+2018-07-10 13:00:16.968 CONFIG 388 [AWT-EventQueue-0 - E.ā] Java Vendor: Oracle Corporation
+2018-07-10 13:00:16.969 CONFIG 388 [AWT-EventQueue-0 - E.ā] Java Home: /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+2018-07-10 13:00:16.969 CONFIG 388 [AWT-EventQueue-0 - E.ā] DbVis Home: /Applications/DbVisualizer.app/Contents/java/app
+2018-07-10 13:00:16.969 CONFIG 388 [AWT-EventQueue-0 - E.ā] User Home: /Users/liyi
+2018-07-10 13:00:16.969 CONFIG 388 [AWT-EventQueue-0 - E.ā] PrefsDir: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis
+2018-07-10 13:00:16.969 CONFIG 388 [AWT-EventQueue-0 - E.ā] SessionId: 388
+2018-07-10 13:00:16.971 CONFIG 388 [AWT-EventQueue-0 - E.ā] Java Arguments: <none>
+2018-07-10 13:00:16.972 CONFIG 388 [AWT-EventQueue-0 - E.ā] Java Properties: -Dfile.encoding=UTF-8 -Ddbvis.home=/Applications/DbVisualizer.app/Contents/Resources/app -Dinstall4j.launcherId=3074 -Dinstall4j.swt=false -Djava.library.path=/Applications/DbVisualizer.app/Contents/Resources/app/ -Dexe4j.moduleName=/Applications/DbVisualizer.app -Xmx768m -XX:StringTableSize=1000003 -Dsun.locale.formatasdefault=true -Di4j.ownBundlePath=/Applications/DbVisualizer.app -Di4j.jreBundle=/Library/Internet Plug-Ins/JavaAppletPlugin.plugin
+2018-07-10 13:00:16.972 CONFIG 388 [AWT-EventQueue-0 - E.ā] CLASSPATH: /Applications/DbVisualizer.app/Contents/Resources/app/.install4j/i4jruntime.jar:/Applications/DbVisualizer.app/Contents/Resources/app/resources/:/Applications/DbVisualizer.app/Contents/Resources/app/lib/proxy-vole.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/ysvg.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/synthetica.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/graphml.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/darcula.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jsch.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-lang.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jgoodies-forms.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/xmlbeans.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi-ooxml.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/slf4j-api.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/xlsx-streamer.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-io.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/slf4j-nop.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/miglayout.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-databind.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jgoodies-common.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/ognl.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/batik.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/dbvis.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jaxen.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/yexport.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-annotations.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi-ooxml-schemas.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-collections.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/crimson.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/dom4j.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/icepdf-viewer.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/yFiles.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-text.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/vectorgraphics.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/forms.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jide.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/icepdf-core.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-core.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jdom.jar
+2018-07-10 13:00:17.081 INFO   388 [AWT-EventQueue-0 - A.Ă] Files in: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70
+2018-07-10 13:00:17.082 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak (length: 93, writable: true, readable: true)
+2018-07-10 13:00:17.082 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml (length: 91, writable: true, readable: true)
+2018-07-10 13:00:17.082 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml (length: 155, writable: true, readable: true)
+2018-07-10 13:00:17.083 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak (length: 86, writable: true, readable: true)
+2018-07-10 13:00:17.083 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml (length: 55, writable: true, readable: true)
+2018-07-10 13:00:17.083 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/borders (writable: true, readable: true)
+2018-07-10 13:00:17.084 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml.bak (length: 88, writable: true, readable: true)
+2018-07-10 13:00:17.084 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml (length: 88, writable: true, readable: true)
+2018-07-10 13:00:17.084 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/keymaps (writable: true, readable: true)
+2018-07-10 13:00:17.085 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/layouts (writable: true, readable: true)
+2018-07-10 13:00:17.085 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak (length: 91, writable: true, readable: true)
+2018-07-10 13:00:17.085 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/editorstyles91.xml.bak (length: 1057, writable: true, readable: true)
+2018-07-10 13:00:17.086 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak (length: 37638, writable: true, readable: true)
+2018-07-10 13:00:17.086 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml (length: 37638, writable: true, readable: true)
+2018-07-10 13:00:17.089 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak (length: 155, writable: true, readable: true)
+2018-07-10 13:00:17.089 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml (length: 93, writable: true, readable: true)
+2018-07-10 13:00:17.089 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml (length: 86, writable: true, readable: true)
+2018-07-10 13:00:17.089 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/editorstyles91.xml (length: 1057, writable: true, readable: true)
+2018-07-10 13:00:17.090 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes (writable: true, readable: true)
+2018-07-10 13:00:17.090 INFO   388 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak (length: 55, writable: true, readable: true)
+2018-07-10 13:00:17.104 INFO   388 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:00:17.105 INFO   388 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml (37638 bytes)
+2018-07-10 13:00:17.169 INFO   388 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-10 13:00:19.568 INFO   388 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:00:19.568 INFO   388 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml (93 bytes)
+2018-07-10 13:00:19.569 INFO   388 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-10 13:00:19.570 INFO   388 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:00:19.570 INFO   388 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml (86 bytes)
+2018-07-10 13:00:19.572 INFO   388 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-10 13:00:19.573 INFO   388 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:00:19.573 INFO   388 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml (155 bytes)
+2018-07-10 13:00:19.574 INFO   388 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-10 13:00:19.581 INFO   388 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml
+2018-07-10 13:00:19.581 INFO   388 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml (88 bytes)
+2018-07-10 13:00:19.582 INFO   388 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml.bak
+2018-07-10 13:00:19.583 INFO   388 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:00:19.584 INFO   388 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml (91 bytes)
+2018-07-10 13:00:19.585 INFO   388 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-10 13:00:19.586 INFO   388 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:00:19.586 INFO   388 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml (55 bytes)
+2018-07-10 13:00:19.587 INFO   388 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-10 13:00:19.590 INFO   388 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-macos.xml
+2018-07-10 13:00:19.590 INFO   388 [AWT-EventQueue-0 - A.Ď]    Looking for backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-macos.xml.bak
+2018-07-10 13:00:19.590 INFO   388 [AWT-EventQueue-0 - A.Ď]       No backup file found or it is zero length: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-macos.xml.bak. Will use default setup
+2018-07-10 13:00:19.679 INFO   388 [AWT-EventQueue-0 - OraTNSUtil.getTNSDirectory] The TNS_ADMIN environment variable is not set. Trying ORACLE_HOME
+2018-07-10 13:00:19.680 INFO   388 [AWT-EventQueue-0 - OraTNSUtil.getTNSDirectory] The ORACLE_HOME environment variable is not set. TNS names cannot be used for Oracle connections
+2018-07-10 13:00:28.983 INFO   388 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-macos.xml
+2018-07-10 13:00:28.983 INFO   388 [AWT-EventQueue-0 - A.Ď]    Looking for backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-macos.xml.bak
+2018-07-10 13:00:28.984 INFO   388 [AWT-EventQueue-0 - A.Ď]       No backup file found or it is zero length: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-macos.xml.bak. Will use default setup
+2018-07-10 13:00:32.299 INFO   388 [AWT-EventQueue-0 - DbVisualizerGUI.initialize] Startup time: 15.647
+2018-07-10 13:00:32.624 INFO   388 [AWT-EventQueue-0 - i.Ą] Workspace auto saver thread started. Interval: 30 sec
+2018-07-10 13:00:32.627 INFO   388 [AWT-EventQueue-0 - d.ă] Connection keep-alive thread started. Interval: 10 sec
+2018-07-10 13:00:54.294 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:00:54.295 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml-20180710-130017093.tmp
+2018-07-10 13:00:54.313 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 37640 bytes
+2018-07-10 13:00:54.316 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:00:54.317 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-10 13:00:54.317 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:00:54.318 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml-20180710-130017098.tmp
+2018-07-10 13:00:54.318 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2018-07-10 13:00:54.318 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:00:54.319 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-10 13:00:54.320 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:00:54.320 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml-20180710-130017099.tmp
+2018-07-10 13:00:54.321 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2018-07-10 13:00:54.321 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:00:54.322 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-10 13:00:54.323 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:00:54.323 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml-20180710-130017100.tmp
+2018-07-10 13:00:54.324 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2018-07-10 13:00:54.324 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:00:54.324 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-10 13:00:54.325 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:00:54.325 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml-20180710-130017101.tmp
+2018-07-10 13:00:54.325 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2018-07-10 13:00:54.326 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:00:54.326 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-10 13:00:54.327 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:00:54.327 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml-20180710-130017103.tmp
+2018-07-10 13:00:54.327 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 55 bytes
+2018-07-10 13:00:54.328 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:00:54.328 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-10 13:00:55.814 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:00:55.814 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml-20180710-130017093.tmp
+2018-07-10 13:00:55.821 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 37640 bytes
+2018-07-10 13:00:55.822 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:00:55.823 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-10 13:00:55.824 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:00:55.825 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml-20180710-130017098.tmp
+2018-07-10 13:00:55.826 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2018-07-10 13:00:55.826 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:00:55.827 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-10 13:00:55.828 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:00:55.829 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml-20180710-130017099.tmp
+2018-07-10 13:00:55.829 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2018-07-10 13:00:55.830 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:00:55.830 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-10 13:00:55.832 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:00:55.832 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml-20180710-130017100.tmp
+2018-07-10 13:00:55.833 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2018-07-10 13:00:55.833 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:00:55.834 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-10 13:00:55.835 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:00:55.835 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml-20180710-130017101.tmp
+2018-07-10 13:00:55.835 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2018-07-10 13:00:55.836 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:00:55.837 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-10 13:00:55.838 INFO   388 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:00:55.838 INFO   388 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml-20180710-130017103.tmp
+2018-07-10 13:00:55.838 INFO   388 [AWT-EventQueue-0 - A.ā]    Temp file written: 55 bytes
+2018-07-10 13:00:55.840 INFO   388 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:00:55.841 INFO   388 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-10 13:00:55.842 INFO   388 [AWT-EventQueue-0 - D$3.run] Restarting: open -n /Applications/DbVisualizer.app
+2018-07-10 13:00:55.855 INFO   388 [AWT-EventQueue-0 - DbVisualizerGUI.ā] Shutdown time: 0.183
+2018-07-10 13:00:56.681 CONFIG 757 [AWT-EventQueue-0 - E.ā] Product: DbVisualizer 10.0.13 [Build #2858]
+2018-07-10 13:00:56.682 CONFIG 757 [AWT-EventQueue-0 - E.ā] OS: Mac OS X
+2018-07-10 13:00:56.682 CONFIG 757 [AWT-EventQueue-0 - E.ā] OS Version: 10.13.5
+2018-07-10 13:00:56.682 CONFIG 757 [AWT-EventQueue-0 - E.ā] OS Arch: x86_64
+2018-07-10 13:00:56.683 CONFIG 757 [AWT-EventQueue-0 - E.ā] Java Version: 1.8.0_171
+2018-07-10 13:00:56.683 CONFIG 757 [AWT-EventQueue-0 - E.ā] Java VM: Java HotSpot(TM) 64-Bit Server VM
+2018-07-10 13:00:56.683 CONFIG 757 [AWT-EventQueue-0 - E.ā] Java Vendor: Oracle Corporation
+2018-07-10 13:00:56.683 CONFIG 757 [AWT-EventQueue-0 - E.ā] Java Home: /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+2018-07-10 13:00:56.684 CONFIG 757 [AWT-EventQueue-0 - E.ā] DbVis Home: /Applications/DbVisualizer.app/Contents/java/app
+2018-07-10 13:00:56.684 CONFIG 757 [AWT-EventQueue-0 - E.ā] User Home: /Users/liyi
+2018-07-10 13:00:56.684 CONFIG 757 [AWT-EventQueue-0 - E.ā] PrefsDir: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis
+2018-07-10 13:00:56.684 CONFIG 757 [AWT-EventQueue-0 - E.ā] SessionId: 757
+2018-07-10 13:00:56.686 CONFIG 757 [AWT-EventQueue-0 - E.ā] Java Arguments: <none>
+2018-07-10 13:00:56.687 CONFIG 757 [AWT-EventQueue-0 - E.ā] Java Properties: -Dfile.encoding=UTF-8 -Ddbvis.home=/Applications/DbVisualizer.app/Contents/Resources/app -Dinstall4j.launcherId=3074 -Dinstall4j.swt=false -Djava.library.path=/Applications/DbVisualizer.app/Contents/Resources/app/ -Dexe4j.moduleName=/Applications/DbVisualizer.app -Xmx768m -XX:StringTableSize=1000003 -Dsun.locale.formatasdefault=true -Di4j.ownBundlePath=/Applications/DbVisualizer.app -Di4j.jreBundle=/Library/Internet Plug-Ins/JavaAppletPlugin.plugin
+2018-07-10 13:00:56.687 CONFIG 757 [AWT-EventQueue-0 - E.ā] CLASSPATH: /Applications/DbVisualizer.app/Contents/Resources/app/.install4j/i4jruntime.jar:/Applications/DbVisualizer.app/Contents/Resources/app/resources/:/Applications/DbVisualizer.app/Contents/Resources/app/lib/proxy-vole.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/ysvg.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/synthetica.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/graphml.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/darcula.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jsch.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-lang.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jgoodies-forms.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/xmlbeans.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi-ooxml.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/slf4j-api.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/xlsx-streamer.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-io.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/slf4j-nop.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/miglayout.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-databind.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jgoodies-common.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/ognl.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/batik.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/dbvis.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jaxen.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/yexport.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-annotations.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi-ooxml-schemas.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-collections.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/crimson.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/dom4j.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/icepdf-viewer.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/yFiles.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-text.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/vectorgraphics.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/forms.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jide.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/icepdf-core.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-core.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jdom.jar
+2018-07-10 13:00:56.811 INFO   757 [AWT-EventQueue-0 - A.Ă] Files in: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70
+2018-07-10 13:00:56.811 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak (length: 93, writable: true, readable: true)
+2018-07-10 13:00:56.812 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml (length: 91, writable: true, readable: true)
+2018-07-10 13:00:56.812 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml (length: 155, writable: true, readable: true)
+2018-07-10 13:00:56.812 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak (length: 86, writable: true, readable: true)
+2018-07-10 13:00:56.812 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml (length: 55, writable: true, readable: true)
+2018-07-10 13:00:56.813 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/borders (writable: true, readable: true)
+2018-07-10 13:00:56.813 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml.bak (length: 88, writable: true, readable: true)
+2018-07-10 13:00:56.813 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml (length: 88, writable: true, readable: true)
+2018-07-10 13:00:56.814 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/keymaps (writable: true, readable: true)
+2018-07-10 13:00:56.814 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/layouts (writable: true, readable: true)
+2018-07-10 13:00:56.814 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak (length: 91, writable: true, readable: true)
+2018-07-10 13:00:56.815 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/editorstyles91.xml.bak (length: 1057, writable: true, readable: true)
+2018-07-10 13:00:56.815 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak (length: 37640, writable: true, readable: true)
+2018-07-10 13:00:56.815 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml (length: 37640, writable: true, readable: true)
+2018-07-10 13:00:56.818 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak (length: 155, writable: true, readable: true)
+2018-07-10 13:00:56.818 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml (length: 93, writable: true, readable: true)
+2018-07-10 13:00:56.819 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml (length: 86, writable: true, readable: true)
+2018-07-10 13:00:56.819 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/editorstyles91.xml (length: 1057, writable: true, readable: true)
+2018-07-10 13:00:56.819 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes (writable: true, readable: true)
+2018-07-10 13:00:56.819 INFO   757 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak (length: 55, writable: true, readable: true)
+2018-07-10 13:00:56.835 INFO   757 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:00:56.835 INFO   757 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml (37640 bytes)
+2018-07-10 13:00:56.902 INFO   757 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-10 13:00:59.158 INFO   757 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:00:59.158 INFO   757 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml (93 bytes)
+2018-07-10 13:00:59.159 INFO   757 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-10 13:00:59.160 INFO   757 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:00:59.160 INFO   757 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml (86 bytes)
+2018-07-10 13:00:59.161 INFO   757 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-10 13:00:59.161 INFO   757 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:00:59.162 INFO   757 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml (155 bytes)
+2018-07-10 13:00:59.162 INFO   757 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-10 13:00:59.166 INFO   757 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml
+2018-07-10 13:00:59.167 INFO   757 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml (88 bytes)
+2018-07-10 13:00:59.168 INFO   757 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml.bak
+2018-07-10 13:00:59.168 INFO   757 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:00:59.169 INFO   757 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml (91 bytes)
+2018-07-10 13:00:59.169 INFO   757 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-10 13:00:59.170 INFO   757 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:00:59.171 INFO   757 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml (55 bytes)
+2018-07-10 13:00:59.171 INFO   757 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-10 13:00:59.174 INFO   757 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-darcula.xml
+2018-07-10 13:00:59.174 INFO   757 [AWT-EventQueue-0 - A.Ď]    Looking for backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-darcula.xml.bak
+2018-07-10 13:00:59.174 INFO   757 [AWT-EventQueue-0 - A.Ď]       No backup file found or it is zero length: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-darcula.xml.bak. Will use default setup
+2018-07-10 13:00:59.235 INFO   757 [AWT-EventQueue-0 - OraTNSUtil.getTNSDirectory] The TNS_ADMIN environment variable is not set. Trying ORACLE_HOME
+2018-07-10 13:00:59.236 INFO   757 [AWT-EventQueue-0 - OraTNSUtil.getTNSDirectory] The ORACLE_HOME environment variable is not set. TNS names cannot be used for Oracle connections
+2018-07-10 13:01:02.001 INFO   757 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-darcula.xml
+2018-07-10 13:01:02.001 INFO   757 [AWT-EventQueue-0 - A.Ď]    Looking for backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-darcula.xml.bak
+2018-07-10 13:01:02.002 INFO   757 [AWT-EventQueue-0 - A.Ď]       No backup file found or it is zero length: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/themes/theme-darcula.xml.bak. Will use default setup
+2018-07-10 13:01:05.476 INFO   757 [AWT-EventQueue-0 - DbVisualizerGUI.initialize] Startup time: 9.132
+2018-07-10 13:01:05.781 INFO   757 [AWT-EventQueue-0 - i.Ą] Workspace auto saver thread started. Interval: 30 sec
+2018-07-10 13:01:05.782 INFO   757 [AWT-EventQueue-0 - d.ă] Connection keep-alive thread started. Interval: 10 sec
+2018-07-10 13:01:11.613 INFO   757 [pool-3-thread-2 - S.flush] Tue Jul 10 13:01:11 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-10 13:01:11.850 INFO   757 [ExecutorRunner-pool-2-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: ipms
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:01:11.851 INFO   757 [ExecutorRunner-pool-2-thread-1 - H.Ĵ] Exception while connecting mysql
+java.sql.SQLException: Access denied for user 'ipms'@'172.18.0.1' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-10 13:04:45.311 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:45.311 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:04:45.319 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:04:45.320 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml-20180710-130056823.tmp
+2018-07-10 13:04:45.361 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 39022 bytes
+2018-07-10 13:04:45.362 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:04:45.363 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-10 13:04:45.364 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:04:45.364 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml-20180710-130056827.tmp
+2018-07-10 13:04:45.365 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2018-07-10 13:04:45.365 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:04:45.366 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-10 13:04:45.367 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:04:45.367 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml-20180710-130056829.tmp
+2018-07-10 13:04:45.367 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2018-07-10 13:04:45.367 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:04:45.368 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-10 13:04:45.369 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:04:45.370 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml-20180710-130056830.tmp
+2018-07-10 13:04:45.370 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2018-07-10 13:04:45.370 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:04:45.371 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-10 13:04:45.372 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml
+2018-07-10 13:04:45.372 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml-20180710-130056830.tmp
+2018-07-10 13:04:45.373 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 88 bytes
+2018-07-10 13:04:45.373 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml
+2018-07-10 13:04:45.374 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml.bak
+2018-07-10 13:04:45.375 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:04:45.375 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml-20180710-130056831.tmp
+2018-07-10 13:04:45.375 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2018-07-10 13:04:45.375 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:04:45.376 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-10 13:04:45.377 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:04:45.378 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml-20180710-130056833.tmp
+2018-07-10 13:04:45.378 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 618 bytes
+2018-07-10 13:04:45.379 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:04:45.379 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-10 13:04:47.255 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:47.256 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:04:48.580 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:48.580 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:04:48.814 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:48.814 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:04:49.011 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:49.011 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:04:49.176 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:49.176 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:04:49.348 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:49.348 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:04:49.527 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:49.528 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:04:49.735 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:49.736 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:04:52.405 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+*** Database Properties ****************************
+Alias: hive
+Notes: [11 characters]
+Settings Format: Server Info
+URL: jdbc:hive2://10.19.58.81:10015/default
+Driver: Hive
+Userid: coc
+Preferred Database Type: AUTO
+Current Database Type: HIVE
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+None
+--- Overridden Driver Properties -------------------
+None
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: Hive
+DefaultDriver: true
+DefaultClass: org.apache.hive.jdbc.HiveDriver
+Paths:
+  Path: /Users/liyi/.m2/repository/org/apache/hive/hive-jdbc/1.2.1/hive-jdbc-1.2.1.jar
+    Class: org.apache.hive.jdbc.HiveDriver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-10 13:04:52.405 INFO   757 [ExecutorRunner-pool-2-thread-2 - H.Ĵ] Exception while connecting hive
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.connect(Unknown Source)
+	at com.onseven.dbvis.db.I.H.Ŋ(Z:154)
+	at com.onseven.dbvis.db.I.H.Ĵ(Z:1692)
+	at com.onseven.dbvis.db.I.K.Ĵ(Z:3063)
+	at com.onseven.dbvis.db.I.D.Ī(Z:1756)
+	at com.onseven.dbvis.K.C.Z.Ģ(Z:2713)
+	at com.onseven.dbvis.K.C.K.Ă(Z:1374)
+	at com.onseven.dbvis.K.C.K.doInBackground(Z:1521)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.Exception: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at com.onseven.dbvis.g.B.F$A.call(Z:2374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/hive/service/cli/thrift/TCLIService$Iface
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.TCLIService$Iface
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 more
+2018-07-10 13:09:45.100 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:09:45.103 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml-20180710-130056823.tmp
+2018-07-10 13:09:45.106 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 38882 bytes
+2018-07-10 13:09:45.106 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml
+2018-07-10 13:09:45.107 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-10 13:09:45.108 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:09:45.108 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml-20180710-130056827.tmp
+2018-07-10 13:09:45.108 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2018-07-10 13:09:45.109 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-10 13:09:45.109 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-10 13:09:45.110 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:09:45.110 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml-20180710-130056829.tmp
+2018-07-10 13:09:45.110 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2018-07-10 13:09:45.110 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml
+2018-07-10 13:09:45.111 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-10 13:09:45.112 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:09:45.112 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml-20180710-130056830.tmp
+2018-07-10 13:09:45.113 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2018-07-10 13:09:45.113 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml
+2018-07-10 13:09:45.114 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-10 13:09:45.114 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml
+2018-07-10 13:09:45.114 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml-20180710-130056830.tmp
+2018-07-10 13:09:45.114 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 88 bytes
+2018-07-10 13:09:45.115 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml
+2018-07-10 13:09:45.115 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/workingset.xml.bak
+2018-07-10 13:09:45.116 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:09:45.116 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml-20180710-130056831.tmp
+2018-07-10 13:09:45.116 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2018-07-10 13:09:45.116 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml
+2018-07-10 13:09:45.117 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-10 13:09:45.118 INFO   757 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:09:45.118 INFO   757 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml-20180710-130056833.tmp
+2018-07-10 13:09:45.118 INFO   757 [AWT-EventQueue-0 - A.ā]    Temp file written: 618 bytes
+2018-07-10 13:09:45.118 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-10 13:09:45.119 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-10 13:09:45.119 INFO   757 [AWT-EventQueue-0 - DbVisualizerGUI.ā] Shutdown time: 0.163

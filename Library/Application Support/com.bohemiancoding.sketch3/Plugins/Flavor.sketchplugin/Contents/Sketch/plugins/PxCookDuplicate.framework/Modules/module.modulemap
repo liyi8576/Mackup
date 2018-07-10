@@ -1,0 +1,6 @@
+framework module PxCookDuplicate {
+  umbrella header "PxCookDuplicate.h"
+
+  export *
+  module * { export * }
+}

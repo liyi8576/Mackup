@@ -1,0 +1,22 @@
+{
+  "locale": "zh-CN",
+  "lang": "zh",
+  "country": "CN",
+  "theme": "../dist/main/css/themes/dark.css",
+  "hotkey": "Control+Space",
+  "showInTray": true,
+  "firstStart": false,
+  "developerMode": false,
+  "cleanOnHide": true,
+  "skipDonateDialog": true,
+  "lastShownDonateDialog": 1526864481748,
+  "plugins": {},
+  "isMigratedPlugins": true,
+  "openAtLogin": false,
+  "positions": {
+    "69733248": [
+      595,
+      247
+    ]
+  }
+}

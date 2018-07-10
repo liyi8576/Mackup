@@ -1,0 +1,6 @@
+[IMP] Import start
+[IMP] Import type - Text file
+[IMP] Import from - /Users/liyi/Develop/docker-volume/files/MG_CONT_INFO.TXT
+[IMP] Import table [MG_CONT_INFO]
+[IMP] Processed: 0, Added: 0, Updated: 0, Deleted: 0, Errors: 0
+[IMP] Finished successfully

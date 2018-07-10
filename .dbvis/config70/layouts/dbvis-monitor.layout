@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LayoutPersistence>
+    <DockableBarManager frameState="0" persistenceName="0" version="20">
+        <UndockedBounds height="768" width="1024" x="128" y="23"/>
+        <DockableBarContext currentDockSide="1" currentMode="2"
+            dockId="0" dockedHeight="0" dockedWidth="0" initIndex="0"
+            initMode="2" initPosition="1" initSide="1" key="Data Monitor Toolbar">
+            <DockableBarPreviousState dockId="0" fcId="0" mode="2"
+                newRow="1" row="0" side="1" start="0" type="close"/>
+        </DockableBarContext>
+        <DockableBarContainer side="1">
+            <DockableBarList>
+                <DockableBarItem start="0">
+                    <DockableBar key="Data Monitor Toolbar" preferredRowCount="0"/>
+                </DockableBarItem>
+            </DockableBarList>
+        </DockableBarContainer>
+    </DockableBarManager>
+    <DockingManager frameState="0" persistenceName="1" version="20">
+        <Bounds height="768" width="1024" x="128" y="23"/>
+        <ContainerContainer dockId="54629" initiallyEven="0"
+            orientation="0" proportionLayout="0">
+            <ContainerContainer dockId="23615" initiallyEven="0"
+                orientation="1" proportionLayout="0">
+                <Workspace acceptDockableFrame="1"/>
+            </ContainerContainer>
+        </ContainerContainer>
+        <AutoHideContainer side="3"/>
+        <AutoHideContainer side="7"/>
+        <AutoHideContainer side="5"/>
+        <AutoHideContainer side="1"/>
+    </DockingManager>
+</LayoutPersistence>

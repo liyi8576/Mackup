@@ -1,0 +1,16 @@
+{
+  "name": "cerebro-plugins",
+  "dependencies": {
+    "cerebro-converter": "1.0.7",
+    "cerebro-math": "1.0.0",
+    "cerebro-open-web": "1.0.0",
+    "cerebro-google": "1.0.1",
+    "cerebro-mac-apps": "1.0.2",
+    "cerebro-files-nav": "1.0.4",
+    "cerebro-translate": "1.3.0",
+    "cerebro-plugin-boostnote": "0.1.0",
+    "cerebro-tldr": "1.0.1",
+    "cerebro-codelf": "0.1.10",
+    "cerebro-snippets": "1.1.0"
+  }
+}

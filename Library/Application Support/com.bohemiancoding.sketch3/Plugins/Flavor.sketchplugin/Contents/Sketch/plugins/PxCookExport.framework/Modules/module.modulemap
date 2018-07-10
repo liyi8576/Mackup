@@ -1,0 +1,6 @@
+framework module PxCookExport {
+  umbrella header "PxCookExport.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+[2016-06-27 14:55:25] [Msg] [Imp] Import start
+[2016-06-27 14:55:25] [Msg] [Imp] Import type - XLSX
+[2016-06-27 14:55:25] [Msg] [Imp] Import from - /Users/liyi/Desktop/ip_pool_conf.xlsx
+[2016-06-27 14:55:25] [Msg] [Imp] Import table [ip_pool_conf]
+[2016-06-27 14:55:25] [Msg] [Imp] Processed: 10, Added: 10, Updated: 0, Deleted: 0, Error: 0
+[2016-06-27 14:55:25] [Msg] [Imp] Finished - Successfully

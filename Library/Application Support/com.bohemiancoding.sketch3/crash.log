@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>finish ToggleRulers {
+    action = "&lt;MSToggleRulersAction: 0x600000268880&gt;";
+    document = "&lt;MSDocument: 0x7fade8d64390&gt;";
+}</string>
+	<string>instant CloseDocument {
+    document = "&lt;MSDocument: 0x7fade8d64390&gt;";
+    selection =     (
+    );
+}</string>
+	<string>begin SilentCheckForUpdates {
+    action = "&lt;MSSilentCheckForUpdatesAction: 0x600000254760&gt;";
+}</string>
+	<string>finish SilentCheckForUpdates {
+    action = "&lt;MSSilentCheckForUpdatesAction: 0x600000254760&gt;";
+}</string>
+	<string>begin SilentCheckForUpdates {
+    action = "&lt;MSSilentCheckForUpdatesAction: 0x600000251ac0&gt;";
+}</string>
+	<string>finish SilentCheckForUpdates {
+    action = "&lt;MSSilentCheckForUpdatesAction: 0x600000251ac0&gt;";
+}</string>
+	<string>instant OpenDocument {
+    document = "&lt;MSDocument: 0x7fe94e419430&gt;";
+    selection =     (
+    );
+}</string>
+	<string>instant HandlerGotFocus {
+    name = Normal;
+}</string>
+	<string>begin ToggleRulers {
+    action = "&lt;MSToggleRulersAction: 0x604000471c40&gt;";
+    document = "&lt;MSDocument: 0x7fe94e419430&gt;";
+}</string>
+	<string>finish ToggleRulers {
+    action = "&lt;MSToggleRulersAction: 0x604000471c40&gt;";
+    document = "&lt;MSDocument: 0x7fe94e419430&gt;";
+}</string>
+	<string>instant CloseDocument {
+    document = "&lt;MSDocument: 0x7fe94e419430&gt;";
+    selection =     (
+    );
+}</string>
+</array>
+</plist>

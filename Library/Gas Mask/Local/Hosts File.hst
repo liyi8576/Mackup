@@ -1,0 +1,35 @@
+127.0.0.1		localhost
+255.255.255.255	broadcasthost
+::1				localhost
+fe80::1%lo0		localhost
+
+
+0.0.0.0 account.jetbrains.com
+
+192.168.100.20 liyi-mac
+127.0.0.1 hadoop-master
+127.0.0.1 hadoop-slave1
+127.0.0.1 hadoop-slave2
+127.0.0.1 hive-server
+
+
+# Build Date: 2017-03-28T00:34:57.001056 (UTC)
+# API-1-WS [ChinaNet] (Avg RTT: 14.605ms)
+119.84.95.19    se.itunes.apple.com
+119.84.95.19    su.itunes.apple.com
+119.84.95.19    upp.itunes.apple.com
+119.84.95.19    play.itunes.apple.com
+119.84.95.19    apps.itunes.apple.com
+119.84.95.19    client-api.itunes.apple.com
+# API-2-WS [ChinaNet] (Avg RTT: 3.774ms)
+219.144.71.163  s.mzstatic.com
+219.144.71.163  itunes.apple.com
+219.144.71.163  init.itunes.apple.com
+219.144.71.163  search.itunes.apple.com
+219.144.71.163  itunesconnect.apple.com
+# Beta-HK-Akamai [HongKong] (Avg RTT: 62.909ms)
+184.87.97.50    beta.itunes.apple.com
+# Radio-HK-Akamai [HongKong] (Avg RTT: 58.485ms)
+104.115.242.174 radio.itunes.apple.com
+104.115.242.174 radio-activity.itunes.apple.com
+104.115.242.174 radio-services.itunes.apple.com

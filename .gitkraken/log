@@ -1,0 +1,24 @@
+{
+  "log": [
+    {
+      "actionName": "app_settings_action_set",
+      "count": 8,
+      "totalMS": 1
+    },
+    {
+      "actionName": "refresh_action_refresh_success",
+      "count": 2,
+      "totalMS": 0
+    },
+    {
+      "actionName": "profile_settings_action_set",
+      "count": 1,
+      "totalMS": 0
+    },
+    {
+      "actionName": "repo_settings_action_set",
+      "count": 2,
+      "totalMS": 1
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+ {
+     "name": "蓝湖",
+     "description": "lanhuapp.com",
+     "author": "smallStone",
+     "version": "0.71",
+     "identifier": "com.lanhuSketch.smallStone",
+     "updateURL": "https://lanhuapp.com/",
+     "homepage": "https://lanhuapp.com/",
+     "menu": {
+         "items": ["uploadSelectArtboard","uploadAllArtboard"],
+         "title": "蓝湖"
+     },
+     "commands": [{
+             "script": "lanhu.js",
+             "handler": "uploadSelectArtboard",
+             "name": "上传所选 Artboard",
+             "shortcut": "command e",
+             "identifier": "uploadSelectArtboard"
+         },
+         {
+             "script": "lanhu.js",
+             "handler": "uploadAllArtboard",
+             "name": "上传全部 Artboard",
+             "shortcut": "ctrl command e",
+             "identifier": "uploadAllArtboard"
+         }
+     ]
+ }
