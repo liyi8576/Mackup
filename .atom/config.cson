@@ -16,6 +16,7 @@
       "image-view"
     ]
     telemetryConsent: "no"
+    useProxySettingsWhenCallingApm: false
   "exception-reporting":
     userId: "8d02a07a-5a70-41d3-8665-61f0accaeb7b"
   "spell-check":
