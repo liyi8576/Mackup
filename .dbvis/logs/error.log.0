@@ -1717,3 +1717,958 @@ Caused by: java.lang.ClassNotFoundException: org.apache.hive.service.cli.thrift.
 2018-07-10 13:09:45.118 INFO   757 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml
 2018-07-10 13:09:45.119 INFO   757 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.dbvis/config70/recent-paths.xml.bak
 2018-07-10 13:09:45.119 INFO   757 [AWT-EventQueue-0 - DbVisualizerGUI.ā] Shutdown time: 0.163
+2018-07-16 14:02:34.376 CONFIG 677 [AWT-EventQueue-0 - E.ā] Product: DbVisualizer 10.0.13 [Build #2858]
+2018-07-16 14:02:34.377 CONFIG 677 [AWT-EventQueue-0 - E.ā] OS: Mac OS X
+2018-07-16 14:02:34.378 CONFIG 677 [AWT-EventQueue-0 - E.ā] OS Version: 10.13.6
+2018-07-16 14:02:34.378 CONFIG 677 [AWT-EventQueue-0 - E.ā] OS Arch: x86_64
+2018-07-16 14:02:34.378 CONFIG 677 [AWT-EventQueue-0 - E.ā] Java Version: 1.8.0_171
+2018-07-16 14:02:34.378 CONFIG 677 [AWT-EventQueue-0 - E.ā] Java VM: Java HotSpot(TM) 64-Bit Server VM
+2018-07-16 14:02:34.379 CONFIG 677 [AWT-EventQueue-0 - E.ā] Java Vendor: Oracle Corporation
+2018-07-16 14:02:34.379 CONFIG 677 [AWT-EventQueue-0 - E.ā] Java Home: /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+2018-07-16 14:02:34.379 CONFIG 677 [AWT-EventQueue-0 - E.ā] DbVis Home: /Applications/DbVisualizer.app/Contents/java/app
+2018-07-16 14:02:34.379 CONFIG 677 [AWT-EventQueue-0 - E.ā] User Home: /Users/liyi
+2018-07-16 14:02:34.379 CONFIG 677 [AWT-EventQueue-0 - E.ā] PrefsDir: /Users/liyi/CloudSync/Mackup/.dbvis
+2018-07-16 14:02:34.379 CONFIG 677 [AWT-EventQueue-0 - E.ā] SessionId: 677
+2018-07-16 14:02:34.382 CONFIG 677 [AWT-EventQueue-0 - E.ā] Java Arguments: <none>
+2018-07-16 14:02:34.382 CONFIG 677 [AWT-EventQueue-0 - E.ā] Java Properties: -Dfile.encoding=UTF-8 -Ddbvis.home=/Applications/DbVisualizer.app/Contents/Resources/app -Dinstall4j.launcherId=3074 -Dinstall4j.swt=false -Djava.library.path=/Applications/DbVisualizer.app/Contents/Resources/app/ -Dexe4j.moduleName=/Applications/DbVisualizer.app -Xmx768m -XX:StringTableSize=1000003 -Dsun.locale.formatasdefault=true -Di4j.ownBundlePath=/Applications/DbVisualizer.app -Di4j.jreBundle=/Library/Internet Plug-Ins/JavaAppletPlugin.plugin
+2018-07-16 14:02:34.383 CONFIG 677 [AWT-EventQueue-0 - E.ā] CLASSPATH: /Applications/DbVisualizer.app/Contents/Resources/app/.install4j/i4jruntime.jar:/Applications/DbVisualizer.app/Contents/Resources/app/resources/:/Applications/DbVisualizer.app/Contents/Resources/app/lib/proxy-vole.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/ysvg.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/synthetica.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/graphml.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/darcula.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jsch.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-lang.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jgoodies-forms.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/xmlbeans.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi-ooxml.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/slf4j-api.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/xlsx-streamer.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-io.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/slf4j-nop.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/miglayout.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-databind.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jgoodies-common.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/ognl.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/batik.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/dbvis.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jaxen.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/yexport.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-annotations.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/poi-ooxml-schemas.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-collections.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/crimson.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/dom4j.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/icepdf-viewer.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/yFiles.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/commons-text.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/vectorgraphics.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/forms.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jide.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/icepdf-core.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jackson-core.jar:/Applications/DbVisualizer.app/Contents/Resources/app/lib/jdom.jar
+2018-07-16 14:02:34.528 INFO   677 [AWT-EventQueue-0 - A.Ă] Files in: /Users/liyi/CloudSync/Mackup/.dbvis/config70
+2018-07-16 14:02:34.528 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/tablefilters.xml.bak (length: 93, writable: true, readable: true)
+2018-07-16 14:02:34.528 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/mp.xml (length: 91, writable: true, readable: true)
+2018-07-16 14:02:34.529 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/templates.xml (length: 155, writable: true, readable: true)
+2018-07-16 14:02:34.529 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/favorites.xml.bak (length: 86, writable: true, readable: true)
+2018-07-16 14:02:34.529 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/recent-paths.xml (length: 618, writable: true, readable: true)
+2018-07-16 14:02:34.529 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/borders (writable: true, readable: true)
+2018-07-16 14:02:34.530 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/workingset.xml.bak (length: 88, writable: true, readable: true)
+2018-07-16 14:02:34.530 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/workingset.xml (length: 88, writable: true, readable: true)
+2018-07-16 14:02:34.530 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/keymaps (writable: true, readable: true)
+2018-07-16 14:02:34.531 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/recentpaths.nssyncsc (length: 0, writable: true, readable: true)
+2018-07-16 14:02:34.531 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/layouts (writable: true, readable: true)
+2018-07-16 14:02:34.531 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/mp.xml.bak (length: 91, writable: true, readable: true)
+2018-07-16 14:02:34.531 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/editorstyles91.xml.bak (length: 1057, writable: true, readable: true)
+2018-07-16 14:02:34.532 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/dbvis.xml.bak (length: 38882, writable: true, readable: true)
+2018-07-16 14:02:34.534 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/dbvis.xml (length: 38882, writable: true, readable: true)
+2018-07-16 14:02:34.534 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/templates.xml.bak (length: 155, writable: true, readable: true)
+2018-07-16 14:02:34.534 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/tablefilters.xml (length: 93, writable: true, readable: true)
+2018-07-16 14:02:34.535 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/favorites.xml (length: 86, writable: true, readable: true)
+2018-07-16 14:02:34.535 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/editorstyles91.xml (length: 1057, writable: true, readable: true)
+2018-07-16 14:02:34.535 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/themes (writable: true, readable: true)
+2018-07-16 14:02:34.536 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/recentpaths.xml.nssyncsc (length: 0, writable: true, readable: true)
+2018-07-16 14:02:34.536 INFO   677 [AWT-EventQueue-0 - A.Ă]    /Users/liyi/CloudSync/Mackup/.dbvis/config70/recent-paths.xml.bak (length: 618, writable: true, readable: true)
+2018-07-16 14:02:34.553 INFO   677 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/dbvis.xml
+2018-07-16 14:02:34.554 INFO   677 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/dbvis.xml (38882 bytes)
+2018-07-16 14:02:34.649 INFO   677 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-16 14:02:37.047 INFO   677 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-16 14:02:37.047 INFO   677 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/tablefilters.xml (93 bytes)
+2018-07-16 14:02:37.048 INFO   677 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-16 14:02:37.049 INFO   677 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/favorites.xml
+2018-07-16 14:02:37.049 INFO   677 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/favorites.xml (86 bytes)
+2018-07-16 14:02:37.050 INFO   677 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-16 14:02:37.051 INFO   677 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/templates.xml
+2018-07-16 14:02:37.051 INFO   677 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/templates.xml (155 bytes)
+2018-07-16 14:02:37.052 INFO   677 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-16 14:02:37.057 INFO   677 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/workingset.xml
+2018-07-16 14:02:37.057 INFO   677 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/workingset.xml (88 bytes)
+2018-07-16 14:02:37.059 INFO   677 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/workingset.xml.bak
+2018-07-16 14:02:37.060 INFO   677 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/mp.xml
+2018-07-16 14:02:37.060 INFO   677 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/mp.xml (91 bytes)
+2018-07-16 14:02:37.061 INFO   677 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-16 14:02:37.063 INFO   677 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-16 14:02:37.063 INFO   677 [AWT-EventQueue-0 - A.ć]    Load/parse file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/recent-paths.xml (618 bytes)
+2018-07-16 14:02:37.064 INFO   677 [AWT-EventQueue-0 - A.ć]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-16 14:02:37.068 INFO   677 [AWT-EventQueue-0 - A.ć] Loading file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/themes/theme-darcula.xml
+2018-07-16 14:02:37.069 INFO   677 [AWT-EventQueue-0 - A.Ď]    Looking for backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/themes/theme-darcula.xml.bak
+2018-07-16 14:02:37.069 INFO   677 [AWT-EventQueue-0 - A.Ď]       No backup file found or it is zero length: /Users/liyi/CloudSync/Mackup/.dbvis/config70/themes/theme-darcula.xml.bak. Will use default setup
+2018-07-16 14:02:37.134 INFO   677 [AWT-EventQueue-0 - OraTNSUtil.getTNSDirectory] The TNS_ADMIN environment variable is not set. Trying ORACLE_HOME
+2018-07-16 14:02:37.134 INFO   677 [AWT-EventQueue-0 - OraTNSUtil.getTNSDirectory] The ORACLE_HOME environment variable is not set. TNS names cannot be used for Oracle connections
+2018-07-16 14:02:41.030 INFO   677 [AWT-EventQueue-0 - DbVisualizerGUI.initialize] Startup time: 7.080
+2018-07-16 14:02:41.538 INFO   677 [AWT-EventQueue-0 - i.Ą] Workspace auto saver thread started. Interval: 30 sec
+2018-07-16 14:02:41.540 INFO   677 [AWT-EventQueue-0 - d.ă] Connection keep-alive thread started. Interval: 10 sec
+2018-07-16 14:02:43.821 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:02:43 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:02:44.079 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: ipms
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:02:44.080 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+java.sql.SQLException: Access denied for user 'ipms'@'172.18.0.1' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:02:50.367 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:02:50 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:02:50.412 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: ipms
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:02:50.412 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+java.sql.SQLException: Access denied for user 'ipms'@'172.18.0.1' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:07.733 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:07 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:07.779 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:07.780 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:08.654 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:08 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:08.690 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:08.691 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:08.844 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:08 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:08.884 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:08.884 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:09.084 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:09 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:09.115 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:09.116 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:09.900 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:09 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:09.936 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:09.937 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:10.123 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:10 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:10.159 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:10.160 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:15.493 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:15 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:15.529 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:15.530 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:15.922 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:15 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:15.959 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:15.960 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:19.365 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:19 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:19.404 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED, RECONNECTING
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:19.404 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:03:26.212 INFO   677 [pool-2-thread-1 - S.flush] Mon Jul 16 14:03:26 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2018-07-16 14:03:26.243 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+*** Database Properties ****************************
+Alias: mysql
+Notes: [0 characters]
+Settings Format: Server Info
+URL: jdbc:mysql://localhost:3306/ipms
+Driver: MySQL
+Userid: irec
+Preferred Database Type: AUTO
+Current Database Type: MYSQL
+Preferred Profile: auto
+Current Profile: null (not connected?)
+Connection State(s): DISCONNECTED
+--- Object Type Settings ---------------------------
+None
+--- Overridden User Properties ---------------------
+mysql.ConnectWhenConnectAll = true
+mysql.ConnectionModeMigrated = true
+mysql.TransactionIsolation = 0
+--- Overridden Driver Properties -------------------
+useCursorFetch = true
+defaultFetchSize = 5000
+*** End Database Properties ************************
+*** Driver Information *****************************
+Name: MySQL
+DefaultDriver: true
+DefaultClass: com.mysql.jdbc.Driver
+Paths:
+  Path: /Applications/DbVisualizer.app/Contents/java/app/jdbc/mysql/mysql.jar
+    Class: com.mysql.jdbc.Driver
+*** End Driver Information *************************
+*** Current Connection Message *********************
+Disconnected.
+*** End Current Connection Message *****************
+
+2018-07-16 14:03:26.243 INFO   677 [ExecutorRunner-pool-1-thread-1 - H.Ĵ] Exception while connecting mysql
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ipms'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2194)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.onseven.dbvis.g.B.D.ā(Z:1548)
+	at com.onseven.dbvis.g.B.F$A.call(Z:1369)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-16 14:04:15.606 INFO   677 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/dbvis.xml
+2018-07-16 14:04:15.607 INFO   677 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/dbvis.xml-20180716-140234540.tmp
+2018-07-16 14:04:15.630 INFO   677 [AWT-EventQueue-0 - A.ā]    Temp file written: 38969 bytes
+2018-07-16 14:04:15.630 INFO   677 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/CloudSync/Mackup/.dbvis/config70/dbvis.xml
+2018-07-16 14:04:15.631 INFO   677 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/dbvis.xml.bak
+2018-07-16 14:04:15.632 INFO   677 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-16 14:04:15.632 INFO   677 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/tablefilters.xml-20180716-140234546.tmp
+2018-07-16 14:04:15.633 INFO   677 [AWT-EventQueue-0 - A.ā]    Temp file written: 93 bytes
+2018-07-16 14:04:15.633 INFO   677 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/CloudSync/Mackup/.dbvis/config70/tablefilters.xml
+2018-07-16 14:04:15.634 INFO   677 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/tablefilters.xml.bak
+2018-07-16 14:04:15.634 INFO   677 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/favorites.xml
+2018-07-16 14:04:15.635 INFO   677 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/favorites.xml-20180716-140234547.tmp
+2018-07-16 14:04:15.635 INFO   677 [AWT-EventQueue-0 - A.ā]    Temp file written: 86 bytes
+2018-07-16 14:04:15.635 INFO   677 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/CloudSync/Mackup/.dbvis/config70/favorites.xml
+2018-07-16 14:04:15.636 INFO   677 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/favorites.xml.bak
+2018-07-16 14:04:15.638 INFO   677 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/templates.xml
+2018-07-16 14:04:15.638 INFO   677 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/templates.xml-20180716-140234548.tmp
+2018-07-16 14:04:15.639 INFO   677 [AWT-EventQueue-0 - A.ā]    Temp file written: 155 bytes
+2018-07-16 14:04:15.639 INFO   677 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/CloudSync/Mackup/.dbvis/config70/templates.xml
+2018-07-16 14:04:15.639 INFO   677 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/templates.xml.bak
+2018-07-16 14:04:15.640 INFO   677 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/workingset.xml
+2018-07-16 14:04:15.640 INFO   677 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/workingset.xml-20180716-140234549.tmp
+2018-07-16 14:04:15.640 INFO   677 [AWT-EventQueue-0 - A.ā]    Temp file written: 88 bytes
+2018-07-16 14:04:15.641 INFO   677 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/CloudSync/Mackup/.dbvis/config70/workingset.xml
+2018-07-16 14:04:15.641 INFO   677 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/workingset.xml.bak
+2018-07-16 14:04:15.642 INFO   677 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/mp.xml
+2018-07-16 14:04:15.642 INFO   677 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/mp.xml-20180716-140234550.tmp
+2018-07-16 14:04:15.643 INFO   677 [AWT-EventQueue-0 - A.ā]    Temp file written: 91 bytes
+2018-07-16 14:04:15.643 INFO   677 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/CloudSync/Mackup/.dbvis/config70/mp.xml
+2018-07-16 14:04:15.643 INFO   677 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/mp.xml.bak
+2018-07-16 14:04:15.645 INFO   677 [AWT-EventQueue-0 - A.ā] Writing file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-16 14:04:15.645 INFO   677 [AWT-EventQueue-0 - A.ā]    Generate/write temp file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/recent-paths.xml-20180716-140234551.tmp
+2018-07-16 14:04:15.646 INFO   677 [AWT-EventQueue-0 - A.ā]    Temp file written: 618 bytes
+2018-07-16 14:04:15.646 INFO   677 [AWT-EventQueue-0 - A.ā]    Copying temp file to: /Users/liyi/CloudSync/Mackup/.dbvis/config70/recent-paths.xml
+2018-07-16 14:04:15.647 INFO   677 [AWT-EventQueue-0 - A.ā]    Creating backup file: /Users/liyi/CloudSync/Mackup/.dbvis/config70/recent-paths.xml.bak
+2018-07-16 14:04:15.647 INFO   677 [AWT-EventQueue-0 - DbVisualizerGUI.ā] Shutdown time: 0.135

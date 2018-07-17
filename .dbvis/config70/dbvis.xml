@@ -814,10 +814,10 @@
       <Notes />
       <Url />
       <Driver>MySQL</Driver>
-      <Userid>ipms</Userid>
+      <Userid>irec</Userid>
       <Profile>auto</Profile>
       <Type>mysql</Type>
-      <Password>zbvztASIuPA=</Password>
+      <Password>lTP8n9loqZs=</Password>
       <ServerInfoFormat>1</ServerInfoFormat>
       <AutoDetectType>true</AutoDetectType>
       <Properties>
@@ -855,7 +855,9 @@
       <Password>24H2vVSUV2E=</Password>
       <ServerInfoFormat>1</ServerInfoFormat>
       <AutoDetectType>true</AutoDetectType>
-      <Properties />
+      <Properties>
+        <Property key="dbvis.ConnectionModeMigrated">true</Property>
+      </Properties>
       <UrlFormat>0</UrlFormat>
       <UrlVariables>
         <Driver>
