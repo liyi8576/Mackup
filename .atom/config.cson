@@ -25,3 +25,6 @@
     ]
   welcome:
     showOnStartup: false
+".source.yaml":
+  editor:
+    autoIndentOnPaste: true
