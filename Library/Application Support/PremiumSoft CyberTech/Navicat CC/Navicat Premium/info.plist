@@ -23,13 +23,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
+			<string>{"Name":"irec_user_label","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>Query</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>QueryView</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>New query</string>
+			<string>Open table irec_user_label@irec (MDP)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -56,13 +56,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_feature_arrange","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"irec_user_label_classify","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open table irec_feature_arrange@irec (MDP)</string>
+			<string>Open table irec_user_label_classify@irec (MDP)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -122,13 +122,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_feature_labels","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"irec_prd_feature_weight","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open table irec_feature_labels@irec (MDP)</string>
+			<string>Design table irec_prd_feature_weight@irec (MDP)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
