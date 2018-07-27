@@ -23,13 +23,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_user_label","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ci_combine_label_rel","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open table irec_user_label@irec (MDP)</string>
+			<string>Open table ci_combine_label_rel@spark4 (coc-front)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -39,9 +39,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -56,13 +56,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_user_label_classify","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ci_coo_user_rel","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open table irec_user_label_classify@irec (MDP)</string>
+			<string>Open table ci_coo_user_rel@spark4 (coc-front)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -72,9 +72,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -89,13 +89,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_prd_feature_weight","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ci_cus_label_use_stat","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open table irec_prd_feature_weight@irec (MDP)</string>
+			<string>Open table ci_cus_label_use_stat@spark4 (coc-front)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -105,9 +105,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -122,13 +122,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_prd_feature_weight","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ci_label_analysis_rule","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design table irec_prd_feature_weight@irec (MDP)</string>
+			<string>Open table ci_label_analysis_rule@spark4 (coc-front)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -138,9 +138,141 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"ci_label_assess_info","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open table ci_label_assess_info@spark4 (coc-front)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>spark4</string>
+			<key>servername</key>
+			<string>coc-front</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>5</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"ci_label_ext_info","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open table ci_label_ext_info@spark4 (coc-front)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>spark4</string>
+			<key>servername</key>
+			<string>coc-front</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>6</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"ci_label_info","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open table ci_label_info@spark4 (coc-front)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>spark4</string>
+			<key>servername</key>
+			<string>coc-front</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>7</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"ci_label_info_0616","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open table ci_label_info_0616@spark4 (coc-front)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>spark4</string>
+			<key>servername</key>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -162,13 +294,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_prd_feature_weight","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"dim_label_view_type","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table irec_prd_feature_weight</string>
+			<string>Open Table dim_label_view_type</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -178,9 +310,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -195,13 +327,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_user_label","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"dim_label_type","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_user_label</string>
+			<string>Open Table dim_label_type</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -211,9 +343,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -228,13 +360,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_user_label_classify","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"dim_label_use_type","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_user_label_classify</string>
+			<string>Open Table dim_label_use_type</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -244,9 +376,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -261,13 +393,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_business","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"dim_label_data_status","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_business</string>
+			<string>Open Table dim_label_data_status</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -277,9 +409,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -294,13 +426,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_feature_arrange","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"dim_coc_label_info","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_feature_arrange</string>
+			<string>Open Table dim_coc_label_info</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -310,9 +442,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -327,13 +459,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_prd_feature_weight","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"dim_coc_label_model_table","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_prd_feature_weight</string>
+			<string>Open Table dim_coc_label_model_table</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -343,9 +475,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -360,13 +492,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_recommend_log","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"dim_coc_label_status","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_recommend_log</string>
+			<string>Open Table dim_coc_label_status</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -376,9 +508,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -393,13 +525,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_strategy_result_stat","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ci_com_custom_rel","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_strategy_result_stat</string>
+			<string>Open Table ci_com_custom_rel</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -409,9 +541,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -426,13 +558,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_feature_labels","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ci_com_custom_info","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_feature_labels</string>
+			<string>Open Table ci_com_custom_info</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -442,9 +574,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -459,13 +591,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_prd_feature_vector","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ci_user_label_contrast","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_prd_feature_vector</string>
+			<string>Open Table ci_user_label_contrast</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -475,9 +607,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>spark4</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>coc-front</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
