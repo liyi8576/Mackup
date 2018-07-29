@@ -1,366 +1,210 @@
-[2018-07-26 16:07:55.769][coc-front][218824][MYSQL][]
+[2018-07-27 18:21:34.274][mysqldev][000006][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'
 
-[2018-07-26 16:07:55.817][coc-front][218824][MYSQL][]
+[2018-07-27 18:21:34.287][mysqldev][000006][MYSQL][]
 SHOW DATABASES
 
-[2018-07-26 16:07:57.627][coc-front][218824][MYSQL][]
-SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'spark4' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'spark4' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'spark4'
+[2018-07-27 18:22:25.764][mysqldev][000006][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'irec' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'irec' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'irec'
 
-[2018-07-26 16:07:57.836][coc-front][218824][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'spark4' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+[2018-07-27 18:22:25.807][mysqldev][000006][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'irec' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2018-07-26 16:07:57.925][coc-front][218825][MYSQL][]
+[2018-07-27 18:22:25.814][mysqldev][000006][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'irec' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2018-07-27 18:22:25.834][mysqldev][000006][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'irec' ORDER BY ROUTINE_SCHEMA
+
+[2018-07-27 18:22:25.916][mysqldev][000006][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2018-07-26 16:07:58.021][coc-front][218824][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'spark4' ORDER BY TABLE_SCHEMA, TABLE_NAME
-
-[2018-07-26 16:07:58.148][coc-front][218825][MYSQL][]
+[2018-07-27 18:22:25.994][mysqldev][000006][MYSQL][]
 SHOW TABLE STATUS
 
-[2018-07-26 16:07:58.424][coc-front][218824][MYSQL][]
-SELECT ROUTINE_SCHEMA, ROUTINE_NAME FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'spark4' ORDER BY ROUTINES.ROUTINE_SCHEMA
-
-[2018-07-26 16:07:58.659][coc-front][218824][MYSQL][]
+[2018-07-27 18:22:26.64][mysqldev][000006][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2018-07-26 16:07:58.813][coc-front][218824][MYSQL][]
+[2018-07-27 18:22:26.711][mysqldev][000006][MYSQL][]
 SHOW TABLE STATUS
 
-[2018-07-26 16:08:18.724][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`dim_label_type` LIMIT 0, 1000
+[2018-07-27 18:22:29.311][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_product` LIMIT 0, 1000
 
-[2018-07-26 16:08:18.808][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`dim_label_type`
+[2018-07-27 18:22:29.316][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_product`
 
-[2018-07-26 16:08:18.881][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'dim_label_type'
+[2018-07-27 18:22:29.319][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_product'
 
-[2018-07-26 16:08:18.946][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`dim_label_type`
+[2018-07-27 18:22:29.323][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_product`
 
-[2018-07-26 16:08:21.783][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`dim_label_use_type` LIMIT 0, 1000
+[2018-07-27 18:23:02.599][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_user_label` LIMIT 0, 1000
 
-[2018-07-26 16:08:21.856][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`dim_label_use_type`
+[2018-07-27 18:23:02.601][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_user_label`
 
-[2018-07-26 16:08:21.894][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'dim_label_use_type'
+[2018-07-27 18:23:02.606][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_user_label'
 
-[2018-07-26 16:08:21.959][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`dim_label_use_type`
+[2018-07-27 18:23:02.61][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_user_label`
 
-[2018-07-26 16:08:23.677][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`dim_label_view_type` LIMIT 0, 1000
+[2018-07-27 18:23:04.83][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_user_label_classify` LIMIT 0, 1000
 
-[2018-07-26 16:08:23.749][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`dim_label_view_type`
+[2018-07-27 18:23:04.832][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_user_label_classify`
 
-[2018-07-26 16:08:23.791][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'dim_label_view_type'
+[2018-07-27 18:23:04.834][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_user_label_classify'
 
-[2018-07-26 16:08:23.894][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`dim_label_view_type`
+[2018-07-27 18:23:04.837][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_user_label_classify`
 
-[2018-07-26 16:08:26.917][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`dim_label_data_status` LIMIT 0, 1000
+[2018-07-27 18:23:31.419][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_user_group` LIMIT 0, 1000
 
-[2018-07-26 16:08:26.993][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`dim_label_data_status`
+[2018-07-27 18:23:31.42][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_user_group`
 
-[2018-07-26 16:08:27.029][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'dim_label_data_status'
+[2018-07-27 18:23:31.422][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_user_group'
 
-[2018-07-26 16:08:27.097][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`dim_label_data_status`
+[2018-07-27 18:23:31.425][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_user_group`
 
-[2018-07-26 16:08:34.922][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`dim_coc_label_info` LIMIT 0, 1000
+[2018-07-27 18:23:35.32][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_strategy_result_stat` LIMIT 0, 1000
 
-[2018-07-26 16:08:34.977][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`dim_coc_label_info`
+[2018-07-27 18:23:35.322][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_strategy_result_stat`
 
-[2018-07-26 16:08:35.017][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'dim_coc_label_info'
+[2018-07-27 18:23:35.324][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_strategy_result_stat'
 
-[2018-07-26 16:08:35.053][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`dim_coc_label_info`
+[2018-07-27 18:23:35.327][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_strategy_result_stat`
 
-[2018-07-26 16:08:37.451][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`dim_coc_label_model_table` LIMIT 0, 1000
+[2018-07-27 18:23:56.71][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_strategy_node_log` LIMIT 0, 1000
 
-[2018-07-26 16:08:37.543][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`dim_coc_label_model_table`
+[2018-07-27 18:23:56.714][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_strategy_node_log`
 
-[2018-07-26 16:08:37.59][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'dim_coc_label_model_table'
+[2018-07-27 18:23:56.716][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_strategy_node_log'
 
-[2018-07-26 16:08:37.637][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`dim_coc_label_model_table`
+[2018-07-27 18:23:56.72][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_strategy_node_log`
 
-[2018-07-26 16:08:38.62][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`dim_coc_label_status` LIMIT 0, 1000
+[2018-07-27 18:23:58.172][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_strategy_node` LIMIT 0, 1000
 
-[2018-07-26 16:08:38.689][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`dim_coc_label_status`
+[2018-07-27 18:23:58.175][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_strategy_node`
 
-[2018-07-26 16:08:38.719][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'dim_coc_label_status'
+[2018-07-27 18:23:58.177][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_strategy_node'
 
-[2018-07-26 16:08:38.752][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`dim_coc_label_status`
+[2018-07-27 18:23:58.181][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_strategy_node`
 
-[2018-07-26 16:08:39.685][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`dim_coc_label_table` LIMIT 0, 1000
+[2018-07-27 18:23:59.235][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_strategy_log` LIMIT 0, 1000
 
-[2018-07-26 16:08:39.78][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`dim_coc_label_table`
+[2018-07-27 18:23:59.238][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_strategy_log`
 
-[2018-07-26 16:08:39.809][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'dim_coc_label_table'
+[2018-07-27 18:23:59.24][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_strategy_log'
 
-[2018-07-26 16:08:39.84][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`dim_coc_label_table`
+[2018-07-27 18:23:59.243][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_strategy_log`
 
-[2018-07-26 16:08:40.725][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`dim_coc_plan_type1` LIMIT 0, 1000
+[2018-07-27 18:24:00.338][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_strategy_abtest` LIMIT 0, 1000
 
-[2018-07-26 16:08:41.063][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`dim_coc_plan_type1`
+[2018-07-27 18:24:00.339][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_strategy_abtest`
 
-[2018-07-26 16:08:41.091][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'dim_coc_plan_type1'
+[2018-07-27 18:24:00.341][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_strategy_abtest'
 
-[2018-07-26 16:08:41.122][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`dim_coc_plan_type1`
+[2018-07-27 18:24:00.344][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_strategy_abtest`
 
-[2018-07-26 16:08:55.421][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_user_label_rel` LIMIT 0, 1000
+[2018-07-27 18:24:07.192][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_strategy` LIMIT 0, 1000
 
-[2018-07-26 16:08:55.485][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_user_label_rel`
+[2018-07-27 18:24:07.194][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_strategy`
 
-[2018-07-26 16:08:55.515][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_user_label_rel'
+[2018-07-27 18:24:07.197][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_strategy'
 
-[2018-07-26 16:08:55.576][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_user_label_rel`
+[2018-07-27 18:24:07.2][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_strategy`
 
-[2018-07-26 16:08:56.783][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_user_label_contrast` LIMIT 0, 1000
+[2018-07-27 18:24:08.471][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_recommend_log` LIMIT 0, 1000
 
-[2018-07-26 16:08:56.907][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_user_label_contrast`
+[2018-07-27 18:24:08.472][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_recommend_log`
 
-[2018-07-26 16:08:56.937][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_user_label_contrast'
+[2018-07-27 18:24:08.474][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_recommend_log'
 
-[2018-07-26 16:08:56.981][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_user_label_contrast`
+[2018-07-27 18:24:08.477][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_recommend_log`
 
-[2018-07-26 16:09:00.376][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_user_use_label` LIMIT 0, 1000
+[2018-07-27 18:24:09.778][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_product_classify` LIMIT 0, 1000
 
-[2018-07-26 16:09:00.552][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_user_use_label`
+[2018-07-27 18:24:09.78][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_product_classify`
 
-[2018-07-26 16:09:00.579][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_user_use_label'
+[2018-07-27 18:24:09.782][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_product_classify'
 
-[2018-07-26 16:09:00.61][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_user_use_label`
+[2018-07-27 18:24:09.785][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_product_classify`
 
-[2018-07-26 16:13:23.373][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_user_use_custom` LIMIT 0, 1000
+[2018-07-27 18:24:11.096][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_product1` LIMIT 0, 1000
 
-[2018-07-26 16:13:23.606][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_user_use_custom`
+[2018-07-27 18:24:11.098][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_product1`
 
-[2018-07-26 16:13:23.634][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_user_use_custom'
+[2018-07-27 18:24:11.1][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_product1'
 
-[2018-07-26 16:13:23.665][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_user_use_custom`
+[2018-07-27 18:24:11.105][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_product1`
 
-[2018-07-26 16:13:26.861][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_user_read_info` LIMIT 0, 1000
+[2018-07-27 18:24:15.74][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_process_node` LIMIT 0, 1000
 
-[2018-07-26 16:13:26.919][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_user_read_info`
+[2018-07-27 18:24:15.745][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_process_node`
 
-[2018-07-26 16:13:26.947][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_user_read_info'
+[2018-07-27 18:24:15.747][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_process_node'
 
-[2018-07-26 16:13:26.978][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_user_read_info`
+[2018-07-27 18:24:15.751][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_process_node`
 
-[2018-07-26 16:13:28.293][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_user_prochan_rel` LIMIT 0, 1000
+[2018-07-27 18:24:18.584][mysqldev][000006][MYSQL][]
+SELECT * FROM `irec`.`irec_prd_feature_weight` LIMIT 0, 1000
 
-[2018-07-26 16:13:28.587][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_user_prochan_rel`
+[2018-07-27 18:24:18.588][mysqldev][000007][MYSQL][]
+SHOW COLUMNS FROM `irec`.`irec_prd_feature_weight`
 
-[2018-07-26 16:13:28.616][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_user_prochan_rel'
+[2018-07-27 18:24:18.59][mysqldev][000006][MYSQL][]
+SHOW TABLE STATUS LIKE 'irec_prd_feature_weight'
 
-[2018-07-26 16:13:28.647][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_user_prochan_rel`
-
-[2018-07-26 16:13:38.51][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_label_info` LIMIT 0, 1000
-
-[2018-07-26 16:13:38.836][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_label_info`
-
-[2018-07-26 16:13:38.87][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_label_info'
-
-[2018-07-26 16:13:38.902][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_label_info`
-
-[2018-07-26 16:13:58.501][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_authorize_label` LIMIT 0, 1000
-
-[2018-07-26 16:13:58.585][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_authorize_label`
-
-[2018-07-26 16:13:58.612][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_authorize_label'
-
-[2018-07-26 16:13:58.642][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_authorize_label`
-
-[2018-07-26 16:14:04.867][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_category_label_rel` LIMIT 0, 1000
-
-[2018-07-26 16:14:04.923][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_category_label_rel`
-
-[2018-07-26 16:14:04.951][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_category_label_rel'
-
-[2018-07-26 16:14:04.982][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_category_label_rel`
-
-[2018-07-26 16:14:11.351][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_com_custom_info` LIMIT 0, 1000
-
-[2018-07-26 16:14:11.42][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_com_custom_info`
-
-[2018-07-26 16:14:11.457][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_com_custom_info'
-
-[2018-07-26 16:14:11.487][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_com_custom_info`
-
-[2018-07-26 16:14:12.595][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_com_custom_rel` LIMIT 0, 1000
-
-[2018-07-26 16:14:12.648][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_com_custom_rel`
-
-[2018-07-26 16:14:12.675][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_com_custom_rel'
-
-[2018-07-26 16:14:12.704][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_com_custom_rel`
-
-[2018-07-26 16:14:22.166][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_combine_label_rel` LIMIT 0, 1000
-
-[2018-07-26 16:14:22.222][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_combine_label_rel`
-
-[2018-07-26 16:14:22.25][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_combine_label_rel'
-
-[2018-07-26 16:14:22.284][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_combine_label_rel`
-
-[2018-07-26 16:14:29.476][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_coo_user_rel` LIMIT 0, 1000
-
-[2018-07-26 16:14:29.579][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_coo_user_rel`
-
-[2018-07-26 16:14:29.613][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_coo_user_rel'
-
-[2018-07-26 16:14:29.644][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_coo_user_rel`
-
-[2018-07-26 16:14:33.306][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_cus_label_use_stat` LIMIT 0, 1000
-
-[2018-07-26 16:14:33.361][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_cus_label_use_stat`
-
-[2018-07-26 16:14:33.39][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_cus_label_use_stat'
-
-[2018-07-26 16:14:33.421][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_cus_label_use_stat`
-
-[2018-07-26 16:14:49.835][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_label_analysis_rule` LIMIT 0, 1000
-
-[2018-07-26 16:14:49.893][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_label_analysis_rule`
-
-[2018-07-26 16:14:49.921][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_label_analysis_rule'
-
-[2018-07-26 16:14:49.952][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_label_analysis_rule`
-
-[2018-07-26 16:14:53.654][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_label_assess_info` LIMIT 0, 1000
-
-[2018-07-26 16:14:53.745][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_label_assess_info`
-
-[2018-07-26 16:14:53.785][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_label_assess_info'
-
-[2018-07-26 16:14:53.815][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_label_assess_info`
-
-[2018-07-26 16:15:05.369][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_label_ext_info` LIMIT 0, 1000
-
-[2018-07-26 16:15:05.596][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_label_ext_info`
-
-[2018-07-26 16:15:05.627][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_label_ext_info'
-
-[2018-07-26 16:15:05.659][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_label_ext_info`
-
-[2018-07-26 16:15:13.891][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_label_info` LIMIT 0, 1000
-
-[2018-07-26 16:15:14.328][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_label_info`
-
-[2018-07-26 16:15:14.361][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_label_info'
-
-[2018-07-26 16:15:14.399][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_label_info`
-
-[2018-07-26 16:15:36.357][coc-front][218824][MYSQL][]
-SELECT * FROM `spark4`.`ci_label_info_0616` LIMIT 0, 1000
-
-[2018-07-26 16:15:36.704][coc-front][218825][MYSQL][]
-SHOW COLUMNS FROM `spark4`.`ci_label_info_0616`
-
-[2018-07-26 16:15:36.743][coc-front][218824][MYSQL][]
-SHOW TABLE STATUS LIKE 'ci_label_info_0616'
-
-[2018-07-26 16:15:36.778][coc-front][218824][MYSQL][]
-SHOW CREATE TABLE `spark4`.`ci_label_info_0616`
+[2018-07-27 18:24:18.593][mysqldev][000006][MYSQL][]
+SHOW CREATE TABLE `irec`.`irec_prd_feature_weight`
 

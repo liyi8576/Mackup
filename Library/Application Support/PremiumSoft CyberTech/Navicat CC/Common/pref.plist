@@ -153,7 +153,19 @@
 					</dict>
 				</dict>
 				<key>Oracle</key>
-				<dict/>
+				<dict>
+					<key>10.1.48.60</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
 				<key>PostgreSQL</key>
 				<dict/>
 				<key>SQL Server</key>
@@ -284,6 +296,14 @@
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key></key>
+					<integer>721</integer>
+				</dict>
+			</dict>
+			<key>Server_ORA</key>
 			<dict>
 				<key>colwidth</key>
 				<dict>

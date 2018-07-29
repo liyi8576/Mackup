@@ -10,67 +10,6 @@
 			<dict/>
 			<key>MySQL</key>
 			<dict>
-				<key>10.1.48.60</key>
-				<dict>
-					<key>ServerVersion</key>
-					<integer>50550</integer>
-					<key>ServerVersionStr</key>
-					<string>5.5.50-MariaDB</string>
-					<key>alt_http_proxy_user_name</key>
-					<string></string>
-					<key>alt_http_user_name</key>
-					<string></string>
-					<key>alt_ssh_user_name</key>
-					<string></string>
-					<key>alt_user_name</key>
-					<string></string>
-					<key>autoconnect</key>
-					<integer>0</integer>
-					<key>customdblist</key>
-					<array/>
-					<key>encoding</key>
-					<integer>0</integer>
-					<key>host</key>
-					<string>10.1.48.60</string>
-					<key>nsy_dirty_flag</key>
-					<false/>
-					<key>nsy_hash</key>
-					<string></string>
-					<key>nsy_id</key>
-					<string></string>
-					<key>nsy_project_uuid</key>
-					<string></string>
-					<key>nsy_sync_http_proxy_user_name</key>
-					<true/>
-					<key>nsy_sync_http_user_name</key>
-					<true/>
-					<key>nsy_sync_ssh_user_name</key>
-					<true/>
-					<key>nsy_sync_user_name</key>
-					<true/>
-					<key>port</key>
-					<string>3306</string>
-					<key>savepassword</key>
-					<false/>
-					<key>savepath</key>
-					<string>/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Common/Settings/0/0/MySQL/10.13.6.103</string>
-					<key>serviceprovider</key>
-					<string>0</string>
-					<key>sessionlimit</key>
-					<integer>0</integer>
-					<key>usecompression</key>
-					<integer>0</integer>
-					<key>usecustomdblist</key>
-					<integer>0</integer>
-					<key>usehttptunnel</key>
-					<false/>
-					<key>username</key>
-					<string>irec_service</string>
-					<key>usessl</key>
-					<false/>
-					<key>usetunnel</key>
-					<false/>
-				</dict>
 				<key>192.168.0.103</key>
 				<dict>
 					<key>autoconnect</key>
@@ -392,7 +331,73 @@
 				</dict>
 			</dict>
 			<key>Oracle</key>
-			<dict/>
+			<dict>
+				<key>10.1.48.60</key>
+				<dict>
+					<key>ServerVersion</key>
+					<integer>0</integer>
+					<key>ServerVersionStr</key>
+					<string></string>
+					<key>alt_http_proxy_user_name</key>
+					<string></string>
+					<key>alt_http_user_name</key>
+					<string></string>
+					<key>alt_ssh_user_name</key>
+					<string></string>
+					<key>alt_user_name</key>
+					<string></string>
+					<key>autoconnect</key>
+					<integer>0</integer>
+					<key>clientcharsetid</key>
+					<integer>0</integer>
+					<key>clientencoding</key>
+					<integer>65001</integer>
+					<key>connectionrole</key>
+					<integer>0</integer>
+					<key>customdblist</key>
+					<array/>
+					<key>host</key>
+					<string>10.1.48.60</string>
+					<key>nsy_dirty_flag</key>
+					<false/>
+					<key>nsy_hash</key>
+					<string></string>
+					<key>nsy_id</key>
+					<string></string>
+					<key>nsy_project_uuid</key>
+					<string></string>
+					<key>nsy_sync_http_proxy_user_name</key>
+					<true/>
+					<key>nsy_sync_http_user_name</key>
+					<true/>
+					<key>nsy_sync_ssh_user_name</key>
+					<true/>
+					<key>nsy_sync_user_name</key>
+					<true/>
+					<key>port</key>
+					<string>1521</string>
+					<key>savepassword</key>
+					<true/>
+					<key>savepath</key>
+					<string>/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Common/Settings/0/0/Oracle/10.1.48.60</string>
+					<key>servicename</key>
+					<string>ORCL</string>
+					<key>servicenametype</key>
+					<integer>0</integer>
+					<key>serviceprovider</key>
+					<string>0</string>
+					<key>sessionlimit</key>
+					<integer>0</integer>
+					<key>usecustomdblist</key>
+					<integer>0</integer>
+					<key>useosauthentication</key>
+					<integer>0</integer>
+					<key>username</key>
+					<string>mcd_core</string>
+					<key>usetunnel</key>
+					<false/>
+				</dict>
+			</dict>
 			<key>PostgreSQL</key>
 			<dict/>
 			<key>SQL Server</key>
