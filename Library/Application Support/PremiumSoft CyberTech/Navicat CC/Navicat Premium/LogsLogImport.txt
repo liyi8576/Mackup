@@ -1,6 +1,7 @@
-[2017-10-26 08:57:52.826] [IMP] Import start
-[2017-10-26 08:57:52.829] [IMP] Import type - Text file
-[2017-10-26 08:57:52.829] [IMP] Import from - /Users/liyi/Develop/docker-volume/files/MG_CONT_INFO.TXT
-[2017-10-26 08:57:52.829] [IMP] Import table [MG_CONT_INFO]
-[2017-10-26 08:57:55.719] [IMP] Processed: 60586, Added: 60586, Updated: 0, Deleted: 0, Errors: 0
-[2017-10-26 08:57:55.719] [IMP] Finished successfully
+[2018-07-30 18:12:52.328] [IMP] Import start
+[2018-07-30 18:12:52.33] [IMP] Import type - Excel file
+[2018-07-30 18:12:52.33] [IMP] Import from - /Users/liyi/Downloads/mcd_plan_def.xls
+[2018-07-30 18:12:52.385] [IMP] Create table [MCD_PLAN_DEF2]
+[2018-07-30 18:12:52.385] [IMP] Import table [MCD_PLAN_DEF2]
+[2018-07-30 18:12:52.505] [IMP] Processed: 500, Added: 500, Updated: 0, Deleted: 0, Errors: 0
+[2018-07-30 18:12:52.505] [IMP] Finished successfully
