@@ -13,23 +13,27 @@
 		</dict>
 	</dict>
 	<key>autosaves</key>
-	<dict/>
-	<key>continues</key>
 	<dict>
-		<key>0</key>
+		<key>81C418C1CDE418B6447A8CE508512E4C</key>
 		<dict>
+			<key>autosavecomplete</key>
+			<true/>
+			<key>autosaveexternalquerypath</key>
+			<string></string>
+			<key>autosavelocations</key>
+			<string>[{"key":"","path":"/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium/Profiles/AutoSave/194FE7D9-9CB9-44BC-BC36-6689475C42FA.bak"}]</string>
 			<key>catalogname</key>
 			<string></string>
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"MCD_PLAN_DEF2","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
 			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
+			<string>Query</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>QueryView</string>
 			<key>name</key>
-			<string>Open table MCD_PLAN_DEF2@irec (mysqldev)</string>
+			<string>Untitled</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -39,9 +43,45 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>mdp</string>
 			<key>servername</key>
-			<string>mysqldev</string>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>continues</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
+			<key>formobjecttype</key>
+			<string>Query</string>
+			<key>formtype</key>
+			<string>QueryView</string>
+			<key>name</key>
+			<string>New query</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -56,13 +96,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_product","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
 			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
+			<string>Query</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>QueryView</string>
 			<key>name</key>
-			<string>Open table irec_product@irec (MDP)</string>
+			<string>New query</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -72,7 +112,106 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
+			<key>formobjecttype</key>
+			<string>Query</string>
+			<key>formtype</key>
+			<string>QueryView</string>
+			<key>name</key>
+			<string>New query</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
+			<key>formobjecttype</key>
+			<string>Query</string>
+			<key>formtype</key>
+			<string>QueryView</string>
+			<key>name</key>
+			<string>New query</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"mdp_kpiset_kpi","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open table mdp_kpiset_kpi@mdp (MDP)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -96,13 +235,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_product","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_expert_model","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_product</string>
+			<string>Open Table mdp_expert_model</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -112,9 +251,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>mdp</string>
 			<key>servername</key>
-			<string>mysqldev</string>
+			<string>MDP</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -129,13 +268,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_product","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_machine_learning_server","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table irec_product</string>
+			<string>Open Table mdp_machine_learning_server</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -145,7 +284,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -162,13 +301,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_product","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table irec_product</string>
+			<string>Open Table mdp_model</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -178,9 +317,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>mdp</string>
 			<key>servername</key>
-			<string>mysqldev</string>
+			<string>MDP</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -189,6 +328,105 @@
 			<integer>0</integer>
 		</dict>
 		<key>3</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"mdp_model_params","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open Table mdp_model_params</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"mdp_model","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>DesignForm</string>
+			<key>name</key>
+			<string>Design Table mdp_model</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>5</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"mdp_kpiset_kpi","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open Table mdp_kpiset_kpi</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>6</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -221,105 +459,6 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>4</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"irec_product1","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open Table irec_product1</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>irec</string>
-			<key>servername</key>
-			<string>mysqldev</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>5</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"irec_user_label_classify","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open Table irec_user_label_classify</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>irec</string>
-			<key>servername</key>
-			<string>mysqldev</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>6</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"TMP_TABLE","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open Table TMP_TABLE</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>irec</string>
-			<key>servername</key>
-			<string>mysqldev</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
 		<key>7</key>
 		<dict>
 			<key>catalogname</key>
@@ -327,13 +466,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_user_label_classify","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"irec_product","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_user_label_classify</string>
+			<string>Open Table irec_product</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -345,7 +484,7 @@
 			<key>schemaname</key>
 			<string>irec</string>
 			<key>servername</key>
-			<string>MDP</string>
+			<string>mysqldev</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -360,13 +499,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_label_enum_dic","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"irec_product","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table irec_label_enum_dic</string>
+			<string>Design Table irec_product</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -393,13 +532,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_label_enum_dic","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"irec_product","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table irec_label_enum_dic</string>
+			<string>Design Table irec_product</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
