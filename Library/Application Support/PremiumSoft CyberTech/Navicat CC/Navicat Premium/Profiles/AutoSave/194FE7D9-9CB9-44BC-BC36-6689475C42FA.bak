@@ -1,7 +1,0 @@
-select * from mdp_expert_model t where t.MODEL_NAME='model_automatic_demo';
-
-select * from mdp_model t2 where t2.model_name='model_automatic_demo';
-
-
-select * from mdp_model_task t1 where t1.model_id='5b604d5812f792000a8c4959'
-
