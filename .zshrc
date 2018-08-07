@@ -172,3 +172,9 @@ export PATH="/usr/local/opt/thrift@0.9/bin:$PATH"
 #**************sdkman setting**************
 # export SDKMAN_DIR="/Users/liyi/.sdkman"
 # [[ -s "/Users/liyi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/liyi/.sdkman/bin/sdkman-init.sh"
+#
+
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
