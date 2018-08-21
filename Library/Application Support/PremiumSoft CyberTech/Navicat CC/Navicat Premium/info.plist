@@ -100,9 +100,9 @@
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_ds</string>
+			<string>Open Table mdp_ds</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -133,9 +133,9 @@
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table mdp_ds</string>
+			<string>Design Table mdp_ds</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
