@@ -1,7 +1,7 @@
 tap "buo/cask-upgrade"
 tap "caskformula/caskformula"
 tap "d12frosted/emacs-plus"
-tap "dbcli/tap"
+tap "dbcli/tap", pin: true
 tap "hhvm/hhvm"
 tap "homebrew/bundle"
 tap "homebrew/cask"
