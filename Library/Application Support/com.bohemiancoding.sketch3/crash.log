@@ -2,46 +2,68 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>finish ToggleRulers {
-    action = "&lt;MSToggleRulersAction: 0x600000268880&gt;";
-    document = "&lt;MSDocument: 0x7fade8d64390&gt;";
+	<string>begin Pencil {
+    action = "&lt;MSPencilAction: 0x60400067e940&gt;";
+    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
 }</string>
-	<string>instant CloseDocument {
-    document = "&lt;MSDocument: 0x7fade8d64390&gt;";
-    selection =     (
-    );
-}</string>
-	<string>begin SilentCheckForUpdates {
-    action = "&lt;MSSilentCheckForUpdatesAction: 0x600000254760&gt;";
-}</string>
-	<string>finish SilentCheckForUpdates {
-    action = "&lt;MSSilentCheckForUpdatesAction: 0x600000254760&gt;";
-}</string>
-	<string>begin SilentCheckForUpdates {
-    action = "&lt;MSSilentCheckForUpdatesAction: 0x600000251ac0&gt;";
-}</string>
-	<string>finish SilentCheckForUpdates {
-    action = "&lt;MSSilentCheckForUpdatesAction: 0x600000251ac0&gt;";
-}</string>
-	<string>instant OpenDocument {
-    document = "&lt;MSDocument: 0x7fe94e419430&gt;";
-    selection =     (
-    );
-}</string>
-	<string>instant HandlerGotFocus {
+	<string>instant HandlerLostFocus {
     name = Normal;
 }</string>
-	<string>begin ToggleRulers {
-    action = "&lt;MSToggleRulersAction: 0x604000471c40&gt;";
-    document = "&lt;MSDocument: 0x7fe94e419430&gt;";
+	<string>instant HandlerGotFocus {
+    name = Pencil;
 }</string>
-	<string>finish ToggleRulers {
-    action = "&lt;MSToggleRulersAction: 0x604000471c40&gt;";
-    document = "&lt;MSDocument: 0x7fe94e419430&gt;";
+	<string>finish Pencil {
+    action = "&lt;MSPencilAction: 0x60400067e940&gt;";
+    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
+}</string>
+	<string>begin SelectionChanged {
+    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
+    newSelection =     (
+        "&lt;MSShapePathLayer: 0x6040001d9230&gt; Path (95962B11-DF18-41E4-A42E-33C2AAE978F7)"
+    );
+    oldSelection =     (
+    );
+}</string>
+	<string>finish SelectionChanged {
+    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
+    newSelection =     (
+        "&lt;MSShapePathLayer: 0x6040001d9230&gt; Path (95962B11-DF18-41E4-A42E-33C2AAE978F7)"
+    );
+    oldSelection =     (
+    );
+}</string>
+	<string>begin ArtboardChanged {
+    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
+    newArtboard = "&lt;MSArtboardGroup: 0x7fbfd7ce1990&gt; 1701\U5f53\U524d\U623f\U95f4\U88c5\U4fee\U5e03\U5c40\U56fe (D65BC812-FDA3-4E0C-9E35-0EB4BCAC9E1A)";
+    oldArtboard = "&lt;null&gt;";
+}</string>
+	<string>finish ArtboardChanged {
+    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
+    newArtboard = "&lt;MSArtboardGroup: 0x7fbfd7ce1990&gt; 1701\U5f53\U524d\U623f\U95f4\U88c5\U4fee\U5e03\U5c40\U56fe (D65BC812-FDA3-4E0C-9E35-0EB4BCAC9E1A)";
+    oldArtboard = "&lt;null&gt;";
+}</string>
+	<string>begin SelectionChanged {
+    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
+    newSelection =     (
+        "&lt;MSShapeGroup: 0x7fbfdb018ba0&gt; Path (DB9A9CD0-8213-42DA-9E69-957E18CD40BC)"
+    );
+    oldSelection =     (
+        "&lt;MSShapePathLayer: 0x6040001d9230&gt; Path (95962B11-DF18-41E4-A42E-33C2AAE978F7)"
+    );
+}</string>
+	<string>finish SelectionChanged {
+    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
+    newSelection =     (
+        "&lt;MSShapeGroup: 0x7fbfdb018ba0&gt; Path (DB9A9CD0-8213-42DA-9E69-957E18CD40BC)"
+    );
+    oldSelection =     (
+        "&lt;MSShapePathLayer: 0x6040001d9230&gt; Path (95962B11-DF18-41E4-A42E-33C2AAE978F7)"
+    );
 }</string>
 	<string>instant CloseDocument {
-    document = "&lt;MSDocument: 0x7fe94e419430&gt;";
+    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
     selection =     (
+        "&lt;MSShapeGroup: 0x7fbfdb018ba0&gt; Path (DB9A9CD0-8213-42DA-9E69-957E18CD40BC)"
     );
 }</string>
 </array>
