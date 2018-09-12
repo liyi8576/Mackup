@@ -2,13 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>begin Pencil {
-    action = "&lt;MSPencilAction: 0x60400067e940&gt;";
-    document = "&lt;MSDocument: 0x7fbfd7d1ffd0&gt;";
-}</string>
-	<string>instant HandlerLostFocus {
-    name = Normal;
-}</string>
 	<string>instant HandlerGotFocus {
     name = Pencil;
 }</string>
@@ -65,6 +58,12 @@
     selection =     (
         "&lt;MSShapeGroup: 0x7fbfdb018ba0&gt; Path (DB9A9CD0-8213-42DA-9E69-957E18CD40BC)"
     );
+}</string>
+	<string>begin SilentCheckForUpdates {
+    action = "&lt;MSSilentCheckForUpdatesAction: 0x604000851040&gt;";
+}</string>
+	<string>finish SilentCheckForUpdates {
+    action = "&lt;MSSilentCheckForUpdatesAction: 0x604000851040&gt;";
 }</string>
 </array>
 </plist>
