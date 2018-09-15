@@ -1,1 +1,0 @@
-SELECT CASE WHEN COUNT(instance_id)  > 0 THEN 1 ELSE 0 END AS result  FROM MDP_TENANT_INSTANCE  WHERE  instance_id = '111'
