@@ -81,18 +81,9 @@ function proxy_on(){
     curl ip.gs
 }
 
-# 切换至公司开发服务器docker环境
-function docker_dev(){
-    eval $(docker-machine env prd-dev)
-}
-
 # 切换至本机Mac docker环境
 function docker_mac(){
     eval $(docker-machine env -u)
-}
-# 切换至虚拟机 docker环境
-function docker_vbox(){
-    eval $(docker-machine env vbox)
 }
 
 # 更新系统
@@ -124,7 +115,7 @@ function upgrade(){
 #**********************环境变量&别名设置***************************
 export LANG=en_US.UTF-8
 export EDITOR="vim"
-export M2_HOME="/Users/liyi/Develop/apache-maven-3.5.3"
+export M2_HOME="/Users/liyi/Develop/apache-maven-3.5.4"
 export PATH="/Users/liyi/Tools:/Users/liyi/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$M2_HOME/bin:$PATH"
 alias cls="clear"
 alias ll="ls -l"
