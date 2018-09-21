@@ -174,3 +174,5 @@ export PATH=$PATH:$GOROOT/bin
 #PS1='$(kube_ps1)'$PS1
 
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+source oc_completion.sh
