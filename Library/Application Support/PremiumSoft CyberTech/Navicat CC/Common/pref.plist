@@ -292,7 +292,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>637</integer>
+					<integer>858</integer>
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>
@@ -300,7 +300,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>637</integer>
+					<integer>858</integer>
 				</dict>
 			</dict>
 			<key>Server_ORA</key>
@@ -318,7 +318,7 @@
 					<key>Collation</key>
 					<integer>120</integer>
 					<key>Comment</key>
-					<integer>50</integer>
+					<integer>220</integer>
 					<key>Created Date</key>
 					<integer>120</integer>
 					<key>Created Time</key>

@@ -1,0 +1,3 @@
+select * from result_pageinfo p 
+where  p.pagetype_id=1 
+and (p.alg_name='C5' or p.alg_name is null)
