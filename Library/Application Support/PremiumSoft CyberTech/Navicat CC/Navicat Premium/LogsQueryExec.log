@@ -1151,3 +1151,965 @@ SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING
 [2018-09-23 17:17:12.897][MDP][458339][MYSQL][]
 SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.000989*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
 
+[2018-09-24 10:35:09.569][MDP][458339][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-24 10:35:09.909][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 10:35:09.978][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 10:35:10.05][MDP][505386][MYSQL][]
+select rule_simple_total_size,rule_simple_error_size,rule_accuracy,rule_field_json,rule_sql 
+from mdp_model_task_classify_rule  
+where task_id ='5b9f045bc778ff2c311e6d34'
+order BY rule_accuracy ,rule_simple_total_size
+
+[2018-09-24 10:35:10.137][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 10:35:10.204][MDP][505386][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-24 10:35:10.262][MDP][505386][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.000987*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-24 10:37:05.265][MDP][505386][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-24 10:37:05.323][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 10:37:05.392][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 10:37:05.461][MDP][505386][MYSQL][]
+select rule_simple_total_size,rule_simple_error_size,rule_accuracy,rule_field_json,rule_sql from mdp_model_task_classify_rule  
+where task_id ='5b9f045bc778ff2c311e6d34' order BY rule_accuracy ,rule_simple_total_size
+
+[2018-09-24 10:37:05.543][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 10:37:05.61][MDP][505386][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-24 10:37:05.669][MDP][505386][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.000987*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-24 10:37:20.008][MDP][505386][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-24 10:37:20.064][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 10:37:20.134][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 10:37:20.203][MDP][505386][MYSQL][]
+select rule_simple_total_size,rule_simple_error_size,rule_accuracy,rule_field_json 
+from mdp_model_task_classify_rule  
+where task_id ='5b9f045bc778ff2c311e6d34' order BY rule_accuracy ,rule_simple_total_size
+
+[2018-09-24 10:37:20.284][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 10:37:20.352][MDP][505386][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-24 10:37:20.411][MDP][505386][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.000747*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-24 11:40:59.826][MDP][508384][MYSQL][]
+INSERT INTO `mdp`.`mdp_train_rpt_item_conf`() VALUES ()
+
+[2018-09-24 11:40:59.921][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` IS NULL AND `name` IS NULL AND `generate_mode` IS NULL AND `section_group` IS NULL AND `data_header` IS NULL AND `data_sql` IS NULL AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:41:49.713][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_log` LIMIT 0,1000
+
+[2018-09-24 11:41:50.186][MDP][508424][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_log`
+
+[2018-09-24 11:41:50.261][MDP][508384][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_log'
+
+[2018-09-24 11:41:50.335][MDP][508384][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_log`
+
+[2018-09-24 11:42:11.099][MDP][508384][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
+
+[2018-09-24 11:42:11.237][MDP][508384][MYSQL][]
+SHOW CREATE TABLE `mdp_train_rpt_item_conf` 
+
+[2018-09-24 11:42:11.373][MDP][508384][MYSQL][]
+SHOW FULL COLUMNS FROM `mdp_train_rpt_item_conf`
+
+[2018-09-24 11:42:11.514][MDP][508384][MYSQL][]
+SHOW INDEX FROM `mdp_train_rpt_item_conf`
+
+[2018-09-24 11:42:11.651][MDP][508384][MYSQL][]
+SELECT ACTION_ORDER, EVENT_OBJECT_TABLE, TRIGGER_NAME, EVENT_MANIPULATION, EVENT_OBJECT_TABLE, DEFINER, ACTION_STATEMENT, ACTION_TIMING FROM information_schema.triggers WHERE BINARY event_object_schema = 'mdp' AND BINARY event_object_table = 'mdp_train_rpt_item_conf' ORDER BY event_object_table
+
+[2018-09-24 11:42:11.807][MDP][508384][MYSQL][]
+SELECT TABLE_NAME, PARTITION_NAME, SUBPARTITION_NAME, PARTITION_METHOD, SUBPARTITION_METHOD, PARTITION_EXPRESSION, SUBPARTITION_EXPRESSION, PARTITION_DESCRIPTION, PARTITION_COMMENT, NODEGROUP, TABLESPACE_NAME FROM information_schema.PARTITIONS WHERE NOT ISNULL(PARTITION_NAME) AND TABLE_SCHEMA LIKE 'mdp' AND TABLE_NAME LIKE 'mdp_train_rpt_item_conf' ORDER BY TABLE_NAME, PARTITION_NAME, PARTITION_ORDINAL_POSITION, SUBPARTITION_ORDINAL_POSITION
+
+[2018-09-24 11:42:11.964][MDP][508384][MYSQL][]
+SHOW TABLE STATUS
+
+[2018-09-24 11:42:12.164][MDP][508384][MYSQL][]
+SELECT DISTINCT(TABLESPACE_NAME) AS TABLESPACE_NAME FROM information_schema.FILES WHERE NOT ISNULL(TABLESPACE_NAME) LIMIT 10000
+
+[2018-09-24 11:42:31.799][MDP][508384][MYSQL][]
+ALTER TABLE `mdp`.`mdp_train_rpt_item_conf` 
+MODIFY COLUMN `generate_conf` longtext CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '数据解析处理JS函数配置' AFTER `data_sql`
+
+[2018-09-24 11:42:31.972][MDP][508384][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2018-09-24 11:42:32.12][MDP][508384][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
+
+[2018-09-24 11:42:32.267][MDP][508384][MYSQL][]
+SHOW CREATE TABLE `mdp_train_rpt_item_conf` 
+
+[2018-09-24 11:42:32.428][MDP][508384][MYSQL][]
+SHOW FULL COLUMNS FROM `mdp_train_rpt_item_conf`
+
+[2018-09-24 11:42:32.569][MDP][508384][MYSQL][]
+SHOW INDEX FROM `mdp_train_rpt_item_conf`
+
+[2018-09-24 11:42:32.708][MDP][508384][MYSQL][]
+SELECT ACTION_ORDER, EVENT_OBJECT_TABLE, TRIGGER_NAME, EVENT_MANIPULATION, EVENT_OBJECT_TABLE, DEFINER, ACTION_STATEMENT, ACTION_TIMING FROM information_schema.triggers WHERE BINARY event_object_schema = 'mdp' AND BINARY event_object_table = 'mdp_train_rpt_item_conf' ORDER BY event_object_table
+
+[2018-09-24 11:42:32.858][MDP][508384][MYSQL][]
+SELECT TABLE_NAME, PARTITION_NAME, SUBPARTITION_NAME, PARTITION_METHOD, SUBPARTITION_METHOD, PARTITION_EXPRESSION, SUBPARTITION_EXPRESSION, PARTITION_DESCRIPTION, PARTITION_COMMENT, NODEGROUP, TABLESPACE_NAME FROM information_schema.PARTITIONS WHERE NOT ISNULL(PARTITION_NAME) AND TABLE_SCHEMA LIKE 'mdp' AND TABLE_NAME LIKE 'mdp_train_rpt_item_conf' ORDER BY TABLE_NAME, PARTITION_NAME, PARTITION_ORDINAL_POSITION, SUBPARTITION_ORDINAL_POSITION
+
+[2018-09-24 11:42:33.017][MDP][508384][MYSQL][]
+SELECT DISTINCT(TABLESPACE_NAME) AS TABLESPACE_NAME FROM information_schema.FILES WHERE NOT ISNULL(TABLESPACE_NAME) LIMIT 10000
+
+[2018-09-24 11:44:02.214][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `code` = 'feature_rule', `name` = '模型规则', `section_group` = '训练结果' WHERE `code` IS NULL AND `name` IS NULL AND `generate_mode` IS NULL AND `section_group` IS NULL AND `data_header` IS NULL AND `data_sql` IS NULL AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:44:02.28][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` IS NULL AND `data_sql` IS NULL AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:44:11.483][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `section_group` = '输入输出' WHERE `code` = 'overview' AND `name` = '概览' AND `generate_mode` = 'SQL' AND `section_group` = 'INFO' AND `data_header` = '[{ \"name\": \"CREATE_TIME\", \"desc\": \"开始时间\"},{ \"name\": \"END_TIME\", \"desc\": \"完成时间\"},{ \"name\": \"ELAPSED_TIME\", \"desc\": \"耗时\"},{ \"name\": \"MODEL_TYPE_NAME\", \"desc\": \"情景模式\"},{ \"name\": \"USER_NAME\", \"desc\": \"创建人\"}]' AND `data_sql` = 'select mmt.CREATE_TIME, mmt.END_TIME, CONCAT(TIMESTAMPDIFF(SECOND,mmt.create_time,mmt.end_time),\'s\') ELAPSED_TIME, mmty.MODEL_TYPE_NAME, bui.USER_NAME from mdp_model_task mmt left join mdp_model mm on mmt.model_id = mm.model_id left join mdp_model_type mmty on mm.model_type_id = mmty.model_type_id left join base_user_info bui on mm.create_user = bui.user_id where mmt.task_id = :TASK_ID' AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:44:11.553][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'overview' AND `name` = '概览' AND `generate_mode` = 'SQL' AND `section_group` = '输入输出' AND `data_header` = '[{ \"name\": \"CREATE_TIME\", \"desc\": \"开始时间\"},{ \"name\": \"END_TIME\", \"desc\": \"完成时间\"},{ \"name\": \"ELAPSED_TIME\", \"desc\": \"耗时\"},{ \"name\": \"MODEL_TYPE_NAME\", \"desc\": \"情景模式\"},{ \"name\": \"USER_NAME\", \"desc\": \"创建人\"}]' AND `data_sql` = 'select mmt.CREATE_TIME, mmt.END_TIME, CONCAT(TIMESTAMPDIFF(SECOND,mmt.create_time,mmt.end_time),\'s\') ELAPSED_TIME, mmty.MODEL_TYPE_NAME, bui.USER_NAME from mdp_model_task mmt left join mdp_model mm on mmt.model_id = mm.model_id left join mdp_model_type mmty on mm.model_type_id = mmty.model_type_id left join base_user_info bui on mm.create_user = bui.user_id where mmt.task_id = :TASK_ID' AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:44:13.328][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `section_group` = '输入输出' WHERE `code` = 'ds_input' AND `name` = '输入数据' AND `generate_mode` = 'SQL' AND `section_group` = 'INFO' AND `data_header` = '[{ \"name\": \"NAME\", \"desc\": \"数据源\"},{ \"name\": \"DS_TYPE\", \"desc\": \"类型/来源\"},{ \"name\": \"DS_SIZE\", \"desc\": \"数据量\"},{ \"name\": \"DS_FIELD_SIZE\", \"desc\": \"特征维度\"}]' AND `data_sql` = 'select md.NAME, md.DS_TYPE, md.DS_SIZE, md.DS_FIELD_SIZE from mdp_model_task mmt left join mdp_model mm on mmt.model_id = mm.model_id left join mdp_ds md on mm.ds_id = md.ds_id where mmt.task_id = :TASK_ID' AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:44:13.396][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'ds_input' AND `name` = '输入数据' AND `generate_mode` = 'SQL' AND `section_group` = '输入输出' AND `data_header` = '[{ \"name\": \"NAME\", \"desc\": \"数据源\"},{ \"name\": \"DS_TYPE\", \"desc\": \"类型/来源\"},{ \"name\": \"DS_SIZE\", \"desc\": \"数据量\"},{ \"name\": \"DS_FIELD_SIZE\", \"desc\": \"特征维度\"}]' AND `data_sql` = 'select md.NAME, md.DS_TYPE, md.DS_SIZE, md.DS_FIELD_SIZE from mdp_model_task mmt left join mdp_model mm on mmt.model_id = mm.model_id left join mdp_ds md on mm.ds_id = md.ds_id where mmt.task_id = :TASK_ID' AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:44:49.52][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select rule_simple_total_size,rule_simple_error_size,rule_accuracy,rule_field_json from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size\n' WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` IS NULL AND `data_sql` IS NULL AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:44:49.594][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` IS NULL AND `data_sql` = 'select rule_simple_total_size,rule_simple_error_size,rule_accuracy,rule_field_json from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size\n' AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:45:15.875][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size' WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` IS NULL AND `data_sql` = 'select rule_simple_total_size,rule_simple_error_size,rule_accuracy,rule_field_json from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size\n' AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:45:15.946][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` IS NULL AND `data_sql` = 'select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size' AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:46:29.94][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` IS NULL AND `data_sql` = 'select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size' AND `generate_conf` IS NULL LIMIT 1
+
+[2018-09-24 11:46:30.011][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` IS NULL AND `data_sql` = 'select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size' AND `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' LIMIT 1
+
+[2018-09-24 11:50:15.126][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_header` = '[{ \"name\": \"CONFIDENCE\", \"desc\": \"置信度\"},{ \"name\": \"TOTAL_NUM\", \"desc\": \"数据条数\"},{ \"name\": \"ERROR_NUM\", \"desc\": \"错误条数\"}]' WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` IS NULL AND `data_sql` = 'select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size' AND `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' LIMIT 1
+
+[2018-09-24 11:50:15.204][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` = '[{ \"name\": \"CONFIDENCE\", \"desc\": \"置信度\"},{ \"name\": \"TOTAL_NUM\", \"desc\": \"数据条数\"},{ \"name\": \"ERROR_NUM\", \"desc\": \"错误条数\"}]' AND `data_sql` = 'select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size' AND `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' LIMIT 1
+
+[2018-09-24 11:50:53.921][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_mode` = 'SQL_FUNC' WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` IS NULL AND `section_group` = '训练结果' AND `data_header` = '[{ \"name\": \"CONFIDENCE\", \"desc\": \"置信度\"},{ \"name\": \"TOTAL_NUM\", \"desc\": \"数据条数\"},{ \"name\": \"ERROR_NUM\", \"desc\": \"错误条数\"}]' AND `data_sql` = 'select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size' AND `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' LIMIT 1
+
+[2018-09-24 11:50:53.988][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule' AND `name` = '模型规则' AND `generate_mode` = 'SQL_FUNC' AND `section_group` = '训练结果' AND `data_header` = '[{ \"name\": \"CONFIDENCE\", \"desc\": \"置信度\"},{ \"name\": \"TOTAL_NUM\", \"desc\": \"数据条数\"},{ \"name\": \"ERROR_NUM\", \"desc\": \"错误条数\"}]' AND `data_sql` = 'select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size' AND `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' LIMIT 1
+
+[2018-09-24 11:51:20.008][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` LIMIT 0,1000
+
+[2018-09-24 11:51:20.148][MDP][508424][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 11:51:20.218][MDP][508384][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
+
+[2018-09-24 11:51:20.288][MDP][508384][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 11:52:01.256][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `code` = 'feature_rule', `section_group` = '训练结果' WHERE `code` = ''
+
+[2018-09-24 11:52:01.322][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:52:24.173][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `name` = '', `generate_mode` = 'SQL&FUNC' WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:52:24.238][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:52:47.903][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `name` = '模型规则' WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:52:47.969][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:53:01.662][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_header` = '[{ \"name\": \"CONFIDENCE\", \"desc\": \"置信度\"},{ \"name\": \"TOTAL_NUM\", \"desc\": \"数据条数\"},{ \"name\": \"ERROR_NUM\", \"desc\": \"错误条数\"}]' WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:53:01.728][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:53:11.835][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule  where task_id =:TASK_ID order BY rule_accuracy ,rule_simple_total_size' WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:53:11.9][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:53:26.705][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n' WHERE `code` = 'overview'
+
+[2018-09-24 11:53:26.779][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'overview'
+
+[2018-09-24 11:53:33.157][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = '    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n' WHERE `code` = 'overview'
+
+[2018-09-24 11:53:33.238][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'overview'
+
+[2018-09-24 11:53:35.753][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = '' WHERE `code` = 'overview'
+
+[2018-09-24 11:53:35.818][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'overview'
+
+[2018-09-24 11:53:45.657][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:53:45.727][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 11:54:00.111][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` LIMIT 0,1000
+
+[2018-09-24 11:54:00.248][MDP][508424][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 11:54:00.338][MDP][508384][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
+
+[2018-09-24 11:54:00.408][MDP][508384][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 12:38:59.365][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = '    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'rule_simple_total_size\'],\n            \'ERROR_NUM\': item[\'rule_simple_error_size\'],\n            \'CONFIDENCE\': item[\'rule_accuracy\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' WHERE `code` = 'feature_rule'
+
+[2018-09-24 12:38:59.467][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 12:39:02.996][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'FIELDCNNAME\']+\' \'+rule[\'FIELDOPERATOR\']+\' \'+rule[\'FIELDVALUE\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'RULE_SIMPLE_TOTAL_SIZE\'],\n            \'ERROR_NUM\': item[\'RULE_SIMPLE_ERROR_SIZE\'],\n            \'CONFIDENCE\': item[\'RULE_ACCURACY\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' WHERE `code` = 'feature_rule'
+
+[2018-09-24 12:39:03.062][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 12:41:05.123][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'fieldcnname\']+\' \'+rule[\'fieldoperator\']+\' \'+rule[\'fieldvalue\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'RULE_SIMPLE_TOTAL_SIZE\'],\n            \'ERROR_NUM\': item[\'RULE_SIMPLE_ERROR_SIZE\'],\n            \'CONFIDENCE\': item[\'RULE_ACCURACY\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' WHERE `code` = 'feature_rule'
+
+[2018-09-24 12:41:05.194][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 12:41:57.781][MDP][505386][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-24 12:42:22.655][MDP][508384][MYSQL][]
+KILL 505386
+
+[2018-09-24 12:42:22.723][MDP][508384][MYSQL][]
+Unknown thread id: 505386
+
+[2018-09-24 12:42:28.604][MDP][505386][MYSQL][]
+Lost connection to MySQL server during query
+
+[2018-09-24 12:42:28.605][MDP][505386][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 12:42:28.972][MDP][511384][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 12:42:34.218][MDP][511384][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-24 12:42:34.276][MDP][511384][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 12:42:34.349][MDP][511384][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 12:42:34.423][MDP][511384][MYSQL][]
+select RULE_SIMPLE_TOTAL_SIZE,RULE_SIMPLE_ERROR_SIZE,RULE_ACCURACY,RULE_FIELD_JSON from mdp_model_task_classify_rule 
+where task_id ='5b9f045bc778ff2c311e6d34'  order BY rule_accuracy ,rule_simple_total_size
+
+[2018-09-24 12:42:34.508][MDP][511384][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 12:42:34.583][MDP][511384][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-24 12:42:34.642][MDP][511384][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001014*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-24 12:43:39.708][MDP][508384][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var resultList=[];\n    for(var i=0;i<list.length;i++){\n        var item=list[i];\n        var json=item[\'RULE_FIELD_JSON\'];\n        var itemRules=[];\n        var ruleList=JSON.parse(json);\n        for(var j=0;j<ruleList.length;j++){\n            var rule=ruleList[j];\n            itemRules.push(rule[\'fieldCnName\']+\' \'+rule[\'fieldOperator\']+\' \'+rule[\'fieldValue\']);\n        }\n        resultList.push({\n            \'TOTAL_NUM\': item[\'RULE_SIMPLE_TOTAL_SIZE\'],\n            \'ERROR_NUM\': item[\'RULE_SIMPLE_ERROR_SIZE\'],\n            \'CONFIDENCE\': item[\'RULE_ACCURACY\'],\n            \'RULE\': itemRules.join(\'|\'),\n        });\n    }\n    return resultList;\n}' WHERE `code` = 'feature_rule'
+
+[2018-09-24 12:43:39.778][MDP][508384][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'feature_rule'
+
+[2018-09-24 14:21:13.972][MDP][515857][MYSQL][]
+SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
+
+[2018-09-24 14:21:15.981][MDP][515857][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2018-09-24 14:21:16.051][MDP][515857][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+
+[2018-09-24 14:21:16.121][MDP][515857][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2018-09-24 14:21:16.311][MDP][515857][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_SCHEMA
+
+[2018-09-24 14:21:16.358][MDP][515861][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2018-09-24 14:21:16.493][MDP][515857][MYSQL][]
+SHOW TABLE STATUS
+
+[2018-09-24 14:21:16.758][MDP][515857][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2018-09-24 14:21:16.896][MDP][515857][MYSQL][]
+SHOW TABLE STATUS
+
+[2018-09-24 14:21:20.959][MDP][515857][MYSQL][]
+SELECT * FROM `mdp`.`result_pageitem` LIMIT 0,1000
+
+[2018-09-24 14:21:21.091][MDP][515861][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`result_pageitem`
+
+[2018-09-24 14:21:21.154][MDP][515857][MYSQL][]
+SHOW TABLE STATUS LIKE 'result_pageitem'
+
+[2018-09-24 14:21:21.217][MDP][515857][MYSQL][]
+SHOW CREATE TABLE `mdp`.`result_pageitem`
+
+[2018-09-24 14:21:22.851][MDP][515867][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `section_group` = '模型信息' WHERE `code` = 'ds_input'
+
+[2018-09-24 14:21:22.912][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'ds_input'
+
+[2018-09-24 14:21:24.152][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`result_pageinfo` LIMIT 0,1000
+
+[2018-09-24 14:21:24.363][MDP][515857][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`result_pageinfo`
+
+[2018-09-24 14:21:24.426][MDP][515867][MYSQL][]
+SHOW TABLE STATUS LIKE 'result_pageinfo'
+
+[2018-09-24 14:21:24.492][MDP][515867][MYSQL][]
+SHOW CREATE TABLE `mdp`.`result_pageinfo`
+
+[2018-09-24 14:21:28.288][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_token_conf` LIMIT 0,1000
+
+[2018-09-24 14:21:28.413][MDP][515857][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_token_conf`
+
+[2018-09-24 14:21:28.474][MDP][515867][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_token_conf'
+
+[2018-09-24 14:21:28.544][MDP][515867][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_token_conf`
+
+[2018-09-24 14:21:31.294][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_conf` LIMIT 0,1000
+
+[2018-09-24 14:21:31.422][MDP][515857][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_conf`
+
+[2018-09-24 14:21:31.487][MDP][515867][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_conf'
+
+[2018-09-24 14:21:31.555][MDP][515867][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_conf`
+
+[2018-09-24 14:21:32.421][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` LIMIT 0,1000
+
+[2018-09-24 14:21:32.552][MDP][515857][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 14:21:32.615][MDP][515867][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
+
+[2018-09-24 14:21:32.678][MDP][515867][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 14:21:37.464][MDP][515867][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `section_group` = '模型信息' WHERE `code` = 'overview'
+
+[2018-09-24 14:21:37.529][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'overview'
+
+[2018-09-24 14:21:42.518][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` LIMIT 0,1000
+
+[2018-09-24 14:21:42.653][MDP][515867][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 14:21:42.718][MDP][515883][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
+
+[2018-09-24 14:21:42.781][MDP][515883][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 14:22:57.128][MDP][515867][MYSQL][]
+INSERT INTO `mdp`.`mdp_train_rpt_item_conf`(`code`, `name`) VALUES ('indi_input', '进入模型的数据')
+
+[2018-09-24 14:22:57.191][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'indi_input'
+
+[2018-09-24 14:23:01.995][MDP][515867][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_mode` = 'SQL' WHERE `code` = 'indi_input'
+
+[2018-09-24 14:23:02.063][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'indi_input'
+
+[2018-09-24 14:23:10.000][MDP][515867][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `section_group` = '模型信息' WHERE `code` = 'indi_input'
+
+[2018-09-24 14:23:10.061][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'indi_input'
+
+[2018-09-24 14:23:45.702][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_log` LIMIT 0,1000
+
+[2018-09-24 14:23:45.832][MDP][515883][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_log`
+
+[2018-09-24 14:23:45.896][MDP][515867][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_log'
+
+[2018-09-24 14:23:45.974][MDP][515867][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_log`
+
+[2018-09-24 14:24:18.146][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`result_pagetype` LIMIT 0,1000
+
+[2018-09-24 14:24:18.269][MDP][515883][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`result_pagetype`
+
+[2018-09-24 14:24:18.332][MDP][515867][MYSQL][]
+SHOW TABLE STATUS LIKE 'result_pagetype'
+
+[2018-09-24 14:24:18.397][MDP][515867][MYSQL][]
+SHOW CREATE TABLE `mdp`.`result_pagetype`
+
+[2018-09-24 14:26:11.9][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`result_pageinfo` ORDER BY `pageitem_id`  LIMIT 0,1000
+
+[2018-09-24 14:26:12.098][MDP][515883][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`result_pageinfo`
+
+[2018-09-24 14:26:12.162][MDP][515867][MYSQL][]
+SHOW TABLE STATUS LIKE 'result_pageinfo'
+
+[2018-09-24 14:26:12.227][MDP][515867][MYSQL][]
+SHOW CREATE TABLE `mdp`.`result_pageinfo`
+
+[2018-09-24 14:26:15.026][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`result_pageinfo` ORDER BY `pagetype_id`  LIMIT 0,1000
+
+[2018-09-24 14:26:15.224][MDP][515883][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`result_pageinfo`
+
+[2018-09-24 14:26:15.294][MDP][515867][MYSQL][]
+SHOW TABLE STATUS LIKE 'result_pageinfo'
+
+[2018-09-24 14:26:15.359][MDP][515867][MYSQL][]
+SHOW CREATE TABLE `mdp`.`result_pageinfo`
+
+[2018-09-24 14:29:37.742][MDP][515867][MYSQL][]
+SELECT * FROM `mdp`.`mdp_model_task_kpi` LIMIT 0,1000
+
+[2018-09-24 14:29:38.138][MDP][515883][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_model_task_kpi`
+
+[2018-09-24 14:29:38.202][MDP][515867][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_model_task_kpi'
+
+[2018-09-24 14:29:38.269][MDP][515867][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_model_task_kpi`
+
+[2018-09-24 14:29:48.873][MDP][515867][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2018-09-24 14:29:48.937][MDP][515883][MYSQL][]
+SHOW TABLE STATUS
+
+[2018-09-24 14:29:49.094][MDP][515867][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+
+[2018-09-24 14:30:04.029][MDP][515867][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-24 14:30:04.094][MDP][515867][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:30:04.174][MDP][515867][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:30:04.252][MDP][515867][MYSQL][]
+select * from mdp_model_task_kpi
+
+[2018-09-24 14:30:16.464][MDP][515883][MYSQL][]
+KILL 515867
+
+[2018-09-24 14:30:47.42][MDP][515867][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-24 14:30:47.808][MDP][516297][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:30:47.911][MDP][516297][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:30:48.012][MDP][516297][MYSQL][]
+select * from mdp_model_task_kpi t where t.task_id='5b9f045bc778ff2c311e6d34'
+
+[2018-09-24 14:30:48.147][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_model_task_kpi` LIMIT 0
+
+[2018-09-24 14:30:48.27][MDP][515883][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_model_task_kpi`
+
+[2018-09-24 14:30:48.34][MDP][516297][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:30:48.421][MDP][516297][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-24 14:30:48.486][MDP][516297][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001021*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-24 14:31:39.161][MDP][516297][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-24 14:31:39.23][MDP][516297][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:31:39.379][MDP][516297][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:31:39.461][MDP][516297][MYSQL][]
+select field_id,field_cn_name,field_desc from mdp_model_task_kpi t where t.task_id='5b9f045bc778ff2c311e6d34'
+
+[2018-09-24 14:31:39.604][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_model_task_kpi` LIMIT 0
+
+[2018-09-24 14:31:39.681][MDP][516297][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:31:39.756][MDP][516297][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-24 14:31:39.826][MDP][516297][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001021*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-24 14:32:10.301][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select field_id,field_cn_name,field_desc from mdp_model_task_kpi t where t.task_id=:TASK_ID' WHERE `code` = 'indi_input'
+
+[2018-09-24 14:32:10.363][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'indi_input'
+
+[2018-09-24 14:37:45.017][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select field_id as kpiId,field_cn_name as kpiName,field_desc as kpiDesc from mdp_model_task_kpi t where t.task_id=:TASK_ID' WHERE `code` = 'indi_input'
+
+[2018-09-24 14:37:45.081][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'indi_input'
+
+[2018-09-24 14:39:11.849][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_header` = '[{\"name\":\"KPI_ID\",\"desc\":\"指标编码\"},{\"name\":\"KPI_NAME\",\"desc\":\"指标名称\"},{\"name\":\"KPI_DESC\",\"desc\":\"指标描述\"}]\n' WHERE `code` = 'indi_input'
+
+[2018-09-24 14:39:11.91][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'indi_input'
+
+[2018-09-24 14:40:08.384][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select field_id as KPI_ID,field_cn_name as KPI_NAME,field_desc as KPI_DESC from mdp_model_task_kpi t where t.task_id=:TASK_ID' WHERE `code` = 'indi_input'
+
+[2018-09-24 14:40:08.461][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'indi_input'
+
+[2018-09-24 14:43:56.144][MDP][515883][MYSQL][]
+INSERT INTO `mdp`.`mdp_train_rpt_item_conf`(`generate_mode`) VALUES ('SQL&FUNC')
+
+[2018-09-24 14:43:56.212][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` IS NULL
+
+[2018-09-24 14:44:01.749][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select PARAM_JSON from mdp_model_task where task_id=:taskId' WHERE `code` IS NULL
+
+[2018-09-24 14:44:01.811][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` IS NULL
+
+[2018-09-24 14:44:43.356][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_header` = '[{\"name\":\"imgTitle\",\"desc\":\"图片名称\"},{\"name\":\"imgUrl\",\"desc\":\"图片路径\"}]' WHERE `code` IS NULL
+
+[2018-09-24 14:44:43.424][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` IS NULL
+
+[2018-09-24 14:45:23.306][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `code` = 'train_ROC', `name` = '训练集ROC曲线' WHERE `code` IS NULL
+
+[2018-09-24 14:45:23.369][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 14:45:43.246][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `section_group` = '效果评估' WHERE `code` = 'train_ROC'
+
+[2018-09-24 14:45:43.312][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 14:46:19.532][MDP][516297][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-24 14:46:19.613][MDP][516297][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:46:19.699][MDP][516297][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:46:19.789][MDP][516297][MYSQL][]
+select PARAM_JSON from mdp_model_task where task_id='5b9f045bc778ff2c311e6d34'
+
+[2018-09-24 14:46:19.862][MDP][516297][MYSQL][]
+SHOW STATUS
+
+[2018-09-24 14:46:19.943][MDP][516297][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-24 14:46:20.013][MDP][516297][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.000782*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-24 14:53:23.318][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var parmJson=list.get(0);\n    var json=JSON.parse(parmJson);\n    var resultInfo=json[\'trainResultInfo\'];\n    if(resultInfo){\n        return resultInfo[\'testRocPngFile\'];\n    }\n    return null;\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 14:53:23.383][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 14:53:45.216][MDP][515883][MYSQL][]
+INSERT INTO `mdp`.`mdp_train_rpt_item_conf`(`code`) VALUES ('test_ROC')
+
+[2018-09-24 14:53:45.28][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:54:36.19][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `name` = '校验集ROC曲线' WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:54:36.287][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:54:39.037][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_mode` = 'SQL&FUNC' WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:54:39.103][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:54:41.789][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `section_group` = '效果评估' WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:54:41.87][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:54:45.271][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_header` = '[{\"name\":\"imgTitle\",\"desc\":\"图片名称\"},{\"name\":\"imgUrl\",\"desc\":\"图片路径\"}]' WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:54:45.333][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:55:15.559][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_header` = '[{\"name\":\"imgTitle\",\"desc\":\"图片名称\"},{\"name\":\"imgUrl\",\"desc\":\"图片路径\"}]' WHERE `code` = 'train_ROC'
+
+[2018-09-24 14:55:15.623][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 14:55:46.98][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select PARAM_JSON from mdp_model_task where task_id=:taskId' WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:55:47.042][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:55:54.592][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var parmJson=list.get(0);\n    var json=JSON.parse(parmJson);\n    var resultInfo=json[\'trainResultInfo\'];\n    if(resultInfo){\n        return resultInfo[\'testRocPngFile\'];\n    }\n    return null;\n}' WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:55:54.657][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:56:07.418][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var parmJson=list.get(0);\n    var json=JSON.parse(parmJson);\n    var resultInfo=json[\'trainResultInfo\'];\n    if(resultInfo){\n        return resultInfo[\'trainRocPngFile\'];\n    }\n    return null;\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 14:56:07.482][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 14:56:13.557][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list){\n    var parmJson=list.get(0);\n    var json=JSON.parse(parmJson);\n    var resultInfo=json[\'trainResultInfo\'];\n    if(resultInfo){\n        return resultInfo[\'testRocPngFile\'];\n    }\n    return null;\n}' WHERE `code` = 'test_ROC'
+
+[2018-09-24 14:56:13.619][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 15:11:15.876][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_mode` = 'SQL&CHART' WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:11:15.943][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:12:06.076][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_mode` = 'SQL&CHART' WHERE `code` = 'test_ROC'
+
+[2018-09-24 15:12:06.138][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 15:18:04.72][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var parmJson=list.get(0);\n    var json=JSON.parse(parmJson);\n    var resultInfo=json[\'trainResultInfo\'];\n    if(resultInfo){\n        var img = resultInfo[\'testRocPngFile\'];\n        var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n        return {\n            imgTitle: \'训练集ROC曲线\',\n            imgUrl: vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\']\n        }\n    }\n    return null;\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:18:04.786][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:18:11.684][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var parmJson = list.get(0);\n    var json = JSON.parse(parmJson);\n    var resultInfo = json[\'testResultInfo\'];\n    if(resultInfo){\n        var img = resultInfo[\'testRocPngFile\'];\n        var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');\n        return {\n            imgTitle: \'校验集ROC曲线\',\n            imgUrl: vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\']\n        }\n    }\n    return null;\n}' WHERE `code` = 'test_ROC'
+
+[2018-09-24 15:18:11.749][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 15:18:54.091][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_mode` = 'SQL&FUNC' WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:18:54.152][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:18:57.047][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_mode` = 'SQL&FUNC' WHERE `code` = 'test_ROC'
+
+[2018-09-24 15:18:57.119][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'test_ROC'
+
+[2018-09-24 15:29:43.565][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `code` = 'train_ROC' WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:29:43.629][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:29:45.629][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `code` = 'check_ROC' WHERE `code` = 'test_ROC'
+
+[2018-09-24 15:29:45.705][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
+
+[2018-09-24 15:32:44.924][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select PARAM_JSON from mdp_model_task where task_id=:TASK_ID' WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:32:44.987][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:32:50.123][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select PARAM_JSON from mdp_model_task where task_id=:TASK_ID' WHERE `code` = 'check_ROC'
+
+[2018-09-24 15:32:50.186][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
+
+[2018-09-24 15:40:02.852][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\'];\n        var json=JSON.parse(parmJson);\n        var resultInfo=json[\'trainResultInfo\'];\n        if(resultInfo){\n            var img = resultInfo[\'testRocPngFile\'];\n            var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n            resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n        }\n    }\n    return {\n        imgTitle: \'训练集ROC曲线\',\n        imgUrl: resultUrl\n    };\n' WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:40:02.922][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:40:05.513][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = '' WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:40:05.575][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:40:09.053][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\'];\n        var json=JSON.parse(parmJson);\n        var resultInfo=json[\'trainResultInfo\'];\n        if(resultInfo){\n            var img = resultInfo[\'testRocPngFile\'];\n            var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n            resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n        }\n    }\n    return {\n        imgTitle: \'训练集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:40:09.12][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:40:33.889][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\'];\n        var json=JSON.parse(parmJson);\n        var resultInfo=json[\'testResultInfo\'];\n        if(resultInfo){\n            var img = resultInfo[\'testRocPngFile\'];\n            var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n            resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n        }\n    }\n    return {\n        imgTitle: \'训练集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'check_ROC'
+
+[2018-09-24 15:40:33.953][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
+
+[2018-09-24 15:40:47.378][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\'];\n        var json=JSON.parse(parmJson);\n        var resultInfo=json[\'trainResultInfo\'];\n        if(resultInfo){\n            var img = resultInfo[\'trainRocPngFile\'];\n            var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n            resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n        }\n    }\n    return {\n        imgTitle: \'训练集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 15:40:47.442][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:05:39.491][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\'];\n        var json=JSON.parse(parmJson);\n        return json;\n        var resultInfo=json[\'trainResultInfo\'];\n        if(resultInfo){\n            var img = resultInfo[\'trainRocPngFile\'];\n            var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n            resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n        }\n    }\n    return {\n        imgTitle: \'训练集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:05:39.56][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:07:47.292][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\'];\n        var json=JSON.parse(parmJson);\n        return json;\n        var resultInfo=json[\'testResultInfo\'];\n        if(resultInfo){\n            var img = resultInfo[\'testRocPngFile\'];\n            var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n            resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n        }\n    }\n    return {\n        imgTitle: \'校验集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:07:47.355][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:09:40.417][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\'];\n        var json=JSON.parse(parmJson);\n        return json;\n        var resultInfo=json[\'trainResultInfo\'];\n        if(resultInfo){\n            var img = resultInfo[\'testRocPngFile\'];\n            var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n            resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n        }\n    }\n    return {\n        imgTitle: \'校验集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:09:40.482][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:09:52.972][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\'];\n        var json=JSON.parse(parmJson);\n        var resultInfo=json[\'trainResultInfo\'];\n        if(resultInfo){\n            var img = resultInfo[\'testRocPngFile\'];\n            var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n            resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n        }\n    }\n    return {\n        imgTitle: \'校验集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:09:53.034][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:10:01.86][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\'];\n        var json=JSON.parse(parmJson);\n        var resultInfo=json[\'trainResultInfo\'];\n        if(resultInfo){\n            var img = resultInfo[\'trainRocPngFile\'];\n            var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n            resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n        }\n    }\n    return {\n        imgTitle: \'训练集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:10:01.927][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:13:25.306][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\']||{};\n        var json=JSON.parse(parmJson);\n        var trainResultInfo=json[\'trainResultInfo\']||{};\n        var resultInfo=trainResultInfo[\'resultInfo\']||{};\n        var img = resultInfo[\'testRocPngFile\']||{};\n        var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n        resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n    }\n    return {\n        imgTitle: \'校验集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:13:25.368][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:13:35.649][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\']||{};\n        var json=JSON.parse(parmJson);\n        var trainResultInfo=json[\'trainResultInfo\']||{};\n        var resultInfo=trainResultInfo[\'resultInfo\']||{};\n        var img = resultInfo[\'trainRocPngFile\']||{};\n        var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n        resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n    }\n    return {\n        imgTitle: \'训练集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:13:35.712][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:15:27.382][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\']||{};\n        var json=JSON.parse(parmJson);\n        var trainResultInfo=json[\'trainResultInfo\']||{};\n        var resultInfo=trainResultInfo[\'resultInfo\']||{};\n        var img = resultInfo[\'testRocPngFile\']||\'\';\n        var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n        resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n    }\n    return {\n        imgTitle: \'校验集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:15:27.448][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:15:36.851][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\']||{};\n        var json=JSON.parse(parmJson);\n        var trainResultInfo=json[\'trainResultInfo\']||{};\n        var resultInfo=trainResultInfo[\'resultInfo\']||{};\n        var img = resultInfo[\'trainRocPngFile\']||\'\';\n        var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n        resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n    }\n    return {\n        imgTitle: \'训练集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:15:36.918][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:40:55.324][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `code` = 'train_ROC' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:40:55.39][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:52:34.052][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` LIMIT 0,1000
+
+[2018-09-24 16:52:34.438][MDP][524229][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 16:52:34.509][MDP][515883][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
+
+[2018-09-24 16:52:34.573][MDP][515883][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 16:52:54.223][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `code` = 'check_ROC' WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:52:54.283][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
+
+[2018-09-24 16:53:11.067][MDP][515883][MYSQL][]
+INSERT INTO `mdp`.`mdp_train_rpt_item_conf`(`code`) VALUES ('train_ROC')
+
+[2018-09-24 16:53:11.126][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:14.772][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `name` = '校验集ROC曲线' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:14.832][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:20.15][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_mode` = 'SQL&FUNC' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:20.211][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:23.43][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `section_group` = '效果评估' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:23.497][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:36.195][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_header` = '[{\"name\":\"imgTitle\",\"desc\":\"图片名称\"},{\"name\":\"imgUrl\",\"desc\":\"图片路径\"}]' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:36.258][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:40.947][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select PARAM_JSON from mdp_model_task where task_id=:TASK_ID' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:53:41.027][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:54:23.243][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n  var resultUrl;\n  if(list && list.length>0){\n      var parmJson= list.get(0)[\'PARAM_JSON\']||{};\n      var json=JSON.parse(parmJson);\n      var trainResultInfo=json[\'trainResultInfo\']||{};\n      var resultInfo=trainResultInfo[\'resultInfo\']||{};\n      var img = resultInfo[\'trainRocPngFile\']||\'\';\n      var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n      resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n  }\n  return {\n      imgTitle: \'训练集ROC曲线\',\n      imgUrl: resultUrl\n  };\n}' WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:54:23.308][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+
+[2018-09-24 16:54:28.193][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` LIMIT 0,1000
+
+[2018-09-24 16:54:28.323][MDP][524229][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 16:54:28.388][MDP][515883][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
+
+[2018-09-24 16:54:28.457][MDP][515883][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_item_conf`
+
+[2018-09-24 17:14:03.939][MDP][515883][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_conf` SET `arith_id` = 'C5' WHERE `scene_id` = '1' AND `arith_id` = '1'
+
+[2018-09-24 17:14:04.012][MDP][515883][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_conf` WHERE `scene_id` = '1' AND `arith_id` = 'C5'
+

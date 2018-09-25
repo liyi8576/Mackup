@@ -1,6 +1,0 @@
-select rule_simple_total_size,rule_simple_error_size,rule_accuracy,rule_field_json,rule_sql 
-from mdp_model_task_classify_rule  
-where task_id ='5b9f045bc778ff2c311e6d34'
-order BY rule_accuracy ,rule_simple_total_size
-
-
