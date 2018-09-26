@@ -176,3 +176,8 @@ export PATH=$PATH:$GOROOT/bin
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 source ./oc_completion.sh
+
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "dracula/zsh", as:theme

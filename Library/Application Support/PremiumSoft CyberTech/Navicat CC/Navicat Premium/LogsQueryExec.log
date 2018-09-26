@@ -1,155 +1,66 @@
-[2018-09-25 15:06:23.302][MDP][596934][MYSQL][]
+[2018-09-26 11:05:47.345][MDP][652115][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'
 
-[2018-09-25 15:06:23.369][MDP][596934][MYSQL][]
+[2018-09-26 11:05:47.412][MDP][652115][MYSQL][]
 SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
 
-[2018-09-25 15:06:26.501][MDP][596934][MYSQL][]
+[2018-09-26 11:05:49.571][MDP][652115][MYSQL][]
 SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
 
-[2018-09-25 15:06:26.572][MDP][596934][MYSQL][]
+[2018-09-26 11:05:49.642][MDP][652115][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2018-09-25 15:06:26.636][MDP][596934][MYSQL][]
+[2018-09-26 11:05:49.714][MDP][652115][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
 
-[2018-09-25 15:06:26.831][MDP][596934][MYSQL][]
+[2018-09-26 11:05:49.934][MDP][652115][MYSQL][]
 SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_SCHEMA
 
-[2018-09-25 15:06:26.866][MDP][596938][MYSQL][]
+[2018-09-26 11:05:49.965][MDP][652117][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2018-09-25 15:06:27.008][MDP][596934][MYSQL][]
+[2018-09-26 11:05:50.128][MDP][652115][MYSQL][]
 SHOW TABLE STATUS
 
-[2018-09-25 15:06:27.958][MDP][596934][MYSQL][]
+[2018-09-26 11:05:51.057][MDP][652115][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2018-09-25 15:06:28.107][MDP][596934][MYSQL][]
+[2018-09-26 11:05:51.187][MDP][652115][MYSQL][]
 SHOW TABLE STATUS
 
-[2018-09-25 15:06:32.448][MDP][596934][MYSQL][]
-SELECT * FROM `mdp`.`mdp_tenant_instance` LIMIT 0,1000
-
-[2018-09-25 15:06:32.634][MDP][596938][MYSQL][]
-SHOW COLUMNS FROM `mdp`.`mdp_tenant_instance`
-
-[2018-09-25 15:06:32.744][MDP][596934][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
-
-[2018-09-25 15:06:32.818][MDP][596934][MYSQL][]
-SHOW CREATE TABLE `mdp`.`mdp_tenant_instance`
-
-[2018-09-25 15:10:16.855][MDP][596934][MYSQL][]
-DELETE FROM `mdp`.`mdp_tenant_instance` WHERE `instance_id` = 'ABCD' AND `tenant` = 'xz' AND `tenant_name` IS NULL AND `tenant_desc` IS NULL AND `parameters` = '{\"resQuota\":{\"memory\":5.0,\"cpu\":16.0,\"storage\":50.0},\"tenant\":\"xz\"}' AND `arrange_setting` = '{\"MINER\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}},\"MDPSERVER\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}},\"UI\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}},\"NOTEBOOK\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}}}' AND `mdpserver_route` = 'xz.mdpserver.prd.dataos.io' AND `mdpserver_svc` = '172.25.172.40:9099' AND `miner_route` = 'xz.miner.prd.dataos.io' AND `miner_svc` = '172.25.190.109:8888' AND `notebook_route` = 'xz.notebook.prd.dataos.io' AND `notebook_svc` = '172.25.124.208:9098' AND `ui_route` = 'xz.ui.prd.dataos.io' AND `ui_svc` = '172.25.11.152:9097' AND `service_id` = '2CA11441-8154-4E69-AF78-D498EA9D37A3' AND `plan_id` = 'E0123F53-F2FC-46A1-B648-09941F01D8BC' AND `create_time` = Cast('2018-09-21 17:42:49' AS Binary(19)) AND `update_time` IS NULL LIMIT 1
-
-[2018-09-25 15:33:48.321][MDP][596934][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_conf` LIMIT 0,1000
-
-[2018-09-25 15:33:48.574][MDP][596938][MYSQL][]
-SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_conf`
-
-[2018-09-25 15:33:48.703][MDP][596934][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_train_rpt_conf'
-
-[2018-09-25 15:33:48.819][MDP][596934][MYSQL][]
-SHOW CREATE TABLE `mdp`.`mdp_train_rpt_conf`
-
-[2018-09-25 15:33:55.244][MDP][596934][MYSQL][]
+[2018-09-26 11:05:57.21][MDP][652115][MYSQL][]
 SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` LIMIT 0,1000
 
-[2018-09-25 15:33:55.443][MDP][596938][MYSQL][]
+[2018-09-26 11:05:57.336][MDP][652117][MYSQL][]
 SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_item_conf`
 
-[2018-09-25 15:33:55.551][MDP][596934][MYSQL][]
+[2018-09-26 11:05:57.398][MDP][652115][MYSQL][]
 SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
 
-[2018-09-25 15:33:55.65][MDP][596934][MYSQL][]
+[2018-09-26 11:05:57.47][MDP][652115][MYSQL][]
 SHOW CREATE TABLE `mdp`.`mdp_train_rpt_item_conf`
 
-[2018-09-25 16:05:33.608][MDP][596934][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_conf` SET `reprt_conf` = '[ { \"tab\": \"模型信息\", \"sections\": [ { \"title\": \"概览\", \"uiType\": \"SimpleTable\", \"conf\": \"overview\" }, { \"title\": \"输入数据源\", \"uiType\": \"SimpleTable\", \"conf\": \"ds_input\" }, { \"title\": \"进入模型的数据\", \"uiType\": \"FeatureTable\", \"conf\": \"indi_input\" }, { \"title\": \"算法&超参数\", \"uiType\": \"SimpleTable\", \"conf\": \"arith_parms\" } ] }, { \"tab\": \"效果评估\", \"sections\": [ { \"title\": \"混淆矩阵\", \"subSections\": [ { \"title\": \"训练集\", \"conf\": { \"stat\": \"train_stat\", \"list\": \"train_list\" } }, { \"title\": \"校验集\", \"conf\": { \"stat\": \"check_stat\", \"list\": \"check_list\" } } ] }, { \"title\": \"ROC曲线\", \"subSections\": [ { \"title\": \"训练集\", \"uiType\": \"Chart\", \"conf\": \"train_ROC\" }, { \"title\": \"校验集\", \"uiType\": \"Chart\", \"conf\": \"check_ROC\" } ] } ] }, { \"tab\": \"训练结果\", \"sections\": [ { \"title\": \"模型规则Top5\", \"uiType\": \"ModelRuleTable\", \"conf\": \"feature_rule\" } ] }]' WHERE `scene_id` = '1' AND `arith_id` = 'C5'
+[2018-09-26 11:05:58.587][MDP][652115][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_conf` LIMIT 0,1000
 
-[2018-09-25 16:05:33.745][MDP][596934][MYSQL][]
+[2018-09-26 11:05:58.736][MDP][652117][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_conf`
+
+[2018-09-26 11:05:58.802][MDP][652115][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_train_rpt_conf'
+
+[2018-09-26 11:05:58.866][MDP][652115][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_train_rpt_conf`
+
+[2018-09-26 11:07:11.238][MDP][652115][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_conf` SET `reprt_conf` = '[ { \"tab\": \"模型信息\", \"sections\": [ { \"title\": \"概览\", \"uiType\": \"SimpleTable\", \"conf\": \"overview\" }, { \"title\": \"输入数据源\", \"uiType\": \"SimpleTable\", \"conf\": \"ds_input\" }, { \"title\": \"进入模型的数据\", \"uiType\": \"FeatureTable\", \"conf\": \"indi_input\" }, { \"title\": \"算法&超参数\", \"uiType\": \"ArithParamTable\", \"conf\": \"arith_parms\" } ] }, { \"tab\": \"效果评估\", \"sections\": [ { \"title\": \"混淆矩阵\", \"layout\": \"TowColumnLayout\", \"subSections\": [ { \"title\": \"训练集\", \"uiType\": \"SimpleTable\", \"conf\": { \"stat\": \"train_stat\", \"list\": \"train_list\" } }, { \"title\": \"校验集\", \"uiType\": \"SimpleTable\", \"conf\": { \"stat\": \"check_stat\", \"list\": \"check_list\" } } ] }, { \"title\": \"ROC曲线\", \"layout\": \"TowColumnLayout\", \"subSections\": [ { \"title\": \"训练集\", \"uiType\": \"Chart\", \"conf\": \"train_ROC\" }, { \"title\": \"校验集\", \"uiType\": \"Chart\", \"conf\": \"check_ROC\" } ] } ] }, { \"tab\": \"训练结果\", \"sections\": [ { \"title\": \"模型规则Top5\", \"uiType\": \"ModelRuleTable\", \"conf\": \"feature_rule\" } ] }]' WHERE `scene_id` = '1' AND `arith_id` = 'C5'
+
+[2018-09-26 11:07:11.348][MDP][652115][MYSQL][]
 SELECT * FROM `mdp`.`mdp_train_rpt_conf` WHERE `scene_id` = '1' AND `arith_id` = 'C5'
 
-[2018-09-25 16:10:31.927][MDP][596934][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_conf` SET `reprt_conf` = '[ { \"tab\": \"模型信息\", \"sections\": [ { \"title\": \"概览\", \"uiType\": \"SimpleTable\", \"conf\": \"overview\" }, { \"title\": \"输入数据源\", \"uiType\": \"SimpleTable\", \"conf\": \"ds_input\" }, { \"title\": \"进入模型的数据\", \"uiType\": \"FeatureTable\", \"conf\": \"indi_input\" }, { \"title\": \"算法&超参数\", \"uiType\": \"SimpleTable\", \"conf\": \"arith_parms\" } ] }, { \"tab\": \"效果评估\", \"sections\": [ { \"title\": \"混淆矩阵\", \"layout\": \"TowColumnLayout\", \"subSections\": [ { \"title\": \"训练集\", \"conf\": { \"stat\": \"train_stat\", \"list\": \"train_list\" } }, { \"title\": \"校验集\", \"conf\": { \"stat\": \"check_stat\", \"list\": \"check_list\" } } ] }, { \"title\": \"ROC曲线\", \"layout\": \"TowColumnLayout\", \"subSections\": [ { \"title\": \"训练集\", \"uiType\": \"Chart\", \"conf\": \"train_ROC\" }, { \"title\": \"校验集\", \"uiType\": \"Chart\", \"conf\": \"check_ROC\" } ] } ] }, { \"tab\": \"训练结果\", \"sections\": [ { \"title\": \"模型规则Top5\", \"uiType\": \"ModelRuleTable\", \"conf\": \"feature_rule\" } ] }]' WHERE `scene_id` = '1' AND `arith_id` = 'C5'
+[2018-09-26 11:35:46.371][MDP][652115][MYSQL][]
+UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'select mmp.PARAM_KEY,mmp.PARAM_VALUE from mdp_model_task mmd left join mdp_model_params mmp on mmd.model_id = mmp.model_id where mmd.task_id = :TASK_ID ' WHERE `code` = 'arith_parms'
 
-[2018-09-25 16:10:32.006][MDP][596934][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_conf` WHERE `scene_id` = '1' AND `arith_id` = 'C5'
-
-[2018-09-25 16:36:40.366][MDP][596934][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_conf` SET `reprt_conf` = '[ { \"tab\": \"模型信息\", \"sections\": [ { \"title\": \"概览\", \"uiType\": \"SimpleTable\", \"conf\": \"overview\" }, { \"title\": \"输入数据源\", \"uiType\": \"SimpleTable\", \"conf\": \"ds_input\" }, { \"title\": \"进入模型的数据\", \"uiType\": \"FeatureTable\", \"conf\": \"indi_input\" }, { \"title\": \"算法&超参数\", \"uiType\": \"SimpleTable\", \"conf\": \"arith_parms\" } ] }, { \"tab\": \"效果评估\", \"sections\": [ { \"title\": \"混淆矩阵\", \"layout\": \"TowColumnLayout\", \"subSections\": [ { \"title\": \"训练集\", \"uiType\": \"SimpleTable\", \"conf\": { \"stat\": \"train_stat\", \"list\": \"train_list\" } }, { \"title\": \"校验集\", \"uiType\": \"SimpleTable\", \"conf\": { \"stat\": \"check_stat\", \"list\": \"check_list\" } } ] }, { \"title\": \"ROC曲线\", \"layout\": \"TowColumnLayout\", \"subSections\": [ { \"title\": \"训练集\", \"uiType\": \"Chart\", \"conf\": \"train_ROC\" }, { \"title\": \"校验集\", \"uiType\": \"Chart\", \"conf\": \"check_ROC\" } ] } ] }, { \"tab\": \"训练结果\", \"sections\": [ { \"title\": \"模型规则Top5\", \"uiType\": \"ModelRuleTable\", \"conf\": \"feature_rule\" } ] }]' WHERE `scene_id` = '1' AND `arith_id` = 'C5'
-
-[2018-09-25 16:36:40.43][MDP][596934][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_conf` WHERE `scene_id` = '1' AND `arith_id` = 'C5'
-
-[2018-09-25 17:52:20.132][MDP][596934][MYSQL][]
-SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
-
-[2018-09-25 17:52:20.377][MDP][605041][MYSQL][]
-SHOW VARIABLES LIKE 'lower_case_%'
-
-[2018-09-25 17:52:33.336][MDP][605041][MYSQL][]
-SET PROFILING = 1
-
-[2018-09-25 17:52:33.396][MDP][605041][MYSQL][]
-SHOW STATUS
-
-[2018-09-25 17:52:33.472][MDP][605041][MYSQL][]
-SHOW STATUS
-
-[2018-09-25 17:52:33.554][MDP][605041][MYSQL][]
-SELECT
-	mmp.param_key,
-	mmp.param_value 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id 
-WHERE
-	mmd.task_id = '5b9f045bc778ff2c311e6d34'
-
-[2018-09-25 17:52:33.619][MDP][605041][MYSQL][]
-SHOW STATUS
-
-[2018-09-25 17:52:33.695][MDP][605041][MYSQL][]
-SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
-
-[2018-09-25 17:52:33.772][MDP][605041][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001694*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
-
-[2018-09-25 17:53:29.655][MDP][605127][MYSQL][]
-SHOW TABLE STATUS
-
-[2018-09-25 17:53:29.829][MDP][605127][MYSQL][]
-SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
-
-[2018-09-25 17:55:03.936][MDP][605041][MYSQL][]
-SET PROFILING = 1
-
-[2018-09-25 17:55:04.012][MDP][605041][MYSQL][]
-SHOW STATUS
-
-[2018-09-25 17:55:04.112][MDP][605041][MYSQL][]
-SHOW STATUS
-
-[2018-09-25 17:55:04.185][MDP][605041][MYSQL][]
-SELECT
-	mmp.PARAM_KEY,
-	mmp.PARAM_VALUE 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id 
-WHERE
-	mmd.task_id = '5b9f045bc778ff2c311e6d34'
-
-[2018-09-25 17:55:04.257][MDP][605041][MYSQL][]
-SHOW STATUS
-
-[2018-09-25 17:55:04.326][MDP][605041][MYSQL][]
-SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
-
-[2018-09-25 17:55:04.393][MDP][605041][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001694*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+[2018-09-26 11:35:46.447][MDP][652115][MYSQL][]
+SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'arith_parms'
 
