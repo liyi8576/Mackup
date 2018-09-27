@@ -1,5 +1,10 @@
 #***********************ZSH 设置*******************************
+#export ZPLUG_HOME=/usr/local/opt/zplug
 export ZSH=/Users/liyi/.oh-my-zsh
+#source $ZPLUG_HOME/init.zsh
+source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#zplug "dracula/zsh", as:theme
 # ZSH 主题设置
 ZSH_THEME="dracula"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -57,8 +62,6 @@ POWERLEVEL9K_USER_ICON="\uF415"
 ENABLE_CORRECTION="false"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git python docker pip yarn)
-source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #*************iterm2_shell_integration******
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -175,9 +178,5 @@ export PATH=$PATH:$GOROOT/bin
 
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
-source ./oc_completion.sh
+source ~/Tools/oc_completion.sh
 
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
-zplug "dracula/zsh", as:theme

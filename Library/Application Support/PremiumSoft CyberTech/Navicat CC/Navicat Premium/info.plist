@@ -13,77 +13,15 @@
 		</dict>
 	</dict>
 	<key>autosaves</key>
-	<dict/>
-	<key>continues</key>
 	<dict>
-		<key>0</key>
+		<key>7C864A61C937BCD44BDA326FDCFAEF24</key>
 		<dict>
-			<key>catalogname</key>
+			<key>autosavecomplete</key>
+			<true/>
+			<key>autosaveexternalquerypath</key>
 			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_train_rpt_conf","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table mdp_train_rpt_conf@mdp (MDP)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>1</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_train_rpt_item_conf","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table mdp_train_rpt_item_conf@mdp (MDP)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>2</key>
-		<dict>
+			<key>autosavelocations</key>
+			<string>[{"key":"","path":"/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium/Profiles/AutoSave/520BB201-83A7-4F3B-9D6E-FB7E436FBBA5.bak"}]</string>
 			<key>catalogname</key>
 			<string></string>
 			<key>conntype</key>
@@ -95,7 +33,7 @@
 			<key>formtype</key>
 			<string>QueryView</string>
 			<key>name</key>
-			<string>New query</string>
+			<string>Untitled</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -116,6 +54,8 @@
 			<integer>0</integer>
 		</dict>
 	</dict>
+	<key>continues</key>
+	<dict/>
 	<key>favorites</key>
 	<dict/>
 	<key>nsylogindata</key>
@@ -129,13 +69,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_train_rpt_conf","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_task_arithmetic","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_train_rpt_conf</string>
+			<string>Open Table mdp_model_task_arithmetic</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -195,13 +135,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_tenant_instance","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_train_rpt_conf","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_tenant_instance</string>
+			<string>Open Table mdp_train_rpt_conf</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -228,13 +168,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"result_pageitem","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_tenant_instance","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table result_pageitem</string>
+			<string>Open Table mdp_tenant_instance</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -261,13 +201,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"result_pageinfo","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_tenant_instance","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table result_pageinfo</string>
+			<string>Design Table mdp_tenant_instance</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -294,13 +234,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_token_conf","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_params","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_token_conf</string>
+			<string>Open Table mdp_model_params</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -327,13 +267,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"result_pagetype","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_task","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table result_pagetype</string>
+			<string>Open Table mdp_model_task</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -360,13 +300,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_model_task_kpi","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_type_params","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_model_task_kpi</string>
+			<string>Open Table mdp_model_type_params</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -393,13 +333,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_train_rpt_log","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_arithmetic_params","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_train_rpt_log</string>
+			<string>Open Table mdp_arithmetic_params</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -426,13 +366,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_train_rpt_item_conf","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_enum_dic","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_train_rpt_item_conf</string>
+			<string>Open Table base_enum_dic</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>

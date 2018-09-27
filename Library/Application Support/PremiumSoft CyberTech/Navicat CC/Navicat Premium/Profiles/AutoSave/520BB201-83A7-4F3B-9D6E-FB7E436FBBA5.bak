@@ -1,0 +1,15 @@
+SELECT  
+ mmp.PARAM_KEY, mmp.PARAM_VALUE,
+ IF ( pm.param_desc = NULL, pm.param_desc, IF ( mmp.PARAM_KEY = 'WorkMode', '训练方式:Auto自动训练、Manual手动调试', pm2.param_desc ) ) AS PARAM_DESC 
+FROM
+	mdp_model_task mmd
+	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id
+	LEFT JOIN mdp_arithmetic_params pm ON pm.param_key = mmp.param_key
+	LEFT JOIN mdp_model_type_params pm2 ON pm2.param_key = mmp.param_key
+	WHERE mmd.task_id = '5b84febca0030f210cde84af'
+-- group by 1,2,3
+-- select * 
+-- FROM mdp_model_task mmd 
+-- LEFT JOIN mdp_model_params mmp 
+-- ON mmd.model_id = mmp.model_id 
+-- where mmd.task_id='5b84febca0030f210cde84af'
