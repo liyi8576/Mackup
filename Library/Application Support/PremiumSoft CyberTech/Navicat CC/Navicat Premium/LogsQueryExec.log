@@ -1,599 +1,664 @@
-[2018-09-26 17:33:00.757][MDP][670448][MYSQL][]
+[2018-09-27 18:18:15.796][MDP][741360][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'
 
-[2018-09-26 17:33:00.817][MDP][670448][MYSQL][]
+[2018-09-27 18:18:15.864][MDP][741360][MYSQL][]
 SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
 
-[2018-09-26 17:33:03.36][MDP][670448][MYSQL][]
+[2018-09-27 18:18:18.15][MDP][741360][MYSQL][]
 SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
 
-[2018-09-26 17:33:03.44][MDP][670448][MYSQL][]
+[2018-09-27 18:18:18.221][MDP][741360][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2018-09-26 17:33:03.506][MDP][670448][MYSQL][]
+[2018-09-27 18:18:18.291][MDP][741360][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
 
-[2018-09-26 17:33:03.691][MDP][670448][MYSQL][]
+[2018-09-27 18:18:18.52][MDP][741366][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2018-09-27 18:18:18.528][MDP][741360][MYSQL][]
 SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_SCHEMA
 
-[2018-09-26 17:33:03.74][MDP][670451][MYSQL][]
+[2018-09-27 18:18:18.655][MDP][741366][MYSQL][]
+SHOW TABLE STATUS
+
+[2018-09-27 18:18:18.937][MDP][741360][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2018-09-26 17:33:03.867][MDP][670448][MYSQL][]
+[2018-09-27 18:18:19.066][MDP][741360][MYSQL][]
 SHOW TABLE STATUS
 
-[2018-09-26 17:33:04.172][MDP][670448][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2018-09-26 17:33:04.295][MDP][670448][MYSQL][]
-SHOW TABLE STATUS
-
-[2018-09-26 17:33:08.314][MDP][670448][MYSQL][]
-SELECT * FROM `mdp`.`mdp_model_task` LIMIT 0,1000
-
-[2018-09-26 17:33:11.258][MDP][670451][MYSQL][]
-SHOW COLUMNS FROM `mdp`.`mdp_model_task`
-
-[2018-09-26 17:33:11.332][MDP][670448][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_model_task'
-
-[2018-09-26 17:33:11.4][MDP][670448][MYSQL][]
-SHOW CREATE TABLE `mdp`.`mdp_model_task`
-
-[2018-09-26 17:33:13.162][MDP][670448][MYSQL][]
-SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
-
-[2018-09-26 17:33:13.231][MDP][670451][MYSQL][]
-SHOW TABLE STATUS
-
-[2018-09-26 17:33:13.384][MDP][670448][MYSQL][]
-SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
-
-[2018-09-26 17:33:13.41][MDP][670451][MYSQL][]
-SHOW VARIABLES LIKE 'lower_case_%'
-
-[2018-09-26 17:35:24.06][MDP][670448][MYSQL][]
-SET PROFILING = 1
-
-[2018-09-26 17:35:24.134][MDP][670448][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 17:35:24.217][MDP][670448][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 17:35:24.304][MDP][670448][MYSQL][]
-select * from mdp_model_task t where task_id='5b9f045bc778ff2c311e6d34'
-
-[2018-09-26 17:35:24.495][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_model_task` LIMIT 0
-
-[2018-09-26 17:35:24.66][MDP][670451][MYSQL][]
-SHOW COLUMNS FROM `mdp`.`mdp_model_task`
-
-[2018-09-26 17:35:24.735][MDP][670448][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 17:35:24.812][MDP][670448][MYSQL][]
-SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
-
-[2018-09-26 17:35:24.895][MDP][670448][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001135*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
-
-[2018-09-26 17:37:10.836][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_model_task_arithmetic` LIMIT 0,1000
-
-[2018-09-26 17:37:10.993][MDP][670458][MYSQL][]
-SHOW COLUMNS FROM `mdp`.`mdp_model_task_arithmetic`
-
-[2018-09-26 17:37:11.055][MDP][670451][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_model_task_arithmetic'
-
-[2018-09-26 17:37:11.12][MDP][670451][MYSQL][]
-SHOW CREATE TABLE `mdp`.`mdp_model_task_arithmetic`
-
-[2018-09-26 18:06:13.222][MDP][670451][MYSQL][]
+[2018-09-27 18:18:23.439][MDP][741360][MYSQL][]
 SELECT * FROM `mdp`.`mdp_tenant_instance` LIMIT 0,1000
 
-[2018-09-26 18:06:13.345][MDP][670458][MYSQL][]
+[2018-09-27 18:18:23.576][MDP][741366][MYSQL][]
 SHOW COLUMNS FROM `mdp`.`mdp_tenant_instance`
 
-[2018-09-26 18:06:13.402][MDP][670451][MYSQL][]
+[2018-09-27 18:18:23.646][MDP][741360][MYSQL][]
 SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
 
-[2018-09-26 18:06:13.468][MDP][670451][MYSQL][]
+[2018-09-27 18:18:23.715][MDP][741360][MYSQL][]
 SHOW CREATE TABLE `mdp`.`mdp_tenant_instance`
 
-[2018-09-26 18:06:16.461][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` LIMIT 0,1000
+[2018-09-27 18:18:28.457][MDP][741360][MYSQL][]
+DELETE FROM `mdp`.`mdp_tenant_instance` WHERE `instance_id` = 'ABCD' AND `tenant` = 'xz' AND `tenant_name` = '西藏' AND `tenant_desc` IS NULL AND `parameters` = '{\"resQuota\":{\"memory\":5.0,\"cpu\":16.0,\"storage\":50.0},\"tenant\":\"xz\",\"tenantName\":\"西藏\"}' AND `arrange_setting` = '{\"NOTEBOOK\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}},\"UI\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}},\"MINER\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}},\"MDPSERVER\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}}}' AND `mdpserver_route` IS NULL AND `mdpserver_svc` IS NULL AND `miner_route` IS NULL AND `miner_svc` IS NULL AND `notebook_route` IS NULL AND `notebook_svc` IS NULL AND `ui_route` IS NULL AND `ui_svc` IS NULL AND `service_id` = '2CA11441-8154-4E69-AF78-D498EA9D37A3' AND `plan_id` = 'E0123F53-F2FC-46A1-B648-09941F01D8BC' AND `create_time` = Cast('2018-09-27 18:09:14' AS Binary(19)) AND `update_time` IS NULL LIMIT 1
 
-[2018-09-26 18:06:16.588][MDP][670458][MYSQL][]
-SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_item_conf`
+[2018-09-27 18:18:29.839][MDP][741360][MYSQL][]
+SELECT * FROM `mdp`.`mdp_tenant_instance` LIMIT 0,1000
 
-[2018-09-26 18:06:16.646][MDP][670451][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_train_rpt_item_conf'
+[2018-09-27 18:18:30.009][MDP][741366][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_tenant_instance`
 
-[2018-09-26 18:06:16.71][MDP][670451][MYSQL][]
-SHOW CREATE TABLE `mdp`.`mdp_train_rpt_item_conf`
+[2018-09-27 18:18:30.119][MDP][741360][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
 
-[2018-09-26 18:07:09.348][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    var img = arithResult[\'trainRocPngFile\']||\'\';\n    var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n    resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'训练集ROC曲线\',imgUrl: resultUrl};\n}' WHERE `code` = 'train_ROC'
+[2018-09-27 18:18:30.228][MDP][741360][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_tenant_instance`
 
-[2018-09-26 18:07:09.414][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
+[2018-09-27 20:07:29.909][MDP][746672][MYSQL][]
+SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
 
-[2018-09-26 18:07:57.143][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    var img = arithResult[\'testRocPngFile\']||\'\';\n    var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n    resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'校验集ROC曲线\',imgUrl: resultUrl};\n}    var resultUrl;\n    if(list && list.length>0){\n        var parmJson= list.get(0)[\'PARAM_JSON\']||{};\n        var json=JSON.parse(parmJson);\n        var trainResultInfo=json[\'trainResultInfo\']||{};\n        var resultInfo=trainResultInfo[\'resultInfo\']||{};\n        var img = resultInfo[\'testRocPngFile\']||\'\';\n        var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n        resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];\n    }\n    return {\n        imgTitle: \'校验集ROC曲线\',\n        imgUrl: resultUrl\n    };\n}' WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:07:57.283][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:08:00.328][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    var img = arithResult[\'testRocPngFile\']||\'\';\n    var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n    resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'校验集ROC曲线\',imgUrl: resultUrl};\n}' WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:08:00.396][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:14:13.592][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    var img = arithResult[\'testRocPngFile\']||\'\';\n    var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n    resultUrl=vars[\'CHART_URL\'] + imgName + vars[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'校验集ROC曲线\',imgUrl: resultUrl};\n}' WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:14:13.658][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:14:49.206][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = '    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    var img = arithResult[\'trainRocPngFile\']||\'\';\n    var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n    resultUrl=vars[\'CHART_URL\']+imgName+[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'训练集ROC曲线\',imgUrl: resultUrl};\n}' WHERE `code` = 'train_ROC'
-
-[2018-09-26 18:14:49.276][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
-
-[2018-09-26 18:14:51.987][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    var img = arithResult[\'trainRocPngFile\']||\'\';\n    var imgName = img.replace(new RegExp( \'.png\', \'gi\' ),\'\');        \n    resultUrl=vars[\'CHART_URL\'] + imgName + vars[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'训练集ROC曲线\',imgUrl: resultUrl};\n}' WHERE `code` = 'train_ROC'
-
-[2018-09-26 18:14:52.052][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
-
-[2018-09-26 18:31:32.982][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    resultUrl=vars[\'CHART_URL\'] + arithResult[\'testRocPngFile\']||\'\' + vars[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'校验集ROC曲线\',imgUrl: resultUrl};\n}' WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:31:33.052][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:31:57.123][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    resultUrl=vars[\'CHART_URL\'] + arithResult[\'trainRocPngFile\']||\'\' + vars[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'训练集ROC曲线\',imgUrl: resultUrl};\n}' WHERE `code` = 'train_ROC'
-
-[2018-09-26 18:31:57.196][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
-
-[2018-09-26 18:33:55.493][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    resultUrl=vars[\'CHART_URL\'] + arithResult[\'testRocPngFile\'] + vars[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'校验集ROC曲线\',imgUrl: resultUrl};\n}' WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:33:55.604][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'check_ROC'
-
-[2018-09-26 18:34:54.937][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `generate_conf` = 'function handle(list,vars){\n    var resultUrl,arithResult={};\n    var obj=(list&&list.length>0&&list[0])||{};\n    var json=JSON.parse(obj[\'PARAM_JSON\']||\'{}\');\n    var info =(json[\'trainResultInfo\'] && json[\'trainResultInfo\'][\'resultInfo\'])||\"[]\";\n    var infoJson=JSON.parse(info);\n    if(infoJson instanceof Array){\n        for(var i=0;i<infoJson.length;i++){\n            if(infoJson[i][\'algName\']===vars[\'ARITH_NAME\']){\n                arithResult=infoJson[i];\n                break;\n            }\n        }\n    }else{\n        arithResult=infoJson;\n    }\n    resultUrl=vars[\'CHART_URL\'] + arithResult[\'trainRocPngFile\'] + vars[\'IMG_EXT_NAME\'];  \n    return {imgTitle: \'训练集ROC曲线\',imgUrl: resultUrl};\n}' WHERE `code` = 'train_ROC'
-
-[2018-09-26 18:34:55.004][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'train_ROC'
-
-[2018-09-26 18:40:10.588][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_conf` LIMIT 0,1000
-
-[2018-09-26 18:40:10.712][MDP][670458][MYSQL][]
-SHOW COLUMNS FROM `mdp`.`mdp_train_rpt_conf`
-
-[2018-09-26 18:40:10.766][MDP][670451][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_train_rpt_conf'
-
-[2018-09-26 18:40:10.829][MDP][670451][MYSQL][]
-SHOW CREATE TABLE `mdp`.`mdp_train_rpt_conf`
-
-[2018-09-26 18:41:31.44][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_conf` SET `reprt_conf` = '' WHERE `scene_id` = '1' AND `arith_id` = 'C5'
-
-[2018-09-26 18:41:31.501][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_conf` WHERE `scene_id` = '1' AND `arith_id` = 'C5'
-
-[2018-09-26 18:41:33.339][MDP][670451][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_conf` SET `reprt_conf` = '[ { \"tab\": \"模型信息\", \"sections\": [ { \"title\": \"概览\", \"uiType\": \"SimpleTable\", \"conf\": \"overview\" }, { \"title\": \"输入数据源\", \"uiType\": \"SimpleTable\", \"conf\": \"ds_input\" }, { \"title\": \"进入模型的数据\", \"uiType\": \"FeatureTable\", \"conf\": \"indi_input\" }, { \"title\": \"算法&超参数\", \"uiType\": \"SimpleTable\", \"conf\": \"arith_parms\" } ] }, { \"tab\": \"效果评估\", \"sections\": [ { \"title\": \"混淆矩阵\", \"layout\": \"TowColumnLayout\", \"subSections\": [ { \"title\": \"训练集\", \"uiType\": \"StatTable\", \"conf\": { \"stat\": \"train_stat\", \"list\": \"train_list\" } }, { \"title\": \"校验集\", \"uiType\": \"StatTable\", \"conf\": { \"stat\": \"check_stat\", \"list\": \"check_list\" } } ] }, { \"title\": \"ROC曲线\", \"layout\": \"TowColumnLayout\", \"subSections\": [ { \"title\": \"训练集\", \"uiType\": \"Chart\", \"conf\": \"train_ROC\" }, { \"title\": \"校验集\", \"uiType\": \"Chart\", \"conf\": \"check_ROC\" } ] } ] }, { \"tab\": \"训练结果\", \"sections\": [ { \"title\": \"模型规则Top5\", \"uiType\": \"ModelRuleTable\", \"conf\": \"feature_rule\" } ] }]' WHERE `scene_id` = '1' AND `arith_id` = 'C5'
-
-[2018-09-26 18:41:33.404][MDP][670451][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_conf` WHERE `scene_id` = '1' AND `arith_id` = 'C5'
-
-[2018-09-26 18:59:35.229][MDP][670451][MYSQL][]
+[2018-09-27 20:07:31.693][MDP][746672][MYSQL][]
 SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
 
-[2018-09-26 18:59:35.285][MDP][670458][MYSQL][]
-SHOW TABLE STATUS
+[2018-09-27 20:07:31.774][MDP][746672][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2018-09-26 18:59:35.426][MDP][670451][MYSQL][]
-SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+[2018-09-27 20:07:31.881][MDP][746672][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
 
-[2018-09-26 18:59:58.737][MDP][670451][MYSQL][]
-SET PROFILING = 1
+[2018-09-27 20:07:32.07][MDP][746672][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_SCHEMA
 
-[2018-09-26 18:59:58.802][MDP][670451][MYSQL][]
-SHOW STATUS
+[2018-09-27 20:07:39.88][MDP][746672][MYSQL][]
+SELECT * FROM `mdp`.`mdp_model_task` LIMIT 0,1000
 
-[2018-09-26 18:59:58.878][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 18:59:58.959][MDP][670451][MYSQL][]
-SELECT mmp.PARAM_KEY, mmp.PARAM_VALUE,
-IF
-	( pm.param_desc = NULL, pm.param_desc, IF ( mmp.PARAM_KEY = 'WorkMode', '训练方式:Auto自动训练、Manual手动调试', pm2.param_desc ) ) AS PARAM_DESC 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id
-	LEFT JOIN mdp_arithmetic_params pm ON pm.param_key = mmp.param_key
-	LEFT JOIN mdp_model_type_params pm2 ON pm2.param_key = mmp.param_key
-	WHERE mmd.task_id = '5b84febca0030f210cde84af'
-
-[2018-09-26 18:59:59.024][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 18:59:59.107][MDP][670451][MYSQL][]
-SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
-
-[2018-09-26 18:59:59.176][MDP][670451][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001157*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
-
-[2018-09-26 19:00:30.343][MDP][670458][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 't' ORDER BY TABLE_SCHEMA, TABLE_TYPE
-
-[2018-09-26 19:00:30.412][MDP][670458][MYSQL][]
-SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 't' ORDER BY ROUTINE_SCHEMA
-
-[2018-09-26 19:00:30.475][MDP][670458][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' AND TABLE_NAME = 't' ORDER BY TABLE_SCHEMA, TABLE_NAME
-
-[2018-09-26 19:00:42.056][MDP][670451][MYSQL][]
-SET PROFILING = 1
-
-[2018-09-26 19:00:42.117][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:00:42.192][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:00:42.27][MDP][670451][MYSQL][]
-select * from mdp_model_task t where t.task_id='5b84febca0030f210cde84af'
-
-[2018-09-26 19:00:42.389][MDP][670458][MYSQL][]
-SELECT * FROM `mdp`.`mdp_model_task` LIMIT 0
-
-[2018-09-26 19:00:42.505][MDP][670458][MYSQL][]
+[2018-09-27 20:07:43.006][MDP][746681][MYSQL][]
 SHOW COLUMNS FROM `mdp`.`mdp_model_task`
 
-[2018-09-26 19:00:42.564][MDP][670451][MYSQL][]
+[2018-09-27 20:07:43.071][MDP][746672][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_model_task'
+
+[2018-09-27 20:07:43.142][MDP][746672][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_model_task`
+
+[2018-09-27 20:08:06.14][MDP][746748][MYSQL][]
+SELECT * FROM `mdp`.`mdp_model_task` LIMIT 0,1000
+
+[2018-09-27 20:08:09.002][MDP][746672][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_model_task`
+
+[2018-09-27 20:08:09.075][MDP][746748][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_model_task'
+
+[2018-09-27 20:08:09.139][MDP][746748][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_model_task`
+
+[2018-09-27 20:08:16.824][MDP][746760][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2018-09-27 20:08:16.976][MDP][746748][MYSQL][]
+SHOW TABLE STATUS
+
+[2018-09-27 20:08:39.48][MDP][746748][MYSQL][]
+SELECT * FROM `mdp`.`mdp_model_stage_p` LIMIT 0,1000
+
+[2018-09-27 20:08:39.895][MDP][746760][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_model_stage_p`
+
+[2018-09-27 20:08:39.986][MDP][746748][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_model_stage_p'
+
+[2018-09-27 20:08:40.057][MDP][746748][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_model_stage_p`
+
+[2018-09-27 20:08:44.857][MDP][746748][MYSQL][]
+SELECT * FROM `mdp`.`mdp_model_stage` LIMIT 0,1000
+
+[2018-09-27 20:08:45.395][MDP][746760][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_model_stage`
+
+[2018-09-27 20:08:45.487][MDP][746748][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_model_stage'
+
+[2018-09-27 20:08:45.593][MDP][746748][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_model_stage`
+
+[2018-09-27 20:09:23.991][MDP][746748][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2018-09-27 20:09:23.996][MDP][746672][MYSQL][]
+SHOW VARIABLES LIKE 'lower_case_%'
+
+[2018-09-27 20:09:24.049][MDP][746760][MYSQL][]
+SHOW TABLE STATUS
+
+[2018-09-27 20:09:24.2][MDP][746748][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+
+[2018-09-27 20:09:58.368][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:09:58.428][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:00:42.637][MDP][670451][MYSQL][]
+[2018-09-27 20:09:58.504][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:09:58.583][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t where t.parent_id is not null
+
+[2018-09-27 20:09:58.719][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:09:58.794][MDP][746748][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-09-26 19:00:42.703][MDP][670451][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001157*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+[2018-09-27 20:09:58.857][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001447*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2018-09-26 19:01:26.347][MDP][670451][MYSQL][]
+[2018-09-27 20:10:42.402][MDP][746748][MYSQL][]
 SET PROFILING = 1
 
-[2018-09-26 19:01:26.408][MDP][670451][MYSQL][]
+[2018-09-27 20:10:42.47][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:01:26.483][MDP][670451][MYSQL][]
+[2018-09-27 20:10:42.545][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:01:26.558][MDP][670451][MYSQL][]
-select * 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp 
-	ON mmd.model_id = mmp.model_id 
-where t.task_id='5b84febca0030f210cde84af'
+[2018-09-27 20:10:42.623][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t where t.parent_id ='5b83c092d40c5d21c49d4924'
 
-[2018-09-26 19:01:26.621][MDP][670451][MYSQL][]
-Unknown column 't.task_id' in 'where clause'
-
-[2018-09-26 19:01:41.724][MDP][670451][MYSQL][]
-SET PROFILING = 1
-
-[2018-09-26 19:01:41.786][MDP][670451][MYSQL][]
+[2018-09-27 20:10:42.692][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:01:41.863][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:01:41.937][MDP][670451][MYSQL][]
-select * 
-FROM
-	mdp_model_task mmd mmd
-	LEFT JOIN mdp_model_params mmp 
-	ON mmd.model_id = mmp.model_id 
-where mmd.task_id='5b84febca0030f210cde84af'
-
-[2018-09-26 19:01:41.999][MDP][670451][MYSQL][]
-You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mmd
-	LEFT JOIN mdp_model_params mmp 
-	ON mmd.model_id = mmp.model_id 
-where mmd.' at line 3
-
-[2018-09-26 19:02:08.24][MDP][670451][MYSQL][]
-SET PROFILING = 1
-
-[2018-09-26 19:02:08.302][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:02:08.376][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:02:08.451][MDP][670451][MYSQL][]
-select * 
-FROM
-	mdp_model_task mmd mmd
-	LEFT JOIN mdp_model_params mmp 
-	ON mmd.model_id = mmp.model_id 
-where mmd.task_id='5b84febca0030f210cde84af'
-
-[2018-09-26 19:02:08.513][MDP][670451][MYSQL][]
-You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mmd
-	LEFT JOIN mdp_model_params mmp 
-	ON mmd.model_id = mmp.model_id 
-where mmd.' at line 3
-
-[2018-09-26 19:02:32.221][MDP][670451][MYSQL][]
-SET PROFILING = 1
-
-[2018-09-26 19:02:32.291][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:02:32.364][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:02:32.439][MDP][670451][MYSQL][]
-select * 
-FROM mdp_model_task mmd mmd
-LEFT JOIN mdp_model_params mmp 
-ON mmd.model_id = mmp.model_id 
-where mmd.task_id='5b84febca0030f210cde84af'
-
-[2018-09-26 19:02:32.501][MDP][670451][MYSQL][]
-You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mmd
-LEFT JOIN mdp_model_params mmp 
-ON mmd.model_id = mmp.model_id 
-where mmd.ta' at line 2
-
-[2018-09-26 19:02:49.581][MDP][670451][MYSQL][]
-SET PROFILING = 1
-
-[2018-09-26 19:02:49.642][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:02:49.716][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:02:49.79][MDP][670451][MYSQL][]
-select * 
-FROM mdp_model_task mmd 
-LEFT JOIN mdp_model_params mmp 
-ON mmd.model_id = mmp.model_id 
-where mmd.task_id='5b84febca0030f210cde84af'
-
-[2018-09-26 19:02:49.924][MDP][670451][MYSQL][]
-SHOW STATUS
-
-[2018-09-26 19:02:49.997][MDP][670451][MYSQL][]
+[2018-09-27 20:10:42.768][MDP][746748][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-09-26 19:02:50.059][MDP][670451][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.000130*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=21 GROUP BY SEQ, STATE ORDER BY SEQ
+[2018-09-27 20:10:42.834][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001447*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2018-09-26 19:03:21.383][MDP][670451][MYSQL][]
+[2018-09-27 20:11:13.019][MDP][746748][MYSQL][]
 SET PROFILING = 1
 
-[2018-09-26 19:03:21.445][MDP][670451][MYSQL][]
+[2018-09-27 20:11:13.084][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:03:21.525][MDP][670451][MYSQL][]
+[2018-09-27 20:11:13.158][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:03:21.599][MDP][670451][MYSQL][]
-SELECT mmp.PARAM_KEY, mmp.PARAM_VALUE,
-IF
-	( pm.param_desc = NULL, pm.param_desc, IF ( mmp.PARAM_KEY = 'WorkMode', '训练方式:Auto自动训练、Manual手动调试', pm2.param_desc ) ) AS PARAM_DESC 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id
-	LEFT JOIN mdp_arithmetic_params pm ON pm.param_key = mmp.param_key
-	LEFT JOIN mdp_model_type_params pm2 ON pm2.param_key = mmp.param_key
-	WHERE mmd.task_id = '5b84febca0030f210cde84af'
-	
--- select * 
--- FROM mdp_model_task mmd 
--- LEFT JOIN mdp_model_params mmp 
--- ON mmd.model_id = mmp.model_id 
--- where mmd.task_id='5b84febca0030f210cde84af'
+[2018-09-27 20:11:13.234][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where t.task_id='5b83bfb6d40c5d21c49d4919'
 
-[2018-09-26 19:03:21.666][MDP][670451][MYSQL][]
+[2018-09-27 20:11:13.314][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:03:21.741][MDP][670451][MYSQL][]
+[2018-09-27 20:11:13.391][MDP][746748][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-09-26 19:03:21.807][MDP][670451][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001197*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=28 GROUP BY SEQ, STATE ORDER BY SEQ
+[2018-09-27 20:11:13.457][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001438*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2018-09-26 19:04:54.274][MDP][670451][MYSQL][]
+[2018-09-27 20:11:29.129][MDP][746748][MYSQL][]
 SET PROFILING = 1
 
-[2018-09-26 19:04:54.335][MDP][670451][MYSQL][]
+[2018-09-27 20:11:29.194][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:04:54.427][MDP][670451][MYSQL][]
+[2018-09-27 20:11:29.27][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:04:54.503][MDP][670451][MYSQL][]
-SELECT mmp.PARAM_KEY, mmp.PARAM_VALUE,
-IF
-	( pm.param_desc = NULL, pm.param_desc, IF ( mmp.PARAM_KEY = 'WorkMode', '训练方式:Auto自动训练、Manual手动调试', pm2.param_desc ) ) AS PARAM_DESC 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id
-	LEFT JOIN mdp_arithmetic_params pm ON pm.param_key = mmp.param_key
-	LEFT JOIN mdp_model_type_params pm2 ON pm2.param_key = mmp.param_key
-	WHERE mmd.task_id = '5b84febca0030f210cde84af'
-	group by 1,2,3
--- select * 
--- FROM mdp_model_task mmd 
--- LEFT JOIN mdp_model_params mmp 
--- ON mmd.model_id = mmp.model_id 
--- where mmd.task_id='5b84febca0030f210cde84af'
+[2018-09-27 20:11:29.345][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where t.id='5b83bfb6d40c5d21c49d4919'
 
-[2018-09-26 19:04:54.579][MDP][670451][MYSQL][]
+[2018-09-27 20:11:29.411][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 19:04:54.669][MDP][670451][MYSQL][]
+[2018-09-27 20:11:29.486][MDP][746748][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-09-26 19:04:54.754][MDP][670451][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001634*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=35 GROUP BY SEQ, STATE ORDER BY SEQ
+[2018-09-27 20:11:29.551][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002238*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=12 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2018-09-26 20:07:20.195][MDP][670451][MYSQL][]
+[2018-09-27 20:11:34.965][MDP][746748][MYSQL][]
 SET PROFILING = 1
 
-[2018-09-26 20:08:22.212][MDP][000000][MYSQL][]
-
-
-[2018-09-26 20:08:22.214][MDP][000000][MYSQL][]
+[2018-09-27 20:11:35.027][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:08:22.612][MDP][677638][MYSQL][]
+[2018-09-27 20:11:35.1][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:08:22.689][MDP][677638][MYSQL][]
-SELECT mmp.PARAM_KEY, mmp.PARAM_VALUE,
-IF
-	( pm.param_desc = NULL, pm.param_desc, IF ( mmp.PARAM_KEY = 'WorkMode', '训练方式:Auto自动训练、Manual手动调试', pm2.param_desc ) ) AS PARAM_DESC 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id
-	LEFT JOIN mdp_arithmetic_params pm ON pm.param_key = mmp.param_key
-	LEFT JOIN mdp_model_type_params pm2 ON pm2.param_key = mmp.param_key
-	WHERE mmd.task_id = '5b84febca0030f210cde84af'
-group by 1,2,3
+[2018-09-27 20:11:35.177][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where t.task_id='5b83bfb6d40c5d21c49d4919'
 
-[2018-09-26 20:08:22.755][MDP][677638][MYSQL][]
+[2018-09-27 20:11:35.246][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:08:22.842][MDP][677638][MYSQL][]
+[2018-09-27 20:11:35.319][MDP][746748][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-09-26 20:14:24.343][MDP][677638][MYSQL][]
+[2018-09-27 20:11:35.384][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002466*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=19 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:11:47.254][MDP][746748][MYSQL][]
 SET PROFILING = 1
 
-[2018-09-26 20:14:24.408][MDP][677638][MYSQL][]
+[2018-09-27 20:11:47.316][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:14:24.494][MDP][677638][MYSQL][]
+[2018-09-27 20:11:47.394][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:14:24.571][MDP][677638][MYSQL][]
-SELECT mmp.PARAM_KEY, mmp.PARAM_VALUE,
-IF
-	( pm.param_desc = NULL, pm.param_desc, IF ( mmp.PARAM_KEY = 'WorkMode', '训练方式:Auto自动训练、Manual手动调试', pm2.param_desc ) ) AS PARAM_DESC 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id
-	LEFT JOIN mdp_arithmetic_params pm ON pm.param_key = mmp.param_key
-	LEFT JOIN mdp_model_type_params pm2 ON pm2.param_key = mmp.param_key
-	WHERE mmd.task_id = '5b84febca0030f210cde84af'
-group by 1,2,3
--- select * 
--- FROM mdp_model_task mmd 
--- LEFT JOIN mdp_model_params mmp 
--- ON mmd.model_id = mmp.model_id 
--- where mmd.task_id='5b84febca0030f210cde84af'
+[2018-09-27 20:11:47.468][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where t.task_id='5b83bfb6d40c5d21c49d4919' and parent_id is null
 
-[2018-09-26 20:14:24.645][MDP][677638][MYSQL][]
+[2018-09-27 20:11:47.539][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:14:24.735][MDP][677638][MYSQL][]
+[2018-09-27 20:11:47.613][MDP][746748][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-09-26 20:14:24.803][MDP][677638][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001171*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+[2018-09-27 20:11:47.678][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002465*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=26 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2018-09-26 20:14:55.851][MDP][677638][MYSQL][]
+[2018-09-27 20:13:06.225][MDP][746748][MYSQL][]
 SET PROFILING = 1
 
-[2018-09-26 20:14:55.92][MDP][677638][MYSQL][]
+[2018-09-27 20:13:06.289][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:14:56.011][MDP][677638][MYSQL][]
+[2018-09-27 20:13:06.366][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:14:56.096][MDP][677638][MYSQL][]
-SELECT * 
--- mmp.PARAM_KEY, mmp.PARAM_VALUE,
--- IF ( pm.param_desc = NULL, pm.param_desc, IF ( mmp.PARAM_KEY = 'WorkMode', '训练方式:Auto自动训练、Manual手动调试', pm2.param_desc ) ) AS PARAM_DESC 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id
-	LEFT JOIN mdp_arithmetic_params pm ON pm.param_key = mmp.param_key
-	LEFT JOIN mdp_model_type_params pm2 ON pm2.param_key = mmp.param_key
-	WHERE mmd.task_id = '5b84febca0030f210cde84af'
--- group by 1,2,3
--- select * 
--- FROM mdp_model_task mmd 
--- LEFT JOIN mdp_model_params mmp 
--- ON mmd.model_id = mmp.model_id 
--- where mmd.task_id='5b84febca0030f210cde84af'
+[2018-09-27 20:13:06.44][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where parent_id ='5b83bfbcd40c5d21c49d491a'
 
-[2018-09-26 20:14:56.601][MDP][677638][MYSQL][]
+[2018-09-27 20:13:06.509][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:14:56.684][MDP][677638][MYSQL][]
+[2018-09-27 20:13:06.583][MDP][746748][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-09-26 20:14:56.75][MDP][677638][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001171*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+[2018-09-27 20:13:06.646][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002413*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=33 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2018-09-26 20:15:09.545][MDP][677638][MYSQL][]
+[2018-09-27 20:13:11.182][MDP][746748][MYSQL][]
 SET PROFILING = 1
 
-[2018-09-26 20:15:09.612][MDP][677638][MYSQL][]
+[2018-09-27 20:13:11.244][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:15:09.696][MDP][677638][MYSQL][]
+[2018-09-27 20:13:11.319][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:15:09.778][MDP][677638][MYSQL][]
-SELECT  
- mmp.PARAM_KEY, mmp.PARAM_VALUE,
- IF ( pm.param_desc = NULL, pm.param_desc, IF ( mmp.PARAM_KEY = 'WorkMode', '训练方式:Auto自动训练、Manual手动调试', pm2.param_desc ) ) AS PARAM_DESC 
-FROM
-	mdp_model_task mmd
-	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id
-	LEFT JOIN mdp_arithmetic_params pm ON pm.param_key = mmp.param_key
-	LEFT JOIN mdp_model_type_params pm2 ON pm2.param_key = mmp.param_key
-	WHERE mmd.task_id = '5b84febca0030f210cde84af'
--- group by 1,2,3
--- select * 
--- FROM mdp_model_task mmd 
--- LEFT JOIN mdp_model_params mmp 
--- ON mmd.model_id = mmp.model_id 
--- where mmd.task_id='5b84febca0030f210cde84af'
+[2018-09-27 20:13:11.395][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where t.task_id='5b83bfb6d40c5d21c49d4919' 
+and parent_id is null
 
-[2018-09-26 20:15:09.846][MDP][677638][MYSQL][]
+[2018-09-27 20:13:11.465][MDP][746748][MYSQL][]
 SHOW STATUS
 
-[2018-09-26 20:15:09.922][MDP][677638][MYSQL][]
+[2018-09-27 20:13:11.538][MDP][746748][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-09-26 20:15:09.988][MDP][677638][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001001*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+[2018-09-27 20:13:11.605][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002463*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=40 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2018-09-26 20:21:07.469][MDP][678213][MYSQL][]
-UPDATE `mdp`.`mdp_train_rpt_item_conf` SET `data_sql` = 'SELECT mmp.PARAM_KEY, mmp.PARAM_VALUE,\nIF\n	( pm.param_desc = NULL, pm.param_desc, IF ( mmp.PARAM_KEY = \'WorkMode\', \'训练方式:Auto自动训练、Manual手动调试\', pm2.param_desc ) ) AS PARAM_DESC \nFROM\n	mdp_model_task mmd\n	LEFT JOIN mdp_model_params mmp ON mmd.model_id = mmp.model_id\n	LEFT JOIN mdp_arithmetic_params pm ON pm.param_key = mmp.param_key\n	LEFT JOIN mdp_model_type_params pm2 ON pm2.param_key = mmp.param_key\n	WHERE mmd.task_id = :TASK_ID\ngroup by 1,2,3' WHERE `code` = 'arith_parms'
+[2018-09-27 20:13:19.298][MDP][746748][MYSQL][]
+SET PROFILING = 1
 
-[2018-09-26 20:21:07.535][MDP][678213][MYSQL][]
-SELECT * FROM `mdp`.`mdp_train_rpt_item_conf` WHERE `code` = 'arith_parms'
+[2018-09-27 20:13:19.361][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:13:19.436][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:13:19.511][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where parent_id ='5b83bfc9d40c5d21c49d491c'
+
+[2018-09-27 20:13:19.585][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:13:19.659][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:13:19.725][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002508*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=47 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:13:22.455][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:13:22.518][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:13:22.593][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:13:22.668][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where t.task_id='5b83bfb6d40c5d21c49d4919' 
+and parent_id is null
+
+[2018-09-27 20:13:22.736][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:13:22.81][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:13:22.876][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002400*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=54 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:13:29.731][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:13:29.798][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:13:29.874][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:13:29.948][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where parent_id ='5b83c092d40c5d21c49d4924'
+
+[2018-09-27 20:13:30.018][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:13:30.091][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:13:30.156][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002470*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=61 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:16:38.678][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:16:38.776][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:16:38.852][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:16:38.975][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where t.task_id='5b83bfb6d40c5d21c49d4919' 
+and parent_id is null
+
+[2018-09-27 20:16:39.054][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:16:39.145][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:16:39.222][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002463*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=68 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:17:16.862][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:17:16.926][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:17:17.005][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:17:17.087][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where parent_id ='5b83c080d40c5d21c49d4923'
+
+[2018-09-27 20:17:17.156][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:17:17.249][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:17:17.34][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002434*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=75 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:17:22.781][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:17:22.846][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:17:22.922][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:17:22.998][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where t.task_id='5b83bfb6d40c5d21c49d4919' 
+and parent_id is null
+
+[2018-09-27 20:17:23.066][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:17:23.14][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:17:23.204][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002546*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=82 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:18:25.278][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:18:25.342][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:18:25.417][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:18:25.491][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where parent_id is not null
+
+[2018-09-27 20:18:25.634][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:18:25.71][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:18:25.774][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002567*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=89 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:24:20.423][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:24:20.494][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:24:20.585][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:24:20.676][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where parent_id is not null
+order by task_id
+
+[2018-09-27 20:24:20.862][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:24:20.961][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:24:21.05][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002454*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=96 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:24:30.371][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:24:30.445][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:24:30.531][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:24:30.615][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where parent_id is not null
+order by task_id,stage_id
+
+[2018-09-27 20:24:30.782][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:24:30.855][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:24:30.928][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002485*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=103 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:25:02.507][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:25:02.57][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:25:02.647][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:25:02.725][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where parent_id is  null
+order by task_id,stage_id
+
+[2018-09-27 20:25:03.139][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:25:03.211][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:25:03.275][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002435*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=110 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:26:06.861][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:26:06.966][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:26:07.039][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:26:07.123][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where id in (select id from mdp_model_stage where parent_id is not null)
+order by task_id,stage_id
+
+[2018-09-27 20:26:07.28][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:26:07.357][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:26:07.439][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002363*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=117 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:32:33.071][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 20:32:33.135][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:32:33.211][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:32:33.286][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where id in (select parent_id from mdp_model_stage where parent_id is not null)
+order by task_id,stage_id
+
+[2018-09-27 20:32:33.373][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 20:32:33.472][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 20:32:33.57][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002355*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=124 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 20:39:39.835][MDP][746760][MYSQL][]
+SELECT * FROM `mdp`.`mdp_model` LIMIT 0,1000
+
+[2018-09-27 20:39:40.145][MDP][746672][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_model`
+
+[2018-09-27 20:39:40.215][MDP][746760][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_model'
+
+[2018-09-27 20:39:40.275][MDP][746760][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_model`
+
+[2018-09-27 21:08:18.889][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 21:08:18.951][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 21:08:19.027][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 21:08:19.102][MDP][746748][MYSQL][]
+SELECT * FROM mdp_model_stage t 
+where id in (select parent_id from mdp_model_stage where parent_id is not null)
+order by task_id,stage_id
+
+[2018-09-27 21:08:19.189][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 21:08:19.262][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 21:08:19.327][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002229*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=131 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 21:08:51.936][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 21:08:52.000][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 21:08:52.075][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 21:08:52.15][MDP][746748][MYSQL][]
+select * from mdp_model_stage t 
+where task_id='5b84febca0030f210cde84af'
+
+[2018-09-27 21:08:52.221][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 21:08:52.293][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 21:08:52.358][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002295*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=138 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-09-27 21:09:05.516][MDP][746748][MYSQL][]
+SET PROFILING = 1
+
+[2018-09-27 21:09:05.583][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 21:09:05.657][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 21:09:05.732][MDP][746748][MYSQL][]
+select * from mdp_model_stage t 
+where task_id='5b84febca0030f210cde84af' and parent_id is null
+
+[2018-09-27 21:09:05.8][MDP][746748][MYSQL][]
+SHOW STATUS
+
+[2018-09-27 21:09:05.874][MDP][746748][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-09-27 21:09:05.938][MDP][746748][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002162*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=145 GROUP BY SEQ, STATE ORDER BY SEQ
 

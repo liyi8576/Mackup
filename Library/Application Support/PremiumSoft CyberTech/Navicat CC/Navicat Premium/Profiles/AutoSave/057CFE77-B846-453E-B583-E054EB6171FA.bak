@@ -1,0 +1,7 @@
+SELECT * FROM mdp_model_stage t 
+where id in (select parent_id from mdp_model_stage where parent_id is not null)
+order by task_id,stage_id
+
+select * from mdp_model_stage t 
+where task_id='5b84febca0030f210cde84af' and parent_id is null
+

@@ -1,10 +1,4 @@
 #***********************ZSH 设置*******************************
-#export ZPLUG_HOME=/usr/local/opt/zplug
-export ZSH=/Users/liyi/.oh-my-zsh
-#source $ZPLUG_HOME/init.zsh
-source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#zplug "dracula/zsh", as:theme
 # ZSH 主题设置
 ZSH_THEME="dracula"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -162,6 +156,10 @@ export PATH="/usr/local/opt/thrift@0.9/bin:$PATH"
 #     source $(brew --prefix)/etc/brew-wrap
 # fi
 #source ~/.bin/tmuxinator.zsh
+
+export ZSH=/Users/liyi/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #**************sdkman setting**************
 # export SDKMAN_DIR="/Users/liyi/.sdkman"
