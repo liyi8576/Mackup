@@ -1,1 +1,0 @@
-select distinct operate_type from mdp_model_stage 
