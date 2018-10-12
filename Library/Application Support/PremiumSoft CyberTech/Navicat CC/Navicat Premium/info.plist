@@ -195,6 +195,39 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
+			<string>{"Name":"mdp_tenant_instance","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>DesignForm</string>
+			<key>name</key>
+			<string>Design Table mdp_tenant_instance</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>1</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
 			<string>{"Name":"mdp_model_task_arithmetic","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
@@ -221,7 +254,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>1</key>
+		<key>2</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -254,7 +287,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>2</key>
+		<key>3</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -287,7 +320,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>3</key>
+		<key>4</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -320,7 +353,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>4</key>
+		<key>5</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -334,39 +367,6 @@
 			<string>TableView</string>
 			<key>name</key>
 			<string>Open Table mdp_tenant_instance</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>5</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_tenant_instance","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>DesignForm</string>
-			<key>name</key>
-			<string>Design Table mdp_tenant_instance</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
