@@ -94,3 +94,338 @@ SHOW TABLE STATUS LIKE 'mdp_ftp'
 [2018-10-10 10:46:35.27][MDP][575232][MYSQL][]
 SHOW CREATE TABLE `mdp`.`mdp_ftp`
 
+[2018-10-12 17:38:54.736][MDP][727075][MYSQL][]
+SELECT * FROM `mdp`.`mdp_tenant_instance` LIMIT 0,1000
+
+[2018-10-12 17:38:55.269][MDP][727076][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_tenant_instance`
+
+[2018-10-12 17:38:55.33][MDP][727075][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
+
+[2018-10-12 17:38:55.392][MDP][727075][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_tenant_instance`
+
+[2018-10-12 17:39:03.622][MDP][727075][MYSQL][]
+DELETE FROM `mdp`.`mdp_tenant_instance` WHERE `instance_id` = '2c366908-c302-11e8-b507-0242ac110004' AND `tenant` = '43005678-0202-483c-8ad8-58954004b7c6' AND `tenant_name` = 'zhaoyim004' AND `tenant_desc` IS NULL AND `parameters` = '{\"resQuota\":{\"memory\":33.0,\"cpu\":33.0,\"storage\":50.0},\"tenant\":\"43005678-0202-483c-8ad8-58954004b7c6\",\"tenantName\":\"zhaoyim004\"}' AND `arrange_setting` = '{\"MINER\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}},\"UI\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}},\"MDPSERVER\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}},\"NOTEBOOK\":{\"imageVersion\":\"1.2.2\",\"replicas\":1,\"resLimit\":{\"memory\":2.0,\"cpu\":2.0,\"storage\":10.0}}}' AND `mdpserver_route` = '43005678-0202-483c-8ad8-58954004b7c6.mdpserver.prd.dataos.io' AND `mdpserver_svc` = '172.25.70.0:9099' AND `miner_route` = '43005678-0202-483c-8ad8-58954004b7c6.miner.prd.dataos.io' AND `miner_svc` = '172.25.121.196:8888' AND `notebook_route` = '43005678-0202-483c-8ad8-58954004b7c6.notebook.prd.dataos.io' AND `notebook_svc` = '172.25.26.147:9098' AND `ui_route` = '43005678-0202-483c-8ad8-58954004b7c6.ui.prd.dataos.io' AND `ui_svc` = '172.25.87.252:9097' AND `service_id` = '2CA11441-8154-4E69-AF78-D498EA9D37A3' AND `plan_id` = 'E0123F53-F2FC-46A1-B648-09941F01D8BC' AND `create_time` = Cast('2018-09-28 17:20:26' AS Binary(19)) AND `update_time` IS NULL LIMIT 1
+
+[2018-10-12 17:39:05.45][MDP][727075][MYSQL][]
+SELECT * FROM `mdp`.`mdp_tenant_instance` LIMIT 0,1000
+
+[2018-10-12 17:39:05.568][MDP][727076][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`mdp_tenant_instance`
+
+[2018-10-12 17:39:05.63][MDP][727075][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
+
+[2018-10-12 17:39:05.691][MDP][727075][MYSQL][]
+SHOW CREATE TABLE `mdp`.`mdp_tenant_instance`
+
+[2018-10-12 18:09:31.706][MDP][727075][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2018-10-12 18:09:31.765][MDP][727076][MYSQL][]
+SHOW TABLE STATUS
+
+[2018-10-12 18:09:31.941][MDP][727075][MYSQL][]
+SHOW VARIABLES LIKE 'lower_case_%'
+
+[2018-10-12 18:09:32.079][MDP][727075][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+
+[2018-10-12 18:09:42.059][MDP][727075][MYSQL][]
+SET PROFILING = 1
+
+[2018-10-12 18:09:42.123][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:09:42.203][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:09:42.281][MDP][727075][MYSQL][]
+SELECT
+	tenant,
+	tenant_name,
+	tenant_desc,
+	service_info,
+	service_id,
+	plan_id,
+	instance_id,
+	parameters,
+	arrange_setting,
+	mdpserver_route,
+	mdpserver_svc,
+	notebook_route,
+	notebook_svc,
+	ui_route,
+	ui_svc,
+	miner_route,
+	miner_svc,
+	sb_version,
+	create_time,
+	update_time 
+FROM
+	MDP_TENANT_INSTANCE 
+WHERE
+	instance_id = '1'
+
+[2018-10-12 18:09:42.344][MDP][727075][MYSQL][]
+Unknown column 'service_info' in 'field list'
+
+[2018-10-12 18:10:25.161][MDP][727075][MYSQL][]
+SET PROFILING = 1
+
+[2018-10-12 18:10:25.222][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:10:25.302][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:10:25.405][MDP][727075][MYSQL][]
+SELECT
+	tenant,
+	tenant_name,
+	tenant_desc,
+	service_id,
+	plan_id,
+	instance_id,
+	parameters,
+	arrange_setting,
+	mdpserver_route,
+	mdpserver_svc,
+	notebook_route,
+	notebook_svc,
+	ui_route,
+	ui_svc,
+	miner_route,
+	miner_svc,
+	sb_version,
+	create_time,
+	update_time 
+FROM
+	MDP_TENANT_INSTANCE 
+WHERE
+	instance_id = '1'
+
+[2018-10-12 18:10:25.469][MDP][727075][MYSQL][]
+Unknown column 'sb_version' in 'field list'
+
+[2018-10-12 18:10:32.815][MDP][727075][MYSQL][]
+SET PROFILING = 1
+
+[2018-10-12 18:10:32.917][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:10:32.995][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:10:33.073][MDP][727075][MYSQL][]
+SELECT
+	tenant,
+	tenant_name,
+	tenant_desc,
+	service_id,
+	plan_id,
+	instance_id,
+	parameters,
+	arrange_setting,
+	mdpserver_route,
+	mdpserver_svc,
+	notebook_route,
+	notebook_svc,
+	ui_route,
+	ui_svc,
+	miner_route,
+	miner_svc,
+	create_time,
+	update_time 
+FROM
+	MDP_TENANT_INSTANCE 
+WHERE
+	instance_id = '1'
+
+[2018-10-12 18:10:33.141][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:10:33.219][MDP][727075][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-10-12 18:10:33.281][MDP][727075][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001639*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-10-12 18:10:57.377][MDP][727075][MYSQL][]
+SET PROFILING = 1
+
+[2018-10-12 18:10:57.457][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:10:57.548][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:10:57.623][MDP][727075][MYSQL][]
+SELECT
+	tenant,
+	tenant_name,
+	tenant_desc,
+	service_info,
+	service_id,
+	plan_id,
+	instance_id,
+	parameters,
+	arrange_setting,
+	mdpserver_route,
+	mdpserver_svc,
+	notebook_route,
+	notebook_svc,
+	ui_route,
+	ui_svc,
+	miner_route,
+	miner_svc,
+	sb_version,
+	create_time,
+	update_time 
+FROM
+	MDP_TENANT_INSTANCE 
+WHERE
+	instance_id = '1'
+
+[2018-10-12 18:10:57.682][MDP][727075][MYSQL][]
+Unknown column 'service_info' in 'field list'
+
+[2018-10-12 18:11:26.197][MDP][727075][MYSQL][]
+SET PROFILING = 1
+
+[2018-10-12 18:11:26.259][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:11:26.344][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:11:26.415][MDP][727075][MYSQL][]
+SELECT
+	tenant,
+	tenant_name,
+	tenant_desc,
+	service_info,
+	service_id,
+	plan_id,
+	instance_id,
+	parameters,
+	arrange_setting,
+	mdpserver_route,
+	mdpserver_svc,
+	notebook_route,
+	notebook_svc,
+	ui_route,
+	ui_svc,
+	miner_route,
+	miner_svc,
+	sb_version,
+	create_time,
+	update_time 
+FROM
+	MDP_TENANT_INSTANCE 
+WHERE
+	instance_id = '1'
+
+[2018-10-12 18:11:26.476][MDP][727075][MYSQL][]
+Unknown column 'service_info' in 'field list'
+
+[2018-10-12 18:11:57.431][MDP][727076][MYSQL][]
+ALTER TABLE `mdp`.`mdp_tenant_instance` 
+ADD COLUMN `service_info` varchar(1000) NULL COMMENT '租户服务实例信息' AFTER `tenant_desc`,
+ADD COLUMN `sb_version` varchar(10) NULL COMMENT 'serviceBroker生成版本' AFTER `plan_id`
+
+[2018-10-12 18:11:57.566][MDP][727076][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2018-10-12 18:11:57.688][MDP][727076][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
+
+[2018-10-12 18:11:57.801][MDP][727076][MYSQL][]
+SHOW CREATE TABLE `mdp_tenant_instance` 
+
+[2018-10-12 18:11:57.922][MDP][727076][MYSQL][]
+SHOW FULL COLUMNS FROM `mdp_tenant_instance`
+
+[2018-10-12 18:11:58.04][MDP][727076][MYSQL][]
+SHOW INDEX FROM `mdp_tenant_instance`
+
+[2018-10-12 18:11:58.171][MDP][727076][MYSQL][]
+SELECT ACTION_ORDER, EVENT_OBJECT_TABLE, TRIGGER_NAME, EVENT_MANIPULATION, EVENT_OBJECT_TABLE, DEFINER, ACTION_STATEMENT, ACTION_TIMING FROM information_schema.triggers WHERE BINARY event_object_schema = 'mdp' AND BINARY event_object_table = 'mdp_tenant_instance' ORDER BY event_object_table
+
+[2018-10-12 18:11:58.297][MDP][727076][MYSQL][]
+SELECT TABLE_NAME, PARTITION_NAME, SUBPARTITION_NAME, PARTITION_METHOD, SUBPARTITION_METHOD, PARTITION_EXPRESSION, SUBPARTITION_EXPRESSION, PARTITION_DESCRIPTION, PARTITION_COMMENT, NODEGROUP, TABLESPACE_NAME FROM information_schema.PARTITIONS WHERE NOT ISNULL(PARTITION_NAME) AND TABLE_SCHEMA LIKE 'mdp' AND TABLE_NAME LIKE 'mdp_tenant_instance' ORDER BY TABLE_NAME, PARTITION_NAME, PARTITION_ORDINAL_POSITION, SUBPARTITION_ORDINAL_POSITION
+
+[2018-10-12 18:11:58.452][MDP][727076][MYSQL][]
+SELECT DISTINCT(TABLESPACE_NAME) AS TABLESPACE_NAME FROM information_schema.FILES WHERE NOT ISNULL(TABLESPACE_NAME) LIMIT 10000
+
+[2018-10-12 18:11:59.778][MDP][727076][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2018-10-12 18:11:59.895][MDP][727076][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
+
+[2018-10-12 18:12:00.009][MDP][727076][MYSQL][]
+SHOW CREATE TABLE `mdp_tenant_instance` 
+
+[2018-10-12 18:12:00.125][MDP][727076][MYSQL][]
+SHOW FULL COLUMNS FROM `mdp_tenant_instance`
+
+[2018-10-12 18:12:00.246][MDP][727076][MYSQL][]
+SHOW INDEX FROM `mdp_tenant_instance`
+
+[2018-10-12 18:12:00.359][MDP][727076][MYSQL][]
+SELECT ACTION_ORDER, EVENT_OBJECT_TABLE, TRIGGER_NAME, EVENT_MANIPULATION, EVENT_OBJECT_TABLE, DEFINER, ACTION_STATEMENT, ACTION_TIMING FROM information_schema.triggers WHERE BINARY event_object_schema = 'mdp' AND BINARY event_object_table = 'mdp_tenant_instance' ORDER BY event_object_table
+
+[2018-10-12 18:12:00.486][MDP][727076][MYSQL][]
+SELECT TABLE_NAME, PARTITION_NAME, SUBPARTITION_NAME, PARTITION_METHOD, SUBPARTITION_METHOD, PARTITION_EXPRESSION, SUBPARTITION_EXPRESSION, PARTITION_DESCRIPTION, PARTITION_COMMENT, NODEGROUP, TABLESPACE_NAME FROM information_schema.PARTITIONS WHERE NOT ISNULL(PARTITION_NAME) AND TABLE_SCHEMA LIKE 'mdp' AND TABLE_NAME LIKE 'mdp_tenant_instance' ORDER BY TABLE_NAME, PARTITION_NAME, PARTITION_ORDINAL_POSITION, SUBPARTITION_ORDINAL_POSITION
+
+[2018-10-12 18:12:00.625][MDP][727076][MYSQL][]
+SELECT DISTINCT(TABLESPACE_NAME) AS TABLESPACE_NAME FROM information_schema.FILES WHERE NOT ISNULL(TABLESPACE_NAME) LIMIT 10000
+
+[2018-10-12 18:12:04.799][MDP][727075][MYSQL][]
+SET PROFILING = 1
+
+[2018-10-12 18:12:04.859][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:12:04.931][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:12:05.004][MDP][727075][MYSQL][]
+SELECT
+	tenant,
+	tenant_name,
+	tenant_desc,
+	service_info,
+	service_id,
+	plan_id,
+	instance_id,
+	parameters,
+	arrange_setting,
+	mdpserver_route,
+	mdpserver_svc,
+	notebook_route,
+	notebook_svc,
+	ui_route,
+	ui_svc,
+	miner_route,
+	miner_svc,
+	sb_version,
+	create_time,
+	update_time 
+FROM
+	MDP_TENANT_INSTANCE 
+WHERE
+	instance_id = '1'
+
+[2018-10-12 18:12:05.067][MDP][727075][MYSQL][]
+SHOW STATUS
+
+[2018-10-12 18:12:05.139][MDP][727075][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-10-12 18:12:05.205][MDP][727075][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001490*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=14 GROUP BY SEQ, STATE ORDER BY SEQ
+
