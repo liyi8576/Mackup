@@ -1,0 +1,1 @@
+select * from mdp_tenant_instance;

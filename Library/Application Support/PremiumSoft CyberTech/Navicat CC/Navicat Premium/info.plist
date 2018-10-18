@@ -13,9 +13,83 @@
 		</dict>
 	</dict>
 	<key>autosaves</key>
-	<dict/>
+	<dict>
+		<key>58C4155EA62E46C03ED390BDDAFB52CE</key>
+		<dict>
+			<key>autosavecomplete</key>
+			<true/>
+			<key>autosaveexternalquerypath</key>
+			<string></string>
+			<key>autosavelocations</key>
+			<string>[{"key":"","path":"/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium/Profiles/AutoSave/0F5A8620-D709-4AE6-9374-14C5A12712C2.bak"}]</string>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
+			<key>formobjecttype</key>
+			<string>Query</string>
+			<key>formtype</key>
+			<string>QueryView</string>
+			<key>name</key>
+			<string>Untitled</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
 	<key>continues</key>
-	<dict/>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"mdp_tenant_instance","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open table mdp_tenant_instance@mdp (MDP)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
 	<key>favorites</key>
 	<dict/>
 	<key>nsylogindata</key>
@@ -62,13 +136,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ftp","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_tenant_instance","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_ftp</string>
+			<string>Open Table mdp_tenant_instance</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -95,13 +169,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_tenant_instance","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_ftp","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_tenant_instance</string>
+			<string>Open Table mdp_ftp</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
