@@ -178,3 +178,4 @@ if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 source ~/Tools/oc_completion.sh
 
+export PATH=$PATH:/usr/local/Cellar/mysql-client/5.7.23/bin
