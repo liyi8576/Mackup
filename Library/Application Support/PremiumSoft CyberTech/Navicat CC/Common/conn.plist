@@ -34,6 +34,12 @@
 							<key>name</key>
 							<string>mlp_test_k8s_mdp</string>
 						</dict>
+						<dict>
+							<key>autoopen</key>
+							<false/>
+							<key>name</key>
+							<string>mlp_test_k8s_model</string>
+						</dict>
 					</array>
 					<key>encoding</key>
 					<integer>0</integer>

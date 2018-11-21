@@ -1,0 +1,1 @@
+select * from mdp_model_stage t where t.operate_type=1
