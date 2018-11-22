@@ -4,6 +4,7 @@
       "source.ini": [
         ".hgrc"
         ".buckconfig"
+        ".flowconfig"
       ]
       "source.json": [
         "BUCK.autodeps"
