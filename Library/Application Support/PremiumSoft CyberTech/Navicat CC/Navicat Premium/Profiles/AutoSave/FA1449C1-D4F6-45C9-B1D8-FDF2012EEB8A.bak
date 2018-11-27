@@ -1,9 +1,0 @@
-select t2.model_id,t3.model_name,t3.model_type_id,t1.*
-from mdp_model_task_classify_imp t1 left outer join mdp_model_task t2
-on t1.task_id=t2.task_id 
-left outer join mdp_model t3
-on t2.model_id=t3.model_id
-order by t3.model_type_id desc;
-
-
-select * from mdp_model_task_classify_imp t4 where t4.task_id='5bf376a346e0fb000f2b2f4b'
