@@ -1,87 +1,162 @@
-[2018-11-27 17:07:07.24][10.1.235.34][885462][MYSQL][]
+[2018-12-06 16:58:10.919][MDP][455394][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'
 
-[2018-11-27 17:07:08.645][10.1.235.34][885462][MYSQL][]
-SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mlp_test_k8s_mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mlp_test_k8s_mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mlp_test_k8s_mdp'
+[2018-12-06 16:58:10.996][MDP][455394][MYSQL][]
+SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
 
-[2018-11-27 17:07:08.687][10.1.235.34][885462][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mlp_test_k8s_mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+[2018-12-06 16:58:13.806][MDP][455394][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
 
-[2018-11-27 17:07:08.716][10.1.235.34][885462][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mlp_test_k8s_mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
+[2018-12-06 16:58:13.907][MDP][455394][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2018-11-27 17:07:08.867][10.1.235.34][885466][MYSQL][]
+[2018-12-06 16:58:13.98][MDP][455394][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2018-12-06 16:58:14.241][MDP][455394][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_SCHEMA
+
+[2018-12-06 16:58:14.301][MDP][455399][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2018-11-27 17:07:08.878][10.1.235.34][885462][MYSQL][]
-SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mlp_test_k8s_mdp' ORDER BY ROUTINE_SCHEMA
-
-[2018-11-27 17:07:08.93][10.1.235.34][885466][MYSQL][]
+[2018-12-06 16:58:14.472][MDP][455394][MYSQL][]
 SHOW TABLE STATUS
 
-[2018-11-27 17:07:09.376][10.1.235.34][885462][MYSQL][]
+[2018-12-06 16:58:17.491][MDP][455394][MYSQL][]
+SHOW VARIABLES LIKE 'lower_case_%'
+
+[2018-12-06 16:58:20.684][MDP][455394][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2018-12-06 16:58:20.76][MDP][455399][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2018-11-27 17:07:09.43][10.1.235.34][885462][MYSQL][]
-SHOW TABLE STATUS
+[2018-12-06 16:58:20.924][MDP][455394][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
 
-[2018-11-27 17:07:13.674][10.1.235.34][885462][MYSQL][]
-SELECT * FROM `mlp_test_k8s_mdp`.`mdp_tenant_instance` LIMIT 0,1000
+[2018-12-06 16:58:22.073][MDP][455394][MYSQL][]
+SET PROFILING = 1
 
-[2018-11-27 17:07:13.732][10.1.235.34][885466][MYSQL][]
-SHOW COLUMNS FROM `mlp_test_k8s_mdp`.`mdp_tenant_instance`
+[2018-12-06 16:58:22.153][MDP][455394][MYSQL][]
+SHOW STATUS
 
-[2018-11-27 17:07:13.786][10.1.235.34][885462][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
+[2018-12-06 16:58:22.259][MDP][455394][MYSQL][]
+SHOW STATUS
 
-[2018-11-27 17:07:13.815][10.1.235.34][885462][MYSQL][]
-SHOW CREATE TABLE `mlp_test_k8s_mdp`.`mdp_tenant_instance`
+[2018-12-06 16:58:22.357][MDP][455394][MYSQL][]
+SELECT *  FROM mdp_model_task_arithmetic
 
-[2018-11-27 17:07:17.692][10.1.235.34][885462][MYSQL][]
-DELETE FROM `mlp_test_k8s_mdp`.`mdp_tenant_instance` WHERE `service_id` = '2CA11441-8154-4E69-AF78-D498EA9D37A3' AND `plan_id` = 'E0123F53-F2FC-46A1-B648-09941F01D8BC' AND `instance_id` = 'TEST' AND `tenant` = '5231fe14347e439dad4c1b3ea92d3e01' AND `tenant_name` = '测试' AND `tenant_desc` IS NULL AND `service_info` = '{\"webftp\":{\"serviceIp\":\"172.25.154.214\",\"servicePort\":\"9022\",\"version\":\"1.0\"},\"miner-aifl\":{\"version\":\"1.3.1\"},\"miner-control\":{\"serviceIp\":\"172.25.120.233\",\"proxyPort\":\"30000\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.miner-control.mlp-develop.prd.dataos.io/\",\"servicePort\":\"15000\",\"version\":\"1.3.1\"},\"mdpserver\":{\"serviceIp\":\"172.25.85.249\",\"proxyPort\":\"30002\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.mdpserver.mlp-develop.prd.dataos.io/\",\"servicePort\":\"9099\",\"version\":\"1.3.1\"},\"miner-drimo\":{\"serviceIp\":\"172.25.253.191\",\"proxyPort\":\"30003\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.miner-drimo.mlp-develop.prd.dataos.io/\",\"servicePort\":\"48888\",\"version\":\"1.3.1\"},\"mdpweb\":{\"serviceIp\":\"172.25.247.221\",\"proxyPort\":\"30004\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"mdpweb.mlp-develop.prd.dataos.io/\",\"servicePort\":\"8081\",\"version\":\"1.3.1\"},\"aifl-ailib\":{\"serviceIp\":\"172.25.88.166\",\"servicePort\":\"28888\",\"version\":\"1.3.1\"},\"proxyMapping\":{\"uri-miner_control\":\"5231fe14347e439dad4c1b3ea92d3e01.miner-control.mlp-develop.prd.dataos.io/\",\"vhost-miner_control\":\"10.252.38.8:30000\",\"uri-notebook_ui\":\"5231fe14347e439dad4c1b3ea92d3e01.notebook-ui.mlp-develop.prd.dataos.io/\",\"vhost-notebook_ui\":\"10.252.38.8:30001\",\"uri-mdpserver\":\"5231fe14347e439dad4c1b3ea92d3e01.mdpserver.mlp-develop.prd.dataos.io/\",\"vhost-mdpserver\":\"10.252.38.8:30002\",\"uri-miner_drimo\":\"5231fe14347e439dad4c1b3ea92d3e01.miner-drimo.mlp-develop.prd.dataos.io/\",\"vhost-miner_drimo\":\"10.252.38.8:30003\",\"uri-mdpweb\":\"mdpweb.mlp-develop.prd.dataos.io/\",\"vhost-mdpweb\":\"10.252.38.8:30004\",\"uri-notebook\":\"5231fe14347e439dad4c1b3ea92d3e01.notebook.mlp-develop.prd.dataos.io/\",\"vhost-notebook\":\"10.252.38.8:30005\"},\"aifl-spark\":{\"version\":\"1.3.1\"},\"tenant-inst\":{\"tenant\":\"5231fe14347e439dad4c1b3ea92d3e01\"},\"notebook-ui\":{\"serviceIp\":\"172.25.48.8\",\"proxyPort\":\"30001\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.notebook-ui.mlp-develop.prd.dataos.io/\",\"servicePort\":\"9097\",\"version\":\"1.3.1\"},\"sftp\":{\"serviceIp\":\"172.25.137.83\",\"servicePort\":\"8022\",\"version\":\"1.0\"},\"notebook\":{\"serviceIp\":\"172.25.0.240\",\"proxyPort\":\"30005\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.notebook.mlp-develop.prd.dataos.io/\",\"servicePort\":\"9198\",\"version\":\"1.3.1\"}}' AND `parameters` = '{\"resQuota\":{\"memory\":48.0,\"cpu\":36.0,\"storage\":20.0},\"tenant\":\"5231fe14347e439dad4c1b3ea92d3e01\",\"tenantName\":\"测试\"}' AND `arrange_setting` = '{\"webftp\":{\"imageVersion\":\"1.0\",\"replicas\":1,\"resLimit\":{\"memory\":8.0,\"cpu\":4.0},\"resRequest\":{\"memory\":8.0,\"cpu\":4.0}},\"miner-aifl\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":8.0,\"cpu\":8.0},\"resRequest\":{\"memory\":5.0,\"cpu\":4.0}},\"miner-control\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":8.0,\"cpu\":8.0},\"resRequest\":{\"memory\":5.0,\"cpu\":4.0}},\"notebook-ui\":{\"imageVersion\":\"1.3.1\",\"replicas\":2,\"resLimit\":{\"memory\":6.0,\"cpu\":4.0},\"resRequest\":{\"memory\":5.0,\"cpu\":4.0}},\"mdpserver\":{\"imageVersion\":\"1.3.1\",\"replicas\":2,\"resLimit\":{\"memory\":7.0,\"cpu\":4.0},\"resRequest\":{\"memory\":5.0,\"cpu\":4.0}},\"sftp\":{\"imageVersion\":\"1.0\",\"replicas\":1,\"resLimit\":{\"memory\":10.0,\"cpu\":4.0},\"resRequest\":{\"memory\":8.0,\"cpu\":4.0}},\"miner-drimo\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":8.0,\"cpu\":8.0},\"resRequest\":{\"memory\":5.0,\"cpu\":4.0}},\"mdpweb\":{\"imageVersion\":\"1.3.1\",\"replicas\":1,\"resLimit\":{\"memory\":5.0,\"cpu\":4.0},\"resRequest\":{\"memory\":5.0,\"cpu\":4.0}},\"aifl-ailib\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":8.0,\"cpu\":8.0},\"resRequest\":{\"memory\":5.0,\"cpu\":4.0}},\"notebook\":{\"imageVersion\":\"1.3.1\",\"replicas\":2,\"resLimit\":{\"memory\":6.0,\"cpu\":4.0},\"resRequest\":{\"memory\":5.0,\"cpu\":4.0}},\"aifl-spark\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":8.0,\"cpu\":8.0},\"resRequest\":{\"memory\":5.0,\"cpu\":4.0}}}' AND `sb_version` = '1.0.1' AND `create_time` = Cast('2018-11-23 12:43:27' AS Binary(19)) AND `update_time` IS NULL LIMIT 1
+[2018-12-06 16:58:22.454][MDP][455394][MYSQL][]
+SHOW STATUS
 
-[2018-11-27 17:55:44.341][10.1.235.34][889230][MYSQL][]
-SELECT * FROM `mlp_test_k8s_mdp`.`mdp_tenant_instance` LIMIT 0,1000
+[2018-12-06 16:58:22.548][MDP][455394][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-11-27 17:55:44.516][10.1.235.34][889231][MYSQL][]
-SHOW COLUMNS FROM `mlp_test_k8s_mdp`.`mdp_tenant_instance`
+[2018-12-06 16:58:22.635][MDP][455394][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001210*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2018-11-27 17:55:44.548][10.1.235.34][889230][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
+[2018-12-06 17:42:13.634][MDP][455394][MYSQL][]
+SET PROFILING = 1
 
-[2018-11-27 17:55:44.575][10.1.235.34][889230][MYSQL][]
-SHOW CREATE TABLE `mlp_test_k8s_mdp`.`mdp_tenant_instance`
+[2018-12-06 17:42:15.576][MDP][455394][MYSQL][]
+SHOW STATUS
 
-[2018-11-27 17:55:48.825][10.1.235.34][889230][MYSQL][]
-DELETE FROM `mlp_test_k8s_mdp`.`mdp_tenant_instance` WHERE `service_id` = '2CA11441-8154-4E69-AF78-D498EA9D37A3' AND `plan_id` = 'E0123F53-F2FC-46A1-B648-09941F01D8BC' AND `instance_id` = 'TEST' AND `tenant` = '5231fe14347e439dad4c1b3ea92d3e01' AND `tenant_name` = '测试' AND `tenant_desc` IS NULL AND `service_info` = '{\"webftp\":{\"serviceIp\":\"172.25.154.214\",\"servicePort\":\"9022\",\"version\":\"1.0\"},\"miner-aifl\":{\"version\":\"1.3.1\"},\"miner-control\":{\"serviceIp\":\"172.25.120.233\",\"proxyPort\":\"30000\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.miner-control.mlp-develop.prd.dataos.io/\",\"servicePort\":\"15000\",\"version\":\"1.3.1\"},\"mdpserver\":{\"serviceIp\":\"172.25.85.249\",\"proxyPort\":\"30002\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.mdpserver.mlp-develop.prd.dataos.io/\",\"servicePort\":\"9099\",\"version\":\"1.3.1\"},\"miner-drimo\":{\"serviceIp\":\"172.25.253.191\",\"proxyPort\":\"30003\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.miner-drimo.mlp-develop.prd.dataos.io/\",\"servicePort\":\"48888\",\"version\":\"1.3.1\"},\"mdpweb\":{\"serviceIp\":\"172.25.247.221\",\"proxyPort\":\"30004\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"mdpweb.mlp-develop.prd.dataos.io/\",\"servicePort\":\"8081\",\"version\":\"1.3.1\"},\"aifl-ailib\":{\"serviceIp\":\"172.25.88.166\",\"servicePort\":\"28888\",\"version\":\"1.3.1\"},\"proxyMapping\":{\"uri-miner_control\":\"5231fe14347e439dad4c1b3ea92d3e01.miner-control.mlp-develop.prd.dataos.io/\",\"vhost-miner_control\":\"10.252.38.8:30000\",\"uri-notebook_ui\":\"5231fe14347e439dad4c1b3ea92d3e01.notebook-ui.mlp-develop.prd.dataos.io/\",\"vhost-notebook_ui\":\"10.252.38.8:30001\",\"uri-mdpserver\":\"5231fe14347e439dad4c1b3ea92d3e01.mdpserver.mlp-develop.prd.dataos.io/\",\"vhost-mdpserver\":\"10.252.38.8:30002\",\"uri-miner_drimo\":\"5231fe14347e439dad4c1b3ea92d3e01.miner-drimo.mlp-develop.prd.dataos.io/\",\"vhost-miner_drimo\":\"10.252.38.8:30003\",\"uri-mdpweb\":\"mdpweb.mlp-develop.prd.dataos.io/\",\"vhost-mdpweb\":\"10.252.38.8:30004\",\"uri-notebook\":\"5231fe14347e439dad4c1b3ea92d3e01.notebook.mlp-develop.prd.dataos.io/\",\"vhost-notebook\":\"10.252.38.8:30005\"},\"aifl-spark\":{\"version\":\"1.3.1\"},\"tenant-inst\":{\"tenant\":\"5231fe14347e439dad4c1b3ea92d3e01\"},\"notebook-ui\":{\"serviceIp\":\"172.25.48.8\",\"proxyPort\":\"30001\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.notebook-ui.mlp-develop.prd.dataos.io/\",\"servicePort\":\"9097\",\"version\":\"1.3.1\"},\"sftp\":{\"serviceIp\":\"172.25.137.83\",\"servicePort\":\"8022\",\"version\":\"1.0\"},\"notebook\":{\"serviceIp\":\"172.25.0.240\",\"proxyPort\":\"30005\",\"proxyIp\":\"10.252.38.8\",\"routeUrl\":\"5231fe14347e439dad4c1b3ea92d3e01.notebook.mlp-develop.prd.dataos.io/\",\"servicePort\":\"9198\",\"version\":\"1.3.1\"}}' AND `parameters` = '{\"resQuota\":{\"memory\":1024.0,\"cpu\":80.0,\"storage\":20.0},\"tenant\":\"5231fe14347e439dad4c1b3ea92d3e01\",\"tenantName\":\"测试\"}' AND `arrange_setting` = '{\"webftp\":{\"imageVersion\":\"1.0\",\"replicas\":1,\"resLimit\":{\"memory\":8.0,\"cpu\":4.0},\"resRequest\":{\"memory\":8.0,\"cpu\":4.0}},\"miner-aifl\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":121.0,\"cpu\":21.0},\"resRequest\":{\"memory\":100.0,\"cpu\":8.0}},\"miner-control\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":121.0,\"cpu\":21.0},\"resRequest\":{\"memory\":100.0,\"cpu\":8.0}},\"notebook-ui\":{\"imageVersion\":\"1.3.1\",\"replicas\":2,\"resLimit\":{\"memory\":297.0,\"cpu\":13.0},\"resRequest\":{\"memory\":100.0,\"cpu\":8.0}},\"mdpserver\":{\"imageVersion\":\"1.3.1\",\"replicas\":1,\"resLimit\":{\"memory\":205.0,\"cpu\":13.0},\"resRequest\":{\"memory\":100.0,\"cpu\":8.0}},\"sftp\":{\"imageVersion\":\"1.0\",\"replicas\":1,\"resLimit\":{\"memory\":113.0,\"cpu\":9.0},\"resRequest\":{\"memory\":8.0,\"cpu\":4.0}},\"miner-drimo\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":121.0,\"cpu\":21.0},\"resRequest\":{\"memory\":100.0,\"cpu\":8.0}},\"mdpweb\":{\"imageVersion\":\"1.3.1\",\"replicas\":1,\"resLimit\":{\"memory\":100.0,\"cpu\":8.0},\"resRequest\":{\"memory\":100.0,\"cpu\":8.0}},\"aifl-ailib\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":121.0,\"cpu\":21.0},\"resRequest\":{\"memory\":100.0,\"cpu\":8.0}},\"notebook\":{\"imageVersion\":\"1.3.1\",\"replicas\":2,\"resLimit\":{\"memory\":297.0,\"cpu\":13.0},\"resRequest\":{\"memory\":100.0,\"cpu\":8.0}},\"aifl-spark\":{\"imageVersion\":\"1.3.1\",\"replicas\":4,\"resLimit\":{\"memory\":121.0,\"cpu\":21.0},\"resRequest\":{\"memory\":100.0,\"cpu\":8.0}}}' AND `sb_version` = '1.0.1' AND `create_time` = Cast('2018-11-27 17:09:27' AS Binary(19)) AND `update_time` IS NULL LIMIT 1
+[2018-12-06 17:42:16.438][MDP][455394][MYSQL][]
+SHOW STATUS
 
-[2018-11-27 17:55:49.504][10.1.235.34][889238][MYSQL][]
-SELECT * FROM `mlp_test_k8s_mdp`.`mdp_tenant_instance` LIMIT 0,1000
+[2018-12-06 17:42:19.162][MDP][455394][MYSQL][]
+SELECT *  FROM mdp_model_task_arithmetic where model_id='3524824075911168'
 
-[2018-11-27 17:55:49.571][10.1.235.34][889230][MYSQL][]
-SHOW COLUMNS FROM `mlp_test_k8s_mdp`.`mdp_tenant_instance`
+[2018-12-06 17:42:19.408][MDP][455394][MYSQL][]
+SHOW STATUS
 
-[2018-11-27 17:55:49.62][10.1.235.34][889238][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_tenant_instance'
+[2018-12-06 17:42:20.826][MDP][455394][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2018-11-27 17:55:49.651][10.1.235.34][889238][MYSQL][]
-SHOW CREATE TABLE `mlp_test_k8s_mdp`.`mdp_tenant_instance`
+[2018-12-06 17:42:20.988][MDP][455394][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001210*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2018-11-27 17:56:04.999][10.1.235.34][889238][MYSQL][]
-SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mlp_test_k8s_mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mlp_test_k8s_mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mlp_test_k8s_mdp'
+[2018-12-06 17:43:48.52][MDP][455394][MYSQL][]
+SET PROFILING = 1
 
-[2018-11-27 17:56:05.047][10.1.235.34][889238][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mlp_test_k8s_mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+[2018-12-06 17:43:48.876][MDP][455394][MYSQL][]
+SHOW STATUS
 
-[2018-11-27 17:56:05.079][10.1.235.34][889238][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mlp_test_k8s_mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
+[2018-12-06 17:43:49.69][MDP][455394][MYSQL][]
+SHOW STATUS
 
-[2018-11-27 17:56:05.107][10.1.235.34][889258][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
+[2018-12-06 17:43:50.509][MDP][455394][MYSQL][]
+SELECT *  FROM mdp_model_task_arithmetic -- where model_id='3524824075911168'
 
-[2018-11-27 17:56:05.169][10.1.235.34][889258][MYSQL][]
-SHOW TABLE STATUS
+[2018-12-06 17:43:51.529][MDP][455394][MYSQL][]
+SHOW STATUS
 
-[2018-11-27 17:56:05.207][10.1.235.34][889238][MYSQL][]
-SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mlp_test_k8s_mdp' ORDER BY ROUTINE_SCHEMA
+[2018-12-06 17:43:52.046][MDP][455394][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-12-06 17:43:52.959][MDP][455394][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001081*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-12-06 17:44:05.697][MDP][455394][MYSQL][]
+SET PROFILING = 1
+
+[2018-12-06 17:44:06.303][MDP][455394][MYSQL][]
+SHOW STATUS
+
+[2018-12-06 17:44:07.513][MDP][455394][MYSQL][]
+SHOW STATUS
+
+[2018-12-06 17:44:08.908][MDP][455394][MYSQL][]
+SELECT model_id,count(*)  FROM mdp_model_task_arithmetic group by model_id -- where model_id='3524824075911168'
+
+[2018-12-06 17:44:09.07][MDP][455394][MYSQL][]
+SHOW STATUS
+
+[2018-12-06 17:44:09.418][MDP][455394][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-12-06 17:44:09.711][MDP][455394][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001831*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=12 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-12-06 17:51:33.767][MDP][455394][MYSQL][]
+SET PROFILING = 1
+
+[2018-12-06 17:51:34.683][MDP][455394][MYSQL][]
+SHOW STATUS
+
+[2018-12-06 17:51:38.366][MDP][455394][MYSQL][]
+SHOW STATUS
+
+[2018-12-06 17:51:38.525][MDP][455394][MYSQL][]
+SELECT * FROM mdp_model_task_arithmetic -- where model_id='3524824075911168'
+
+[2018-12-06 17:51:38.693][MDP][455394][MYSQL][]
+SHOW STATUS
+
+[2018-12-06 17:51:38.945][MDP][455394][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-12-06 17:51:39.031][MDP][455394][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002424*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=19 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2018-12-06 17:51:54.764][MDP][455394][MYSQL][]
+SET PROFILING = 1
+
+[2018-12-06 17:51:55.772][MDP][455394][MYSQL][]
+SHOW STATUS
+
+[2018-12-06 17:51:56.988][MDP][455394][MYSQL][]
+SHOW STATUS
+
+[2018-12-06 17:52:00.66][MDP][455394][MYSQL][]
+SELECT * FROM mdp_model_task_arithmetic order by work_mode desc-- where model_id='3524824075911168'
+
+[2018-12-06 17:52:01.821][MDP][455394][MYSQL][]
+SHOW STATUS
+
+[2018-12-06 17:52:04.486][MDP][455394][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2018-12-06 17:52:04.84][MDP][455394][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002109*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=26 GROUP BY SEQ, STATE ORDER BY SEQ
 
