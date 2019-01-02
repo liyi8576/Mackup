@@ -23,13 +23,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
+			<string>{"Name":"irec_tenant_instance","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>Query</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>QueryView</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>New query</string>
+			<string>Open table irec_tenant_instance@irec (MDP)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -39,7 +39,40 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp</string>
+			<string>irec</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>1</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"irec_tenant_instance","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>DesignForm</string>
+			<key>name</key>
+			<string>Design table irec_tenant_instance@irec (MDP)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>irec</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -59,6 +92,39 @@
 	<key>recents</key>
 	<dict>
 		<key>0</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"irec_tenant_instance","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>DesignForm</string>
+			<key>name</key>
+			<string>Design Table irec_tenant_instance</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>irec</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>1</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -91,7 +157,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>1</key>
+		<key>2</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -124,7 +190,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>2</key>
+		<key>3</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -157,7 +223,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>3</key>
+		<key>4</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -190,7 +256,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>4</key>
+		<key>5</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -223,7 +289,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>5</key>
+		<key>6</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -256,7 +322,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>6</key>
+		<key>7</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -289,7 +355,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>7</key>
+		<key>8</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -322,7 +388,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>8</key>
+		<key>9</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -336,39 +402,6 @@
 			<string>TableView</string>
 			<key>name</key>
 			<string>Open Table irec_model</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>irec_demo</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>9</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"irec_model_state_log","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open Table irec_model_state_log</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
