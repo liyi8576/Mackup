@@ -197,13 +197,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_tenant_instance","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_privilege_rule_map","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table irec_tenant_instance</string>
+			<string>Open Table base_privilege_rule_map</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -213,7 +213,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -230,13 +230,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_model_task_arithmetic","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_privilege_conf","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_model_task_arithmetic</string>
+			<string>Open Table base_privilege_conf</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -263,13 +263,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_train_rpt_result","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_role_cover","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table mdp_train_rpt_result</string>
+			<string>Design Table base_role_cover</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -296,13 +296,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_machine_learning_server","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_role_cover","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_machine_learning_server</string>
+			<string>Open Table base_role_cover</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -329,13 +329,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ftp","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_user_info","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_ftp</string>
+			<string>Open Table base_user_info</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -362,13 +362,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_model_task","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_user_role_map","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_model_task</string>
+			<string>Open Table base_user_role_map</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -395,13 +395,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_model_task_dl_loss","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_user_group_map","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_model_task_dl_loss</string>
+			<string>Open Table base_user_group_map</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -428,13 +428,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ds","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_usergroup_role_map","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_ds</string>
+			<string>Open Table base_usergroup_role_map</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -461,13 +461,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_strategy_log","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_role_data_map","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table irec_strategy_log</string>
+			<string>Open Table base_role_data_map</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -477,7 +477,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec_demo</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -494,13 +494,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_model","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_apptopic_task","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table irec_model</string>
+			<string>Design Table mdp_apptopic_task</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -510,7 +510,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec_demo</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
