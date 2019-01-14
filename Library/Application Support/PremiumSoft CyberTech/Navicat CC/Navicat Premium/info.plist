@@ -23,13 +23,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
+			<string>{"Name":"mdp_apptopic","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>Query</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>QueryView</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>New query</string>
+			<string>Open table mdp_apptopic@mdp (MDP)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -56,112 +56,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"base_role_data_map","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_apptopic","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open table base_role_data_map@mdp (MDP)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>2</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"base_role_cover","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table base_role_cover@mdp (MDP)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>3</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
-			<key>formobjecttype</key>
-			<string>Query</string>
-			<key>formtype</key>
-			<string>QueryView</string>
-			<key>name</key>
-			<string>New query</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>4</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
-			<key>formobjecttype</key>
-			<string>Query</string>
-			<key>formtype</key>
-			<string>QueryView</string>
-			<key>name</key>
-			<string>New query</string>
+			<string>Design table mdp_apptopic@mdp (MDP)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -201,9 +102,9 @@
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table mdp_apptopic</string>
+			<string>Design Table mdp_apptopic</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -234,9 +135,9 @@
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_apptopic</string>
+			<string>Open Table mdp_apptopic</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
