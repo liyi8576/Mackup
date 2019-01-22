@@ -15,7 +15,107 @@
 	<key>autosaves</key>
 	<dict/>
 	<key>continues</key>
-	<dict/>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
+			<key>formobjecttype</key>
+			<string>Query</string>
+			<key>formtype</key>
+			<string>QueryView</string>
+			<key>name</key>
+			<string>New query</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mlp_test_k8s_mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>1</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"base_auth_data_map","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open table base_auth_data_map@mlp_test_k8s_mdp (MDP)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mlp_test_k8s_mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"mdp_model","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open table mdp_model@mlp_test_k8s_mdp (MDP)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mlp_test_k8s_mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
 	<key>favorites</key>
 	<dict/>
 	<key>nsublogindata</key>
@@ -33,13 +133,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_apptopic","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_auth_data_map","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_apptopic</string>
+			<string>Open Table base_auth_data_map</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -49,7 +149,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp</string>
+			<string>mlp_test_k8s_mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -66,13 +166,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_apptopic","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_apptopic</string>
+			<string>Open Table mdp_model</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -82,7 +182,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp</string>
+			<string>mlp_test_k8s_mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -132,13 +232,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"base_role_cover","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_role_data_map","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table base_role_cover</string>
+			<string>Open Table base_role_data_map</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -148,7 +248,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp</string>
+			<string>mlp_test_k8s_mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -165,13 +265,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"base_role_data_map","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_user_info","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table base_role_data_map</string>
+			<string>Open Table base_user_info</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -181,7 +281,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp</string>
+			<string>mlp_test_k8s_mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -198,13 +298,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"base_role_cover","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"base_group_info","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table base_role_cover</string>
+			<string>Open Table base_group_info</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -214,7 +314,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp</string>
+			<string>mlp_test_k8s_mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -231,13 +331,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"v_base_user_role_cover","ObjectType":"View_MYSQL"}</string>
+			<string>{"Name":"base_group_info","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>View_MYSQL</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open View v_base_user_role_cover</string>
+			<string>Open Table base_group_info</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -264,13 +364,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ds_cycle","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_type","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_ds_cycle</string>
+			<string>Open Table mdp_model_type</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -297,13 +397,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ds_data_review","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_ds_data_review</string>
+			<string>Open Table mdp_model</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -330,13 +430,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"v_base_user_role_cover_tmp1","ObjectType":"View_MYSQL"}</string>
+			<string>{"Name":"base_role_data_map","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>View_MYSQL</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>DesignForm</string>
 			<key>name</key>
-			<string>Design View v_base_user_role_cover_tmp1</string>
+			<string>Design Table base_role_data_map</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
