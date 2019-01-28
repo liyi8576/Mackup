@@ -80,7 +80,7 @@ brew "watchman"
 brew "wget"
 brew "yarn"
 brew "youtube-dl"
-brew "zsh", args: ["without-etcdir"]
+brew "zsh"
 brew "zsh-syntax-highlighting"
 brew "c-bata/kube-prompt/kube-prompt"
 brew "garethr/kubeval/kubeval"
