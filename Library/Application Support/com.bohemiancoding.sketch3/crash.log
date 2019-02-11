@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>begin SilentCheckForUpdates {
+    action = "&lt;MSSilentCheckForUpdatesAction: 0x60000127aee0&gt;";
+}</string>
+	<string>finish SilentCheckForUpdates {
+    action = "&lt;MSSilentCheckForUpdatesAction: 0x60000127aee0&gt;";
+}</string>
+	<string>begin Log {
+    action = "&lt;MSLogAction: 0x6000009b1100&gt;";
+    command = "&lt;MSPluginCommand: 0x600003236300&gt;";
+    level = error;
+    payload =     (
+        "Error: Error Domain=NSCocoaErrorDomain Code=4 \"\U201ccom.sketchapp.unsplash-plugin\U201d couldn\U2019t be removed.\" UserInfo={NSFilePath=/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn/T/com.sketchapp.unsplash-plugin, NSUserStringVariant=(\n    Remove\n), NSUnderlyingError=0x6000011f2730 {Error Domain=NSPOSIXErrorDomain Code=2 \"No such file or directory\"}}"
+    );
+    stringValue = "{ rmdirSync@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:5:3229\n_@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:37:994\n__skpm_run@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:57:119\n__skpm_run@[native code]\n  line: 5,\n  column: 3229,\n  sourceURL: '/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js' }";
+}</string>
+	<string>finish Log {
+    action = "&lt;MSLogAction: 0x6000009b1100&gt;";
+    command = "&lt;MSPluginCommand: 0x600003236300&gt;";
+    level = error;
+    payload =     (
+        "Error: Error Domain=NSCocoaErrorDomain Code=4 \"\U201ccom.sketchapp.unsplash-plugin\U201d couldn\U2019t be removed.\" UserInfo={NSFilePath=/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn/T/com.sketchapp.unsplash-plugin, NSUserStringVariant=(\n    Remove\n), NSUnderlyingError=0x6000011f2730 {Error Domain=NSPOSIXErrorDomain Code=2 \"No such file or directory\"}}"
+    );
+    stringValue = "{ rmdirSync@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:5:3229\n_@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:37:994\n__skpm_run@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:57:119\n__skpm_run@[native code]\n  line: 5,\n  column: 3229,\n  sourceURL: '/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js' }";
+}</string>
+</array>
+</plist>
