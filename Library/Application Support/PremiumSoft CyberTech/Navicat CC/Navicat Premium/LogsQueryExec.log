@@ -1,234 +1,1844 @@
-[2019-01-31 13:47:57.031][MDP][258469][MYSQL][]
+[2019-02-27 14:39:48.605][MDP][058727][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'
 
-[2019-01-31 13:47:57.102][MDP][258469][MYSQL][]
+[2019-02-27 14:39:48.672][MDP][058727][MYSQL][]
 SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
 
-[2019-01-31 13:48:00.495][MDP][258469][MYSQL][]
+[2019-02-27 14:39:51.772][MDP][058727][MYSQL][]
 SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
 
-[2019-01-31 13:48:00.595][MDP][258469][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
-
-[2019-01-31 13:48:00.673][MDP][258469][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
-
-[2019-01-31 13:48:00.845][MDP][258474][MYSQL][]
+[2019-02-27 14:39:52.53][MDP][058732][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2019-01-31 13:48:00.902][MDP][258469][MYSQL][]
-SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_SCHEMA
-
-[2019-01-31 13:48:00.967][MDP][258474][MYSQL][]
-SHOW TABLE STATUS
-
-[2019-01-31 13:48:01.482][MDP][258469][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-01-31 13:48:01.608][MDP][258469][MYSQL][]
-SHOW TABLE STATUS
-
-[2019-01-31 13:48:07.089][MDP][258469][MYSQL][]
-SHOW PROCEDURE STATUS WHERE Db = 'mdp'
-
-[2019-01-31 13:48:07.155][MDP][258469][MYSQL][]
-SHOW FUNCTION STATUS WHERE Db = 'mdp'
-
-[2019-01-31 13:48:07.221][MDP][258469][MYSQL][]
-SELECT * FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_NAME
-
-[2019-01-31 13:48:20.088][MDP][258469][MYSQL][]
+[2019-02-27 14:39:52.666][MDP][058727][MYSQL][]
 SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
 
-[2019-01-31 13:48:44.488][MDP][258508][MYSQL][]
-SELECT db.Host, db.Db, db.User, db.Select_priv, db.Insert_priv, db.Update_priv, db.Delete_priv, db.Create_priv, db.Drop_priv, db.Grant_priv, db.References_priv, db.Index_priv, db.Alter_priv, db.Create_tmp_table_priv, db.Lock_tables_priv, db.Create_view_priv, db.Show_view_priv, db.Create_routine_priv, db.Alter_routine_priv, db.Execute_priv, db.Event_priv, db.Trigger_priv FROM mysql.db db
+[2019-02-27 14:39:53.329][MDP][058727][MYSQL][]
+SET PROFILING = 1
 
-[2019-01-31 13:48:44.599][MDP][258508][MYSQL][]
-SELECT pp.Host, pp.Db, pp.User, pp.Routine_name, pp.Routine_type, pp.Proc_priv FROM mysql.procs_priv pp ORDER BY pp.User
+[2019-02-27 14:39:53.391][MDP][058727][MYSQL][]
+SHOW STATUS
 
-[2019-01-31 13:48:44.68][MDP][258508][MYSQL][]
-SELECT * FROM mysql.user u
+[2019-02-27 14:39:53.462][MDP][058727][MYSQL][]
+SHOW STATUS
 
-[2019-01-31 13:48:44.799][MDP][258508][MYSQL][]
-SELECT tp.Host, tp.Db, tp.User, tp.Table_name, tp.Table_priv FROM mysql.tables_priv tp WHERE tp.Table_priv!= '' ORDER BY tp.User
+[2019-02-27 14:39:53.537][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
 
-[2019-01-31 13:48:44.901][MDP][258508][MYSQL][]
-SELECT cp.Host, cp.Db, cp.User, cp.Table_name, cp.Column_name, cp.Column_priv FROM mysql.columns_priv cp ORDER BY cp.User
+[2019-02-27 14:39:54.182][MDP][058727][MYSQL][]
+SHOW STATUS
 
-[2019-01-31 13:48:44.965][MDP][258469][MYSQL][]
-SELECT user, host FROM mysql.user ORDER BY user
+[2019-02-27 14:39:54.253][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2019-01-31 13:48:45.034][MDP][258469][MYSQL][]
+[2019-02-27 14:39:54.311][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001153*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:40:02.319][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:40:04.629][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:40:04.864][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:40:05.037][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union 
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:40:06.606][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:40:06.674][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:40:06.744][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001153*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:40:27.708][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:40:27.801][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:40:27.906][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:40:28.019][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:40:29.498][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:40:29.572][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:40:29.635][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001091*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:42:33.223][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:42:33.287][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:33.357][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:33.43][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:42:34.491][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:34.689][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:42:34.873][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001721*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=12 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:42:40.095][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:42:40.56][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:40.633][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:40.705][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union 
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:42:42.164][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:42.241][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:42:42.302][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002091*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=19 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:42:49.49][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:42:49.566][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:49.652][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:49.742][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:42:50.66][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:50.758][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:42:50.844][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002273*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=26 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:42:55.814][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:42:55.898][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:56.001][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:56.104][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union 
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:42:56.885][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:42:56.963][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:42:57.024][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002112*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=33 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:43:41.467][MDP][058732][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdb' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdb' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdb'
+
+[2019-02-27 14:43:41.854][MDP][058911][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-02-27 14:43:42.003][MDP][058732][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdb' ORDER BY TABLE_NAME ASC
+
+[2019-02-27 14:43:43.497][MDP][058732][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2019-02-27 14:43:43.568][MDP][058911][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-02-27 14:43:43.73][MDP][058732][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+
+[2019-02-27 14:43:44.169][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:43:44.232][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:43:44.372][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:43:44.511][MDP][058732][MYSQL][]
+select * from base_user_info
+
+[2019-02-27 14:43:44.653][MDP][058911][MYSQL][]
+SELECT * FROM `mdp`.`base_user_info` LIMIT 0
+
+[2019-02-27 14:43:44.797][MDP][058911][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`base_user_info`
+
+[2019-02-27 14:43:44.873][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:43:44.956][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:43:45.036][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001126*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:44:05.684][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:44:05.825][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:44:05.977][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:44:06.129][MDP][058732][MYSQL][]
+select user_id,AUTH_TYPE
+from base_user_info group by user_id order by 2 desc
+
+[2019-02-27 14:44:06.407][MDP][058911][MYSQL][]
+SELECT * FROM `mdp`.`base_user_info` LIMIT 0
+
+[2019-02-27 14:44:06.665][MDP][058911][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`base_user_info`
+
+[2019-02-27 14:44:06.789][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:44:06.914][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:44:07.034][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001126*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:44:58.334][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:44:58.4][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:44:58.48][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:44:58.563][MDP][058732][MYSQL][]
+select *
+from base_user_info where user_id in ('songyong','test_zhx')
+
+[2019-02-27 14:44:58.7][MDP][058911][MYSQL][]
+SELECT * FROM `mdp`.`base_user_info` LIMIT 0
+
+[2019-02-27 14:44:58.838][MDP][058911][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`base_user_info`
+
+[2019-02-27 14:44:58.919][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:44:59.017][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:44:59.09][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001021*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:45:27.784][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:45:27.85][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:45:27.953][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:45:28.03][MDP][058732][MYSQL][]
+select user_id,count(AUTH_TYPE)
+from base_user_info group by user_id order by 2 desc
+
+[2019-02-27 14:45:28.111][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:45:28.187][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:45:28.253][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001556*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=12 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:45:41.035][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:45:41.094][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:45:41.164][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:45:41.235][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:45:41.797][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:45:41.866][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:45:41.933][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002121*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=40 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:46:22.132][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:46:22.25][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:46:22.391][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:46:22.52][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	'A' as temp,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	'B' as temp,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:46:23.921][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:46:23.995][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:46:24.066][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002075*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=47 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:46:35.236][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:46:35.425][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:46:35.647][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:46:35.884][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	'A' as temp,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	'B' as temp,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+	
+order by 1
+
+[2019-02-27 14:46:38.276][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:46:38.344][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:46:38.407][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002154*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=54 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:47:53.147][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:47:53.21][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:47:53.279][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:47:53.35][MDP][058727][MYSQL][]
+select T.user_id,count(T.temp)
+from (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	'A' as temp,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	'B' as temp,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+	
+)T 
+group by T.user_id order by 2 desc
+
+[2019-02-27 14:47:53.626][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:47:53.696][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:47:53.755][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002151*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=61 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:48:04.615][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:48:04.683][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:48:04.755][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:48:04.841][MDP][058727][MYSQL][]
+select T.user_id,count(distinct T.temp)
+from (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	'A' as temp,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	'B' as temp,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+	
+)T 
+group by T.user_id order by 2 desc
+
+[2019-02-27 14:48:05.125][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:48:05.198][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:48:05.276][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002197*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=68 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:49:46.173][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:49:46.242][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:49:46.325][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:49:46.413][MDP][058732][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:49:46.674][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:49:46.771][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:49:46.847][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001959*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=19 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:49:51.796][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:49:51.865][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:49:51.949][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:49:52.034][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:49:52.669][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:49:52.757][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:49:52.835][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002226*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=75 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:50:21.631][MDP][058911][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2019-02-27 14:50:22.158][MDP][059223][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-02-27 14:50:22.401][MDP][058911][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+
+[2019-02-27 14:50:39.501][MDP][058911][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:50:39.568][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:50:39.647][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:50:39.727][MDP][058911][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+union all
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:50:40.554][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:50:40.638][MDP][058911][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:50:40.712][MDP][058911][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001134*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:50:48.057][MDP][058911][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:50:48.146][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:50:48.23][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:50:48.311][MDP][058911][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+union 
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:50:49.14][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:50:49.226][MDP][058911][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:50:49.304][MDP][058911][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001134*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:52:19.811][MDP][058911][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:52:19.879][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:52:19.956][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:52:20.043][MDP][058911][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+		`userinfo`.`AUTH_TYPE`,
+
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+union 
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userinfo`.`AUTH_TYPE`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:52:20.708][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:52:20.785][MDP][058911][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:52:20.85][MDP][058911][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001093*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:53:44.98][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:53:45.048][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:53:45.12][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:53:45.192][MDP][058727][MYSQL][]
+select user_id,role_id,role_data_type,data_id,count(*) from (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+) group by user_id,role_id,role_data_type,data_id order by 2 desc
+
+[2019-02-27 14:53:45.316][MDP][058727][MYSQL][]
+Every derived table must have its own alias
+
+[2019-02-27 14:53:52.114][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:53:52.175][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:53:52.255][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:53:52.328][MDP][058727][MYSQL][]
+select user_id,role_id,role_data_type,data_id,count(*) from (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+) T group by user_id,role_id,role_data_type,data_id order by 2 desc
+
+[2019-02-27 14:53:52.931][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:53:53.007][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:53:53.072][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001137*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=86 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:54:22.842][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:54:22.908][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:54:22.987][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:54:23.069][MDP][058732][MYSQL][]
+select user_id,role_id,role_data_type,data_id,count(*) from (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+) T group by user_id,role_id,role_data_type,data_id order by 2 desc
+
+[2019-02-27 14:54:23.263][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:54:23.346][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:54:23.417][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002003*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=26 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:55:01.338][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:55:01.395][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:01.465][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:01.545][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:55:01.887][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:01.96][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:55:02.021][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001474*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=93 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:55:03.459][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:55:03.535][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:03.614][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:03.691][MDP][058732][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:55:03.856][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:03.934][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:55:04.000][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002043*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=33 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:55:06.786][MDP][058911][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:55:06.849][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:06.927][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:07.009][MDP][058911][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+		`userinfo`.`AUTH_TYPE`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+union 
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userinfo`.`AUTH_TYPE`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:55:07.654][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:07.732][MDP][058911][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:55:07.805][MDP][058911][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001770*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=12 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:55:31.002][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:55:31.065][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:31.152][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:31.23][MDP][058732][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+  and EXISTS (SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+)
+
+[2019-02-27 14:55:31.416][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:55:31.494][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:55:31.562][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002078*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=40 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:56:27.302][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:56:27.36][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:56:27.44][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:56:27.51][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+  and userinfo.USER_ID='songyong'
+
+[2019-02-27 14:56:27.578][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:56:27.646][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:56:27.711][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001910*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=100 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:56:43.912][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:56:43.97][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:56:44.047][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:56:44.118][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:56:44.462][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:56:44.537][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:56:44.612][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002057*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=107 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:57:20.864][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:57:20.921][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:57:20.994][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:57:21.065][MDP][058727][MYSQL][]
+select * from  (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+	) T from user_id='songyong'
+
+[2019-02-27 14:57:21.135][MDP][058727][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'from user_id='songyong'' at line 15
+
+[2019-02-27 14:57:29.575][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:57:29.666][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:57:29.769][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:57:29.875][MDP][058727][MYSQL][]
+select * from  (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+	) T where user_id='songyong'
+
+[2019-02-27 14:57:30.106][MDP][059223][MYSQL][]
+SELECT * FROM `mdp`.`T` LIMIT 0
+
+[2019-02-27 14:57:30.217][MDP][059223][MYSQL][]
+Table 'mdp.t' doesn't exist
+
+[2019-02-27 14:57:30.217][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:57:30.337][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:57:30.467][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001177*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=118 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:57:46.943][MDP][058727][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 14:57:47.006][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:57:47.105][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:57:47.176][MDP][058727][MYSQL][]
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+
+[2019-02-27 14:57:47.499][MDP][058727][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 14:57:47.569][MDP][058727][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 14:57:47.65][MDP][058727][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001190*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=125 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 14:58:11.463][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'T1' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+
+[2019-02-27 14:58:11.527][MDP][059223][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'T1' ORDER BY ROUTINE_SCHEMA
+
+[2019-02-27 14:58:11.621][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' AND TABLE_NAME = 'T1' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2019-02-27 14:58:25.726][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'T2' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+
+[2019-02-27 14:58:25.801][MDP][059223][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'T2' ORDER BY ROUTINE_SCHEMA
+
+[2019-02-27 14:58:25.888][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' AND TABLE_NAME = 'T2' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2019-02-27 14:59:35.656][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'T2' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+
+[2019-02-27 14:59:35.718][MDP][059223][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'T2' ORDER BY ROUTINE_SCHEMA
+
+[2019-02-27 14:59:35.807][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' AND TABLE_NAME = 'T2' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2019-02-27 14:59:53.008][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'T2' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+
+[2019-02-27 14:59:53.15][MDP][059223][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'T2' ORDER BY ROUTINE_SCHEMA
+
+[2019-02-27 14:59:53.304][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' AND TABLE_NAME = 'T2' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2019-02-27 15:00:01.366][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'T2' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+
+[2019-02-27 15:00:01.477][MDP][059223][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'T2' ORDER BY ROUTINE_SCHEMA
+
+[2019-02-27 15:00:01.599][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' AND TABLE_NAME = 'T2' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2019-02-27 15:00:11.785][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'T2' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+
+[2019-02-27 15:00:11.875][MDP][059223][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'T2' ORDER BY ROUTINE_SCHEMA
+
+[2019-02-27 15:00:11.99][MDP][059223][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' AND TABLE_NAME = 'T2' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2019-02-27 15:00:29.849][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 15:00:29.949][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:00:30.064][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:00:30.177][MDP][058732][MYSQL][]
+select * from (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+	)T1 where EXISTS (
+		select * from (
+		
+		SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+		) T2
+		where T1.user_id=T2.user_id and T1.role_id=T2.role_id and T1.role_data_type=T2.ROLE_DATA_TYPE and T1.data_id=T2.data_id
+	)
+
+[2019-02-27 15:00:30.493][MDP][059223][MYSQL][]
+SELECT * FROM `mdp`.`T1` LIMIT 0
+
+[2019-02-27 15:00:30.588][MDP][059223][MYSQL][]
+Table 'mdp.t1' doesn't exist
+
+[2019-02-27 15:00:30.588][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:00:30.7][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 15:00:30.797][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002015*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=47 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 15:01:15.752][MDP][059223][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2019-02-27 15:01:16.068][MDP][059729][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-02-27 15:01:16.207][MDP][059223][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+
+[2019-02-27 15:02:36.845][MDP][059223][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 15:02:36.904][MDP][059223][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:02:36.977][MDP][059223][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:02:37.056][MDP][059223][MYSQL][]
+select * from (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+	) T1
+where EXISTS (
+  select * from (
+	SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userinfo`.`AUTH_TYPE`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+	
+	) T2
+	where T1.user_id=T2.user_id and T1.role_id=T2.role_id and T1.role_data_type=T2.ROLE_DATA_TYPE and T1.data_id=T2.data_id
+)
+
+[2019-02-27 15:02:37.921][MDP][059729][MYSQL][]
+SELECT * FROM `mdp`.`T1` LIMIT 0
+
+[2019-02-27 15:02:37.983][MDP][059729][MYSQL][]
+Table 'mdp.t1' doesn't exist
+
+[2019-02-27 15:02:37.983][MDP][059223][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:02:38.058][MDP][059223][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 15:02:38.131][MDP][059223][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001151*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 15:02:40.704][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 15:02:40.774][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:02:40.851][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:02:40.927][MDP][058732][MYSQL][]
+T1.user_id=T2.user_id and T1.role_id=T2.role_id and T1.role_data_type=T2.ROLE_DATA_TYPE and T1.data_id=T2.data_id
+
+[2019-02-27 15:02:40.999][MDP][058732][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'T1.user_id=T2.user_id and T1.role_id=T2.role_id and T1.role_data_type=T2.ROLE_DA' at line 1
+
+[2019-02-27 15:02:44.09][MDP][058732][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 15:02:44.154][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:02:44.23][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:02:44.309][MDP][058732][MYSQL][]
+select * from (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1))) 
+	)T1 where EXISTS (
+		select * from (
+		
+		SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+		) T2
+		where T1.user_id=T2.user_id and T1.role_id=T2.role_id and T1.role_data_type=T2.ROLE_DATA_TYPE and T1.data_id=T2.data_id
+	)
+
+[2019-02-27 15:02:44.536][MDP][059729][MYSQL][]
+SELECT * FROM `mdp`.`T1` LIMIT 0
+
+[2019-02-27 15:02:44.596][MDP][059729][MYSQL][]
+Table 'mdp.t1' doesn't exist
+
+[2019-02-27 15:02:44.596][MDP][058732][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:02:44.67][MDP][058732][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 15:02:44.736][MDP][058732][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001269*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=58 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 15:03:06.742][MDP][059729][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2019-02-27 15:03:07.04][MDP][059816][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-02-27 15:03:07.166][MDP][059729][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+
+[2019-02-27 15:03:56.78][MDP][059729][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 15:03:56.84][MDP][059729][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:03:56.916][MDP][059729][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:03:56.989][MDP][059729][MYSQL][]
+select T.user_id,T.role_id,T.role_data_type,T.data_id,count(*) from (
+SELECT
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+) T 
+group by T.user_id,T.role_id,T.role_data_type,T.data_id
+order by 5 desc
+
+[2019-02-27 15:03:57.58][MDP][059729][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:03:57.656][MDP][059729][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 15:03:57.717][MDP][059729][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001126*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 15:04:41.954][MDP][059729][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 15:04:42.014][MDP][059729][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:04:42.088][MDP][059729][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:04:42.166][MDP][059729][MYSQL][]
+select T.user_id,T.role_id,T.role_data_type,T.data_id,count(*) from (
+SELECT
+  distinct
+	`userinfo`.`USER_ID` AS `user_id`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+) T 
+group by T.user_id,T.role_id,T.role_data_type,T.data_id
+order by 5 desc
+
+[2019-02-27 15:04:42.758][MDP][059729][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:04:42.829][MDP][059729][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 15:04:42.903][MDP][059729][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001126*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 15:05:08.507][MDP][058911][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 15:05:08.58][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:05:08.663][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:05:08.742][MDP][058911][MYSQL][]
+SELECT distinct
+	`userinfo`.`USER_ID` AS `user_id`,
+		`userinfo`.`AUTH_TYPE`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+union all 
+SELECT distinct 
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userinfo`.`AUTH_TYPE`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1)))
+
+[2019-02-27 15:05:09.429][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:05:09.525][MDP][058911][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 15:05:09.599][MDP][058911][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002145*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=19 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 15:05:23.787][MDP][058911][MYSQL][]
+SET PROFILING = 1
+
+[2019-02-27 15:05:23.858][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:05:23.934][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:05:24.013][MDP][058911][MYSQL][]
+SELECT distinct
+	`userinfo`.`USER_ID` AS `user_id`,
+		`userinfo`.`AUTH_TYPE`,
+	`usergrouprole`.`ROLE_ID` AS `role_id`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_group_map` `usergroup` ON ((`userinfo`.`USER_ID` = `usergroup`.`USER_ID`)))
+			JOIN `base_usergroup_role_map` `usergrouprole` ON ((`usergroup`.`GROUP_ID` = `usergrouprole`.`USER_GROUP_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`usergrouprole`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 1)
+	AND (`usergroup`.`IS_VALID` <> - (1)))
+union  
+SELECT distinct 
+	`userinfo`.`USER_ID` AS `user_id`,
+	`userinfo`.`AUTH_TYPE`,
+	`userrolemap`.`ROLE_ID` AS `ROLE_ID`,
+	`cover`.`ROLE_DATA_TYPE` AS `role_data_type`,
+	`datamap`.`DATA_ID` AS `data_id`
+FROM ((((`base_user_info` `userinfo`
+				JOIN `base_user_role_map` `userrolemap` ON ((`userinfo`.`USER_ID` = `userrolemap`.`USER_ID`)))
+			JOIN `base_role_info` `roleinfo` ON ((`userrolemap`.`ROLE_ID` = `roleinfo`.`ROLE_ID`)))
+		JOIN `base_role_cover` `cover` ON ((`userrolemap`.`ROLE_ID` = `cover`.`ROLE_ID`)))
+	JOIN `base_role_data_map` `datamap` ON (((`cover`.`ROLE_DATA_TYPE` = `datamap`.`ROLE_DATA_TYPE`)
+			AND (`cover`.`ROLE_ID` = `datamap`.`ROLE_ID`))))
+WHERE ((`userinfo`.`AUTH_TYPE` = 2)
+	AND (`userrolemap`.`IS_VALID` <> - (1)))
+
+[2019-02-27 15:05:24.731][MDP][058911][MYSQL][]
+SHOW STATUS
+
+[2019-02-27 15:05:24.805][MDP][058911][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-02-27 15:05:24.872][MDP][058911][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002137*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=26 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-02-27 23:03:30.332][MDP][059816][MYSQL][]
 SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
 
-[2019-01-31 13:48:45.267][MDP][258474][MYSQL][]
-SHOW PROCEDURE STATUS WHERE Db = 'mdp'
+[2019-02-27 23:03:35.436][MDP][082276][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
 
-[2019-01-31 13:48:45.27][MDP][258469][MYSQL][]
-SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+[2019-02-27 23:03:35.508][MDP][082276][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2019-01-31 13:48:45.27][MDP][258508][MYSQL][]
+[2019-02-27 23:03:35.579][MDP][082276][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2019-02-27 23:03:35.825][MDP][082276][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_SCHEMA
+
+[2019-02-27 23:03:36.928][MDP][082276][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2019-01-31 13:48:45.331][MDP][258474][MYSQL][]
-SHOW FUNCTION STATUS WHERE Db = 'mdp'
-
-[2019-01-31 13:48:45.393][MDP][258474][MYSQL][]
-SELECT * FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_NAME
-
-[2019-01-31 13:48:45.502][MDP][258510][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-01-31 13:48:45.502][MDP][258511][MYSQL][]
-SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
-
-[2019-01-31 13:48:45.502][MDP][258512][MYSQL][]
-SHOW PROCEDURE STATUS WHERE Db = 'mdp'
-
-[2019-01-31 13:48:45.571][MDP][258512][MYSQL][]
-SHOW FUNCTION STATUS WHERE Db = 'mdp'
-
-[2019-01-31 13:48:45.631][MDP][258512][MYSQL][]
-SELECT * FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_NAME
-
-[2019-01-31 13:48:45.774][MDP][258469][MYSQL][]
-SHOW CREATE TABLE `base_user_info` 
-
-[2019-01-31 13:48:45.897][MDP][258469][MYSQL][]
-SHOW FULL COLUMNS FROM `base_user_info`
-
-[2019-01-31 13:48:54.476][MDP][258469][MYSQL][]
-SHOW TABLE STATUS LIKE 'base_user_info'
-
-[2019-01-31 13:48:54.602][MDP][258469][MYSQL][]
-SHOW CREATE TABLE `base_user_info` 
-
-[2019-01-31 13:48:54.728][MDP][258469][MYSQL][]
-SHOW FULL COLUMNS FROM `base_user_info`
-
-[2019-01-31 13:48:54.858][MDP][258469][MYSQL][]
-SHOW INDEX FROM `base_user_info`
-
-[2019-01-31 13:48:54.98][MDP][258469][MYSQL][]
-SELECT ACTION_ORDER, EVENT_OBJECT_TABLE, TRIGGER_NAME, EVENT_MANIPULATION, EVENT_OBJECT_TABLE, DEFINER, ACTION_STATEMENT, ACTION_TIMING FROM information_schema.triggers WHERE BINARY event_object_schema = 'mdp' AND BINARY event_object_table = 'base_user_info' ORDER BY event_object_table
-
-[2019-01-31 13:49:21.074][MDP][258469][MYSQL][]
-SHOW TABLE STATUS LIKE 'base_user_info'
-
-[2019-01-31 13:49:21.2][MDP][258469][MYSQL][]
-SHOW CREATE TABLE `base_user_info` 
-
-[2019-01-31 13:49:21.327][MDP][258469][MYSQL][]
-SHOW FULL COLUMNS FROM `base_user_info`
-
-[2019-01-31 13:49:21.454][MDP][258469][MYSQL][]
-SHOW INDEX FROM `base_user_info`
-
-[2019-01-31 13:49:21.583][MDP][258469][MYSQL][]
-SELECT ACTION_ORDER, EVENT_OBJECT_TABLE, TRIGGER_NAME, EVENT_MANIPULATION, EVENT_OBJECT_TABLE, DEFINER, ACTION_STATEMENT, ACTION_TIMING FROM information_schema.triggers WHERE BINARY event_object_schema = 'mdp' AND BINARY event_object_table = 'base_user_info' ORDER BY event_object_table
-
-[2019-01-31 13:49:21.723][MDP][258469][MYSQL][]
-SELECT TABLE_NAME, PARTITION_NAME, SUBPARTITION_NAME, PARTITION_METHOD, SUBPARTITION_METHOD, PARTITION_EXPRESSION, SUBPARTITION_EXPRESSION, PARTITION_DESCRIPTION, PARTITION_COMMENT, NODEGROUP, TABLESPACE_NAME FROM information_schema.PARTITIONS WHERE NOT ISNULL(PARTITION_NAME) AND TABLE_SCHEMA LIKE 'mdp' AND TABLE_NAME LIKE 'base_user_info' ORDER BY TABLE_NAME, PARTITION_NAME, PARTITION_ORDINAL_POSITION, SUBPARTITION_ORDINAL_POSITION
-
-[2019-01-31 13:49:21.861][MDP][258469][MYSQL][]
-SHOW CHARACTER SET
-
-[2019-01-31 13:49:21.986][MDP][258469][MYSQL][]
-SHOW ENGINES
-
-[2019-01-31 13:49:22.117][MDP][258469][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-01-31 13:49:22.267][MDP][258469][MYSQL][]
-SELECT DISTINCT(TABLESPACE_NAME) AS TABLESPACE_NAME FROM information_schema.FILES WHERE NOT ISNULL(TABLESPACE_NAME) LIMIT 10000
-
-[2019-01-31 13:49:22.395][MDP][258469][MYSQL][]
-SHOW CHARACTER SET
-
-[2019-01-31 13:49:22.528][MDP][258469][MYSQL][]
-SHOW COLLATION
-
-[2019-01-31 13:49:48.533][MDP][258469][MYSQL][]
-SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'ocai' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'ocai' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'ocai'
-
-[2019-01-31 13:49:48.602][MDP][258469][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'ocai' ORDER BY TABLE_SCHEMA, TABLE_TYPE
-
-[2019-01-31 13:49:48.617][MDP][258474][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-01-31 13:49:48.663][MDP][258469][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'ocai' ORDER BY TABLE_SCHEMA, TABLE_NAME
-
-[2019-01-31 13:49:48.732][MDP][258469][MYSQL][]
-SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'ocai' ORDER BY ROUTINE_SCHEMA
-
-[2019-01-31 13:49:48.827][MDP][258474][MYSQL][]
+[2019-02-27 23:03:37.05][MDP][082276][MYSQL][]
 SHOW TABLE STATUS
 
-[2019-01-31 13:49:49.901][MDP][258469][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-01-31 13:49:50.03][MDP][258469][MYSQL][]
-SHOW TABLE STATUS
-
-[2019-01-31 13:49:52.502][MDP][258469][MYSQL][]
-SELECT * FROM `ocai`.`user_info` LIMIT 0,1000
-
-[2019-01-31 13:49:52.621][MDP][258474][MYSQL][]
-SHOW COLUMNS FROM `ocai`.`user_info`
-
-[2019-01-31 13:49:52.683][MDP][258469][MYSQL][]
-SHOW TABLE STATUS LIKE 'user_info'
-
-[2019-01-31 13:49:52.747][MDP][258469][MYSQL][]
-SHOW CREATE TABLE `ocai`.`user_info`
-
-[2019-01-31 13:49:55.935][MDP][258469][MYSQL][]
-SHOW TABLE STATUS LIKE 'user_info'
-
-[2019-01-31 13:49:56.071][MDP][258469][MYSQL][]
-SHOW CREATE TABLE `user_info` 
-
-[2019-01-31 13:49:56.194][MDP][258469][MYSQL][]
-SHOW FULL COLUMNS FROM `user_info`
-
-[2019-01-31 13:49:56.319][MDP][258469][MYSQL][]
-SHOW INDEX FROM `user_info`
-
-[2019-01-31 13:49:56.443][MDP][258469][MYSQL][]
-SELECT ACTION_ORDER, EVENT_OBJECT_TABLE, TRIGGER_NAME, EVENT_MANIPULATION, EVENT_OBJECT_TABLE, DEFINER, ACTION_STATEMENT, ACTION_TIMING FROM information_schema.triggers WHERE BINARY event_object_schema = 'ocai' AND BINARY event_object_table = 'user_info' ORDER BY event_object_table
-
-[2019-01-31 13:49:56.585][MDP][258469][MYSQL][]
-SELECT TABLE_NAME, PARTITION_NAME, SUBPARTITION_NAME, PARTITION_METHOD, SUBPARTITION_METHOD, PARTITION_EXPRESSION, SUBPARTITION_EXPRESSION, PARTITION_DESCRIPTION, PARTITION_COMMENT, NODEGROUP, TABLESPACE_NAME FROM information_schema.PARTITIONS WHERE NOT ISNULL(PARTITION_NAME) AND TABLE_SCHEMA LIKE 'ocai' AND TABLE_NAME LIKE 'user_info' ORDER BY TABLE_NAME, PARTITION_NAME, PARTITION_ORDINAL_POSITION, SUBPARTITION_ORDINAL_POSITION
-
-[2019-01-31 13:49:56.724][MDP][258469][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-01-31 13:49:56.856][MDP][258469][MYSQL][]
-SELECT DISTINCT(TABLESPACE_NAME) AS TABLESPACE_NAME FROM information_schema.FILES WHERE NOT ISNULL(TABLESPACE_NAME) LIMIT 10000
-
-[2019-01-31 14:13:37.687][MDP][258469][MYSQL][]
+[2019-02-27 23:03:42.924][MDP][082276][MYSQL][]
 SELECT * FROM `mdp`.`base_user_info` LIMIT 0,1000
 
-[2019-01-31 14:13:37.815][MDP][258474][MYSQL][]
+[2019-02-27 23:03:43.27][MDP][082287][MYSQL][]
 SHOW COLUMNS FROM `mdp`.`base_user_info`
 
-[2019-01-31 14:13:37.88][MDP][258469][MYSQL][]
+[2019-02-27 23:03:43.331][MDP][082276][MYSQL][]
 SHOW TABLE STATUS LIKE 'base_user_info'
 
-[2019-01-31 14:13:37.945][MDP][258469][MYSQL][]
-SHOW CREATE TABLE `mdp`.`base_user_info`
-
-[2019-01-31 14:13:48.068][MDP][258469][MYSQL][]
-SELECT * FROM `mdp`.`base_user_info` ORDER BY `USER_NAME`  LIMIT 0,1000
-
-[2019-01-31 14:13:48.194][MDP][258474][MYSQL][]
-SHOW COLUMNS FROM `mdp`.`base_user_info`
-
-[2019-01-31 14:13:48.258][MDP][258469][MYSQL][]
-SHOW TABLE STATUS LIKE 'base_user_info'
-
-[2019-01-31 14:13:48.321][MDP][258469][MYSQL][]
+[2019-02-27 23:03:43.392][MDP][082276][MYSQL][]
 SHOW CREATE TABLE `mdp`.`base_user_info`
 

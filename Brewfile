@@ -38,6 +38,7 @@ brew "gawk"
 brew "git"
 brew "git-extras"
 brew "git-flow"
+brew "git-lfs"
 brew "gnu-sed", args: ["with-default-names"]
 brew "pkg-config"
 brew "graphviz"
