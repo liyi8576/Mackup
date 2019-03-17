@@ -3,17 +3,15 @@
 	email = liyi3@asiainfo.com
 [github]
 [core]
-	editor = code -w
 	excludesfile = /Users/liyi/.gitignore_global
 	quotepath = false
 	autocrlf = false
-	editor = code
-	editor = code -w
-	editor = code -w
+	editor = code --wait
 [color]
 	ui = true
 [merge]
-	tool = code
+	tool = Kaleidoscope
+	guitool = Kaleidoscope
     conflictstyle = diff3
 [filter "lfs"]
 	required = true
@@ -22,15 +20,14 @@
 [commit]
 	template = /Users/liyi/.git_commit_template
 [diff]
-	tool =  Kaleidoscope 
-	guitool = Kaleidoscope
+	tool = default-difftool
+	guitool = default-difftool
 [difftool]
     prompt = false
 [mergetool]
     prompt = false
-[merge]
-    tool = Kaleidoscope
-    guitool = Kaleidoscope
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "Kaleidoscope"]
     cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
@@ -38,7 +35,7 @@
     trustExitCode = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Users/liyi/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

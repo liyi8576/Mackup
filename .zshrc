@@ -112,7 +112,7 @@ function upgrade(){
 #**********************环境变量&别名设置***************************
 export LANG=en_US.UTF-8
 export EDITOR="vim"
-export M2_HOME="/Users/liyi/Develop/apache-maven-3.5.4"
+export M2_HOME="/Users/liyi/Develop/apache-maven-3.6.0"
 export PATH="/Users/liyi/Tools:/Users/liyi/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$M2_HOME/bin:$PATH"
 alias cls="clear"
 alias ll="ls -l"
