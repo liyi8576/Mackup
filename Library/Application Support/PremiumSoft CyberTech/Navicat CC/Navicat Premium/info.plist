@@ -17,7 +17,7 @@
 		<key>4D6C0D8F620F5CAC37655259DD58BA14</key>
 		<dict>
 			<key>autosavecomplete</key>
-			<false/>
+			<true/>
 			<key>autosaveexternalquerypath</key>
 			<string></string>
 			<key>autosavelocations</key>
