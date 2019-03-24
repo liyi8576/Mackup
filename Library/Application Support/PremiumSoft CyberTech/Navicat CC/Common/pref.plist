@@ -399,6 +399,8 @@
 					<integer>150</integer>
 					<key>Definer</key>
 					<integer>421</integer>
+					<key>Name</key>
+					<integer>120</integer>
 					<key>SQL Security</key>
 					<integer>150</integer>
 					<key>Updatable</key>

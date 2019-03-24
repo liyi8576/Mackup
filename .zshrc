@@ -21,7 +21,7 @@ POWERLEVEL9K_DISABLE_RPROMPT=false
 #POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=$'\ue0b7'
 # 浅色主题
 #POWERLEVEL9K_COLOR_SCHEME='light'
-# 自定义左边提示符元素 
+# 自定义左边提示符元素
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time history time)
 # 自定义多行链接符
@@ -132,7 +132,7 @@ export NODE_ENV=development
 export PYTHONIOENCODING=UTF-8
 #pyenv setting
 #if command -v pyenv 1>/dev/null 2>&1; then
-#  eval "$(pyenv init -)" 
+#  eval "$(pyenv init -)"
 #fi
 alias loadpyenv='eval "$(pyenv init -)"'
 # eval "$(pipenv --completion)"
@@ -181,3 +181,49 @@ source ~/Tools/oc_completion.sh
 export PATH=$PATH:/usr/local/Cellar/mysql-client/5.7.23/bin
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/qt/bin:$PATH"
+
+
+
+
+# added by Anaconda3 4.3.1 installer
+export PATH="/Users/liyi/anaconda/bin:$PATH":/Users/liyi/.nowa-gui/installation/node_modules/.bin:/Applications/NowaGUI.app/Contents/Resources/app/nodes:/Applications/NowaGUI.app/Contents/Resources/app/node_modules/.bin
+
+# added by Anaconda3 4.3.1 installer
+export PATH="/Users/liyi/anaconda/bin:$PATH":/Users/liyi/.nowa-gui/installation/node_modules/.bin:/Applications/NowaGUI.app/Contents/Resources/app/nodes:/Applications/NowaGUI.app/Contents/Resources/app/node_modules/.bin
+
+# added by Anaconda2 4.4.0 installer
+export PATH="/Users/liyi/anaconda/bin:$PATH":/Users/liyi/.nowa-gui/installation/node_modules/.bin:/Applications/NowaGUI.app/Contents/Resources/app/nodes:/Applications/NowaGUI.app/Contents/Resources/app/node_modules/.bin
+# added by Anaconda3 2018.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/liyi/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/Users/liyi/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/liyi/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/Users/liyi/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+# added by Anaconda3 2018.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/liyi/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/Users/liyi/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/liyi/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/Users/liyi/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/nss/bin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"

@@ -100,21 +100,34 @@
   <toolConfiguration>
     <configs>
       <entry>
-        <string>Breakpoints</string>
+        <string>断点</string>
         <breakpoints>
           <toolEnabled>false</toolEnabled>
           <breakpoints/>
         </breakpoints>
       </entry>
       <entry>
-        <string>Reverse Proxies</string>
-        <reverseProxies>
-          <active>false</active>
-          <reverseProxies/>
-        </reverseProxies>
+        <string>客户端进程</string>
+        <selectedHostsTool>
+          <locations>
+            <locationPatterns/>
+          </locations>
+          <toolEnabled>false</toolEnabled>
+          <useSelectedLocations>false</useSelectedLocations>
+        </selectedHostsTool>
       </entry>
       <entry>
-        <string>White List</string>
+        <string>镜像</string>
+        <mirror>
+          <locations>
+            <locationPatterns/>
+          </locations>
+          <toolEnabled>false</toolEnabled>
+          <useSelectedLocations>false</useSelectedLocations>
+        </mirror>
+      </entry>
+      <entry>
+        <string>白名单</string>
         <whitelist>
           <locations>
             <locationPatterns/>
@@ -125,43 +138,14 @@
         </whitelist>
       </entry>
       <entry>
-        <string>Map Remote</string>
-        <map>
-          <toolEnabled>false</toolEnabled>
-          <mappings/>
-        </map>
-      </entry>
-      <entry>
-        <string>Port Forwarding</string>
+        <string>转发端口</string>
         <portForwarding>
           <active>false</active>
           <portForwardings/>
         </portForwarding>
       </entry>
       <entry>
-        <string>Viewer Mappings</string>
-        <viewerMappings>
-          <toolEnabled>false</toolEnabled>
-          <mappings/>
-        </viewerMappings>
-      </entry>
-      <entry>
-        <string>Rewrite</string>
-        <rewrite>
-          <toolEnabled>false</toolEnabled>
-          <debugging>false</debugging>
-          <sets/>
-        </rewrite>
-      </entry>
-      <entry>
-        <string>Map Local</string>
-        <mapLocal>
-          <toolEnabled>false</toolEnabled>
-          <mappings/>
-        </mapLocal>
-      </entry>
-      <entry>
-        <string>Black List</string>
+        <string>黑名单</string>
         <blacklist>
           <locations>
             <locationPatterns/>
@@ -172,7 +156,14 @@
         </blacklist>
       </entry>
       <entry>
-        <string>Client Process</string>
+        <string>远程映射</string>
+        <map>
+          <toolEnabled>false</toolEnabled>
+          <mappings/>
+        </map>
+      </entry>
+      <entry>
+        <string>无缓存</string>
         <selectedHostsTool>
           <locations>
             <locationPatterns/>
@@ -182,34 +173,14 @@
         </selectedHostsTool>
       </entry>
       <entry>
-        <string>No Caching</string>
-        <selectedHostsTool>
-          <locations>
-            <locationPatterns/>
-          </locations>
+        <string>本地映射</string>
+        <mapLocal>
           <toolEnabled>false</toolEnabled>
-          <useSelectedLocations>false</useSelectedLocations>
-        </selectedHostsTool>
+          <mappings/>
+        </mapLocal>
       </entry>
       <entry>
-        <string>DNS Spoofing</string>
-        <dnsSpoofing>
-          <toolEnabled>false</toolEnabled>
-          <spoofs/>
-        </dnsSpoofing>
-      </entry>
-      <entry>
-        <string>Mirror</string>
-        <mirror>
-          <locations>
-            <locationPatterns/>
-          </locations>
-          <toolEnabled>false</toolEnabled>
-          <useSelectedLocations>false</useSelectedLocations>
-        </mirror>
-      </entry>
-      <entry>
-        <string>Auto Save</string>
+        <string>自动保存</string>
         <autoSave>
           <toolEnabled>false</toolEnabled>
           <enableOnStartup>false</enableOnStartup>
@@ -219,7 +190,21 @@
         </autoSave>
       </entry>
       <entry>
-        <string>Block Cookies</string>
+        <string>查看器映射</string>
+        <viewerMappings>
+          <toolEnabled>false</toolEnabled>
+          <mappings/>
+        </viewerMappings>
+      </entry>
+      <entry>
+        <string>反向代理</string>
+        <reverseProxies>
+          <active>false</active>
+          <reverseProxies/>
+        </reverseProxies>
+      </entry>
+      <entry>
+        <string>阻止 Cookies</string>
         <selectedHostsTool>
           <locations>
             <locationPatterns/>
@@ -227,6 +212,21 @@
           <toolEnabled>false</toolEnabled>
           <useSelectedLocations>false</useSelectedLocations>
         </selectedHostsTool>
+      </entry>
+      <entry>
+        <string>DNS 欺骗</string>
+        <dnsSpoofing>
+          <toolEnabled>false</toolEnabled>
+          <spoofs/>
+        </dnsSpoofing>
+      </entry>
+      <entry>
+        <string>重写</string>
+        <rewrite>
+          <toolEnabled>false</toolEnabled>
+          <debugging>false</debugging>
+          <sets/>
+        </rewrite>
       </entry>
     </configs>
   </toolConfiguration>
