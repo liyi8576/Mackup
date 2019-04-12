@@ -53,7 +53,7 @@ POWERLEVEL9K_EXECUTION_TIME_ICON="\u23F1"
 POWERLEVEL9K_USER_ICON="\uF415"
 
 # 自动纠正命令
-ENABLE_CORRECTION="false"
+ENABLE_CORRECTION="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git python docker pip yarn)
 
@@ -144,7 +144,7 @@ export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
-export PATH=$HOME/.nvm/versions/node/v8.11.1/bin:$PATH
+export PATH=$HOME/.nvm/versions/node/v10.15.3/bin:$PATH
 #**************jenv setting***************
 # export PATH="$HOME/.jenv/bin:$PATH"
 # eval "$(jenv init -)"
@@ -176,54 +176,9 @@ export PATH=$PATH:$GOROOT/bin
 
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
-source ~/Tools/oc_completion.sh
+source <(oc completion zsh)
 
 export PATH=$PATH:/usr/local/Cellar/mysql-client/5.7.23/bin
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/qt/bin:$PATH"
-
-
-
-
-# added by Anaconda3 4.3.1 installer
-export PATH="/Users/liyi/anaconda/bin:$PATH":/Users/liyi/.nowa-gui/installation/node_modules/.bin:/Applications/NowaGUI.app/Contents/Resources/app/nodes:/Applications/NowaGUI.app/Contents/Resources/app/node_modules/.bin
-
-# added by Anaconda3 4.3.1 installer
-export PATH="/Users/liyi/anaconda/bin:$PATH":/Users/liyi/.nowa-gui/installation/node_modules/.bin:/Applications/NowaGUI.app/Contents/Resources/app/nodes:/Applications/NowaGUI.app/Contents/Resources/app/node_modules/.bin
-
-# added by Anaconda2 4.4.0 installer
-export PATH="/Users/liyi/anaconda/bin:$PATH":/Users/liyi/.nowa-gui/installation/node_modules/.bin:/Applications/NowaGUI.app/Contents/Resources/app/nodes:/Applications/NowaGUI.app/Contents/Resources/app/node_modules/.bin
-# added by Anaconda3 2018.12 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/liyi/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/Users/liyi/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/liyi/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/Users/liyi/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
-# added by Anaconda3 2018.12 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/liyi/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/Users/liyi/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/liyi/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/Users/liyi/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<export PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH="/usr/local/opt/nss/bin:$PATH"
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)

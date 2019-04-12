@@ -20,8 +20,8 @@
 [commit]
 	template = /Users/liyi/.git_commit_template
 [diff]
-	tool = default-difftool
-	guitool = default-difftool
+	tool = Kaleidoscope
+	guitool = Kaleidoscope
 [difftool]
     prompt = false
 [mergetool]
