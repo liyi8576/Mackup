@@ -55,7 +55,7 @@ POWERLEVEL9K_USER_ICON="\uF415"
 # 自动纠正命令
 ENABLE_CORRECTION="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(git python docker pip yarn)
+plugins=(git python docker pip yarn zsh-autosuggestions zsh-syntax-highlighting autoswitch_virtualenv)
 
 #*************iterm2_shell_integration******
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -182,3 +182,5 @@ export PATH=$PATH:/usr/local/Cellar/mysql-client/5.7.23/bin
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/qt/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="/usr/local/sbin:$PATH"
+source ~/.oh-my-zsh/plugins/incr/incr*.zsh
