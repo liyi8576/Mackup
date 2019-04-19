@@ -1,41 +1,45 @@
 [user]
-	name = liyi3
-	email = liyi3@asiainfo.com
+name = liyi3
+email = liyi3@asiainfo.com
 [github]
 [core]
-	excludesfile = /Users/liyi/.gitignore_global
-	quotepath = false
-	autocrlf = false
-	editor = code --wait
+excludesfile = /Users/liyi/.gitignore_global
+quotepath = false
+autocrlf = false
+editor = code --wait
 [color]
-	ui = true
+ui = true
 [merge]
-	tool = Kaleidoscope
-	guitool = Kaleidoscope
-    conflictstyle = diff3
+# tool = Kaleidoscope
+# guitool = Kaleidoscope
+tool = smerge
+conflictstyle = diff3
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+required = true
+clean = git-lfs clean %f
+smudge = git-lfs smudge %f
 [commit]
-	template = /Users/liyi/.git_commit_template
+template = /Users/liyi/.git_commit_template
 [diff]
-	tool = Kaleidoscope
-	guitool = Kaleidoscope
+tool = Kaleidoscope
+# guitool = Kaleidoscope
 [difftool]
-    prompt = false
+prompt = false
 [mergetool]
-    prompt = false
+prompt = false
 [difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "Kaleidoscope"]
-    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
-    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-    trustExitCode = true
+cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+trustExitCode = true
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+path =
 [mergetool "sourcetree"]
-	cmd = /Users/liyi/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+cmd = /Users/liyi/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+trustExitCode = true
+[mergetool "smerge"]
+cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+trustExitCode = true
