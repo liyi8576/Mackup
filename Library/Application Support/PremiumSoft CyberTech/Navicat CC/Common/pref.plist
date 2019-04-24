@@ -316,7 +316,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>801</integer>
+					<integer>799</integer>
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>
@@ -324,7 +324,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>777</integer>
+					<integer>799</integer>
 				</dict>
 			</dict>
 			<key>Server_ORA</key>
@@ -332,7 +332,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>823</integer>
+					<integer>801</integer>
 				</dict>
 			</dict>
 			<key>Table_MYSQL</key>
