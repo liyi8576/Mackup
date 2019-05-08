@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>instant OpenDocument {
+    document = "&lt;MSDocument: 0x7ff5f99c25f0&gt;";
+    selection =     (
+    );
+}</string>
+	<string>begin Log {
+    action = "&lt;MSLogAction: 0x7ff5f36ab730&gt;";
+    command = "&lt;MSPluginCommand: 0x7ff5f5d3f070&gt;";
+    level = log;
+    payload =     (
+        "\U2705 loadFramework: `SMFramework` success!"
+    );
+    stringValue = "\U2705 loadFramework: `SMFramework` success!";
+}</string>
+	<string>finish Log {
+    action = "&lt;MSLogAction: 0x7ff5f36ab730&gt;";
+    command = "&lt;MSPluginCommand: 0x7ff5f5d3f070&gt;";
+    level = log;
+    payload =     (
+        "\U2705 loadFramework: `SMFramework` success!"
+    );
+    stringValue = "\U2705 loadFramework: `SMFramework` success!";
+}</string>
+	<string>instant HandlerGotFocus {
+    name = Normal;
+}</string>
+	<string>begin ToggleRulers {
+    action = "&lt;MSToggleRulersAction: 0x7ff5f5dc8010&gt;";
+    document = "&lt;MSDocument: 0x7ff5f99c25f0&gt;";
+}</string>
+	<string>finish ToggleRulers {
+    action = "&lt;MSToggleRulersAction: 0x7ff5f5dc8010&gt;";
+    document = "&lt;MSDocument: 0x7ff5f99c25f0&gt;";
+}</string>
+	<string>begin SelectionChanged {
+    document = "&lt;MSDocument: 0x7ff5f99c25f0&gt;";
+    newSelection =     (
+    );
+    oldSelection =     (
+    );
+}</string>
+	<string>finish SelectionChanged {
+    document = "&lt;MSDocument: 0x7ff5f99c25f0&gt;";
+    newSelection =     (
+    );
+    oldSelection =     (
+    );
+}</string>
+	<string>begin Log {
+    action = "&lt;MSLogAction: 0x7ff5f36ab730&gt;";
+    command = "&lt;MSPluginCommand: 0x7ff5faf72040&gt;";
+    level = error;
+    payload =     (
+        "Error: Error Domain=NSCocoaErrorDomain Code=4 \"\U201ccom.sketchapp.unsplash-plugin\U201d couldn\U2019t be removed.\" UserInfo={NSFilePath=/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn/T/com.sketchapp.unsplash-plugin, NSUserStringVariant=(\n    Remove\n), NSUnderlyingError=0x7ff5faf6dc90 {Error Domain=NSPOSIXErrorDomain Code=2 \"No such file or directory\"}}"
+    );
+    stringValue = "{ rmdirSync@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:5:3229\n_@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:37:994\n__skpm_run@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:57:119\n__skpm_run@[native code]\n  line: 5,\n  column: 3229,\n  sourceURL: '/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js' }";
+}</string>
+	<string>finish Log {
+    action = "&lt;MSLogAction: 0x7ff5f36ab730&gt;";
+    command = "&lt;MSPluginCommand: 0x7ff5faf72040&gt;";
+    level = error;
+    payload =     (
+        "Error: Error Domain=NSCocoaErrorDomain Code=4 \"\U201ccom.sketchapp.unsplash-plugin\U201d couldn\U2019t be removed.\" UserInfo={NSFilePath=/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn/T/com.sketchapp.unsplash-plugin, NSUserStringVariant=(\n    Remove\n), NSUnderlyingError=0x7ff5faf6dc90 {Error Domain=NSPOSIXErrorDomain Code=2 \"No such file or directory\"}}"
+    );
+    stringValue = "{ rmdirSync@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:5:3229\n_@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:37:994\n__skpm_run@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:57:119\n__skpm_run@[native code]\n  line: 5,\n  column: 3229,\n  sourceURL: '/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js' }";
+}</string>
+	<string>instant CloseDocument {
+    document = "&lt;MSDocument: 0x7ff5f99c25f0&gt;";
+    selection =     (
+    );
+}</string>
+</array>
+</plist>

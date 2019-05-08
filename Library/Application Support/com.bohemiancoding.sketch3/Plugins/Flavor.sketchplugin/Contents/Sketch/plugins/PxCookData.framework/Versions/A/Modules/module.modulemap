@@ -1,6 +1,0 @@
-framework module PxCookData {
-  umbrella header "PxCookData.h"
-
-  export *
-  module * { export * }
-}

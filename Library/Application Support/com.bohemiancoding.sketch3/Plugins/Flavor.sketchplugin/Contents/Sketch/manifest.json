@@ -1,12 +1,13 @@
 {
 	"name": "PxCook Flavor",
-	"description": "PxCook Flavor",
+	"description": "常用工具集合，PxCook画板同步",
 	"author": "PxCook",
 	"authorEmail": "pxcook@fancynode.com",
 	"homepage": "http://www.fancynode.com.cn/pxcook",
 	"identifier": "com.fancynode.flavor",
 	"compatibleVersion": "3.6.1",
-	"version": "1.2.2",
+	"version": "1.3.4",
+	"icon": "Icons/icFlavor.png",
 	"commands": [
 		{
 			 "name": "切换显示",
@@ -16,11 +17,25 @@
 			 "handler": "toggleDisplay"
 		},
 		{
-			 "name": "🚚检测更新",
+			 "name": "🚀检测更新",
 			 "identifier": "export-update-command",
 			 "shortcut": "",
 			 "script": "PxCookUI.framework/PxCookUI.js",
 			 "handler": "checkUpdate"
+		},
+		{
+			"name": "访问官网",
+			"identifier": "home-command",
+			"shortcut": "",
+			"script": "PxCookUI.framework/PxCookUI.js",
+			"handler": "home"
+		},
+		{
+			"name": "关于Flavor",
+			"identifier": "about-command",
+			"shortcut": "",
+			"script": "PxCookUI.framework/PxCookUI.js",
+			"handler": "about"
 		},
 		{
 			"script": "PxCookUI.framework/PxCookUI.js",
@@ -36,7 +51,12 @@
 	],
 	"menu": {
 		"title": "PxCook Flavor",
-		"isRoot": true,
-		"items": []
+		"items": [
+			"export-toggle-command",
+			"export-update-command",
+			"home-command",
+			"-",
+			"about-command"
+		]
 	}
 }

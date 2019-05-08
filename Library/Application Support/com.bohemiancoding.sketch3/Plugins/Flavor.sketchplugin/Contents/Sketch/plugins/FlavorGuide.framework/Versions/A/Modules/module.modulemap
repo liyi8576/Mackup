@@ -1,6 +1,0 @@
-framework module FlavorGuide {
-  umbrella header "FlavorGuide.h"
-
-  export *
-  module * { export * }
-}
