@@ -251,6 +251,8 @@
 					<integer>120</integer>
 					<key>Modified Date</key>
 					<integer>150</integer>
+					<key>Name</key>
+					<integer>120</integer>
 					<key>SQL Security</key>
 					<integer>120</integer>
 					<key>Type</key>
@@ -318,7 +320,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>825</integer>
+					<integer>777</integer>
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>
@@ -326,7 +328,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>825</integer>
+					<integer>777</integer>
 				</dict>
 			</dict>
 			<key>Server_ORA</key>

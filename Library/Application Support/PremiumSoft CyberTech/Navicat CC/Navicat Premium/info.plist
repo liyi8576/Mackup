@@ -15,41 +15,7 @@
 	<key>autosaves</key>
 	<dict/>
 	<key>continues</key>
-	<dict>
-		<key>0</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
-			<key>formobjecttype</key>
-			<string>Query</string>
-			<key>formtype</key>
-			<string>QueryView</string>
-			<key>name</key>
-			<string>New query</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
+	<dict/>
 	<key>favorites</key>
 	<dict/>
 	<key>nsublogindata</key>
@@ -61,72 +27,6 @@
 	<key>recents</key>
 	<dict>
 		<key>0</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_external_models","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>DesignForm</string>
-			<key>name</key>
-			<string>Design Table mdp_external_models</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>1</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open Table ai_quota_tenant</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp201</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>2</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -149,7 +49,73 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp201</string>
+			<string>mdp210</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>1</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"ai_open_service","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open Table ai_open_service</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
+			<key>servername</key>
+			<string>MDP</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"ai_quota_tenant_services","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open Table ai_quota_tenant_services</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -166,13 +132,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_machine_learning_server","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_quota_tenant_user_binding","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table mdp_machine_learning_server</string>
+			<string>Design Table ai_quota_tenant_user_binding</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -182,7 +148,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp201</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -199,13 +165,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_model","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_quota_tenant_user_binding","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_model</string>
+			<string>Open Table ai_quota_tenant_user_binding</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -215,7 +181,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp210</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -232,13 +198,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ds","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_user","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_ds</string>
+			<string>Open Table ai_user</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -248,7 +214,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp210</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -265,13 +231,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"oauth_approvals","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_quota_tenant_srv_platform_env","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table oauth_approvals</string>
+			<string>Open Table ai_quota_tenant_srv_platform_env</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -281,7 +247,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp210</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -298,13 +264,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"oauth_access_token","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_quota_tenant_srv_platform_env","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table oauth_access_token</string>
+			<string>Design Table ai_quota_tenant_srv_platform_env</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -314,7 +280,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp210</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -331,13 +297,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"oauth_refresh_token","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_quota_tenant","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table oauth_refresh_token</string>
+			<string>Open Table ai_quota_tenant</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -347,7 +313,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp210</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -364,13 +330,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"oauth_client_details","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_quota_tenant_services","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table oauth_client_details</string>
+			<string>Design Table ai_quota_tenant_services</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -380,7 +346,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp210</string>
+			<string>mdp</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -389,6 +355,23 @@
 			<false/>
 			<key>windowlevel</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>servermonitor</key>
+	<dict>
+		<key>autorefresh</key>
+		<false/>
+		<key>autorefreshtimeinterval</key>
+		<integer>2</integer>
+		<key>selectedservers</key>
+		<dict>
+			<key>MySQL</key>
+			<array>
+				<dict>
+					<key>servername</key>
+					<string>MDP</string>
+				</dict>
+			</array>
 		</dict>
 	</dict>
 	<key>startups</key>
