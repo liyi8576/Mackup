@@ -280,7 +280,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>658</integer>
+					<integer>913</integer>
 				</dict>
 			</dict>
 			<key>Query</key>
@@ -313,6 +313,8 @@
 					<integer>120</integer>
 					<key>Modified Date</key>
 					<integer>150</integer>
+					<key>Name</key>
+					<integer>120</integer>
 				</dict>
 			</dict>
 			<key>Schema_MYSQL</key>
@@ -320,7 +322,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>777</integer>
+					<integer>791</integer>
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>
@@ -328,7 +330,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>777</integer>
+					<integer>913</integer>
 				</dict>
 			</dict>
 			<key>Server_ORA</key>
@@ -348,7 +350,7 @@
 					<key>Comment</key>
 					<integer>50</integer>
 					<key>Created Date</key>
-					<integer>120</integer>
+					<integer>211</integer>
 					<key>Created Time</key>
 					<integer>150</integer>
 					<key>Data Length</key>
@@ -360,9 +362,9 @@
 					<key>Modified Time</key>
 					<integer>150</integer>
 					<key>Name</key>
-					<integer>1000</integer>
+					<integer>302</integer>
 					<key>Rows</key>
-					<integer>50</integer>
+					<integer>145</integer>
 				</dict>
 			</dict>
 			<key>User_MYSQL</key>
