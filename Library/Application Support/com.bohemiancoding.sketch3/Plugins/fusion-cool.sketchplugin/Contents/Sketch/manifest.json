@@ -1,0 +1,39 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "script": "handlers.js",
+      "handlers": {
+        "actions": {
+          "SelectionChanged.finish": "onSelectionChangedFinish",
+          "CloseDocument": "onCloseDocument"
+        }
+      }
+    },
+    {
+      "script": "panel.js",
+      "handlers": {
+        "actions": {
+          "OpenDocument": "onOpenDocument",
+          "Startup": "onStartup",
+          "Shutdown": "onShutdown"
+        }
+      }
+    },
+    {
+      "name": "Export Sketch",
+      "identifier": "com.fusion.export",
+      "script": "handlers.js",
+      "handler": "onExportSketch",
+      "shortcut": "cmd option k"
+    }
+  ],
+  "version": "1.5.4",
+  "description": "The Sketch plugin for Fusion Design.",
+  "name": "Fusion Cool",
+  "identifier": "Fusion Cool",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://alifd.oss-cn-hangzhou.aliyuncs.com/sketch-fusion/appcast.xml"
+}
