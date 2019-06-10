@@ -26,7 +26,7 @@ brew "autoenv"
 brew "autojump"
 brew "bash-completion"
 brew "bat"
-brew "boost", link: false
+brew "boost"
 brew "cabextract"
 brew "ccat"
 brew "coreutils"
