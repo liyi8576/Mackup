@@ -181,8 +181,11 @@ source <(oc completion zsh)
 export PATH=$PATH:/usr/local/Cellar/mysql-client/5.7.23/bin
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/qt/bin:$PATH"
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH="/usr/local/sbin:$PATH"
+#export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+export CLASSPAHT=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH="/usr/local/sbin:$JAVA_HOME/bin:$PATH"
 #source ~/.oh-my-zsh/plugins/incr/incr*.zsh
 
 unsetopt correct_all  
+
