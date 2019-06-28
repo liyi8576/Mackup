@@ -1,36 +1,3747 @@
-[2019-06-24 11:22:17.588][MDP][164469][MYSQL][]
+[2019-06-27 10:46:44.243][MDP][204987][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'
 
-[2019-06-24 11:22:17.665][MDP][164469][MYSQL][]
+[2019-06-27 10:46:44.399][MDP][204987][MYSQL][]
 SHOW VARIABLES LIKE 'sql_mode'
 
-[2019-06-24 11:38:16.846][MDP][164469][MYSQL][]
+[2019-06-27 10:46:47.479][MDP][204987][MYSQL][]
 SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp210'
 
-[2019-06-24 11:38:17.221][MDP][164615][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-06-24 11:38:17.463][MDP][164469][MYSQL][]
+[2019-06-27 10:46:47.649][MDP][204987][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2019-06-24 11:38:17.542][MDP][164469][MYSQL][]
+[2019-06-27 10:46:48.475][MDP][204987][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_NAME
 
-[2019-06-24 11:38:17.77][MDP][164469][MYSQL][]
+[2019-06-27 10:46:48.745][MDP][204989][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 10:46:48.853][MDP][204987][MYSQL][]
 SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp210' ORDER BY ROUTINE_SCHEMA
 
-[2019-06-24 11:38:18.023][MDP][164469][MYSQL][]
+[2019-06-27 10:46:49.43][MDP][204989][MYSQL][]
 SHOW TABLE STATUS
 
-[2019-06-24 11:38:28.09][MDP][164469][MYSQL][]
-SELECT * FROM `mdp210`.`mdp_sys_support` LIMIT 0,1000
+[2019-06-27 10:46:58.563][MDP][204987][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0,1000
 
-[2019-06-24 11:38:28.24][MDP][164615][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`mdp_sys_support`
+[2019-06-27 10:46:58.905][MDP][204989][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
 
-[2019-06-24 11:38:28.317][MDP][164469][MYSQL][]
-SHOW TABLE STATUS LIKE 'mdp_sys_support'
+[2019-06-27 10:46:59.021][MDP][204987][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_model'
 
-[2019-06-24 11:38:28.388][MDP][164469][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`mdp_sys_support`
+[2019-06-27 10:46:59.133][MDP][204987][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`mdp_model`
+
+[2019-06-27 10:47:06.649][MDP][204987][MYSQL][]
+SHOW VARIABLES LIKE 'lower_case_%'
+
+[2019-06-27 10:47:06.757][MDP][204987][MYSQL][]
+SHOW VARIABLES LIKE 'sql_mode'
+
+[2019-06-27 10:47:07.163][MDP][204987][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 10:47:07.45][MDP][204987][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
+
+[2019-06-27 10:47:28.174][MDP][204987][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 10:47:28.291][MDP][204987][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 10:47:28.407][MDP][204987][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 10:47:28.517][MDP][204987][MYSQL][]
+select * from mdp_model t where t.`engine` is null
+
+[2019-06-27 10:47:28.698][MDP][204989][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 10:47:28.883][MDP][204989][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 10:47:29.014][MDP][204987][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 10:47:29.16][MDP][204987][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 10:47:29.297][MDP][204987][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001794*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 10:55:02.292][MDP][204987][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 10:55:02.351][MDP][204987][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 10:55:02.42][MDP][204987][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 10:55:02.484][MDP][204987][MYSQL][]
+select * from mdp_model t
+
+[2019-06-27 10:55:02.763][MDP][204989][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 10:55:02.881][MDP][204989][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 10:55:02.95][MDP][204987][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 10:55:03.038][MDP][204987][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 10:55:03.123][MDP][204987][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001794*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 11:16:38.741][MDP][204989][MYSQL][]
+SELECT * FROM `mdp210`.`ai_role_user_binding` LIMIT 0,1000
+
+[2019-06-27 11:16:39.153][MDP][205300][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_role_user_binding`
+
+[2019-06-27 11:16:39.217][MDP][204989][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_role_user_binding'
+
+[2019-06-27 11:16:39.274][MDP][204989][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_role_user_binding`
+
+[2019-06-27 11:16:55.798][MDP][204989][MYSQL][]
+SELECT * FROM `mdp210`.`ai_group_user_binding` LIMIT 0,1000
+
+[2019-06-27 11:16:55.923][MDP][205300][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_group_user_binding`
+
+[2019-06-27 11:16:56.015][MDP][204989][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_group_user_binding'
+
+[2019-06-27 11:16:56.074][MDP][204989][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_group_user_binding`
+
+[2019-06-27 11:23:18.423][MDP][204989][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 11:23:19.642][MDP][204989][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
+
+[2019-06-27 11:23:21.31][MDP][204989][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 11:23:21.372][MDP][204989][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:23:21.472][MDP][204989][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:23:21.547][MDP][204989][MYSQL][]
+select T.MODEL_ID as MODEL_ID, T.MODEL_NAME as MODEL_NAME, T.MODEL_TYPE_ID as MODEL_TYPE_ID, T3.MODEL_TYPE_ICON, T.STATUS as STATUS
+	, T4.STAGE_ID as STAGE_ID, T2.MAX_STAGE_ID as TASK_EXEC_STAGE, T4.STAGE_NAME as STAGE_NAME, T4.STAGE_ICON as STAGE_ICON, T2.STAGE_BAR_M as STAGE_BAR
+	, T1.TASK_ID, date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s') as CREATE_TIME
+	, case
+		when T2.FIRST_TIME is not null then date_format(T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s')
+		else date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s')
+	end as NEW_TIME
+	, case
+		when T.MANNER = 7 then date_format(T1.END_TIME, '%Y-%m-%d %H:%i:%s')
+		else
+			case
+				when T2.LAST_TIME is not null then date_format(T2.LAST_TIME, '%Y-%m-%d %H:%i:%s')
+				else date_format(now(), '%Y-%m-%d %H:%i:%s')
+			end
+	end as END_TIME, T.CREATE_USER, T.MANNER, T.ENGINE, T.BUSINESS_TYPE
+	, MAT.NAME, T.DEV_LANGUAGE, '' as IS_CYCLE_USE, TAR._owner, TAR._group
+	, TAR._tenant, TAR._auth
+from MDP_MODEL T
+	inner join (
+		select res.res_id, 1 as _owner
+			, IF(AUTH.res_id is null, -1, 1) as _auth
+			, 1 as _group, 1 as _tenant
+		from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+		) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('1134028892240117762', '1499742124740')))
+			) auth
+			on res.res_id = auth.res_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+	) TAR
+	on T.model_id = TAR.res_id
+	left join (
+		select max(task_id) as task_id, max(end_time) as end_time, model_id
+		from MDP_MODEL_TASK
+		group by model_id
+	) T1
+	on T.MODEL_ID = T1.MODEL_ID
+	left join (
+		select model_id, task_id, max(stage_id) - 1 as max_stage_id
+			, min(stage_id) as min_stage_id, min(start_time) as first_time
+			, max(end_time) as last_time, max(stage_bar) as stage_bar_m
+		from MDP_MODEL_STAGE
+		where parent_id is not null
+		group by MODEL_ID, task_id
+	) T2
+	on T2.task_id = T1.task_id
+		and T.MODEL_ID = T2.MODEL_ID
+	left join (
+		select modelSTAGE.status, stage.STAGE_ID, stage.STAGE_NAME, stage.STAGE_ICON
+		from mdp_modelstage_map modelSTAGE
+			left join mdp_stage stage on modelSTAGE.stage_id = stage.stage_id
+	) T4
+	on T.status = T4.status
+	left join MDP_MODEL_TYPE T3 on T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+	left join MDP_APPTOPIC_TYPE MAT on T.BUSINESS_TYPE = MAT.id
+where 1 = 1
+	and T3.IS_VALID != -1
+order by NEW_TIME desc
+
+[2019-06-27 11:23:21.756][MDP][204989][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:23:21.847][MDP][204989][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 11:23:21.935][MDP][204989][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001790*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 11:23:44.989][MDP][204989][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 11:23:45.093][MDP][204989][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:23:45.179][MDP][204989][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:23:45.255][MDP][204989][MYSQL][]
+select T.MODEL_ID as MODEL_ID, T.MODEL_NAME as MODEL_NAME, T.MODEL_TYPE_ID as MODEL_TYPE_ID, T3.MODEL_TYPE_ICON, T.STATUS as STATUS
+	, T4.STAGE_ID as STAGE_ID, T2.MAX_STAGE_ID as TASK_EXEC_STAGE, T4.STAGE_NAME as STAGE_NAME, T4.STAGE_ICON as STAGE_ICON, T2.STAGE_BAR_M as STAGE_BAR
+	, T1.TASK_ID, date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s') as CREATE_TIME,T.create_user
+	, case
+		when T2.FIRST_TIME is not null then date_format(T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s')
+		else date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s')
+	end as NEW_TIME
+	, case
+		when T.MANNER = 7 then date_format(T1.END_TIME, '%Y-%m-%d %H:%i:%s')
+		else
+			case
+				when T2.LAST_TIME is not null then date_format(T2.LAST_TIME, '%Y-%m-%d %H:%i:%s')
+				else date_format(now(), '%Y-%m-%d %H:%i:%s')
+			end
+	end as END_TIME, T.CREATE_USER, T.MANNER, T.ENGINE, T.BUSINESS_TYPE
+	, MAT.NAME, T.DEV_LANGUAGE, '' as IS_CYCLE_USE, TAR._owner, TAR._group
+	, TAR._tenant, TAR._auth
+from MDP_MODEL T
+	inner join (
+		select res.res_id, 1 as _owner
+			, IF(AUTH.res_id is null, -1, 1) as _auth
+			, 1 as _group, 1 as _tenant
+		from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+		) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('1134028892240117762', '1499742124740')))
+			) auth
+			on res.res_id = auth.res_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+	) TAR
+	on T.model_id = TAR.res_id
+	left join (
+		select max(task_id) as task_id, max(end_time) as end_time, model_id
+		from MDP_MODEL_TASK
+		group by model_id
+	) T1
+	on T.MODEL_ID = T1.MODEL_ID
+	left join (
+		select model_id, task_id, max(stage_id) - 1 as max_stage_id
+			, min(stage_id) as min_stage_id, min(start_time) as first_time
+			, max(end_time) as last_time, max(stage_bar) as stage_bar_m
+		from MDP_MODEL_STAGE
+		where parent_id is not null
+		group by MODEL_ID, task_id
+	) T2
+	on T2.task_id = T1.task_id
+		and T.MODEL_ID = T2.MODEL_ID
+	left join (
+		select modelSTAGE.status, stage.STAGE_ID, stage.STAGE_NAME, stage.STAGE_ICON
+		from mdp_modelstage_map modelSTAGE
+			left join mdp_stage stage on modelSTAGE.stage_id = stage.stage_id
+	) T4
+	on T.status = T4.status
+	left join MDP_MODEL_TYPE T3 on T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+	left join MDP_APPTOPIC_TYPE MAT on T.BUSINESS_TYPE = MAT.id
+where 1 = 1
+	and T3.IS_VALID != -1
+order by NEW_TIME desc
+
+[2019-06-27 11:23:45.466][MDP][204989][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:23:45.531][MDP][204989][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 11:23:45.59][MDP][204989][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001790*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 11:24:42.564][MDP][205300][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 11:24:42.701][MDP][205300][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
+
+[2019-06-27 11:24:51.663][MDP][205300][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 11:24:51.723][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:24:51.79][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:24:51.881][MDP][205300][MYSQL][]
+select * from mdp_model
+
+[2019-06-27 11:24:52.397][MDP][205381][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 11:24:52.532][MDP][205381][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 11:24:52.595][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:24:52.667][MDP][205300][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 11:24:52.725][MDP][205300][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001806*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 11:26:30.278][MDP][205300][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 11:26:30.372][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:26:30.472][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:26:30.625][MDP][205300][MYSQL][]
+select res.res_id, 1 as _owner
+			, IF(AUTH.res_id is null, -1, 1) as _auth
+			, 1 as _group, 1 as _tenant
+		from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+		) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('1134028892240117762', '1499742124740')))
+			) auth
+			on res.res_id = auth.res_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+
+[2019-06-27 11:26:30.822][MDP][205381][MYSQL][]
+SELECT * FROM `mdp210`.`res` LIMIT 0
+
+[2019-06-27 11:26:30.927][MDP][205381][MYSQL][]
+Table 'mdp210.res' doesn't exist
+
+[2019-06-27 11:26:30.927][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:26:31.005][MDP][205300][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 11:26:31.14][MDP][205300][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001806*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 11:26:49.26][MDP][204987][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 11:26:49.32][MDP][204987][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:26:49.394][MDP][204987][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:26:49.461][MDP][204987][MYSQL][]
+select * from mdp_model t
+
+[2019-06-27 11:26:49.697][MDP][205381][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 11:26:49.847][MDP][205381][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 11:26:49.934][MDP][204987][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:26:50.001][MDP][204987][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 11:26:50.066][MDP][204987][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001083*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 11:27:09.35][MDP][205300][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 11:27:09.448][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:27:09.566][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:27:09.707][MDP][205300][MYSQL][]
+select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+
+[2019-06-27 11:27:10.095][MDP][205381][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 11:27:10.257][MDP][205381][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 11:27:10.32][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:27:10.384][MDP][205300][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 11:27:10.444][MDP][205300][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001078*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 11:27:40.919][MDP][205300][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 11:27:42.731][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:27:42.958][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:27:43.061][MDP][205300][MYSQL][]
+select res.res_id, 1 as _owner
+			, IF(AUTH.res_id is null, -1, 1) as _auth
+			, 1 as _group, 1 as _tenant
+		from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+		) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('1134028892240117762', '1499742124740')))
+			) auth
+			on res.res_id = auth.res_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+
+[2019-06-27 11:27:43.218][MDP][205381][MYSQL][]
+SELECT * FROM `mdp210`.`res` LIMIT 0
+
+[2019-06-27 11:27:43.286][MDP][205381][MYSQL][]
+Table 'mdp210.res' doesn't exist
+
+[2019-06-27 11:27:43.286][MDP][205300][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:27:43.363][MDP][205300][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 11:27:43.438][MDP][205300][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001846*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=12 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 11:41:47.228][MDP][205381][MYSQL][]
+SELECT * FROM `mdp210`.`ai_subject_res_permit` LIMIT 0,1000
+
+[2019-06-27 11:41:47.791][MDP][205550][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_subject_res_permit`
+
+[2019-06-27 11:41:47.901][MDP][205381][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_subject_res_permit'
+
+[2019-06-27 11:41:47.992][MDP][205381][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_subject_res_permit`
+
+[2019-06-27 11:42:00.739][MDP][205381][MYSQL][]
+SELECT * FROM `mdp210`.`ai_group_res_scope_permit` LIMIT 0,1000
+
+[2019-06-27 11:42:00.877][MDP][205550][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_group_res_scope_permit`
+
+[2019-06-27 11:42:00.96][MDP][205381][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_group_res_scope_permit'
+
+[2019-06-27 11:42:01.04][MDP][205381][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_group_res_scope_permit`
+
+[2019-06-27 11:58:33.684][MDP][205381][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 11:58:33.859][MDP][205381][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
+
+[2019-06-27 11:58:47.273][MDP][205381][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 11:58:47.34][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:58:47.419][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 11:58:47.497][MDP][205381][MYSQL][]
+SELECT
+	T.MODEL_ID MODEL_ID,
+	T.MODEL_NAME MODEL_NAME,
+	T.MODEL_TYPE_ID MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS STATUS,
+	T4.STAGE_ID STAGE_ID,
+	T2.MAX_STAGE_ID TASK_EXEC_STAGE,
+	T4.STAGE_NAME STAGE_NAME,
+	T4.STAGE_ICON STAGE_ICON,
+	T2.STAGE_BAR_M STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE (
+		CASE
+				
+				WHEN T2.LAST_TIME IS NOT NULL THEN
+				date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+			END 
+			) 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = ?, 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = ?, 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT OUTER JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = ? 
+				AND res_id IS NOT NULL 
+				AND (
+					(
+						subject_type IN ( 1, 3 ) 
+					AND subject_id = ?) 
+					OR (
+						subject_type = 2 
+						AND subject_id IN ( ?, ? ) 
+					) 
+				) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT OUTER JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( ?, ? ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = { _USER_TENANT_ } 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) task_id,
+			MAX( end_time ) end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id )- 1 max_stage_id,
+			min( stage_id ) min_stage_id,
+			min( start_time ) first_time,
+			max( end_time ) last_time,
+			max( stage_bar ) stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+		AND T3.IS_VALID !=- 1 
+ORDER BY
+	NEW_TIME DESC
+
+[2019-06-27 11:58:47.566][MDP][205381][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+	' at line 47
+
+[2019-06-27 12:00:48.294][MDP][205381][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 12:00:48.361][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:00:48.436][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:00:48.514][MDP][205381][MYSQL][]
+select T.MODEL_ID as MODEL_ID, T.MODEL_NAME as MODEL_NAME, T.MODEL_TYPE_ID as MODEL_TYPE_ID, T3.MODEL_TYPE_ICON, T.STATUS as STATUS
+	, T4.STAGE_ID as STAGE_ID, T2.MAX_STAGE_ID as TASK_EXEC_STAGE, T4.STAGE_NAME as STAGE_NAME, T4.STAGE_ICON as STAGE_ICON, T2.STAGE_BAR_M as STAGE_BAR
+	, T1.TASK_ID, date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s') as CREATE_TIME
+	, case
+		when T2.FIRST_TIME is not null then date_format(T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s')
+		else date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s')
+	end as NEW_TIME
+	, case
+		when T.MANNER = 7 then date_format(T1.END_TIME, '%Y-%m-%d %H:%i:%s')
+		else
+			case
+				when T2.LAST_TIME is not null then date_format(T2.LAST_TIME, '%Y-%m-%d %H:%i:%s')
+				else date_format(now(), '%Y-%m-%d %H:%i:%s')
+			end
+	end as END_TIME, T.CREATE_USER, T.MANNER, T.ENGINE, T.BUSINESS_TYPE
+	, MAT.NAME, T.DEV_LANGUAGE, '' as IS_CYCLE_USE, TAR._owner, TAR._group
+	, TAR._tenant, TAR._auth
+from MDP_MODEL T
+	inner join (
+		select res.res_id, 1 as _owner
+			, IF(AUTH.res_id is null, -1, 1) as _auth
+			, 1 as _group, 1 as _tenant
+		from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+		) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = '210test4')
+						or (subject_type = 2
+							and subject_id in ('N/A')))
+			) auth
+			on res.res_id = auth.res_id
+		where res.res_owner = '210test4'
+			or auth.res_id is not null
+	) TAR
+	on T.model_id = TAR.res_id
+	left join (
+		select max(task_id) as task_id, max(end_time) as end_time, model_id
+		from MDP_MODEL_TASK
+		group by model_id
+	) T1
+	on T.MODEL_ID = T1.MODEL_ID
+	left join (
+		select model_id, task_id, max(stage_id) - 1 as max_stage_id
+			, min(stage_id) as min_stage_id, min(start_time) as first_time
+			, max(end_time) as last_time, max(stage_bar) as stage_bar_m
+		from MDP_MODEL_STAGE
+		where parent_id is not null
+		group by MODEL_ID, task_id
+	) T2
+	on T2.task_id = T1.task_id
+		and T.MODEL_ID = T2.MODEL_ID
+	left join (
+		select modelSTAGE.status, stage.STAGE_ID, stage.STAGE_NAME, stage.STAGE_ICON
+		from mdp_modelstage_map modelSTAGE
+			left join mdp_stage stage on modelSTAGE.stage_id = stage.stage_id
+	) T4
+	on T.status = T4.status
+	left join MDP_MODEL_TYPE T3 on T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+	left join MDP_APPTOPIC_TYPE MAT on T.BUSINESS_TYPE = MAT.id
+where 1 = 1
+	and T3.IS_VALID != -1
+order by NEW_TIME desc
+
+[2019-06-27 12:00:48.722][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:00:48.804][MDP][205381][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 12:00:48.876][MDP][205381][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001862*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 12:01:01.441][MDP][205381][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 12:01:01.516][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:01:01.593][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:01:01.682][MDP][205381][MYSQL][]
+select T.MODEL_ID as MODEL_ID, T.MODEL_NAME as MODEL_NAME, T.MODEL_TYPE_ID as MODEL_TYPE_ID, T3.MODEL_TYPE_ICON, T.STATUS as STATUS
+	, T4.STAGE_ID as STAGE_ID, T2.MAX_STAGE_ID as TASK_EXEC_STAGE, T4.STAGE_NAME as STAGE_NAME, T4.STAGE_ICON as STAGE_ICON, T2.STAGE_BAR_M as STAGE_BAR
+	, T1.TASK_ID, date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s') as CREATE_TIME
+	, case
+		when T2.FIRST_TIME is not null then date_format(T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s')
+		else date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s')
+	end as NEW_TIME
+	, case
+		when T.MANNER = 7 then date_format(T1.END_TIME, '%Y-%m-%d %H:%i:%s')
+		else
+			case
+				when T2.LAST_TIME is not null then date_format(T2.LAST_TIME, '%Y-%m-%d %H:%i:%s')
+				else date_format(now(), '%Y-%m-%d %H:%i:%s')
+			end
+	end as END_TIME, T.CREATE_USER, T.MANNER, T.ENGINE, T.BUSINESS_TYPE
+	, MAT.NAME, T.DEV_LANGUAGE, '' as IS_CYCLE_USE, TAR._owner, TAR._group
+	, TAR._tenant, TAR._auth
+from MDP_MODEL T
+	inner join (
+		select res.res_id, 1 as _owner
+			, IF(AUTH.res_id is null, -1, 1) as _auth
+			, 1 as _group, 1 as _tenant
+		from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+		) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = '210test4')
+						or (subject_type = 2
+							and subject_id in ('N/A')))
+			) auth
+			on res.res_id = auth.res_id
+		where res.res_owner = '210test4'
+			or auth.res_id is not null
+	) TAR
+	on T.model_id = TAR.res_id
+	left join (
+		select max(task_id) as task_id, max(end_time) as end_time, model_id
+		from MDP_MODEL_TASK
+		group by model_id
+	) T1
+	on T.MODEL_ID = T1.MODEL_ID
+	left join (
+		select model_id, task_id, max(stage_id) - 1 as max_stage_id
+			, min(stage_id) as min_stage_id, min(start_time) as first_time
+			, max(end_time) as last_time, max(stage_bar) as stage_bar_m
+		from MDP_MODEL_STAGE
+		where parent_id is not null
+		group by MODEL_ID, task_id
+	) T2
+	on T2.task_id = T1.task_id
+		and T.MODEL_ID = T2.MODEL_ID
+	left join (
+		select modelSTAGE.status, stage.STAGE_ID, stage.STAGE_NAME, stage.STAGE_ICON
+		from mdp_modelstage_map modelSTAGE
+			left join mdp_stage stage on modelSTAGE.stage_id = stage.stage_id
+	) T4
+	on T.status = T4.status
+	left join MDP_MODEL_TYPE T3 on T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+	left join MDP_APPTOPIC_TYPE MAT on T.BUSINESS_TYPE = MAT.id
+where 1 = 1
+	and T3.IS_VALID != -1
+order by NEW_TIME desc
+
+[2019-06-27 12:01:01.899][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:01:01.97][MDP][205381][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 12:01:02.063][MDP][205381][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001862*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 12:03:38.455][MDP][205381][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 12:03:38.519][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:03:38.596][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:03:38.686][MDP][205381][MYSQL][]
+SELECT
+		T.MODEL_ID MODEL_ID,
+		T.MODEL_NAME MODEL_NAME,
+		T.MODEL_TYPE_ID MODEL_TYPE_ID,
+		T3.MODEL_TYPE_ICON,
+
+		T.STATUS STATUS,
+		T4.STAGE_ID STAGE_ID,
+		T2.MAX_STAGE_ID TASK_EXEC_STAGE,
+		T4.STAGE_NAME STAGE_NAME,
+		T4.STAGE_ICON STAGE_ICON,
+		T2.STAGE_BAR_M STAGE_BAR,
+		T1.TASK_ID,
+
+		date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s') AS CREATE_TIME,
+		CASE
+			WHEN T2.FIRST_TIME IS NOT NULL
+			THEN date_format(T2.FIRST_TIME,'%Y-%m-%d %H:%i:%s')
+			ELSE date_format(T.CREATE_TIME,'%Y-%m-%d %H:%i:%s')
+		END AS NEW_TIME,
+		CASE
+			WHEN T.MANNER = 7
+			THEN date_format(T1.END_TIME,'%Y-%m-%d %H:%i:%s')
+			ELSE
+			(
+			CASE
+				WHEN T2.LAST_TIME IS NOT NULL
+				THEN date_format(T2.LAST_TIME,'%Y-%m-%d %H:%i:%s')
+				ELSE date_format(now(),'%Y-%m-%d %H:%i:%s')
+				END
+			)
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		''  AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth
+	FROM MDP_MODEL T
+	INNER JOIN
+	    (
+
+
+
+        SELECT res.res_id,
+        IF(res.res_owner = ?, 1, -1) AS _owner,
+        IF(grp.user_id IS NULL, -1, 1) AS _group,
+        IF(res.tenant = ?, 1, 0) AS _tenant,
+        IF(auth.res_id IS NULL, -1, 1) AS _auth
+        FROM (select  t.model_id as res_id,  t.model_name as res_name,  t.tenant as tenant,  t.create_user as res_owner,  t.model_type_id as model_scene,  t.business_type as busi_type from  mdp_model t) res
+        LEFT OUTER JOIN (
+        SELECT res_id
+        FROM ai_subject_res_permit
+        WHERE res_domain = ?
+        AND res_id IS NOT NULL
+        AND (
+        (subject_type IN (1, 3) AND subject_id = ?)
+        OR (subject_type = 2 AND subject_id IN
+
+
+                        ('N/A')
+
+
+     )
+        )
+     ) auth
+        ON auth.res_id = RES.res_id
+        LEFT OUTER JOIN (
+        SELECT user_id
+        FROM ai_group_user_binding
+        WHERE valid_flag = 1
+        AND group_id IN
+
+
+
+                        ('N/A')
+
+
+
+     ) grp
+        ON res.res_owner = grp.user_id
+        WHERE res.tenant = {_USER_TENANT_}
+           OR auth.res_id IS NOT NULL
+           OR grp.user_id IS NOT NULL
+
+
+
+		) TAR
+		ON T.model_id=TAR.res_id
+	LEFT JOIN
+		(
+		  SELECT max(task_id) task_id,MAX(end_time) end_time,model_id
+		   FROM MDP_MODEL_TASK
+		  GROUP BY model_id
+		) T1
+		ON T.MODEL_ID = T1.MODEL_ID
+	LEFT JOIN
+		(
+		    SELECT model_id,
+		           task_id,
+		           max(stage_id)-1 max_stage_id,
+		           min(stage_id) min_stage_id,
+		           min(start_time) first_time,
+		           max(end_time) last_time,
+		           max(stage_bar) stage_bar_m
+		 	FROM MDP_MODEL_STAGE
+			WHERE parent_id IS NOT NULL
+			GROUP BY MODEL_ID,task_id
+		) T2
+		ON  T2.task_id=T1.task_id
+		AND T.MODEL_ID = T2.MODEL_ID
+	LEFT JOIN
+	    (
+		SELECT modelSTAGE.status,stage.STAGE_ID, stage.STAGE_NAME,stage.STAGE_ICON
+		  FROM mdp_modelstage_map modelSTAGE
+		LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id
+		) T4
+		ON T.status = T4.status
+	LEFT JOIN MDP_MODEL_TYPE T3
+		   ON  T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+	LEFT JOIN MDP_APPTOPIC_TYPE MAT
+		   ON T.BUSINESS_TYPE = MAT.id
+
+	WHERE 1=1
+	  AND T3.IS_VALID!=-1
+
+
+
+
+
+
+	ORDER BY
+
+			NEW_TIME
+
+[2019-06-27 12:03:39.025][MDP][205381][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, 1, -1) AS _owner,
+        IF(grp.user_id IS NULL, -1, 1) AS _group,
+        I' at line 51
+
+[2019-06-27 12:04:15.932][MDP][205381][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 12:04:15.998][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:04:16.069][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:04:16.145][MDP][205381][MYSQL][]
+SELECT
+	T.MODEL_ID MODEL_ID,
+	T.MODEL_NAME MODEL_NAME,
+	T.MODEL_TYPE_ID MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS STATUS,
+	T4.STAGE_ID STAGE_ID,
+	T2.MAX_STAGE_ID TASK_EXEC_STAGE,
+	T4.STAGE_NAME STAGE_NAME,
+	T4.STAGE_ICON STAGE_ICON,
+	T2.STAGE_BAR_M STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE (
+		CASE
+				
+				WHEN T2.LAST_TIME IS NOT NULL THEN
+				date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+			END 
+			) 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = ?, 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = ?, 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT OUTER JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = ? 
+				AND res_id IS NOT NULL 
+				AND (
+					(
+						subject_type IN ( 1, 3 ) 
+					AND subject_id = ?) 
+					OR ( subject_type = 2 AND subject_id IN ( 'N/A' ) ) 
+				) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT OUTER JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = { _USER_TENANT_ } 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) task_id,
+			MAX( end_time ) end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id )- 1 max_stage_id,
+			min( stage_id ) min_stage_id,
+			min( start_time ) first_time,
+			max( end_time ) last_time,
+			max( stage_bar ) stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+		AND T3.IS_VALID !=- 1 
+ORDER BY
+	NEW_TIME
+
+[2019-06-27 12:04:16.216][MDP][205381][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+	' at line 47
+
+[2019-06-27 12:07:10.071][MDP][205381][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 12:07:10.132][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:07:10.218][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:07:10.296][MDP][205381][MYSQL][]
+SELECT
+	T.MODEL_ID MODEL_ID,
+	T.MODEL_NAME MODEL_NAME,
+	T.MODEL_TYPE_ID MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS STATUS,
+	T4.STAGE_ID STAGE_ID,
+	T2.MAX_STAGE_ID TASK_EXEC_STAGE,
+	T4.STAGE_NAME STAGE_NAME,
+	T4.STAGE_ICON STAGE_ICON,
+	T2.STAGE_BAR_M STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE (
+		CASE
+				
+				WHEN T2.LAST_TIME IS NOT NULL THEN
+				date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+			END 
+			) 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT OUTER JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND (
+					(
+						subject_type IN ( 1, 3 ) 
+					AND subject_id = 'admin') 
+					OR ( subject_type = 2 AND subject_id IN ( 'N/A' ) ) 
+				) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT OUTER JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = { _USER_TENANT_ } 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) task_id,
+			MAX( end_time ) end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id )- 1 max_stage_id,
+			min( stage_id ) min_stage_id,
+			min( start_time ) first_time,
+			max( end_time ) last_time,
+			max( stage_bar ) stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+		AND T3.IS_VALID !=- 1 
+ORDER BY
+	NEW_TIME
+
+[2019-06-27 12:07:10.371][MDP][205381][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '} 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.mo' at line 91
+
+[2019-06-27 12:07:58.014][MDP][205381][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 12:07:58.084][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:07:58.172][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:07:58.259][MDP][205381][MYSQL][]
+SELECT
+	T.MODEL_ID MODEL_ID,
+	T.MODEL_NAME MODEL_NAME,
+	T.MODEL_TYPE_ID MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS STATUS,
+	T4.STAGE_ID STAGE_ID,
+	T2.MAX_STAGE_ID TASK_EXEC_STAGE,
+	T4.STAGE_NAME STAGE_NAME,
+	T4.STAGE_ICON STAGE_ICON,
+	T2.STAGE_BAR_M STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE (
+		CASE
+				
+				WHEN T2.LAST_TIME IS NOT NULL THEN
+				date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+			END 
+			) 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT OUTER JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND (
+					(
+						subject_type IN ( 1, 3 ) 
+					AND subject_id = 'admin') 
+					OR ( subject_type = 2 AND subject_id IN ( 'N/A' ) ) 
+				) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT OUTER JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = 'default'
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) task_id,
+			MAX( end_time ) end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id )- 1 max_stage_id,
+			min( stage_id ) min_stage_id,
+			min( start_time ) first_time,
+			max( end_time ) last_time,
+			max( stage_bar ) stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+		AND T3.IS_VALID !=- 1 
+ORDER BY
+	NEW_TIME
+
+[2019-06-27 12:07:58.643][MDP][205381][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:07:58.724][MDP][205381][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 12:07:58.809][MDP][205381][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.000373*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=21 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 12:58:30.217][MDP][205381][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 12:58:30.636][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:58:30.708][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 12:58:30.808][MDP][206288][MYSQL][]
+SELECT
+	T.MODEL_ID AS MODEL_ID,
+	T.MODEL_NAME AS MODEL_NAME,
+	T.MODEL_TYPE_ID AS MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS AS STATUS,
+	T4.STAGE_ID AS STAGE_ID,
+	T2.MAX_STAGE_ID AS TASK_EXEC_STAGE,
+	T4.STAGE_NAME AS STAGE_NAME,
+	T4.STAGE_ICON AS STAGE_ICON,
+	T2.STAGE_BAR_M AS STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE
+	CASE
+			
+			WHEN T2.LAST_TIME IS NOT NULL THEN
+			date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+		END 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND ((
+						subject_type IN ( 1, 3 ) 
+						AND subject_id = 'admin' 
+						) 
+					OR (
+						subject_type = 2 
+					AND subject_id IN ( 'N/A' ))) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = DEFAULT 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) AS task_id,
+			max( end_time ) AS end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id ) - 1 AS max_stage_id,
+			min( stage_id ) AS min_stage_id,
+			min( start_time ) AS first_time,
+			max( end_time ) AS last_time,
+			max( stage_bar ) AS stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+		AND T3.IS_VALID != - 1 
+ORDER BY
+	NEW_TIME DESC
+
+[2019-06-27 12:58:30.874][MDP][206288][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id' at line 92
+
+[2019-06-27 13:15:17.246][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:15:17.333][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:15:17.441][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:15:17.577][MDP][206288][MYSQL][]
+select * from mdp_model
+
+[2019-06-27 13:15:18.414][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:15:18.838][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:15:19.01][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:15:19.165][MDP][206288][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:15:19.248][MDP][206288][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001800*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:16:00.496][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:16:00.582][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:00.652][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:00.726][MDP][206288][MYSQL][]
+SELECT
+	T.MODEL_ID AS MODEL_ID,
+	T.MODEL_NAME AS MODEL_NAME,
+	T.MODEL_TYPE_ID AS MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS AS STATUS,
+	T4.STAGE_ID AS STAGE_ID,
+	T2.MAX_STAGE_ID AS TASK_EXEC_STAGE,
+	T4.STAGE_NAME AS STAGE_NAME,
+	T4.STAGE_ICON AS STAGE_ICON,
+	T2.STAGE_BAR_M AS STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE
+	CASE
+			
+			WHEN T2.LAST_TIME IS NOT NULL THEN
+			date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+		END 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND ((
+						subject_type IN ( 1, 3 ) 
+						AND subject_id = 'admin' 
+						) 
+					OR (
+						subject_type = 2 
+					AND subject_id IN ( 'N/A' ))) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = 'default' 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) AS task_id,
+			max( end_time ) AS end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id ) - 1 AS max_stage_id,
+			min( stage_id ) AS min_stage_id,
+			min( start_time ) AS first_time,
+			max( end_time ) AS last_time,
+			max( stage_bar ) AS stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+		AND T3.IS_VALID != - 1 
+ORDER BY
+	NEW_TIME DESC
+
+[2019-06-27 13:16:01.025][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:01.094][MDP][206288][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:16:01.198][MDP][206288][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001800*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:16:22.532][MDP][205300][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:16:22.97][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:23.065][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:23.136][MDP][206452][MYSQL][]
+select * from mdp_model
+
+[2019-06-27 13:16:23.369][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:16:23.48][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:16:23.543][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:23.62][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:16:23.684][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001766*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:16:31.051][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:16:31.124][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:31.215][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:31.857][MDP][206452][MYSQL][]
+select * from mdp_model where tenant is null
+
+[2019-06-27 13:16:32.066][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:16:32.24][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:16:32.314][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:32.382][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:16:32.447][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001766*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:16:39.699][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:16:39.761][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:39.843][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:40.022][MDP][206452][MYSQL][]
+select * from mdp_model where tenant!='defalut'
+
+[2019-06-27 13:16:40.334][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:16:40.501][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:16:40.616][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:16:40.7][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:16:40.791][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001061*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:17:05.545][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:17:05.619][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:17:05.689][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:17:05.765][MDP][206452][MYSQL][]
+update mdp_model set tenant='defalut' where tenant!='defalut'
+
+[2019-06-27 13:17:05.872][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:17:05.948][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:17:06.016][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001670*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=12 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:17:30.928][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:17:31.016][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:17:31.109][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:17:31.2][MDP][206452][MYSQL][]
+update mdp_model set tenant='defalut'
+
+[2019-06-27 13:17:31.301][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:17:31.383][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:17:31.46][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002034*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=19 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:17:41.923][MDP][204989][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:17:42.313][MDP][206463][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:17:42.386][MDP][206463][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:17:42.482][MDP][206463][MYSQL][]
+select T.MODEL_ID as MODEL_ID, T.MODEL_NAME as MODEL_NAME, T.MODEL_TYPE_ID as MODEL_TYPE_ID, T3.MODEL_TYPE_ICON, T.STATUS as STATUS
+	, T4.STAGE_ID as STAGE_ID, T2.MAX_STAGE_ID as TASK_EXEC_STAGE, T4.STAGE_NAME as STAGE_NAME, T4.STAGE_ICON as STAGE_ICON, T2.STAGE_BAR_M as STAGE_BAR
+	, T1.TASK_ID, date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s') as CREATE_TIME,T.create_user
+	, case
+		when T2.FIRST_TIME is not null then date_format(T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s')
+		else date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s')
+	end as NEW_TIME
+	, case
+		when T.MANNER = 7 then date_format(T1.END_TIME, '%Y-%m-%d %H:%i:%s')
+		else
+			case
+				when T2.LAST_TIME is not null then date_format(T2.LAST_TIME, '%Y-%m-%d %H:%i:%s')
+				else date_format(now(), '%Y-%m-%d %H:%i:%s')
+			end
+	end as END_TIME, T.CREATE_USER, T.MANNER, T.ENGINE, T.BUSINESS_TYPE
+	, MAT.NAME, T.DEV_LANGUAGE, '' as IS_CYCLE_USE, TAR._owner, TAR._group
+	, TAR._tenant, TAR._auth
+from MDP_MODEL T
+	inner join (
+		select res.res_id, 1 as _owner
+			, IF(AUTH.res_id is null, -1, 1) as _auth
+			, 1 as _group, 1 as _tenant
+		from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+		) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('1134028892240117762', '1499742124740')))
+			) auth
+			on res.res_id = auth.res_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+	) TAR
+	on T.model_id = TAR.res_id
+	left join (
+		select max(task_id) as task_id, max(end_time) as end_time, model_id
+		from MDP_MODEL_TASK
+		group by model_id
+	) T1
+	on T.MODEL_ID = T1.MODEL_ID
+	left join (
+		select model_id, task_id, max(stage_id) - 1 as max_stage_id
+			, min(stage_id) as min_stage_id, min(start_time) as first_time
+			, max(end_time) as last_time, max(stage_bar) as stage_bar_m
+		from MDP_MODEL_STAGE
+		where parent_id is not null
+		group by MODEL_ID, task_id
+	) T2
+	on T2.task_id = T1.task_id
+		and T.MODEL_ID = T2.MODEL_ID
+	left join (
+		select modelSTAGE.status, stage.STAGE_ID, stage.STAGE_NAME, stage.STAGE_ICON
+		from mdp_modelstage_map modelSTAGE
+			left join mdp_stage stage on modelSTAGE.stage_id = stage.stage_id
+	) T4
+	on T.status = T4.status
+	left join MDP_MODEL_TYPE T3 on T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+	left join MDP_APPTOPIC_TYPE MAT on T.BUSINESS_TYPE = MAT.id
+where 1 = 1
+	and T3.IS_VALID != -1
+order by NEW_TIME desc
+
+[2019-06-27 13:17:42.69][MDP][206463][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:17:42.762][MDP][206463][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:17:42.824][MDP][206463][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001764*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:17:58.817][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:17:58.894][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:18:00.055][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:18:00.172][MDP][206288][MYSQL][]
+SELECT
+	T.MODEL_ID AS MODEL_ID,
+	T.MODEL_NAME AS MODEL_NAME,
+	T.MODEL_TYPE_ID AS MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS AS STATUS,
+	T4.STAGE_ID AS STAGE_ID,
+	T2.MAX_STAGE_ID AS TASK_EXEC_STAGE,
+	T4.STAGE_NAME AS STAGE_NAME,
+	T4.STAGE_ICON AS STAGE_ICON,
+	T2.STAGE_BAR_M AS STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE
+	CASE
+			
+			WHEN T2.LAST_TIME IS NOT NULL THEN
+			date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+		END 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND ((
+						subject_type IN ( 1, 3 ) 
+						AND subject_id = 'admin' 
+						) 
+					OR (
+						subject_type = 2 
+					AND subject_id IN ( 'N/A' ))) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = 'default' 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) AS task_id,
+			max( end_time ) AS end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id ) - 1 AS max_stage_id,
+			min( stage_id ) AS min_stage_id,
+			min( start_time ) AS first_time,
+			max( end_time ) AS last_time,
+			max( stage_bar ) AS stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+		AND T3.IS_VALID != - 1 
+ORDER BY
+	NEW_TIME DESC
+
+[2019-06-27 13:18:00.385][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:18:00.46][MDP][206288][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:18:00.53][MDP][206288][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001341*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=9 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:18:12.078][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:18:12.186][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:18:12.265][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:18:12.36][MDP][206452][MYSQL][]
+update mdp_model set tenant='default'
+
+[2019-06-27 13:18:12.435][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:18:12.514][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:18:12.586][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002017*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=26 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:18:54.08][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:18:54.14][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:18:54.243][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:18:54.316][MDP][206288][MYSQL][]
+SELECT
+	T.MODEL_ID AS MODEL_ID,
+	T.MODEL_NAME AS MODEL_NAME,
+	T.MODEL_TYPE_ID AS MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS AS STATUS,
+	T4.STAGE_ID AS STAGE_ID,
+	T2.MAX_STAGE_ID AS TASK_EXEC_STAGE,
+	T4.STAGE_NAME AS STAGE_NAME,
+	T4.STAGE_ICON AS STAGE_ICON,
+	T2.STAGE_BAR_M AS STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE
+	CASE
+			
+			WHEN T2.LAST_TIME IS NOT NULL THEN
+			date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+		END 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND ((
+						subject_type IN ( 1, 3 ) 
+						AND subject_id = 'admin' 
+						) 
+					OR (
+						subject_type = 2 
+					AND subject_id IN ( 'N/A' ))) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = 'default' 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) AS task_id,
+			max( end_time ) AS end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id ) - 1 AS max_stage_id,
+			min( stage_id ) AS min_stage_id,
+			min( start_time ) AS first_time,
+			max( end_time ) AS last_time,
+			max( stage_bar ) AS stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+		AND T3.IS_VALID != - 1 
+ORDER BY
+	NEW_TIME DESC
+
+[2019-06-27 13:18:54.593][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:18:54.668][MDP][206288][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:18:54.735][MDP][206288][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002044*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=16 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:19:14.808][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:19:14.87][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:19:14.943][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:19:15.014][MDP][206288][MYSQL][]
+SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND ((
+						subject_type IN ( 1, 3 ) 
+						AND subject_id = 'admin' 
+						) 
+					OR (
+						subject_type = 2 
+					AND subject_id IN ( 'N/A' ))) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = 'default' 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL
+
+[2019-06-27 13:19:15.183][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`res` LIMIT 0
+
+[2019-06-27 13:19:15.24][MDP][206442][MYSQL][]
+Table 'mdp210.res' doesn't exist
+
+[2019-06-27 13:19:15.24][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:19:15.314][MDP][206288][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:19:15.378][MDP][206288][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002462*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=23 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:20:03.919][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:20:03.989][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:20:04.062][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:20:04.136][MDP][206288][MYSQL][]
+SELECT
+	T.MODEL_ID AS MODEL_ID,
+	T.MODEL_NAME AS MODEL_NAME,
+	T.MODEL_TYPE_ID AS MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS AS STATUS,
+	T4.STAGE_ID AS STAGE_ID,
+	T2.MAX_STAGE_ID AS TASK_EXEC_STAGE,
+	T4.STAGE_NAME AS STAGE_NAME,
+	T4.STAGE_ICON AS STAGE_ICON,
+	T2.STAGE_BAR_M AS STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE
+	CASE
+			
+			WHEN T2.LAST_TIME IS NOT NULL THEN
+			date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+		END 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND ((
+						subject_type IN ( 1, 3 ) 
+						AND subject_id = 'admin' 
+						) 
+					OR (
+						subject_type = 2 
+					AND subject_id IN ( 'N/A' ))) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = 'default' 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) AS task_id,
+			max( end_time ) AS end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id ) - 1 AS max_stage_id,
+			min( stage_id ) AS min_stage_id,
+			min( start_time ) AS first_time,
+			max( end_time ) AS last_time,
+			max( stage_bar ) AS stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+ORDER BY
+	NEW_TIME DESC
+
+[2019-06-27 13:20:04.566][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:20:04.639][MDP][206288][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:20:04.702][MDP][206288][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002380*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=30 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:20:30.514][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:20:30.575][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:20:30.676][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:20:30.748][MDP][206288][MYSQL][]
+select * from MDP_MODEL_TYPE
+
+[2019-06-27 13:20:30.929][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model_type` LIMIT 0
+
+[2019-06-27 13:20:31.071][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model_type`
+
+[2019-06-27 13:20:31.144][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:20:31.215][MDP][206288][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:20:31.335][MDP][206288][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002227*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=37 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:21:38.702][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:21:38.762][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:21:38.833][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:21:38.909][MDP][206288][MYSQL][]
+SELECT
+	T.MODEL_ID AS MODEL_ID,
+	T.MODEL_NAME AS MODEL_NAME,
+	T.MODEL_TYPE_ID AS MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS AS STATUS,
+	T4.STAGE_ID AS STAGE_ID,
+	T2.MAX_STAGE_ID AS TASK_EXEC_STAGE,
+	T4.STAGE_NAME AS STAGE_NAME,
+	T4.STAGE_ICON AS STAGE_ICON,
+	T2.STAGE_BAR_M AS STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE
+	CASE
+			
+			WHEN T2.LAST_TIME IS NOT NULL THEN
+			date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+		END 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND ((
+						subject_type IN ( 1, 3 ) 
+						AND subject_id = 'admin' 
+						) 
+					OR (
+						subject_type = 2 
+					AND subject_id IN ( 'N/A' ))) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = 'default' 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) AS task_id,
+			max( end_time ) AS end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id ) - 1 AS max_stage_id,
+			min( stage_id ) AS min_stage_id,
+			min( start_time ) AS first_time,
+			max( end_time ) AS last_time,
+			max( stage_bar ) AS stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+ORDER BY
+	NEW_TIME DESC
+
+[2019-06-27 13:21:39.3][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:21:39.376][MDP][206288][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:21:39.455][MDP][206288][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002258*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=44 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:21:59.527][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:21:59.587][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:21:59.659][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:21:59.734][MDP][206288][MYSQL][]
+SELECT
+	T.MODEL_ID AS MODEL_ID,
+	T.MODEL_NAME AS MODEL_NAME,
+	T.MODEL_TYPE_ID AS MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS AS STATUS,
+	T4.STAGE_ID AS STAGE_ID,
+	T2.MAX_STAGE_ID AS TASK_EXEC_STAGE,
+	T4.STAGE_NAME AS STAGE_NAME,
+	T4.STAGE_ICON AS STAGE_ICON,
+	T2.STAGE_BAR_M AS STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE
+	CASE
+			
+			WHEN T2.LAST_TIME IS NOT NULL THEN
+			date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+		END 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND ((
+						subject_type IN ( 1, 3 ) 
+						AND subject_id = 'admin' 
+						) 
+					OR (
+						subject_type = 2 
+					AND subject_id IN ( 'N/A' ))) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = 'default' 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) AS task_id,
+			max( end_time ) AS end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id ) - 1 AS max_stage_id,
+			min( stage_id ) AS min_stage_id,
+			min( start_time ) AS first_time,
+			max( end_time ) AS last_time,
+			max( stage_bar ) AS stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1 
+		(AND T3.IS_VALID != - 1  or T3.is_valid is null)
+ORDER BY
+	NEW_TIME DESC
+
+[2019-06-27 13:21:59.803][MDP][206288][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(AND T3.IS_VALID != - 1  or T3.is_valid is null)
+ORDER BY
+	NEW_TIME DESC' at line 137
+
+[2019-06-27 13:22:25.171][MDP][206288][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:22:25.232][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:22:25.303][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:22:25.383][MDP][206288][MYSQL][]
+SELECT
+	T.MODEL_ID AS MODEL_ID,
+	T.MODEL_NAME AS MODEL_NAME,
+	T.MODEL_TYPE_ID AS MODEL_TYPE_ID,
+	T3.MODEL_TYPE_ICON,
+	T.STATUS AS STATUS,
+	T4.STAGE_ID AS STAGE_ID,
+	T2.MAX_STAGE_ID AS TASK_EXEC_STAGE,
+	T4.STAGE_NAME AS STAGE_NAME,
+	T4.STAGE_ICON AS STAGE_ICON,
+	T2.STAGE_BAR_M AS STAGE_BAR,
+	T1.TASK_ID,
+	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
+CASE
+		
+		WHEN T2.FIRST_TIME IS NOT NULL THEN
+		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
+	END AS NEW_TIME,
+CASE
+		
+		WHEN T.MANNER = 7 THEN
+		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE
+	CASE
+			
+			WHEN T2.LAST_TIME IS NOT NULL THEN
+			date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) 
+		END 
+		END AS END_TIME,
+		T.CREATE_USER,
+		T.MANNER,
+		T.ENGINE,
+		T.BUSINESS_TYPE,
+		MAT.NAME,
+		T.DEV_LANGUAGE,
+		'' AS IS_CYCLE_USE,
+		TAR._owner,
+		TAR._group,
+		TAR._tenant,
+		TAR._auth 
+	FROM
+		MDP_MODEL T
+		INNER JOIN (
+		SELECT
+			res.res_id,
+		IF
+			( res.res_owner = 'admin', 1, - 1 ) AS _owner,
+		IF
+			( grp.user_id IS NULL, - 1, 1 ) AS _group,
+		IF
+			( res.tenant = 'default', 1, 0 ) AS _tenant,
+		IF
+			( auth.res_id IS NULL, - 1, 1 ) AS _auth 
+		FROM
+			(
+			SELECT
+				t.model_id AS res_id,
+				t.model_name AS res_name,
+				t.tenant AS tenant,
+				t.create_user AS res_owner,
+				t.model_type_id AS model_scene,
+				t.business_type AS busi_type 
+			FROM
+				mdp_model t 
+			) res
+			LEFT JOIN (
+			SELECT
+				res_id 
+			FROM
+				ai_subject_res_permit 
+			WHERE
+				res_domain = 'MODEL' 
+				AND res_id IS NOT NULL 
+				AND ((
+						subject_type IN ( 1, 3 ) 
+						AND subject_id = 'admin' 
+						) 
+					OR (
+						subject_type = 2 
+					AND subject_id IN ( 'N/A' ))) 
+			) auth ON auth.res_id = RES.res_id
+			LEFT JOIN (
+			SELECT
+				user_id 
+			FROM
+				ai_group_user_binding 
+			WHERE
+				valid_flag = 1 
+				AND group_id IN ( 'N/A' ) 
+			) grp ON res.res_owner = grp.user_id 
+		WHERE
+			res.tenant = 'default' 
+			OR auth.res_id IS NOT NULL 
+			OR grp.user_id IS NOT NULL 
+		) TAR ON T.model_id = TAR.res_id
+		LEFT JOIN (
+		SELECT
+			max( task_id ) AS task_id,
+			max( end_time ) AS end_time,
+			model_id 
+		FROM
+			MDP_MODEL_TASK 
+		GROUP BY
+			model_id 
+		) T1 ON T.MODEL_ID = T1.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			model_id,
+			task_id,
+			max( stage_id ) - 1 AS max_stage_id,
+			min( stage_id ) AS min_stage_id,
+			min( start_time ) AS first_time,
+			max( end_time ) AS last_time,
+			max( stage_bar ) AS stage_bar_m 
+		FROM
+			MDP_MODEL_STAGE 
+		WHERE
+			parent_id IS NOT NULL 
+		GROUP BY
+			MODEL_ID,
+			task_id 
+		) T2 ON T2.task_id = T1.task_id 
+		AND T.MODEL_ID = T2.MODEL_ID
+		LEFT JOIN (
+		SELECT
+			modelSTAGE.STATUS,
+			stage.STAGE_ID,
+			stage.STAGE_NAME,
+			stage.STAGE_ICON 
+		FROM
+			mdp_modelstage_map modelSTAGE
+			LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
+		) T4 ON T.STATUS = T4.
+		STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+		LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
+	WHERE
+		1 = 1
+		AND T3.IS_VALID != - 1  or T3.is_valid is null
+ORDER BY
+	NEW_TIME DESC
+
+[2019-06-27 13:22:25.764][MDP][206288][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:22:25.834][MDP][206288][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:22:25.896][MDP][206288][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001986*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=55 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:22:46.507][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:22:46.569][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:22:46.64][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:22:46.712][MDP][206452][MYSQL][]
+select * from mdp_model
+
+[2019-06-27 13:22:46.926][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:22:47.041][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:22:47.099][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:22:47.168][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:22:47.231][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001991*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=33 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:23:00.33][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:23:00.391][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:00.461][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:00.532][MDP][206452][MYSQL][]
+select * from mdp_model t where t.model_type_id is null
+
+[2019-06-27 13:23:00.651][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:23:00.768][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:23:00.827][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:00.898][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:23:00.962][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002058*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=40 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:23:16.255][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:23:16.354][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:16.474][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:16.554][MDP][206452][MYSQL][]
+select  distinct t.model_type_id  from mdp_model t
+
+[2019-06-27 13:23:16.63][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:16.702][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:23:16.766][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002139*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=47 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:23:31.251][MDP][206463][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:23:31.317][MDP][206463][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:31.389][MDP][206463][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:31.462][MDP][206463][MYSQL][]
+select * from mdp_model_type
+
+[2019-06-27 13:23:31.582][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model_type` LIMIT 0
+
+[2019-06-27 13:23:31.696][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model_type`
+
+[2019-06-27 13:23:31.754][MDP][206463][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:31.823][MDP][206463][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:23:31.888][MDP][206463][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001764*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:23:57.29][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:23:57.352][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:57.422][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:57.491][MDP][206452][MYSQL][]
+select  *  from mdp_model t where t.model_type_id=''
+
+[2019-06-27 13:23:57.61][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:23:57.725][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:23:57.788][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:23:57.874][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:23:57.939][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002079*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=54 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:24:43.842][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:24:43.907][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:24:43.98][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:24:44.051][MDP][206452][MYSQL][]
+select  *  from mdp_model t where t.model_type_id=''
+
+[2019-06-27 13:24:44.17][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:24:44.285][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:24:44.343][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:24:44.411][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:24:44.473][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002071*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=61 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:24:54.543][MDP][206452][MYSQL][]
+UPDATE `mdp210`.`mdp_model` SET `model_type_id` = '5' WHERE `model_id` = '5c1b0479e03dd8000ae2df74'
+
+[2019-06-27 13:24:54.608][MDP][206452][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` WHERE `model_id` = '5c1b0479e03dd8000ae2df74'
+
+[2019-06-27 13:24:56.997][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:24:57.059][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:24:57.13][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:24:57.201][MDP][206452][MYSQL][]
+select  *  from mdp_model t where t.model_type_id=''
+
+[2019-06-27 13:24:57.321][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:24:57.441][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:24:57.503][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:24:57.574][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:24:57.638][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.000244*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=70 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:25:07.108][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:25:07.174][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:25:07.244][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:25:07.316][MDP][206452][MYSQL][]
+select  distinct t.model_type_id  from mdp_model t
+
+[2019-06-27 13:25:07.385][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:25:07.455][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:25:07.523][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.000829*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=77 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 13:25:34.691][MDP][206452][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 13:25:34.756][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:25:34.835][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:25:34.909][MDP][206452][MYSQL][]
+select  *  from mdp_model t where t.model_type_id='8'
+
+[2019-06-27 13:25:35.117][MDP][206442][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-06-27 13:25:35.246][MDP][206442][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-06-27 13:25:35.31][MDP][206452][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 13:25:35.379][MDP][206452][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 13:25:35.45][MDP][206452][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002047*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=84 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 15:08:14.167][MDP][207520][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_ftp` LIMIT 0,1000
+
+[2019-06-27 15:08:14.587][MDP][207521][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_ftp`
+
+[2019-06-27 15:08:14.653][MDP][207520][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_ftp'
+
+[2019-06-27 15:08:14.738][MDP][207520][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`mdp_ftp`
+
+[2019-06-27 18:25:58.261][MDP][209862][MYSQL][]
+SELECT * FROM `mdp210`.`ai_open_api_setting` LIMIT 0,1000
+
+[2019-06-27 18:25:58.855][MDP][209864][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_open_api_setting`
+
+[2019-06-27 18:25:58.93][MDP][209862][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_open_api_setting'
+
+[2019-06-27 18:25:59.017][MDP][209862][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_open_api_setting`
+
+[2019-06-27 18:25:59.684][MDP][209862][MYSQL][]
+SELECT * FROM `mdp210`.`ai_open_service` LIMIT 0,1000
+
+[2019-06-27 18:25:59.839][MDP][209864][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_open_service`
+
+[2019-06-27 18:25:59.95][MDP][209862][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_open_service'
+
+[2019-06-27 18:26:00.044][MDP][209862][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_open_service`
+
+[2019-06-27 18:26:24.234][MDP][209862][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` LIMIT 0,1000
+
+[2019-06-27 18:26:24.361][MDP][209864][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
+
+[2019-06-27 18:26:24.434][MDP][209862][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
+
+[2019-06-27 18:26:24.498][MDP][209862][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
+
+[2019-06-27 18:30:59.416][MDP][209862][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant` LIMIT 0,1000
+
+[2019-06-27 18:30:59.551][MDP][209864][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant`
+
+[2019-06-27 18:30:59.627][MDP][209862][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant'
+
+[2019-06-27 18:30:59.691][MDP][209862][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant`
+
+[2019-06-27 18:31:20.557][MDP][209862][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` LIMIT 0,1000
+
+[2019-06-27 18:31:20.691][MDP][209864][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_containers`
+
+[2019-06-27 18:31:20.765][MDP][209862][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_containers'
+
+[2019-06-27 18:31:20.83][MDP][209862][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_containers`
+
+[2019-06-27 20:38:17.411][MDP][211230][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_user_binding` LIMIT 0,1000
+
+[2019-06-27 20:38:17.629][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` LIMIT 0,1000
+
+[2019-06-27 20:38:17.81][MDP][211232][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_user_binding`
+
+[2019-06-27 20:38:17.877][MDP][211230][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_user_binding'
+
+[2019-06-27 20:38:17.935][MDP][211230][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_user_binding`
+
+[2019-06-27 20:38:18.025][MDP][211233][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_hosts`
+
+[2019-06-27 20:38:18.093][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_hosts'
+
+[2019-06-27 20:38:18.156][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_hosts`
+
+[2019-06-27 20:38:19.638][MDP][211229][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_platform_env` LIMIT 0,1000
+
+[2019-06-27 20:38:19.798][MDP][211228][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_platform_env`
+
+[2019-06-27 20:38:19.862][MDP][211229][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_platform_env'
+
+[2019-06-27 20:38:19.934][MDP][211229][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_platform_env`
+
+[2019-06-27 20:56:24.521][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` LIMIT 0,1000
+
+[2019-06-27 20:56:25.451][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-06-27 20:56:25.672][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_user'
+
+[2019-06-27 20:56:25.908][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_user`
+
+[2019-06-27 20:56:37.119][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` ORDER BY `USER_ID`  LIMIT 0,1000
+
+[2019-06-27 20:56:37.255][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-06-27 20:56:37.34][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_user'
+
+[2019-06-27 20:56:37.403][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_user`
+
+[2019-06-27 20:56:40.709][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` ORDER BY `USER_ID` DESC LIMIT 0,1000
+
+[2019-06-27 20:56:40.862][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-06-27 20:56:40.947][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_user'
+
+[2019-06-27 20:56:41.023][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_user`
+
+[2019-06-27 20:57:00.235][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_feature` LIMIT 0,1000
+
+[2019-06-27 20:57:00.388][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_feature`
+
+[2019-06-27 20:57:01.137][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_feature'
+
+[2019-06-27 20:57:01.243][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_feature`
+
+[2019-06-27 20:57:03.883][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_enum_dic` LIMIT 0,1000
+
+[2019-06-27 20:57:04.062][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_enum_dic`
+
+[2019-06-27 20:57:04.833][MDP][211230][MYSQL][]
+SELECT * FROM `mdp210`.`ai_group_res_scope_permit` LIMIT 0,1000
+
+[2019-06-27 20:57:04.957][MDP][211232][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_group_res_scope_permit`
+
+[2019-06-27 20:57:06.478][MDP][211230][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_group_res_scope_permit'
+
+[2019-06-27 20:57:06.478][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_enum_dic'
+
+[2019-06-27 20:57:06.572][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_enum_dic`
+
+[2019-06-27 20:57:06.572][MDP][211230][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_group_res_scope_permit`
+
+[2019-06-27 20:57:24.509][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant` LIMIT 0,1000
+
+[2019-06-27 20:57:24.651][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant`
+
+[2019-06-27 20:57:24.731][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant'
+
+[2019-06-27 20:57:24.793][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant`
+
+[2019-06-27 20:57:26.946][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` LIMIT 0,1000
+
+[2019-06-27 20:57:27.073][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
+
+[2019-06-27 20:57:27.152][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
+
+[2019-06-27 20:57:27.215][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
+
+[2019-06-27 20:57:30.82][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` LIMIT 0,1000
+
+[2019-06-27 20:57:30.949][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_containers`
+
+[2019-06-27 20:57:32.327][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_containers'
+
+[2019-06-27 20:57:32.421][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_containers`
+
+[2019-06-27 20:57:35.881][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_platform_env` LIMIT 0,1000
+
+[2019-06-27 20:57:36.012][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_platform_env`
+
+[2019-06-27 20:57:36.092][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_platform_env'
+
+[2019-06-27 20:57:36.154][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_platform_env`
+
+[2019-06-27 20:57:41.178][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_user_binding` LIMIT 0,1000
+
+[2019-06-27 20:57:41.308][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_user_binding`
+
+[2019-06-27 20:57:41.389][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_user_binding'
+
+[2019-06-27 20:57:41.451][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_user_binding`
+
+[2019-06-27 20:58:01.348][MDP][211228][MYSQL][]
+DELETE FROM `mdp210`.`ai_quota_tenant_user_binding` WHERE `QUOTA_TENANT_ID` = '029_01' AND `USER_ID` = 'ASIA_KAIFA-sys'
+
+[2019-06-27 20:58:01.42][MDP][211228][MYSQL][]
+DELETE FROM `mdp210`.`ai_quota_tenant_user_binding` WHERE `QUOTA_TENANT_ID` = '029_01' AND `USER_ID` = 'DSEM'
+
+[2019-06-27 20:58:01.482][MDP][211228][MYSQL][]
+DELETE FROM `mdp210`.`ai_quota_tenant_user_binding` WHERE `QUOTA_TENANT_ID` = '029_02' AND `USER_ID` = 'AITribe'
+
+[2019-06-27 20:58:14.908][MDP][211228][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` LIMIT 0,1000
+
+[2019-06-27 20:58:15.038][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-06-27 20:58:15.119][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_user'
+
+[2019-06-27 20:58:15.181][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_user`
+
+[2019-06-27 20:58:43.201][MDP][211228][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
+
+[2019-06-27 20:58:43.293][MDP][211229][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 20:58:44.372][MDP][211229][MYSQL][]
+SHOW TABLE STATUS
+
+[2019-06-27 20:58:44.526][MDP][211228][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+
+[2019-06-27 20:58:44.602][MDP][211228][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2019-06-27 20:58:44.903][MDP][211228][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_SCHEMA
+
+[2019-06-27 20:58:51.218][MDP][211228][MYSQL][]
+SELECT * FROM `mdp`.`ai_user` LIMIT 0,1000
+
+[2019-06-27 20:58:51.353][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp`.`ai_user`
+
+[2019-06-27 20:58:51.435][MDP][211228][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_user'
+
+[2019-06-27 20:58:51.501][MDP][211228][MYSQL][]
+SHOW CREATE TABLE `mdp`.`ai_user`
+
+[2019-06-27 21:01:23.874][MDP][211228][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 21:01:24.004][MDP][211228][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_NAME ASC
+
+[2019-06-27 21:01:27.969][MDP][211228][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 21:01:28.099][MDP][211228][MYSQL][]
+SHOW TABLE STATUS
+
+[2019-06-27 21:01:36.968][MDP][211228][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 21:01:38.033][MDP][211228][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
+
+[2019-06-27 21:01:50.253][MDP][211228][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 21:01:50.835][MDP][211228][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 21:01:51.112][MDP][211228][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 21:01:51.304][MDP][211228][MYSQL][]
+select * from ai_user
+
+[2019-06-27 21:01:51.573][MDP][211229][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` LIMIT 0
+
+[2019-06-27 21:01:51.74][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-06-27 21:01:51.821][MDP][211228][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 21:01:51.949][MDP][211228][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 21:01:52.058][MDP][211228][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002030*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 21:02:00.364][MDP][211228][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 21:02:00.426][MDP][211228][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 21:02:00.498][MDP][211228][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 21:02:00.57][MDP][211228][MYSQL][]
+select * from ai_user
+
+[2019-06-27 21:02:00.795][MDP][211229][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` LIMIT 0
+
+[2019-06-27 21:02:00.926][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-06-27 21:02:01.013][MDP][211228][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 21:02:01.083][MDP][211228][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 21:02:01.147][MDP][211228][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002030*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 21:02:24.081][MDP][211228][MYSQL][]
+SET PROFILING = 1
+
+[2019-06-27 21:02:24.44][MDP][211228][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 21:02:24.828][MDP][211228][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 21:02:25.244][MDP][211228][MYSQL][]
+select * from ai_quota_tenant_user_binding
+
+[2019-06-27 21:02:26.073][MDP][211229][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_user_binding` LIMIT 0
+
+[2019-06-27 21:02:27.036][MDP][211229][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_user_binding`
+
+[2019-06-27 21:02:27.608][MDP][211228][MYSQL][]
+SHOW STATUS
+
+[2019-06-27 21:02:28.602][MDP][211228][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-06-27 21:02:33.272][MDP][211228][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.011955*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-06-27 21:08:49.919][MDP][211229][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-06-27 21:08:50.719][MDP][211229][MYSQL][]
+SHOW TABLE STATUS
 
