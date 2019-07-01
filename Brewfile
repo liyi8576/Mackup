@@ -1,6 +1,7 @@
 tap "buo/cask-upgrade"
 tap "c-bata/kube-prompt"
 tap "caskformula/caskformula"
+tap "caskroom/versions"
 tap "d12frosted/emacs-plus"
 tap "dbcli/tap"
 tap "garethr/kubeval"

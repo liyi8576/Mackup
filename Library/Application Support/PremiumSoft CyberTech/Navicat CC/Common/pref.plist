@@ -322,7 +322,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>1000</integer>
+					<integer>746</integer>
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>
@@ -350,7 +350,7 @@
 					<key>Collation</key>
 					<integer>120</integer>
 					<key>Comment</key>
-					<integer>422</integer>
+					<integer>423</integer>
 					<key>Created Date</key>
 					<integer>211</integer>
 					<key>Created Time</key>
@@ -360,7 +360,7 @@
 					<key>Engine</key>
 					<integer>80</integer>
 					<key>Modified Date</key>
-					<integer>120</integer>
+					<integer>50</integer>
 					<key>Modified Time</key>
 					<integer>150</integer>
 					<key>Name</key>
