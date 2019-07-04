@@ -1,8 +1,0 @@
-SELECT distinct T1.GROUP_ID   as groupId,
-								T2.GROUP_NAME as groupName,
-								T2.GROUP_DESC as groupDesc,
-								T2.GROUP_PID  as groupPid
-FROM ai_open_clientapp_permit T
-INNER JOIN ai_open_api T1 ON T.API_ID = T1.API_ID
-LEFT JOIN ai_open_api_group T2 ON T1.GROUP_ID = T2.GROUP_ID
-WHERE T1.GROUP_ID IS NOT NULL and T2.IS_OPEN=1
