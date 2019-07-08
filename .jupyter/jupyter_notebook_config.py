@@ -45,7 +45,7 @@
 #  Use '*' to allow any origin to access your server.
 #
 #  Takes precedence over allow_origin_pat.
-#c.NotebookApp.allow_origin = ''
+c.NotebookApp.allow_origin = '*'
 
 ## Use a regular expression for the Access-Control-Allow-Origin header
 #
@@ -57,29 +57,6 @@
 #
 #  Ignored if allow_origin is set.
 #c.NotebookApp.allow_origin_pat = ''
-
-## Allow password to be changed at login for the notebook server.
-#
-#  While loggin in with a token, the notebook server UI will give the opportunity
-#  to the user to enter a new password at the same time that will replace the
-#  token login mechanism.
-#
-#  This can be set to false to prevent changing password from the UI/API.
-#c.NotebookApp.allow_password_change = True
-
-## Allow requests where the Host header doesn't point to a local server
-#
-#  By default, requests get a 403 forbidden response if the 'Host' header shows
-#  that the browser thinks it's on a non-local domain. Setting this option to
-#  True disables this check.
-#
-#  This protects against 'DNS rebinding' attacks, where a remote web server
-#  serves you a page and then changes its DNS to send later requests to a local
-#  IP, bypassing same-origin checks.
-#
-#  Local IP addresses (such as 127.0.0.1 and ::1) are allowed as local, along
-#  with hostnames configured in local_hostnames.
-#c.NotebookApp.allow_remote_access = False
 
 ## Whether to allow the user to run the notebook as root.
 #c.NotebookApp.allow_root = False
@@ -126,20 +103,8 @@
 ## The file where the cookie secret is stored.
 #c.NotebookApp.cookie_secret_file = ''
 
-## Override URL shown to users.
-#
-#  Replace actual URL, including protocol, address, port and base URL, with the
-#  given value when displaying URL to the users. Do not change the actual
-#  connection URL. If authentication token is enabled, the token is added to the
-#  custom URL automatically.
-#
-#  This option is intended to be used when the URL to display to the user cannot
-#  be determined reliably by the Jupyter notebook server (proxified or
-#  containerized setups for example).
-#c.NotebookApp.custom_display_url = ''
-
 ## The default URL to redirect to from `/`
-c.NotebookApp.default_url = '/tree'
+#c.NotebookApp.default_url = '/tree'
 
 ## Disable cross-site-request-forgery protection
 #
@@ -167,9 +132,6 @@ c.NotebookApp.default_url = '/tree'
 ## extra paths to look for Javascript notebook extensions
 #c.NotebookApp.extra_nbextensions_path = []
 
-## handlers that should be loaded at higher priority than the default services
-#c.NotebookApp.extra_services = []
-
 ## Extra paths to search for serving static files.
 #
 #  This allows adding javascript/css to be available from the notebook server
@@ -184,10 +146,6 @@ c.NotebookApp.default_url = '/tree'
 ##
 #c.NotebookApp.file_to_run = ''
 
-## Extra keyword arguments to pass to `get_secure_cookie`. See tornado's
-#  get_secure_cookie docs for details.
-#c.NotebookApp.get_secure_cookie_kwargs = {}
-
 ## Deprecated: Use minified JS file or not, mainly use during dev to avoid JS
 #  recompilation
 #c.NotebookApp.ignore_minified_js = False
@@ -201,7 +159,7 @@ c.NotebookApp.default_url = '/tree'
 #c.NotebookApp.iopub_msg_rate_limit = 1000
 
 ## The IP address the notebook server will listen on.
-#c.NotebookApp.ip = 'localhost'
+c.NotebookApp.ip = '*'
 
 ## Supply extra arguments that will be passed to Jinja environment.
 #c.NotebookApp.jinja_environment_options = {}
@@ -222,12 +180,6 @@ c.NotebookApp.default_url = '/tree'
 ## The full path to a private key file for usage with SSL/TLS.
 #c.NotebookApp.keyfile = ''
 
-## Hostnames to allow as local when allow_remote_access is False.
-#
-#  Local IP addresses (such as 127.0.0.1 and ::1) are automatically accepted as
-#  local as well.
-#c.NotebookApp.local_hostnames = ['localhost']
-
 ## The login handler class to use.
 #c.NotebookApp.login_handler_class = 'notebook.auth.login.LoginHandler'
 
@@ -241,24 +193,13 @@ c.NotebookApp.default_url = '/tree'
 #  MathJax, for example:  /static/components/MathJax/MathJax.js
 #c.NotebookApp.mathjax_url = ''
 
-## Sets the maximum allowed size of the client request body, specified in  the
-#  Content-Length request header field. If the size in a request  exceeds the
-#  configured value, a malformed HTTP message is returned to the client.
-#
-#  Note: max_body_size is applied even in streaming mode.
-#c.NotebookApp.max_body_size = 536870912
-
-## Gets or sets the maximum amount of memory, in bytes, that is allocated  for
-#  use by the buffer manager.
-#c.NotebookApp.max_buffer_size = 536870912
-
 ## Dict of Python modules to load as notebook server extensions.Entry values can
 #  be used to enable and disable the loading ofthe extensions. The extensions
 #  will be loaded in alphabetical order.
 #c.NotebookApp.nbserver_extensions = {}
 
 ## The directory to use for notebooks and kernels.
-#c.NotebookApp.notebook_dir = '~/'
+c.NotebookApp.notebook_dir = '/data/ai_lab/jupyter-notebooks'
 
 ## Whether to open in a browser after starting. The specific browser used is
 #  platform dependent and determined by the python standard library `webbrowser`
@@ -292,10 +233,6 @@ c.NotebookApp.default_url = '/tree'
 ## DISABLED: use %pylab or %matplotlib in the notebook to enable matplotlib.
 #c.NotebookApp.pylab = 'disabled'
 
-## If True, display a button in the dashboard to quit (shutdown the notebook
-#  server).
-#c.NotebookApp.quit_button = True
-
 ## (sec) Time window used to  check the message and data rate limits.
 #c.NotebookApp.rate_limit_window = 3
 
@@ -308,13 +245,6 @@ c.NotebookApp.default_url = '/tree'
 ## The session manager class to use.
 #c.NotebookApp.session_manager_class = 'notebook.services.sessions.sessionmanager.SessionManager'
 
-## Shut down the server after N seconds with no kernels or terminals running and
-#  no activity. This can be used together with culling idle kernels
-#  (MappingKernelManager.cull_idle_timeout) to shutdown the notebook server when
-#  it's not in use. This is not precisely timed: it may shut down up to a minute
-#  later. 0 (the default) disables this automatic shutdown.
-#c.NotebookApp.shutdown_no_activity_timeout = 0
-
 ## Supply SSL options for the tornado HTTPServer. See the tornado docs for
 #  details.
 #c.NotebookApp.ssl_options = {}
@@ -322,26 +252,17 @@ c.NotebookApp.default_url = '/tree'
 ## Supply overrides for terminado. Currently only supports "shell_command".
 #c.NotebookApp.terminado_settings = {}
 
-## Set to False to disable terminals.
-#
-#  This does *not* make the notebook server more secure by itself. Anything the
-#  user can in a terminal, they can also do in a notebook.
-#
-#  Terminals may also be automatically disabled if the terminado package is not
-#  available.
-#c.NotebookApp.terminals_enabled = True
-
 ## Token used for authenticating first-time connections to the server.
 #
 #  When no password is enabled, the default is to generate a new, random token.
 #
 #  Setting to an empty string disables authentication altogether, which is NOT
 #  RECOMMENDED.
-c.NotebookApp.token = ''
+#c.NotebookApp.token = '<generated>'
 
 ## Supply overrides for the tornado.web.Application that the Jupyter notebook
 #  uses.
-#c.NotebookApp.tornado_settings = {}
+c.NotebookApp.tornado_settings = { 'headers': {'Content-Security-Policy': "child-src * "}}
 
 ## Whether to trust or not X-Scheme/X-Forwarded-Proto and X-Real-Ip/X-Forwarded-
 #  For headerssent by the upstream reverse proxy. Necessary if the proxy handles
@@ -351,14 +272,13 @@ c.NotebookApp.token = ''
 ## DEPRECATED, use tornado_settings
 #c.NotebookApp.webapp_settings = {}
 
-## Specify Where to open the notebook on startup. This is the `new` argument
-#  passed to the standard library method `webbrowser.open`. The behaviour is not
-#  guaranteed, but depends on browser support. Valid values are:
-#
-#   - 2 opens a new tab,
-#   - 1 opens a new window,
-#   - 0 opens in an existing window.
-#
+## Specify Where to open the notebook on startup. This is the
+#  `new` argument passed to the standard library method `webbrowser.open`.
+#  The behaviour is not guaranteed, but depends on browser support. Valid
+#  values are:
+#      2 opens a new tab,
+#      1 opens a new window,
+#      0 opens in an existing window.
 #  See the `webbrowser.open` documentation for details.
 #c.NotebookApp.webbrowser_open_new = 2
 
@@ -376,44 +296,6 @@ c.NotebookApp.token = ''
 #
 #  Should be in the form of an HTTP origin: ws[s]://hostname[:port]
 #c.NotebookApp.websocket_url = ''
-
-#------------------------------------------------------------------------------
-# LabApp(NotebookApp) configuration
-#------------------------------------------------------------------------------
-
-## The app directory to launch JupyterLab from.
-#c.LabApp.app_dir = '/Users/liyi/anaconda3/share/jupyter/lab'
-
-## Whether to start the app in core mode. In this mode, JupyterLab will run using
-#  the JavaScript assets that are within the installed JupyterLab Python package.
-#  In core mode, third party extensions are disabled. The `--dev-mode` flag is an
-#  alias to this to be used when the Python package itself is installed in
-#  development mode (`pip install -e .`).
-#c.LabApp.core_mode = False
-
-## The default URL to redirect to from `/`
-#c.LabApp.default_url = '/lab'
-
-## Whether to start the app in dev mode. Uses the unpublished local JavaScript
-#  packages in the `dev_mode` folder.  In this case JupyterLab will show a red
-#  stripe at the top of the page.  It can only be used if JupyterLab is installed
-#  as `pip install -e .`.
-#c.LabApp.dev_mode = False
-
-## The override url for static lab assets, typically a CDN.
-#c.LabApp.override_static_url = ''
-
-## The override url for static lab theme assets, typically a CDN.
-#c.LabApp.override_theme_url = ''
-
-## The directory for user settings.
-#c.LabApp.user_settings_dir = '/Users/liyi/CloudSync/Mackup/.jupyter/lab/user-settings'
-
-## Whether to serve the app in watch mode
-#c.LabApp.watch = False
-
-## The directory for workspaces
-#c.LabApp.workspaces_dir = '/Users/liyi/CloudSync/Mackup/.jupyter/lab/workspaces'
 
 #------------------------------------------------------------------------------
 # ConnectionFileMixin(LoggingConfigurable) configuration
@@ -598,30 +480,22 @@ c.NotebookApp.token = ''
 #c.MappingKernelManager.buffer_offline_messages = True
 
 ## Whether to consider culling kernels which are busy. Only effective if
-#  cull_idle_timeout > 0.
+#  cull_idle_timeout is not 0.
 #c.MappingKernelManager.cull_busy = False
 
 ## Whether to consider culling kernels which have one or more connections. Only
-#  effective if cull_idle_timeout > 0.
+#  effective if cull_idle_timeout is not 0.
 #c.MappingKernelManager.cull_connected = False
 
 ## Timeout (in seconds) after which a kernel is considered idle and ready to be
-#  culled. Values of 0 or lower disable culling. Very short timeouts may result
-#  in kernels being culled for users with poor network connections.
+#  culled.  Values of 0 or lower disable culling. The minimum timeout is 300
+#  seconds (5 minutes). Positive values less than the minimum value will be set
+#  to the minimum.
 #c.MappingKernelManager.cull_idle_timeout = 0
 
 ## The interval (in seconds) on which to check for idle kernels exceeding the
 #  cull timeout value.
 #c.MappingKernelManager.cull_interval = 300
-
-## Timeout for giving up on a kernel (in seconds).
-#
-#  On starting and restarting kernels, we check whether the kernel is running and
-#  responsive by sending kernel_info_requests. This sets the timeout in seconds
-#  for how long the kernel can take before being presumed dead.  This affects the
-#  MappingKernelManager (which handles kernel restarts)  and the
-#  ZMQChannelsHandler (which handles the startup).
-#c.MappingKernelManager.kernel_info_timeout = 60
 
 ##
 #c.MappingKernelManager.root_dir = ''
@@ -643,9 +517,6 @@ c.NotebookApp.token = ''
 #  - leading and trailing '/' will be stripped
 #  - if unspecified, path defaults to '',
 #    indicating the root path.
-
-## Allow access to hidden files
-#c.ContentsManager.allow_hidden = False
 
 ##
 #c.ContentsManager.checkpoints = None
@@ -734,11 +605,6 @@ c.NotebookApp.token = ''
 #------------------------------------------------------------------------------
 # FileContentsManager(FileManagerMixin,ContentsManager) configuration
 #------------------------------------------------------------------------------
-
-## If True (default), deleting files will send them to the platform's
-#  trash/recycle bin, where they can be recovered. If False, deleting files
-#  really deletes them.
-#c.FileContentsManager.delete_to_trash = True
 
 ## Python callable or importstring thereof
 #

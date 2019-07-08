@@ -1,308 +1,1651 @@
-[2019-07-03 11:22:47.692][MDP][285728][MYSQL][]
+[2019-07-08 10:46:38.377][MDP][360262][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'
 
-[2019-07-03 11:22:47.796][MDP][285728][MYSQL][]
+[2019-07-08 10:46:38.467][MDP][360262][MYSQL][]
 SHOW VARIABLES LIKE 'sql_mode'
 
-[2019-07-03 11:22:50.555][MDP][285728][MYSQL][]
-SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp210'
+[2019-07-08 10:46:40.81][MDP][360262][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp'
 
-[2019-07-03 11:22:50.689][MDP][285728][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_TYPE
-
-[2019-07-03 11:22:50.842][MDP][285728][MYSQL][]
-SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_NAME
-
-[2019-07-03 11:22:51.182][MDP][285728][MYSQL][]
-SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp210' ORDER BY ROUTINE_SCHEMA
-
-[2019-07-03 11:22:51.322][MDP][285729][MYSQL][]
+[2019-07-08 10:46:41.338][MDP][360264][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2019-07-03 11:22:51.598][MDP][285728][MYSQL][]
+[2019-07-08 10:46:41.734][MDP][360262][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_TYPE
+
+[2019-07-08 10:46:41.822][MDP][360264][MYSQL][]
 SHOW TABLE STATUS
 
-[2019-07-03 11:23:32.687][MDP][285728][MYSQL][]
-SELECT * FROM `mdp210`.`ai_feature` LIMIT 0,1000
+[2019-07-08 10:46:41.826][MDP][360262][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp' ORDER BY TABLE_SCHEMA, TABLE_NAME
 
-[2019-07-03 11:23:32.941][MDP][285729][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_feature`
+[2019-07-08 10:46:42.124][MDP][360262][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp' ORDER BY ROUTINE_SCHEMA
 
-[2019-07-03 11:23:33.091][MDP][285728][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_feature'
+[2019-07-08 10:46:42.564][MDP][360262][MYSQL][]
+SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp210'
 
-[2019-07-03 11:23:33.232][MDP][285728][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_feature`
+[2019-07-08 10:46:42.648][MDP][360262][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2019-07-03 11:23:57.625][MDP][285728][MYSQL][]
-SHOW VARIABLES LIKE 'lower_case_%'
-
-[2019-07-03 11:23:57.792][MDP][285728][MYSQL][]
-SHOW VARIABLES LIKE 'sql_mode'
-
-[2019-07-03 11:23:58.169][MDP][285728][MYSQL][]
+[2019-07-08 10:46:42.691][MDP][360265][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2019-07-03 11:23:58.408][MDP][285728][MYSQL][]
+[2019-07-08 10:46:42.745][MDP][360262][MYSQL][]
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_NAME
+
+[2019-07-08 10:46:43.68][MDP][360262][MYSQL][]
+SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp210' ORDER BY ROUTINE_SCHEMA
+
+[2019-07-08 10:46:43.716][MDP][360265][MYSQL][]
+SHOW TABLE STATUS
+
+[2019-07-08 10:46:46.402][MDP][360262][MYSQL][]
+SHOW VARIABLES LIKE 'lower_case_%'
+
+[2019-07-08 10:46:46.509][MDP][360262][MYSQL][]
+SHOW VARIABLES LIKE 'sql_mode'
+
+[2019-07-08 10:46:46.799][MDP][360262][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-07-08 10:46:46.993][MDP][360262][MYSQL][]
 SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
 
-[2019-07-03 11:24:05.89][MDP][285728][MYSQL][]
+[2019-07-08 10:53:07.207][MDP][360318][MYSQL][]
 SET PROFILING = 1
 
-[2019-07-03 11:24:06.078][MDP][285728][MYSQL][]
+[2019-07-08 10:53:07.278][MDP][360318][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:24:06.264][MDP][285728][MYSQL][]
+[2019-07-08 10:53:07.35][MDP][360318][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:24:06.43][MDP][285728][MYSQL][]
-select * from ai_feature
+[2019-07-08 10:53:07.431][MDP][360318][MYSQL][]
+select * from mdp_model
 
-[2019-07-03 11:24:06.761][MDP][285729][MYSQL][]
-SELECT * FROM `mdp210`.`ai_feature` LIMIT 0
+[2019-07-08 10:53:08.137][MDP][360319][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
 
-[2019-07-03 11:24:07.103][MDP][285729][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_feature`
+[2019-07-08 10:53:08.289][MDP][360319][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
 
-[2019-07-03 11:24:07.227][MDP][285728][MYSQL][]
+[2019-07-08 10:53:08.377][MDP][360318][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:24:07.426][MDP][285728][MYSQL][]
+[2019-07-08 10:53:08.45][MDP][360318][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2019-07-03 11:24:07.603][MDP][285728][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001859*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+[2019-07-08 10:53:08.523][MDP][360318][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001815*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2019-07-03 11:24:19.289][MDP][285728][MYSQL][]
+[2019-07-08 11:28:29.702][MDP][360318][MYSQL][]
 SET PROFILING = 1
 
-[2019-07-03 11:24:19.402][MDP][285728][MYSQL][]
+[2019-07-08 11:28:29.766][MDP][360318][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:24:19.495][MDP][285728][MYSQL][]
+[2019-07-08 11:28:29.837][MDP][360318][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:24:19.604][MDP][285728][MYSQL][]
-select * from ai_feature where component like '%aipGroup%'
+[2019-07-08 11:28:30.145][MDP][360318][MYSQL][]
+select T.MODEL_ID as MODEL_ID, T.MODEL_NAME as MODEL_NAME, T.MODEL_TYPE_ID as MODEL_TYPE_ID, T3.MODEL_TYPE_ICON, T.STATUS as STATUS
+	, T4.STAGE_ID as STAGE_ID, T2.MAX_STAGE_ID as TASK_EXEC_STAGE, T4.STAGE_NAME as STAGE_NAME, T4.STAGE_ICON as STAGE_ICON, T2.STAGE_BAR_M as STAGE_BAR
+	, T1.TASK_ID, date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s') as CREATE_TIME
+	, case
+		when T2.FIRST_TIME is not null then date_format(T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s')
+		else date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s')
+	end as NEW_TIME
+	, case
+		when T.MANNER = 7 then date_format(T1.END_TIME, '%Y-%m-%d %H:%i:%s')
+		else
+			case
+				when T2.LAST_TIME is not null then date_format(T2.LAST_TIME, '%Y-%m-%d %H:%i:%s')
+				else date_format(now(), '%Y-%m-%d %H:%i:%s')
+			end
+	end as END_TIME, T.CREATE_USER, T.MANNER, T.ENGINE, T.BUSINESS_TYPE
+	, MAT.NAME, T.DEV_LANGUAGE, '' as IS_CYCLE_USE, TAR._owner, TAR._group
+	, TAR._tenant, TAR._auth
+from MDP_MODEL T
+	inner join (
+		select res.res_id
+			, IF(res.res_owner = 'admin', 1, -1) as _owner
+			, IF(auth.res_id is null, -1, 1) as _auth
+			, IF(grp.user_id is null, -1, 1) as _group
+			, 1 as _tenant
+		from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+		) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('N/A')))
+			) auth
+			on res.res_id = auth.res_id
+			left join (
+				select user_id
+				from ai_group_user_binding
+				where valid_flag = 1
+					and group_id in ('N/A')
+			) grp
+			on res.res_owner = grp.user_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+			or grp.user_id is not null
+	) TAR
+	on T.model_id = TAR.res_id
+	left join (
+		select max(task_id) as task_id, max(end_time) as end_time, model_id
+		from MDP_MODEL_TASK
+		group by model_id
+	) T1
+	on T.MODEL_ID = T1.MODEL_ID
+	left join (
+		select business_id as model_id, task_id, max(stage_id) - 1 as max_stage_id
+			, min(stage_id) as min_stage_id, min(start_time) as first_time
+			, max(end_time) as last_time, max(stage_bar) as stage_bar_m
+		from mdp_business_stage_trace
+		where parent_id is not null
+			and class_id = '4'
+		group by business_id, task_id
+	) T2
+	on T2.task_id = T1.task_id
+		and T.MODEL_ID = T2.MODEL_ID
+	left join (
+		select modelSTAGE.status, stage.STAGE_ID, stage.STAGE_NAME, stage.STAGE_ICON
+		from mdp_modelstage_map modelSTAGE
+			left join mdp_stage stage on modelSTAGE.stage_id = stage.stage_id
+	) T4
+	on T.status = T4.status
+	left join MDP_MODEL_TYPE T3 on T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+	left join MDP_APPTOPIC_TYPE MAT on T.BUSINESS_TYPE = MAT.id
+where 1 = 1
+	and T3.IS_VALID != -1
+order by NEW_TIME desc
 
-[2019-07-03 11:24:19.784][MDP][285729][MYSQL][]
-SELECT * FROM `mdp210`.`ai_feature` LIMIT 0
-
-[2019-07-03 11:24:19.961][MDP][285729][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_feature`
-
-[2019-07-03 11:24:20.048][MDP][285728][MYSQL][]
+[2019-07-08 11:28:30.314][MDP][360318][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:24:20.155][MDP][285728][MYSQL][]
+[2019-07-08 11:28:30.38][MDP][360318][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2019-07-03 11:24:20.261][MDP][285728][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001859*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+[2019-07-08 11:28:30.436][MDP][360318][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001815*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2019-07-03 11:24:59.737][MDP][285728][MYSQL][]
+[2019-07-08 11:28:59.776][MDP][360319][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-07-08 11:28:59.917][MDP][360319][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
+
+[2019-07-08 11:29:01.991][MDP][360319][MYSQL][]
 SET PROFILING = 1
 
-[2019-07-03 11:25:00.713][MDP][285728][MYSQL][]
+[2019-07-08 11:29:02.065][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:25:00.864][MDP][285728][MYSQL][]
+[2019-07-08 11:29:02.141][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:25:00.974][MDP][285728][MYSQL][]
-update  ai_feature set component=replace(component,'aipGroup','apiGroup')
--- where component like '%aipGroup%'
+[2019-07-08 11:29:02.233][MDP][360319][MYSQL][]
+select res.res_id
+			, IF(res.res_owner = 'admin', 1, -1) as _owner
+			, IF(auth.res_id is null, -1, 1) as _auth
+			, IF(grp.user_id is null, -1, 1) as _group
+			, 1 as _tenant
+		from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+		) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('N/A')))
+			) auth
+			on res.res_id = auth.res_id
+			left join (
+				select user_id
+				from ai_group_user_binding
+				where valid_flag = 1
+					and group_id in ('N/A')
+			) grp
+			on res.res_owner = grp.user_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+			or grp.user_id is not null
 
-[2019-07-03 11:25:01.065][MDP][285728][MYSQL][]
+[2019-07-08 11:29:02.725][MDP][360753][MYSQL][]
+SELECT * FROM `mdp210`.`res` LIMIT 0
+
+[2019-07-08 11:29:02.787][MDP][360753][MYSQL][]
+Table 'mdp210.res' doesn't exist
+
+[2019-07-08 11:29:02.787][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:25:01.161][MDP][285728][MYSQL][]
+[2019-07-08 11:29:02.856][MDP][360319][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2019-07-03 11:25:01.255][MDP][285728][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001117*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+[2019-07-08 11:29:02.918][MDP][360319][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001773*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2019-07-03 11:25:13.885][MDP][285728][MYSQL][]
+[2019-07-08 11:29:20.424][MDP][360319][MYSQL][]
 SET PROFILING = 1
 
-[2019-07-03 11:25:13.984][MDP][285728][MYSQL][]
+[2019-07-08 11:29:20.489][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:25:14.109][MDP][285728][MYSQL][]
+[2019-07-08 11:29:20.559][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:25:14.204][MDP][285728][MYSQL][]
-select * from   ai_feature 
-where component like '%aipGroup%'
+[2019-07-08 11:29:20.629][MDP][360319][MYSQL][]
+select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
 
-[2019-07-03 11:25:14.349][MDP][285729][MYSQL][]
-SELECT * FROM `mdp210`.`ai_feature` LIMIT 0
+[2019-07-08 11:29:20.954][MDP][360753][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
 
-[2019-07-03 11:25:14.565][MDP][285729][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_feature`
+[2019-07-08 11:29:21.078][MDP][360753][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
 
-[2019-07-03 11:25:14.679][MDP][285728][MYSQL][]
+[2019-07-08 11:29:21.146][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:25:14.793][MDP][285728][MYSQL][]
+[2019-07-08 11:29:21.213][MDP][360319][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2019-07-03 11:25:14.883][MDP][285728][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001902*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=12 GROUP BY SEQ, STATE ORDER BY SEQ
+[2019-07-08 11:29:21.276][MDP][360319][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001773*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2019-07-03 11:25:17.75][MDP][285728][MYSQL][]
+[2019-07-08 11:29:37.723][MDP][360319][MYSQL][]
 SET PROFILING = 1
 
-[2019-07-03 11:25:17.859][MDP][285728][MYSQL][]
+[2019-07-08 11:29:37.782][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:25:17.968][MDP][285728][MYSQL][]
+[2019-07-08 11:29:37.859][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:25:18.113][MDP][285728][MYSQL][]
-select * from   ai_feature 
-where component like '%apiGroup%'
+[2019-07-08 11:29:37.929][MDP][360319][MYSQL][]
+select res.res_id
+			, IF(res.res_owner = 'admin', 1, -1) as _owner
+			, IF(auth.res_id is null, -1, 1) as _auth
+			, IF(grp.user_id is null, -1, 1) as _group
+			, 1 as _tenant
+from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('N/A')))
+			) auth
+			on res.res_id = auth.res_id
+			left join (
+				select user_id
+				from ai_group_user_binding
+				where valid_flag = 1
+					and group_id in ('N/A')
+			) grp
+			on res.res_owner = grp.user_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+			or grp.user_id is not null
 
-[2019-07-03 11:25:18.399][MDP][285729][MYSQL][]
-SELECT * FROM `mdp210`.`ai_feature` LIMIT 0
+[2019-07-08 11:29:38.08][MDP][360753][MYSQL][]
+SELECT * FROM `mdp210`.`res` LIMIT 0
 
-[2019-07-03 11:25:18.674][MDP][285729][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_feature`
+[2019-07-08 11:29:38.142][MDP][360753][MYSQL][]
+Table 'mdp210.res' doesn't exist
 
-[2019-07-03 11:25:18.848][MDP][285728][MYSQL][]
+[2019-07-08 11:29:38.142][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 11:25:19.008][MDP][285728][MYSQL][]
+[2019-07-08 11:29:38.21][MDP][360319][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2019-07-03 11:25:19.145][MDP][285728][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002418*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=19 GROUP BY SEQ, STATE ORDER BY SEQ
+[2019-07-08 11:29:38.284][MDP][360319][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001064*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2019-07-03 16:15:44.001][MDP][285728][MYSQL][]
+[2019-07-08 11:29:44.283][MDP][360319][MYSQL][]
 SET PROFILING = 1
 
-[2019-07-03 16:15:44.412][MDP][288308][MYSQL][]
+[2019-07-08 11:29:44.345][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 16:15:44.504][MDP][288308][MYSQL][]
+[2019-07-08 11:29:44.416][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 16:15:44.58][MDP][288308][MYSQL][]
-SELECT T1.GROUP_ID as groupId, T2.GROUP_NAME as groupName, T1.API_ID as apiId, T1.API_NAME as apiName, T1.API_DESC as apiDesc, CONCAT('/',T3.BASE_PATH,T1.ENDPOINT) AS endpoint, T1.HTTP_METHOD as httpMethod FROM ai_open_api T1 LEFT JOIN ai_open_api_group T2 ON T1.GROUP_ID = T2.GROUP_ID LEFT JOIN ai_open_service T3 ON T1.SERVICE_ID = T3.SERVICE_ID LEFT JOIN ai_api_group_binding T4 ON T4.API_ID=T1.API_ID 
-WHERE T1.IS_OPEN = 1 AND T4.GROUP_ID = 'inspeed-defee-api'
+[2019-07-08 11:29:44.49][MDP][360319][MYSQL][]
+where res.res_owner = 'admin'
+-- 			or auth.res_id is not null
+-- 			or grp.user_id is not null
 
-[2019-07-03 16:15:44.657][MDP][288308][MYSQL][]
-SHOW STATUS
+[2019-07-08 11:29:44.587][MDP][360319][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where res.res_owner = 'admin'
+-- 			or auth.res_id is not null
+-- 			or grp.user' at line 1
 
-[2019-07-03 16:15:44.738][MDP][288308][MYSQL][]
-SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
-
-[2019-07-03 16:15:44.803][MDP][288308][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001805*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
-
-[2019-07-03 16:15:48.339][MDP][288308][MYSQL][]
+[2019-07-08 11:29:47.047][MDP][360319][MYSQL][]
 SET PROFILING = 1
 
-[2019-07-03 16:15:48.405][MDP][288308][MYSQL][]
+[2019-07-08 11:29:47.162][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 16:15:48.48][MDP][288308][MYSQL][]
+[2019-07-08 11:29:47.276][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 16:15:48.556][MDP][288308][MYSQL][]
-SELECT T1.GROUP_ID as groupId, T2.GROUP_NAME as groupName, T1.API_ID as apiId, T1.API_NAME as apiName, T1.API_DESC as apiDesc, CONCAT('/',T3.BASE_PATH,T1.ENDPOINT) AS endpoint, T1.HTTP_METHOD as httpMethod FROM ai_open_api T1 LEFT JOIN ai_open_api_group T2 ON T1.GROUP_ID = T2.GROUP_ID LEFT JOIN ai_open_service T3 ON T1.SERVICE_ID = T3.SERVICE_ID LEFT JOIN ai_api_group_binding T4 ON T4.API_ID=T1.API_ID 
-WHERE T1.IS_OPEN = 1
+[2019-07-08 11:29:47.406][MDP][360319][MYSQL][]
+select res.res_id
+			, IF(res.res_owner = 'admin', 1, -1) as _owner
+			, IF(auth.res_id is null, -1, 1) as _auth
+			, IF(grp.user_id is null, -1, 1) as _group
+			, 1 as _tenant
+from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('N/A')))
+			) auth
+			on res.res_id = auth.res_id
+			left join (
+				select user_id
+				from ai_group_user_binding
+				where valid_flag = 1
+					and group_id in ('N/A')
+			) grp
+			on res.res_owner = grp.user_id
+-- 		where res.res_owner = 'admin'
+-- 			or auth.res_id is not null
+-- 			or grp.user_id is not null
 
-[2019-07-03 16:15:48.626][MDP][288308][MYSQL][]
+[2019-07-08 11:29:47.644][MDP][360753][MYSQL][]
+SELECT * FROM `mdp210`.`res` LIMIT 0
+
+[2019-07-08 11:29:47.704][MDP][360753][MYSQL][]
+Table 'mdp210.res' doesn't exist
+
+[2019-07-08 11:29:47.704][MDP][360319][MYSQL][]
 SHOW STATUS
 
-[2019-07-03 16:15:48.701][MDP][288308][MYSQL][]
+[2019-07-08 11:29:47.776][MDP][360319][MYSQL][]
 SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
 
-[2019-07-03 16:15:48.767][MDP][288308][MYSQL][]
-SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001805*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+[2019-07-08 11:29:47.838][MDP][360319][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001779*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=16 GROUP BY SEQ, STATE ORDER BY SEQ
 
-[2019-07-03 18:19:11.135][MDP][289385][MYSQL][]
+[2019-07-08 11:29:53.717][MDP][360319][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 11:29:53.78][MDP][360319][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:29:53.854][MDP][360319][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:29:53.926][MDP][360319][MYSQL][]
+select res.res_id
+			, IF(res.res_owner = 'admin', 1, -1) as _owner
+			, IF(auth.res_id is null, -1, 1) as _auth
+			, IF(grp.user_id is null, -1, 1) as _group
+			, 1 as _tenant
+from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('N/A')))
+			) auth
+			on res.res_id = auth.res_id
+			left join (
+				select user_id
+				from ai_group_user_binding
+				where valid_flag = 1
+					and group_id in ('N/A')
+			) grp
+			on res.res_owner = grp.user_id
+		where res.res_owner = 'admin'
+-- 			or auth.res_id is not null
+-- 			or grp.user_id is not null
+
+[2019-07-08 11:29:54.059][MDP][360753][MYSQL][]
+SELECT * FROM `mdp210`.`res` LIMIT 0
+
+[2019-07-08 11:29:54.119][MDP][360753][MYSQL][]
+Table 'mdp210.res' doesn't exist
+
+[2019-07-08 11:29:54.12][MDP][360319][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:29:54.209][MDP][360319][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 11:29:54.284][MDP][360319][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001972*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=23 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 11:29:59.108][MDP][360319][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 11:29:59.173][MDP][360319][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:29:59.249][MDP][360319][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:29:59.323][MDP][360319][MYSQL][]
+select res.res_id
+			, IF(res.res_owner = 'admin', 1, -1) as _owner
+			, IF(auth.res_id is null, -1, 1) as _auth
+			, IF(grp.user_id is null, -1, 1) as _group
+			, 1 as _tenant
+from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('N/A')))
+			) auth
+			on res.res_id = auth.res_id
+			left join (
+				select user_id
+				from ai_group_user_binding
+				where valid_flag = 1
+					and group_id in ('N/A')
+			) grp
+			on res.res_owner = grp.user_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+-- 			or grp.user_id is not null
+
+[2019-07-08 11:29:59.474][MDP][360753][MYSQL][]
+SELECT * FROM `mdp210`.`res` LIMIT 0
+
+[2019-07-08 11:29:59.534][MDP][360753][MYSQL][]
+Table 'mdp210.res' doesn't exist
+
+[2019-07-08 11:29:59.534][MDP][360319][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:29:59.605][MDP][360319][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 11:29:59.681][MDP][360319][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002041*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=30 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 11:30:05.502][MDP][360319][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 11:30:05.567][MDP][360319][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:30:05.651][MDP][360319][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:30:05.731][MDP][360319][MYSQL][]
+select res.res_id
+			, IF(res.res_owner = 'admin', 1, -1) as _owner
+			, IF(auth.res_id is null, -1, 1) as _auth
+			, IF(grp.user_id is null, -1, 1) as _group
+			, 1 as _tenant
+from (
+			select t.model_id as res_id, t.model_name as res_name, t.tenant as tenant, t.create_user as res_owner, t.model_type_id as model_scene
+				, t.business_type as busi_type
+			from mdp_model t
+) res
+			left join (
+				select res_id
+				from ai_subject_res_permit
+				where res_domain = 'MODEL'
+					and res_id is not null
+					and ((subject_type in (1, 3)
+							and subject_id = 'admin')
+						or (subject_type = 2
+							and subject_id in ('N/A')))
+			) auth
+			on res.res_id = auth.res_id
+			left join (
+				select user_id
+				from ai_group_user_binding
+				where valid_flag = 1
+					and group_id in ('N/A')
+			) grp
+			on res.res_owner = grp.user_id
+		where res.res_owner = 'admin'
+			or auth.res_id is not null
+			or grp.user_id is not null
+
+[2019-07-08 11:30:05.891][MDP][360753][MYSQL][]
+SELECT * FROM `mdp210`.`res` LIMIT 0
+
+[2019-07-08 11:30:05.955][MDP][360753][MYSQL][]
+Table 'mdp210.res' doesn't exist
+
+[2019-07-08 11:30:05.955][MDP][360319][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:30:06.023][MDP][360319][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 11:30:06.097][MDP][360319][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001941*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=37 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 11:34:10.882][MDP][360753][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-07-08 11:34:11.546][MDP][360753][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
+
+[2019-07-08 11:34:30.655][MDP][360753][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 11:34:30.727][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:34:30.804][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:34:30.872][MDP][360753][MYSQL][]
+select * from mdp_model m where m.create_user="admin"
+
+[2019-07-08 11:34:31.242][MDP][360802][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-07-08 11:34:31.348][MDP][360802][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-07-08 11:34:31.412][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:34:31.48][MDP][360753][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 11:34:31.544][MDP][360753][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001830*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 11:34:39.218][MDP][360753][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 11:34:39.278][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:34:39.349][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:34:39.427][MDP][360753][MYSQL][]
+select * from mdp_model m where m.create_user='admin'
+
+[2019-07-08 11:34:39.555][MDP][360802][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_model` LIMIT 0
+
+[2019-07-08 11:34:39.661][MDP][360802][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_model`
+
+[2019-07-08 11:34:39.722][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:34:39.792][MDP][360753][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 11:34:39.854][MDP][360753][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001830*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 11:36:49.267][MDP][360753][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 11:36:49.345][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:36:49.433][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:36:49.504][MDP][360753][MYSQL][]
+select * from ai_user where USER_ID='admin'
+
+[2019-07-08 11:36:49.62][MDP][360802][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` LIMIT 0
+
+[2019-07-08 11:36:49.729][MDP][360802][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-07-08 11:36:49.794][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:36:49.893][MDP][360753][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 11:36:49.957][MDP][360753][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001174*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=5 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 11:37:12.08][MDP][360753][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 11:37:12.14][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:37:12.217][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:37:12.288][MDP][360753][MYSQL][]
+select * from ai_role_user_binding b where b.USER_ID='admin'
+
+[2019-07-08 11:37:12.403][MDP][360802][MYSQL][]
+SELECT * FROM `mdp210`.`ai_role_user_binding` LIMIT 0
+
+[2019-07-08 11:37:12.512][MDP][360802][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_role_user_binding`
+
+[2019-07-08 11:37:12.572][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:37:12.641][MDP][360753][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 11:37:12.709][MDP][360753][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001770*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=12 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 11:38:51.45][MDP][360753][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 11:38:51.511][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:38:51.583][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:38:51.657][MDP][360753][MYSQL][]
+select * from ai_group_user_binding where USER_id='admin'
+
+[2019-07-08 11:38:51.78][MDP][360802][MYSQL][]
+SELECT * FROM `mdp210`.`ai_group_user_binding` LIMIT 0
+
+[2019-07-08 11:38:51.907][MDP][360802][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_group_user_binding`
+
+[2019-07-08 11:38:51.982][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:38:52.06][MDP][360753][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 11:38:52.126][MDP][360753][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002172*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=19 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 11:39:25.197][MDP][360753][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 11:39:25.301][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:39:25.432][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:39:25.564][MDP][360753][MYSQL][]
+select * from ai_user_group where GROUP_ID='1499742124740'
+
+[2019-07-08 11:39:25.821][MDP][360802][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user_group` LIMIT 0
+
+[2019-07-08 11:39:26.102][MDP][360802][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user_group`
+
+[2019-07-08 11:39:26.263][MDP][360753][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 11:39:26.432][MDP][360753][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 11:39:26.616][MDP][360753][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002438*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=26 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 13:49:50.792][MDP][360753][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 13:49:51.139][MDP][362013][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 13:49:51.208][MDP][362013][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 13:49:51.303][MDP][362013][MYSQL][]
+select * from ai_user where USER_ID='220test'
+
+[2019-07-08 13:49:51.745][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` LIMIT 0
+
+[2019-07-08 13:49:51.86][MDP][362014][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-07-08 13:49:51.916][MDP][362013][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 13:49:51.982][MDP][362013][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 13:49:52.04][MDP][362013][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001935*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 13:50:07.496][MDP][362013][MYSQL][]
+SET PROFILING = 1
+
+[2019-07-08 13:50:07.556][MDP][362013][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 13:50:07.622][MDP][362013][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 13:50:07.688][MDP][362013][MYSQL][]
+select * from ai_user where USER_ID='admin'
+
+[2019-07-08 13:50:07.8][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` LIMIT 0
+
+[2019-07-08 13:50:07.91][MDP][362014][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-07-08 13:50:07.978][MDP][362013][MYSQL][]
+SHOW STATUS
+
+[2019-07-08 13:50:08.056][MDP][362013][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2019-07-08 13:50:08.123][MDP][362013][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001935*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2019-07-08 13:50:12.756][MDP][362014][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-07-08 13:50:12.87][MDP][362014][MYSQL][]
+SHOW TABLE STATUS
+
+[2019-07-08 13:50:16.695][MDP][362014][MYSQL][]
 SELECT * FROM `mdp210`.`ai_quota_tenant` LIMIT 0,1000
 
-[2019-07-03 18:19:11.495][MDP][289386][MYSQL][]
+[2019-07-08 13:50:17.075][MDP][362019][MYSQL][]
 SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant`
 
-[2019-07-03 18:19:11.554][MDP][289385][MYSQL][]
+[2019-07-08 13:50:17.153][MDP][362014][MYSQL][]
 SHOW TABLE STATUS LIKE 'ai_quota_tenant'
 
-[2019-07-03 18:19:11.616][MDP][289385][MYSQL][]
+[2019-07-08 13:50:17.221][MDP][362014][MYSQL][]
 SHOW CREATE TABLE `mdp210`.`ai_quota_tenant`
 
-[2019-07-03 18:37:48.862][MDP][289385][MYSQL][]
-SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` LIMIT 0,1000
+[2019-07-08 13:50:25.344][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_user_binding` LIMIT 0,1000
 
-[2019-07-03 18:37:49.034][MDP][289386][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_hosts`
+[2019-07-08 13:50:25.48][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_user_binding`
 
-[2019-07-03 18:37:49.138][MDP][289385][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_hosts'
+[2019-07-08 13:50:25.546][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_user_binding'
 
-[2019-07-03 18:37:49.225][MDP][289385][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_hosts`
+[2019-07-08 13:50:25.632][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_user_binding`
 
-[2019-07-03 18:39:10.13][MDP][289385][MYSQL][]
+[2019-07-08 13:50:39.103][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_user` LIMIT 0,1000
+
+[2019-07-08 13:50:39.246][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_user`
+
+[2019-07-08 13:50:39.308][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_user'
+
+[2019-07-08 13:50:39.366][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_user`
+
+[2019-07-08 13:50:50.08][MDP][362014][MYSQL][]
 SELECT * FROM `mdp210`.`ai_quota_tenant_services` LIMIT 0,1000
 
-[2019-07-03 18:39:10.243][MDP][289386][MYSQL][]
+[2019-07-08 13:50:50.209][MDP][362019][MYSQL][]
 SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
 
-[2019-07-03 18:39:10.309][MDP][289385][MYSQL][]
+[2019-07-08 13:50:50.285][MDP][362014][MYSQL][]
 SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
 
-[2019-07-03 18:39:10.366][MDP][289385][MYSQL][]
+[2019-07-08 13:50:50.356][MDP][362014][MYSQL][]
 SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
 
-[2019-07-03 18:39:21.15][MDP][289385][MYSQL][]
+[2019-07-08 13:50:57.834][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` LIMIT 0,1000
+
+[2019-07-08 13:50:57.963][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_containers`
+
+[2019-07-08 13:50:58.038][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_containers'
+
+[2019-07-08 13:50:58.095][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_containers`
+
+[2019-07-08 13:51:04.2][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` LIMIT 0,1000
+
+[2019-07-08 13:51:04.316][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_hosts`
+
+[2019-07-08 13:51:04.377][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_hosts'
+
+[2019-07-08 13:51:04.435][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_hosts`
+
+[2019-07-08 13:51:06.473][MDP][362014][MYSQL][]
 SELECT * FROM `mdp210`.`ai_quota_tenant_srv_platform_env` LIMIT 0,1000
 
-[2019-07-03 18:39:21.262][MDP][289386][MYSQL][]
+[2019-07-08 13:51:06.611][MDP][362019][MYSQL][]
 SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_platform_env`
 
-[2019-07-03 18:39:21.324][MDP][289385][MYSQL][]
+[2019-07-08 13:51:06.686][MDP][362014][MYSQL][]
 SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_platform_env'
 
-[2019-07-03 18:39:21.383][MDP][289385][MYSQL][]
+[2019-07-08 13:51:06.743][MDP][362014][MYSQL][]
 SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_platform_env`
 
-[2019-07-03 18:39:29.851][MDP][289385][MYSQL][]
-SELECT * FROM `mdp210`.`ai_quota_tenant` LIMIT 0,1000
+[2019-07-08 13:53:21.394][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`(`QUOTA_TENANT_ID`, `SERVICE_ID`, `ENGINE`, `RES_QUOTA`, `DEPLOY_INFO`) VALUES ('default_test', 'anb', '1', '{}', '{}')
 
-[2019-07-03 18:39:29.974][MDP][289386][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant`
+[2019-07-08 13:53:21.456][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '1'
 
-[2019-07-03 18:39:30.035][MDP][289385][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_quota_tenant'
+[2019-07-08 13:53:25.598][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.13.6.101:9197' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '1'
 
-[2019-07-03 18:39:30.092][MDP][289385][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_quota_tenant`
+[2019-07-08 13:53:25.656][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '1'
 
-[2019-07-03 19:36:58.71][MDP][289385][MYSQL][]
-SELECT * FROM `mdp210`.`ai_open_clientapp` LIMIT 0,1000
+[2019-07-08 13:53:29.941][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '1'
 
-[2019-07-03 19:36:58.823][MDP][289386][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_open_clientapp`
+[2019-07-08 13:53:29.997][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '1'
 
-[2019-07-03 19:36:58.89][MDP][289385][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_open_clientapp'
+[2019-07-08 13:53:33.85][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '1'
 
-[2019-07-03 19:36:58.968][MDP][289385][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_open_clientapp`
+[2019-07-08 13:53:33.918][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '1'
 
-[2019-07-03 19:37:12.053][MDP][289385][MYSQL][]
-SELECT * FROM `mdp210`.`oauth_client_details` LIMIT 0,1000
+[2019-07-08 13:53:35.469][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
 
-[2019-07-03 19:37:12.173][MDP][289386][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`oauth_client_details`
+[2019-07-08 13:53:35.532][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
 
-[2019-07-03 19:37:12.236][MDP][289385][MYSQL][]
-SHOW TABLE STATUS LIKE 'oauth_client_details'
+[2019-07-08 13:53:37.022][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
 
-[2019-07-03 19:37:12.295][MDP][289385][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`oauth_client_details`
+[2019-07-08 13:53:37.077][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:53:38.399][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'dsem' AND `ENGINE` = 'default'
+
+[2019-07-08 13:53:38.466][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'dsem' AND `ENGINE` = 'default'
+
+[2019-07-08 13:53:39.756][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'dsem' AND `ENGINE` = 'default'
+
+[2019-07-08 13:53:39.809][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'dsem' AND `ENGINE` = 'default'
+
+[2019-07-08 13:53:41.131][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1'
+
+[2019-07-08 13:53:41.295][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1'
+
+[2019-07-08 13:53:42.527][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:53:42.579][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:53:45.26][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:53:45.314][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_default' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:53:52.522][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`() VALUES ()
+
+[2019-07-08 13:53:52.577][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` IS NULL AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:53:55.181][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` IS NULL AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:53:55.235][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:53:59.082][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`(`QUOTA_TENANT_ID`) VALUES ('default_test')
+
+[2019-07-08 13:53:59.134][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:54:02.399][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ID` = 'anb' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:54:02.455][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = 'default'
+
+[2019-07-08 13:54:03.409][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ID` = 'anb' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:54:03.472][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = 'default'
+
+[2019-07-08 13:54:04.217][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `ENGINE` = '2' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = 'default'
+
+[2019-07-08 13:54:04.27][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:54:07.447][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `ENGINE` = '3' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = 'default'
+
+[2019-07-08 13:54:07.501][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:54:10.173][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `RES_QUOTA` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:54:10.23][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:54:12.447][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `RES_QUOTA` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:54:12.501][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:54:16.552][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `DEPLOY_INFO` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:54:16.607][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:54:19.452][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `DEPLOY_INFO` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:54:19.51][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:54:22.72][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.13.6.101:9197' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:54:22.796][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:54:24.155][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.13.6.101:9197' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:54:24.214][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:54:31.198][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:54:31.255][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:54:33.859][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:54:33.923][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:54:41.736][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`(`QUOTA_TENANT_ID`) VALUES ('default_test')
+
+[2019-07-08 13:54:41.815][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:54:41.884][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`(`QUOTA_TENANT_ID`) VALUES ('default_test')
+
+[2019-07-08 13:54:41.959][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:54:45.543][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`(`QUOTA_TENANT_ID`) VALUES ('default_test')
+
+[2019-07-08 13:54:45.597][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:54:45.654][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`(`QUOTA_TENANT_ID`) VALUES ('default_test')
+
+[2019-07-08 13:54:45.71][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:55:03.282][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`(`QUOTA_TENANT_ID`, `SERVICE_ID`, `ENGINE`, `RES_QUOTA`, `DEPLOY_INFO`) VALUES ('default_test', 'miner', '1', '{}', '{}')
+
+[2019-07-08 13:55:03.334][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1'
+
+[2019-07-08 13:55:09.565][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.1.202.118:15000', `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1'
+
+[2019-07-08 13:55:09.618][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1'
+
+[2019-07-08 13:55:12.088][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`() VALUES ()
+
+[2019-07-08 13:55:12.143][MDP][362014][MYSQL][]
+Duplicate entry 'default' for key 'PRIMARY'
+
+[2019-07-08 13:55:12.201][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`() VALUES ()
+
+[2019-07-08 13:55:12.257][MDP][362014][MYSQL][]
+Duplicate entry 'default' for key 'PRIMARY'
+
+[2019-07-08 13:55:18.17][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`(`QUOTA_TENANT_ID`) VALUES ('10.1.202.118:15000')
+
+[2019-07-08 13:55:18.224][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:55:29.829][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'miner', `ENGINE` = '2', `RES_QUOTA` = '{}', `DEPLOY_INFO` = '{}' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:55:29.913][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:55:35.294][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.13.6.109:17000', `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:55:35.351][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:55:37.365][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`() VALUES ()
+
+[2019-07-08 13:55:37.417][MDP][362014][MYSQL][]
+Duplicate entry 'default' for key 'PRIMARY'
+
+[2019-07-08 13:55:37.472][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`() VALUES ()
+
+[2019-07-08 13:55:37.527][MDP][362014][MYSQL][]
+Duplicate entry 'default' for key 'PRIMARY'
+
+[2019-07-08 13:55:40.849][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`() VALUES ()
+
+[2019-07-08 13:55:40.923][MDP][362014][MYSQL][]
+Duplicate entry 'default' for key 'PRIMARY'
+
+[2019-07-08 13:55:40.993][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`() VALUES ()
+
+[2019-07-08 13:55:41.066][MDP][362014][MYSQL][]
+Duplicate entry 'default' for key 'PRIMARY'
+
+[2019-07-08 13:55:47.041][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`(`QUOTA_TENANT_ID`) VALUES ('dd')
+
+[2019-07-08 13:55:47.144][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'dd' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:55:51.352][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` = 'dd' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:55:51.408][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:00.174][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ID` = 'miner', `ENGINE` = '3', `RES_QUOTA` = '{}', `DEPLOY_INFO` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:00.227][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:56:07.106][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.13.6.109:18000', `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:56:07.182][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:56:08.762][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` LIMIT 0,1000
+
+[2019-07-08 13:56:08.905][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:56:08.976][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
+
+[2019-07-08 13:56:09.048][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:56:16.264][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` ORDER BY `QUOTA_TENANT_ID`  LIMIT 0,1000
+
+[2019-07-08 13:56:16.408][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:56:16.482][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
+
+[2019-07-08 13:56:16.537][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:56:37.817][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:37.906][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:56:37.959][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:38.025][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:56:41.706][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:41.767][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:56:41.821][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:41.873][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:56:46.466][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:46.532][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:56:46.588][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:46.646][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:56:51.479][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` ORDER BY `QUOTA_TENANT_ID`  LIMIT 0,1000
+
+[2019-07-08 13:56:51.597][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:56:51.691][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
+
+[2019-07-08 13:56:51.746][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:56:52.546][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` LIMIT 0,1000
+
+[2019-07-08 13:56:53.2][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:56:53.27][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
+
+[2019-07-08 13:56:53.35][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:56:57.066][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` = '' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:57.119][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:56:57.176][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` = '' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:56:57.232][MDP][362014][MYSQL][]
+Duplicate entry 'default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:57:10.492][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'anb' WHERE `QUOTA_TENANT_ID` = '' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:10.545][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:15.81][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'anb' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:15.864][MDP][362014][MYSQL][]
+Duplicate entry 'anb-default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:57:15.917][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'anb' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:15.986][MDP][362014][MYSQL][]
+Duplicate entry 'anb-default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:57:22.056][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` ORDER BY `QUOTA_TENANT_ID`  LIMIT 0,1000
+
+[2019-07-08 13:57:22.186][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:57:22.254][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
+
+[2019-07-08 13:57:22.33][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:57:34.419][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `ENGINE` = '2' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:34.489][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = '' AND `ENGINE` = '2'
+
+[2019-07-08 13:57:36.101][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `ENGINE` = '3' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:36.154][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:57:41.819][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ID` = 'anb' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = '' AND `ENGINE` = '2'
+
+[2019-07-08 13:57:42.023][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:57:47.059][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'miner' WHERE `QUOTA_TENANT_ID` = '10.1.202.118:15000' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:47.112][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:51.238][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'miner' WHERE `QUOTA_TENANT_ID` = 'dd' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:51.292][MDP][362014][MYSQL][]
+Duplicate entry 'miner-default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:57:51.349][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'miner' WHERE `QUOTA_TENANT_ID` = 'dd' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:51.404][MDP][362014][MYSQL][]
+Duplicate entry 'miner-default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:57:57.451][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'miner' WHERE `QUOTA_TENANT_ID` = 'dd' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:57.534][MDP][362014][MYSQL][]
+Duplicate entry 'miner-default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:57:57.613][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'miner' WHERE `QUOTA_TENANT_ID` = 'dd' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:57:57.667][MDP][362014][MYSQL][]
+Duplicate entry 'miner-default_test-default' for key 'PRIMARY'
+
+[2019-07-08 13:58:03.726][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'miner', `ENGINE` = '2' WHERE `QUOTA_TENANT_ID` = 'dd' AND `SERVICE_ID` = '' AND `ENGINE` = 'default'
+
+[2019-07-08 13:58:03.785][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:05.346][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `ENGINE` = '3' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = 'default'
+
+[2019-07-08 13:58:05.4][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:07.459][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` ORDER BY `QUOTA_TENANT_ID`  LIMIT 0,1000
+
+[2019-07-08 13:58:07.571][MDP][362019][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:58:07.633][MDP][362014][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
+
+[2019-07-08 13:58:07.689][MDP][362014][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
+
+[2019-07-08 13:58:16.934][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `RES_QUOTA` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:17.048][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:18.655][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `RES_QUOTA` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:18.711][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:20.718][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `RES_QUOTA` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:20.822][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:22.791][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `RES_QUOTA` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:22.868][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:25.59][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `DEPLOY_INFO` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:25.706][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:27.679][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `DEPLOY_INFO` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:27.745][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:30.177][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `DEPLOY_INFO` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:30.281][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:33.733][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `DEPLOY_INFO` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:33.785][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:40.339][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.13.6.101:9197' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:40.405][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:41.962][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.13.6.101:9197' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:42.017][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:45.538][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:45.599][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:47.103][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:47.157][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'anb' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:49.013][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:49.104][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:58:50.835][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:50.898][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:58:52.21][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_services`() VALUES ()
+
+[2019-07-08 13:58:52.266][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` IS NULL AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:58:57.681][MDP][362014][MYSQL][]
+DELETE FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` IS NULL AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default'
+
+[2019-07-08 13:59:06.473][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.1.202.118:15000' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:59:06.53][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:59:09.966][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.13.6.109:18000' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:59:10.088][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3'
+
+[2019-07-08 13:59:19.232][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_services` SET `SERVICE_ADDR` = '10.13.6.109:17000' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:59:19.384][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_services` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2'
+
+[2019-07-08 13:59:53.768][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_srv_containers`(`QUOTA_TENANT_ID`, `SERVICE_ID`) VALUES ('default_test', 'miner')
+
+[2019-07-08 13:59:53.83][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = 'default' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 13:59:59.888][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_srv_containers`() VALUES ()
+
+[2019-07-08 13:59:59.976][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` IS NULL AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:01.574][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `ENGINE` = '1' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = 'default' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:01.628][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:05.823][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `QUOTA_TENANT_ID` = 'default_test', `SERVICE_ID` = 'miner', `ENGINE` = '2' WHERE `QUOTA_TENANT_ID` IS NULL AND `SERVICE_ID` IS NULL AND `ENGINE` = 'default' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:05.88][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:13.678][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_srv_containers`(`QUOTA_TENANT_ID`, `SERVICE_ID`, `ENGINE`) VALUES ('default_test', 'miner', '3')
+
+[2019-07-08 14:00:13.738][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:16.662][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `CONTAINER_ID` = '10.1.202.118:5002' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:16.911][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:19.563][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `CONTAINER_ID` = '10.1.202.118:5002' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:19.619][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:23.154][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `CONTAINER_ID` = '10.1.253.52:5006' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` IS NULL AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:23.214][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.253.52:5006' AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:25.397][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `HOST_IP` = '10.1.202.118' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:25.46][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:27.815][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `HOST_IP` = '10.1.202.118' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:27.87][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:29.908][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `HOST_IP` = '10.1.253.52' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.253.52:5006' AND `CONTAINER_IP` = '1' AND `HOST_IP` IS NULL AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:29.98][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.253.52:5006' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.253.52' AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:31.877][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `RES_QUOTA` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:31.944][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` = '{}' AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:33.381][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `RES_QUOTA` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:33.459][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` = '{}' AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:35.97][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `RES_QUOTA` = '{}' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.253.52:5006' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.253.52' AND `RES_QUOTA` IS NULL AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:36.054][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.253.52:5006' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.253.52' AND `RES_QUOTA` = '{}' AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:37.729][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` = '{}' AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:37.782][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '1' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` = '{}' AND `UPDATE_BY` = 'admin' AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:39.38][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` = '{}' AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:39.435][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '2' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.202.118:5002' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.202.118' AND `RES_QUOTA` = '{}' AND `UPDATE_BY` = 'admin' AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:41.875][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_containers` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.253.52:5006' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.253.52' AND `RES_QUOTA` = '{}' AND `UPDATE_BY` IS NULL AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:41.937][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `SERVICE_ID` = 'miner' AND `ENGINE` = '3' AND `SUB_SERVICE` IS NULL AND `CONTAINER_ID` = '10.1.253.52:5006' AND `CONTAINER_IP` = '1' AND `HOST_IP` = '10.1.253.52' AND `RES_QUOTA` = '{}' AND `UPDATE_BY` = 'admin' AND `UPDATE_TIME` = Cast('CURRENT_TIMESTAMP' AS Binary(17)) LIMIT 1
+
+[2019-07-08 14:00:59.676][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_srv_hosts`() VALUES ()
+
+[2019-07-08 14:00:59.764][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` WHERE `QUOTA_TENANT_ID` IS NULL AND `HOST_IP` IS NULL
+
+[2019-07-08 14:01:06.341][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_hosts` SET `QUOTA_TENANT_ID` = 'default_test' WHERE `QUOTA_TENANT_ID` IS NULL AND `HOST_IP` IS NULL
+
+[2019-07-08 14:01:06.546][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` IS NULL
+
+[2019-07-08 14:01:18.149][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_hosts` SET `HOST_IP` = '10.1.253.52', `FTP_PORT` = 22, `FTP_USER` = 'root', `FTP_PASSWORD` = 'cs@2019', `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` IS NULL
+
+[2019-07-08 14:01:18.208][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.253.52'
+
+[2019-07-08 14:01:20.207][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_hosts` SET `FTP_PATH` = '/data/ai_lab/miner/basedata' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.253.52'
+
+[2019-07-08 14:01:20.261][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.253.52'
+
+[2019-07-08 14:01:43.23][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_srv_hosts`(`QUOTA_TENANT_ID`) VALUES ('default_test')
+
+[2019-07-08 14:01:43.284][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` IS NULL
+
+[2019-07-08 14:01:51.544][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_hosts` SET `HOST_IP` = '10.1.202.118', `FTP_PORT` = 22, `FTP_USER` = 'root' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` IS NULL
+
+[2019-07-08 14:01:51.644][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.202.118'
+
+[2019-07-08 14:01:55.543][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_hosts` SET `FTP_PASSWORD` = '618520' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.202.118'
+
+[2019-07-08 14:01:55.642][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.202.118'
+
+[2019-07-08 14:01:57.982][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_hosts` SET `UPDATE_BY` = 'admin' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.202.118'
+
+[2019-07-08 14:01:58.035][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.202.118'
+
+[2019-07-08 14:02:01.654][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_hosts` SET `FTP_PATH` = '/data/ai_lab/miner/basedata' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.202.118'
+
+[2019-07-08 14:02:01.71][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_hosts` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `HOST_IP` = '10.1.202.118'
+
+[2019-07-08 14:02:31.118][MDP][362014][MYSQL][]
+INSERT INTO `mdp210`.`ai_quota_tenant_srv_platform_env`(`QUOTA_TENANT_ID`) VALUES ('default_test')
+
+[2019-07-08 14:02:31.17][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_platform_env` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `PLATFORM_ID` IS NULL
+
+[2019-07-08 14:02:34.388][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_platform_env` SET `PLATFORM_ID` = 'spark' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `PLATFORM_ID` IS NULL
+
+[2019-07-08 14:02:34.443][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_platform_env` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `PLATFORM_ID` = 'spark'
+
+[2019-07-08 14:02:41.991][MDP][362014][MYSQL][]
+UPDATE `mdp210`.`ai_quota_tenant_srv_platform_env` SET `PLATFORM_NAME` = 'spark' WHERE `QUOTA_TENANT_ID` = 'default_test' AND `PLATFORM_ID` = 'spark'
+
+[2019-07-08 14:02:42.079][MDP][362014][MYSQL][]
+SELECT * FROM `mdp210`.`ai_quota_tenant_srv_platform_env` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `PLATFORM_ID` = 'spark'
+
+[2019-07-08 14:03:08.656][MDP][362014][MYSQL][]
+DELETE FROM `mdp210`.`ai_quota_tenant_srv_platform_env` WHERE `QUOTA_TENANT_ID` = 'default_test' AND `PLATFORM_ID` = 'spark'
+
+[2019-07-08 14:21:42.59][MDP][362289][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-07-08 14:21:42.728][MDP][362289][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
 
