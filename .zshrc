@@ -56,7 +56,8 @@ POWERLEVEL9K_USER_ICON="\uF415"
 ENABLE_CORRECTION="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git python docker pip yarn zsh-autosuggestions zsh-syntax-highlighting autoswitch_virtualenv)
+plugins=(git python docker pip yarn)
+#plugins=(git python docker pip yarn zsh-autosuggestions zsh-syntax-highlighting autoswitch_virtualenv)
 #*************iterm2_shell_integration******
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
