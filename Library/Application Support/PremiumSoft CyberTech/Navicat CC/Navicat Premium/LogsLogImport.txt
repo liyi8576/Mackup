@@ -1,7 +1,6 @@
-[2018-07-30 18:12:52.328] [IMP] Import start
-[2018-07-30 18:12:52.33] [IMP] Import type - Excel file
-[2018-07-30 18:12:52.33] [IMP] Import from - /Users/liyi/Downloads/mcd_plan_def.xls
-[2018-07-30 18:12:52.385] [IMP] Create table [MCD_PLAN_DEF2]
-[2018-07-30 18:12:52.385] [IMP] Import table [MCD_PLAN_DEF2]
-[2018-07-30 18:12:52.505] [IMP] Processed: 500, Added: 500, Updated: 0, Deleted: 0, Errors: 0
-[2018-07-30 18:12:52.505] [IMP] Finished successfully
+[2019-07-18 15:13:47.247] [IMP] Import start
+[2019-07-18 15:13:47.328] [IMP] Import type - CSV file
+[2019-07-18 15:13:47.328] [IMP] Import from - /Users/liyi/Desktop/ai_module.csv
+[2019-07-18 15:13:47.328] [IMP] Import table [ai_module_tmp]
+[2019-07-18 15:13:47.503] [IMP] Processed: 23, Added: 23, Updated: 0, Deleted: 0, Errors: 0
+[2019-07-18 15:13:47.503] [IMP] Finished successfully

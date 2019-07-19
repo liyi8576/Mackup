@@ -190,4 +190,5 @@ export PATH="/usr/local/sbin:$JAVA_HOME/bin:$PATH"
 #source ~/.oh-my-zsh/plugins/incr/incr*.zsh
 
 unsetopt correct_all  
+export REDIS_CLUSTER_IP=0.0.0.0
 
