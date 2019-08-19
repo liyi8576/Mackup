@@ -1,278 +1,36 @@
-[2019-08-07 16:56:52.013][MDP][000554][MYSQL][]
+[2019-08-16 11:11:54.067][MDP][010800][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'
 
-[2019-08-07 16:56:52.092][MDP][000554][MYSQL][]
+[2019-08-16 11:11:54.154][MDP][010800][MYSQL][]
 SHOW VARIABLES LIKE 'sql_mode'
 
-[2019-08-07 16:56:54.013][MDP][000554][MYSQL][]
+[2019-08-16 11:11:57.522][MDP][010800][MYSQL][]
 SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp210'
 
-[2019-08-07 16:56:54.119][MDP][000554][MYSQL][]
+[2019-08-16 11:11:57.652][MDP][010800][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2019-08-07 16:56:54.226][MDP][000554][MYSQL][]
+[2019-08-16 11:11:57.732][MDP][010800][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_NAME
 
-[2019-08-07 16:56:54.468][MDP][000554][MYSQL][]
+[2019-08-16 11:11:57.923][MDP][010801][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-08-16 11:11:57.984][MDP][010800][MYSQL][]
 SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp210' ORDER BY ROUTINE_SCHEMA
 
-[2019-08-07 16:56:54.526][MDP][000555][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-08-07 16:56:54.679][MDP][000554][MYSQL][]
+[2019-08-16 11:11:58.771][MDP][010800][MYSQL][]
 SHOW TABLE STATUS
 
-[2019-08-07 16:56:59.988][MDP][000554][MYSQL][]
-SELECT * FROM `mdp210`.`ai_quota_tenant_services` LIMIT 0,1000
+[2019-08-16 11:12:04.761][MDP][010800][MYSQL][]
+SELECT * FROM `mdp210`.`oauth_client_details` LIMIT 0,1000
 
-[2019-08-07 16:57:00.239][MDP][000555][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
+[2019-08-16 11:12:04.922][MDP][010801][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`oauth_client_details`
 
-[2019-08-07 16:57:00.321][MDP][000554][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
+[2019-08-16 11:12:04.996][MDP][010800][MYSQL][]
+SHOW TABLE STATUS LIKE 'oauth_client_details'
 
-[2019-08-07 16:57:00.402][MDP][000554][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
-
-[2019-08-07 16:57:32.323][MDP][000554][MYSQL][]
-SELECT * FROM `mdp210`.`ai_quota_tenant_srv_containers` LIMIT 0,1000
-
-[2019-08-07 16:57:32.651][MDP][000555][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_srv_containers`
-
-[2019-08-07 16:57:32.756][MDP][000554][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_quota_tenant_srv_containers'
-
-[2019-08-07 16:57:32.835][MDP][000554][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_srv_containers`
-
-[2019-08-07 17:42:50.762][MDP][000585][MYSQL][]
-SELECT * FROM `mdp210`.`ai_subject_res_permit` LIMIT 0,1000
-
-[2019-08-07 17:42:51.57][MDP][000586][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_subject_res_permit`
-
-[2019-08-07 17:42:51.737][MDP][000585][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_subject_res_permit'
-
-[2019-08-07 17:42:51.865][MDP][000585][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_subject_res_permit`
-
-[2019-08-07 17:42:53.063][MDP][000585][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai\_subject\_res\_permit'
-
-[2019-08-07 17:42:53.331][MDP][000585][MYSQL][]
-SHOW CREATE TABLE `ai_subject_res_permit` 
-
-[2019-08-07 17:42:53.574][MDP][000585][MYSQL][]
-SHOW FULL COLUMNS FROM `ai_subject_res_permit`
-
-[2019-08-07 17:42:53.819][MDP][000585][MYSQL][]
-SHOW INDEX FROM `ai_subject_res_permit`
-
-[2019-08-07 17:42:54.063][MDP][000585][MYSQL][]
-SELECT ACTION_ORDER, EVENT_OBJECT_TABLE, TRIGGER_NAME, EVENT_MANIPULATION, EVENT_OBJECT_TABLE, DEFINER, ACTION_STATEMENT, ACTION_TIMING FROM information_schema.triggers WHERE BINARY event_object_schema = 'mdp210' AND BINARY event_object_table = 'ai_subject_res_permit' ORDER BY event_object_table
-
-[2019-08-07 17:42:54.327][MDP][000585][MYSQL][]
-SELECT TABLE_NAME, PARTITION_NAME, SUBPARTITION_NAME, PARTITION_METHOD, SUBPARTITION_METHOD, PARTITION_EXPRESSION, SUBPARTITION_EXPRESSION, PARTITION_DESCRIPTION, PARTITION_COMMENT, NODEGROUP, TABLESPACE_NAME FROM information_schema.PARTITIONS WHERE NOT ISNULL(PARTITION_NAME) AND TABLE_SCHEMA LIKE 'mdp210' AND TABLE_NAME LIKE 'ai_subject_res_permit' ORDER BY TABLE_NAME, PARTITION_NAME, PARTITION_ORDINAL_POSITION, SUBPARTITION_ORDINAL_POSITION
-
-[2019-08-07 17:42:54.542][MDP][000585][MYSQL][]
-SHOW CHARACTER SET
-
-[2019-08-07 17:42:54.744][MDP][000585][MYSQL][]
-SHOW ENGINES
-
-[2019-08-07 17:42:54.925][MDP][000585][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-08-07 17:42:55.137][MDP][000585][MYSQL][]
-SELECT DISTINCT(TABLESPACE_NAME) AS TABLESPACE_NAME FROM information_schema.FILES WHERE NOT ISNULL(TABLESPACE_NAME) LIMIT 10000
-
-[2019-08-07 17:42:55.32][MDP][000585][MYSQL][]
-SHOW CHARACTER SET
-
-[2019-08-07 17:42:55.513][MDP][000585][MYSQL][]
-SHOW COLLATION
-
-[2019-08-07 18:18:19.934][MDP][000585][MYSQL][]
-SELECT * FROM `mdp210`.`ai_quota_tenant` LIMIT 0,1000
-
-[2019-08-07 18:18:20.191][MDP][000586][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant`
-
-[2019-08-07 18:18:20.351][MDP][000585][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_quota_tenant'
-
-[2019-08-07 18:18:20.471][MDP][000585][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_quota_tenant`
-
-[2019-08-07 18:19:05.694][MDP][000585][MYSQL][]
-SELECT * FROM `mdp210`.`ai_quota_tenant_services` LIMIT 0,1000
-
-[2019-08-07 18:19:05.93][MDP][000586][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_services`
-
-[2019-08-07 18:19:06.03][MDP][000585][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_quota_tenant_services'
-
-[2019-08-07 18:19:06.121][MDP][000585][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_services`
-
-[2019-08-07 18:20:06.125][MDP][000585][MYSQL][]
-SELECT * FROM `mdp210`.`ai_quota_tenant_user_binding` LIMIT 0,1000
-
-[2019-08-07 18:20:06.282][MDP][000586][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`ai_quota_tenant_user_binding`
-
-[2019-08-07 18:20:06.378][MDP][000585][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_quota_tenant_user_binding'
-
-[2019-08-07 18:20:06.479][MDP][000585][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`ai_quota_tenant_user_binding`
-
-[2019-08-07 20:40:50.092][MDP][000585][MYSQL][]
-SHOW VARIABLES LIKE 'lower_case_%'
-
-[2019-08-07 20:40:50.471][MDP][000669][MYSQL][]
-SHOW VARIABLES LIKE 'sql_mode'
-
-[2019-08-07 20:40:50.619][MDP][000669][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-08-07 20:40:50.774][MDP][000669][MYSQL][]
-SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_NAME ASC
-
-[2019-08-07 20:41:00.899][MDP][000669][MYSQL][]
-SET PROFILING = 1
-
-[2019-08-07 20:41:00.972][MDP][000669][MYSQL][]
-SHOW STATUS
-
-[2019-08-07 20:41:01.052][MDP][000669][MYSQL][]
-SHOW STATUS
-
-[2019-08-07 20:41:01.141][MDP][000669][MYSQL][]
-SELECT
-	T.MODEL_ID MODEL_ID,
-	T.DS_ID DS_ID,
-	T.MODEL_NAME MODEL_NAME,
-	T.MODEL_TYPE_ID MODEL_TYPE_ID,
-	T3.MODEL_TYPE_ICON,
-	T.STATUS STATUS,
-	T4.STAGE_ID STAGE_ID,
-	T2.MAX_STAGE_ID TASK_EXEC_STAGE,
-	T4.STAGE_NAME STAGE_NAME,
-	T4.STAGE_ICON STAGE_ICON,
-	T2.STAGE_BAR_M STAGE_BAR,
-	T1.TASK_ID,
-	date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) AS CREATE_TIME,
-CASE
-		
-		WHEN T2.FIRST_TIME IS NOT NULL THEN
-		date_format( T2.FIRST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( T.CREATE_TIME, '%Y-%m-%d %H:%i:%s' ) 
-	END AS NEW_TIME,
-CASE
-		
-		WHEN T.MANNER = 7 THEN
-		date_format( T1.END_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE ( CASE WHEN T2.LAST_TIME IS NOT NULL THEN date_format( T2.LAST_TIME, '%Y-%m-%d %H:%i:%s' ) ELSE date_format( now(), '%Y-%m-%d %H:%i:%s' ) END ) 
-	END AS END_TIME,
-	T.CREATE_USER,
-	T.MANNER,
-	T.ENGINE,
-	T.BUSINESS_TYPE,
-	MAT.NAME,
-	T.DEV_LANGUAGE,
-	'' AS IS_CYCLE_USE,
-	TAR._owner,
-	TAR._group,
-	TAR._tenant,
-	TAR._auth 
-FROM
-	MDP_MODEL T
-	INNER JOIN (
-	SELECT
-		res.res_id,
-	IF
-		( res.res_owner = ? OR auth.transfer_flag = 1, 1, - 1 ) AS _owner,
-	IF
-		( grp.user_id IS NULL, - 1, 1 ) AS _group,
-	IF
-		( res.tenant = ?, 1, 0 ) AS _tenant,
-	IF
-		( auth.res_id IS NOT NULL AND auth.transfer_flag != 1, 1, - 1 ) AS _auth 
-	FROM
-		(
-		SELECT
-			m.model_id AS res_id,
-			m.model_name AS res_name,
-			m.tenant AS tenant,
-			m.create_user AS res_owner,
-			m.model_type_id AS model_scene,
-			m.business_type AS busi_type 
-		FROM
-			mdp_model m 
-		) res
-		LEFT OUTER JOIN (
-		SELECT
-			res_id,
-			max( transfer_flag ) 
-		FROM
-			ai_subject_res_permit 
-		WHERE
-			res_domain = ? 
-			AND res_id IS NOT NULL 
-			AND valid_flag = 1 
-			AND ( ( subject_type IN ( 1, 3 ) AND subject_id = ?) OR ( subject_type = 2 AND subject_id IN ( ? ) ) ) 
-		GROUP BY
-			res_id,
-			transfer_flag 
-		) auth ON auth.res_id = RES.res_id
-		LEFT OUTER JOIN ( SELECT DISTINCT user_id FROM ai_group_user_binding WHERE valid_flag = 1 AND group_id IN ( ? ) ) grp ON res.res_owner = grp.user_id 
-	WHERE
-		res.tenant = ? 
-		OR auth.res_id IS NOT NULL 
-		OR grp.user_id IS NOT NULL 
-	) TAR ON T.model_id = TAR.res_id
-	LEFT JOIN ( SELECT max( task_id ) task_id, MAX( end_time ) end_time, model_id FROM MDP_MODEL_TASK GROUP BY model_id ) T1 ON T.MODEL_ID = T1.MODEL_ID
-	LEFT JOIN (
-	SELECT
-		business_id AS model_id,
-		task_id,
-		max( stage_id )- 1 max_stage_id,
-		min( stage_id ) min_stage_id,
-		min( start_time ) first_time,
-		max( end_time ) last_time,
-		max( stage_bar ) stage_bar_m 
-	FROM
-		mdp_business_stage_trace 
-	WHERE
-		parent_id IS NOT NULL 
-		AND class_id = '4' 
-	GROUP BY
-		business_id,
-		task_id 
-	) T2 ON T2.task_id = T1.task_id 
-	AND T.MODEL_ID = T2.MODEL_ID
-	LEFT JOIN (
-	SELECT
-		modelSTAGE.STATUS,
-		stage.STAGE_ID,
-		stage.STAGE_NAME,
-		stage.STAGE_ICON 
-	FROM
-		mdp_modelstage_map modelSTAGE
-		LEFT JOIN mdp_stage stage ON modelSTAGE.stage_id = stage.stage_id 
-	) T4 ON T.STATUS = T4.
-	STATUS LEFT JOIN MDP_MODEL_TYPE T3 ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
-	LEFT JOIN MDP_APPTOPIC_TYPE MAT ON T.BUSINESS_TYPE = MAT.id 
-WHERE
-	1 = 1 
-	AND T3.IS_VALID !=- 1 
-ORDER BY
-	NEW_TIME DESC
-
-[2019-08-07 20:41:01.21][MDP][000669][MYSQL][]
-You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? OR auth.transfer_flag = 1, 1, - 1 ) AS _owner,
-	IF
-		( grp.user_id IS NULL, - ' at line 42
+[2019-08-16 11:12:05.073][MDP][010800][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`oauth_client_details`
 
