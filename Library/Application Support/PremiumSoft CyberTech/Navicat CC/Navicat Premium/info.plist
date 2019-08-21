@@ -23,13 +23,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"oauth_client_details","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_sys_support","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open table oauth_client_details@mdp210 (MDP)</string>
+			<string>Open table mdp_sys_support@mdp210 (MDP)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>

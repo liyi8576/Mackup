@@ -1,36 +1,72 @@
-[2019-08-16 11:11:54.067][MDP][010800][MYSQL][]
+[2019-08-20 13:47:15.609][MDP][014879][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'
 
-[2019-08-16 11:11:54.154][MDP][010800][MYSQL][]
+[2019-08-20 13:47:15.668][MDP][014879][MYSQL][]
 SHOW VARIABLES LIKE 'sql_mode'
 
-[2019-08-16 11:11:57.522][MDP][010800][MYSQL][]
+[2019-08-20 13:47:17.705][MDP][014879][MYSQL][]
 SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'mdp210'
 
-[2019-08-16 11:11:57.652][MDP][010800][MYSQL][]
+[2019-08-20 13:47:17.787][MDP][014879][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2019-08-16 11:11:57.732][MDP][010800][MYSQL][]
+[2019-08-20 13:47:17.859][MDP][014879][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'mdp210' ORDER BY TABLE_SCHEMA, TABLE_NAME
 
-[2019-08-16 11:11:57.923][MDP][010801][MYSQL][]
-SHOW FULL TABLES WHERE Table_type != 'VIEW'
-
-[2019-08-16 11:11:57.984][MDP][010800][MYSQL][]
+[2019-08-20 13:47:18.064][MDP][014879][MYSQL][]
 SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'mdp210' ORDER BY ROUTINE_SCHEMA
 
-[2019-08-16 11:11:58.771][MDP][010800][MYSQL][]
+[2019-08-20 13:47:18.091][MDP][014880][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2019-08-20 13:47:18.236][MDP][014879][MYSQL][]
 SHOW TABLE STATUS
 
-[2019-08-16 11:12:04.761][MDP][010800][MYSQL][]
-SELECT * FROM `mdp210`.`oauth_client_details` LIMIT 0,1000
+[2019-08-20 13:47:27.486][MDP][014879][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_sys_support` LIMIT 0,1000
 
-[2019-08-16 11:12:04.922][MDP][010801][MYSQL][]
-SHOW COLUMNS FROM `mdp210`.`oauth_client_details`
+[2019-08-20 13:47:27.747][MDP][014880][MYSQL][]
+SHOW COLUMNS FROM `mdp210`.`mdp_sys_support`
 
-[2019-08-16 11:12:04.996][MDP][010800][MYSQL][]
-SHOW TABLE STATUS LIKE 'oauth_client_details'
+[2019-08-20 13:47:27.865][MDP][014879][MYSQL][]
+SHOW TABLE STATUS LIKE 'mdp_sys_support'
 
-[2019-08-16 11:12:05.073][MDP][010800][MYSQL][]
-SHOW CREATE TABLE `mdp210`.`oauth_client_details`
+[2019-08-20 13:47:27.984][MDP][014879][MYSQL][]
+SHOW CREATE TABLE `mdp210`.`mdp_sys_support`
+
+[2019-08-20 13:47:40.623][MDP][014879][MYSQL][]
+UPDATE `mdp210`.`mdp_sys_support` SET `conf_json` = '[[{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"平台介绍PPT\",\"desc\":\"平台介绍PPT\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"与DACP对接PPT\",\"desc\":\"与DACP对接PPT\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]},{\"group\":\"用户文档\",\"itmes\":[{\"name\":\"平台使用手册\",\"desc\":\"平台使用手册\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"用户常见疑难问题和解答\",\"desc\":\"用户常见疑难问题和解答\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"老admin用户敏捷平台信息表\",\"desc\":\"老admin用户敏捷平台信息表\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]},{\"group\":\"编码建模操作文档\",\"itmes\":[{\"name\":\"敏捷平台编码建模使用说明\",\"desc\":\"敏捷平台编码建模使用说明\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"python,R算法包\",\"desc\":\"python,R算法包\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]},{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"平台v1.3.1版培训手册\",\"desc\":\"平台v1.3.1版培训手册\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]}]' WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:47:40.682][MDP][014879][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_sys_support` WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:48:06.914][MDP][014879][MYSQL][]
+UPDATE `mdp210`.`mdp_sys_support` SET `conf_json` = '[{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"平台介绍PPT\",\"desc\":\"平台介绍PPT\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"与DACP对接PPT\",\"desc\":\"与DACP对接PPT\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]},{\"group\":\"用户文档\",\"itmes\":[{\"name\":\"平台使用手册\",\"desc\":\"平台使用手册\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"用户常见疑难问题和解答\",\"desc\":\"用户常见疑难问题和解答\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"老admin用户敏捷平台信息表\",\"desc\":\"老admin用户敏捷平台信息表\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]},{\"group\":\"编码建模操作文档\",\"itmes\":[{\"name\":\"敏捷平台编码建模使用说明\",\"desc\":\"敏捷平台编码建模使用说明\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"python,R算法包\",\"desc\":\"python,R算法包\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]},{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"平台v1.3.1版培训手册\",\"desc\":\"平台v1.3.1版培训手册\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]}]' WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:48:07.008][MDP][014879][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_sys_support` WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:49:44.977][MDP][014879][MYSQL][]
+UPDATE `mdp210`.`mdp_sys_support` SET `conf_json` = '[{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"dacp3.0与敏捷平台整合操作说明\",\"desc\":\"dacp3.0与敏捷平台整合操作说明\",\"path\":\"/data_images/dacp3.0与敏捷平台整合操作说明.pptx\",\"thumb\":\"\"},{\"name\":\"敏捷平台编码建模使用说明\",\"desc\":\"敏捷平台编码建模使用说明\",\"path\":\"/data_images/敏捷平台编码建模使用说明v1.2.2.pdf\",\"thumb\":\"\"}]},{\"group\":\"用户文档\",\"itmes\":[{\"name\":\"操作手册(前台)\",\"desc\":\"亚信通用人工智能平台操作手册(前台)\",\"path\":\"/data_images/亚信通用人工智能平台操作手册(前台)_v2.3.0.doc\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]},{\"group\":\"\",\"itmes\":[{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]},{\"group\":\"\",\"itmes\":[{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]}]' WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:49:45.041][MDP][014879][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_sys_support` WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:50:20.961][MDP][014879][MYSQL][]
+UPDATE `mdp210`.`mdp_sys_support` SET `conf_json` = '[{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"dacp3.0与敏捷平台整合操作说明\",\"desc\":\"dacp3.0与敏捷平台整合操作说明\",\"path\":\"/data_images/dacp3.0与敏捷平台整合操作说明.pptx\",\"thumb\":\"\"},{\"name\":\"敏捷平台编码建模使用说明\",\"desc\":\"敏捷平台编码建模使用说明\",\"path\":\"/data_images/敏捷平台编码建模使用说明v1.2.2.pdf\",\"thumb\":\"\"}]},{\"group\":\"用户文档\",\"itmes\":[{\"name\":\"操作手册(前台)\",\"desc\":\"亚信通用人工智能平台操作手册(前台)\",\"path\":\"/data_images/亚信通用人工智能平台操作手册(前台)_v2.3.0.doc\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"/data_images/\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"表\",\"path\":\"\",\"thumb\":\"\"}]},{\"group\":\"\",\"itmes\":[{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]},{\"group\":\"\",\"itmes\":[{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]}]\n[{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"dacp3.0与敏捷平台整合操作说明\",\"desc\":\"dacp3.0与敏捷平台整合操作说明\",\"path\":\"/data_images/dacp3.0与敏捷平台整合操作说明.pptx\",\"thumb\":\"\"},{\"name\":\"敏捷平台编码建模使用说明\",\"desc\":\"敏捷平台编码建模使用说明\",\"path\":\"/data_images/敏捷平台编码建模使用说明v1.2.2.pdf\",\"thumb\":\"\"}]},{\"group\":\"用户文档\",\"itmes\":[{\"name\":\"操作手册(前台)\",\"desc\":\"亚信通用人工智能平台操作手册(前台)\",\"path\":\"/data_images/亚信通用人工智能平台操作手册(前台)_v2.3.0.doc\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"/data_images/\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"表\",\"path\":\"\",\"thumb\":\"\"}]},{\"group\":\"\",\"itmes\":[{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]},{\"group\":\"\",\"itmes\":[{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]}]' WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:50:21.116][MDP][014879][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_sys_support` WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:50:48.689][MDP][014879][MYSQL][]
+UPDATE `mdp210`.`mdp_sys_support` SET `conf_json` = '[{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"dacp3.0与敏捷平台整合操作说明\",\"desc\":\"dacp3.0与敏捷平台整合操作说明\",\"path\":\"/data_images/dacp3.0与敏捷平台整合操作说明.pptx\",\"thumb\":\"\"},{\"name\":\"敏捷平台编码建模使用说明\",\"desc\":\"敏捷平台编码建模使用说明\",\"path\":\"/data_images/敏捷平台编码建模使用说明v1.2.2.pdf\",\"thumb\":\"\"}]},{\"group\":\"用户文档\",\"itmes\":[{\"name\":\"操作手册(前台)\",\"desc\":\"亚信通用人工智能平台操作手册(前台)\",\"path\":\"/data_images/亚信通用人工智能平台操作手册(前台)_v2.3.0.doc\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]},{\"group\":\"\",\"itmes\":[{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"},{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]},{\"group\":\"\",\"itmes\":[{\"name\":\"\",\"desc\":\"\",\"path\":\"\",\"thumb\":\"\"}]}]' WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:50:48.842][MDP][014879][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_sys_support` WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:51:18.097][MDP][014879][MYSQL][]
+UPDATE `mdp210`.`mdp_sys_support` SET `conf_json` = '[{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"平台介绍PPT\",\"desc\":\"平台介绍PPT\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"与DACP对接PPT\",\"desc\":\"与DACP对接PPT\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]},{\"group\":\"用户文档\",\"itmes\":[{\"name\":\"平台使用手册\",\"desc\":\"平台使用手册\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"用户常见疑难问题和解答\",\"desc\":\"用户常见疑难问题和解答\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"老admin用户敏捷平台信息表\",\"desc\":\"老admin用户敏捷平台信息表\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]},{\"group\":\"编码建模操作文档\",\"itmes\":[{\"name\":\"敏捷平台编码建模使用说明\",\"desc\":\"敏捷平台编码建模使用说明\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"},{\"name\":\"python,R算法包\",\"desc\":\"python,R算法包\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]},{\"group\":\"介绍文档\",\"itmes\":[{\"name\":\"平台v1.3.1版培训手册\",\"desc\":\"平台v1.3.1版培训手册\",\"path\":\"/data_images/发票104.pdf\",\"thumb\":\"\"}]}]' WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
+
+[2019-08-20 13:51:18.216][MDP][014879][MYSQL][]
+SELECT * FROM `mdp210`.`mdp_sys_support` WHERE `conf_code` = 'Docs' AND `tenant` = 'DEFAULT'
 
