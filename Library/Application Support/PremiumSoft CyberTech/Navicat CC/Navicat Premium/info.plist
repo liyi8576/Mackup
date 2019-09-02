@@ -15,74 +15,7 @@
 	<key>autosaves</key>
 	<dict/>
 	<key>continues</key>
-	<dict>
-		<key>0</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_affiche","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table mdp_affiche@mdp210 (MDP)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp210</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>1</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_affiche","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>DesignForm</string>
-			<key>name</key>
-			<string>Design table mdp_affiche@mdp210 (MDP)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp210</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
+	<dict/>
 	<key>favorites</key>
 	<dict/>
 	<key>nsublogindata</key>
@@ -100,13 +33,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_affiche","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_group_res_scope_permit","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_affiche</string>
+			<string>Open Table ai_group_res_scope_permit</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -166,13 +99,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_apptopic_task","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_solution","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_apptopic_task</string>
+			<string>Open Table ai_solution</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -199,13 +132,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"irec_model","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_res_define","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table irec_model</string>
+			<string>Open Table ai_res_define</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -215,7 +148,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>irec</string>
+			<string>mdp210</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -232,13 +165,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_apptopic","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_res_permission_binding","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_apptopic</string>
+			<string>Open Table ai_res_permission_binding</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -265,13 +198,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_apptopic","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_module","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_apptopic</string>
+			<string>Open Table ai_module</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -298,13 +231,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant_services","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"v_ai_permission","ObjectType":"View_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
+			<string>View_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_quota_tenant_services</string>
+			<string>Open View v_ai_permission</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -331,13 +264,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant_srv_containers","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_sys_support","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table ai_quota_tenant_srv_containers</string>
+			<string>Design Table mdp_sys_support</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -364,13 +297,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_subject_res_permit","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_affiche","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table ai_subject_res_permit</string>
+			<string>Design Table mdp_affiche</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -397,13 +330,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_apptopic_task","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table ai_quota_tenant</string>
+			<string>Design Table mdp_apptopic_task</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
