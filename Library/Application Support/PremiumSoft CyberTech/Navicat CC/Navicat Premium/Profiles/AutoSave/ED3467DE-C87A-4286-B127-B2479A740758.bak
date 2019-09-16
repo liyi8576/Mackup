@@ -1,0 +1,36 @@
+SELECT T.MODEL_ID MODEL_ID, T.DS_ID DS_ID, T.MODEL_NAME MODEL_NAME, T.MODEL_TYPE_ID MODEL_TYPE_ID, T3.MODEL_TYPE_ICON, T.STATUS STATUS, T4.STAGE_ID STAGE_ID, T2.MAX_STAGE_ID TASK_EXEC_STAGE, T4.STAGE_NAME STAGE_NAME, T4.STAGE_ICON STAGE_ICON, T2.STAGE_BAR_M STAGE_BAR, T1.TASK_ID, date_format(T.CREATE_TIME, '%Y-%m-%d %H:%i:%s') AS CREATE_TIME, CASE WHEN T2.FIRST_TIME IS NOT NULL THEN date_format(T2.FIRST_TIME,'%Y-%m-%d %H:%i:%s') ELSE date_format(T.CREATE_TIME,'%Y-%m-%d %H:%i:%s') END AS NEW_TIME, CASE WHEN T.MANNER = 7 THEN date_format(T1.END_TIME,'%Y-%m-%d %H:%i:%s') ELSE ( CASE WHEN T2.LAST_TIME IS NOT NULL THEN date_format(T2.LAST_TIME,'%Y-%m-%d %H:%i:%s') ELSE date_format(now(),'%Y-%m-%d %H:%i:%s') END ) END AS END_TIME, T.CREATE_USER, T.MANNER, T.ENGINE, T.BUSINESS_TYPE, MAT.NAME, T.DEV_LANGUAGE, '' AS IS_CYCLE_USE, TAR._owner, TAR._group, TAR._tenant, TAR._auth
+ FROM MDP_MODEL T
+ INNER JOIN (
+ SELECT res.res_id, IF(res.res_owner = 'admin' OR auth.transfer_flag = 1, 1, -1) AS _owner, IF(grp.user_id IS NULL, -1, 1) AS _group, IF(res.tenant = 'default', 1, 0) AS _tenant, IF(auth.res_id IS NOT NULL AND auth.transfer_flag != 1, 1, -1) AS _auth
+ FROM (select m.model_id as res_id, m.model_name as res_name, m.tenant as tenant, m.create_user as res_owner, m.model_type_id as model_scene, m.business_type as busi_type
+ FROM mdp_model m) res LEFT OUTER JOIN (
+ SELECT res_id,max(transfer_flag) as transfer_flag
+ FROM ai_subject_res_permit
+ WHERE res_domain = 'MODEL' AND res_id IS NOT NULL AND valid_flag = 1 AND ( (subject_type IN (1, 3) AND subject_id = 'admin') OR (subject_type = 2 AND subject_id IN ( '1143356346964414465' ) ) ) GROUP BY res_id,transfer_flag ) auth
+ ON auth.res_id = RES.res_id LEFT OUTER JOIN (
+ SELECT distinct user_id
+ FROM ai_group_user_binding
+ WHERE valid_flag = 1 AND group_id IN ( '1143356346964414465' ) ) grp
+ ON res.res_owner = grp.user_id
+ WHERE res.tenant = 'default' OR auth.res_id IS NOT NULL OR grp.user_id IS NOT NULL ) TAR
+ ON T.model_id=TAR.res_id
+ LEFT JOIN (
+ SELECT max(task_id) task_id,MAX(end_time) end_time,model_id
+ FROM MDP_MODEL_TASK GROUP BY model_id ) T1
+ ON T.MODEL_ID = T1.MODEL_ID
+ LEFT JOIN (
+ SELECT business_id as model_id, task_id, max(stage_id)-1 max_stage_id, min(stage_id) min_stage_id, min(start_time) first_time, max(end_time) last_time, max(stage_bar) stage_bar_m
+ FROM mdp_business_stage_trace
+ WHERE parent_id IS NOT NULL AND class_id = '4' GROUP BY business_id,task_id ) T2
+ ON T2.task_id=T1.task_id AND T.MODEL_ID = T2.MODEL_ID
+ LEFT JOIN (
+ SELECT modelSTAGE.status,stage.STAGE_ID, stage.STAGE_NAME,stage.STAGE_ICON
+ FROM mdp_modelstage_map modelSTAGE
+ LEFT JOIN mdp_stage stage
+ ON modelSTAGE.stage_id = stage.stage_id ) T4
+ ON T.status = T4.status
+ LEFT JOIN MDP_MODEL_TYPE T3
+ ON T.MODEL_TYPE_ID = T3.MODEL_TYPE_ID
+ LEFT JOIN MDP_APPTOPIC_TYPE MAT
+ ON T.BUSINESS_TYPE = MAT.id
+ WHERE 1=1 AND T3.IS_VALID!=-1 AND T.MODEL_TYPE_ID = '1' AND T.STATUS = '5' AND T.MANNER = '1' ORDER BY NEW_TIME DESC;
