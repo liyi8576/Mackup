@@ -330,7 +330,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>382</integer>
+					<integer>1000</integer>
 					<key>Name</key>
 					<integer>120</integer>
 				</dict>
@@ -350,7 +350,7 @@
 					<key>Collation</key>
 					<integer>120</integer>
 					<key>Comment</key>
-					<integer>580</integer>
+					<integer>563</integer>
 					<key>Created Date</key>
 					<integer>211</integer>
 					<key>Created Time</key>
