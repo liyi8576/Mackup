@@ -10,6 +10,67 @@
 			<dict/>
 			<key>MySQL</key>
 			<dict>
+				<key>127.0.0.1</key>
+				<dict>
+					<key>ServerVersion</key>
+					<integer>50727</integer>
+					<key>ServerVersionStr</key>
+					<string>5.7.27</string>
+					<key>alt_http_proxy_user_name</key>
+					<string></string>
+					<key>alt_http_user_name</key>
+					<string></string>
+					<key>alt_ssh_user_name</key>
+					<string></string>
+					<key>alt_user_name</key>
+					<string></string>
+					<key>autoconnect</key>
+					<integer>0</integer>
+					<key>customdblist</key>
+					<array/>
+					<key>encoding</key>
+					<integer>0</integer>
+					<key>host</key>
+					<string>127.0.0.1</string>
+					<key>nsy_dirty_flag</key>
+					<false/>
+					<key>nsy_hash</key>
+					<string></string>
+					<key>nsy_id</key>
+					<string></string>
+					<key>nsy_project_uuid</key>
+					<string></string>
+					<key>nsy_sync_http_proxy_user_name</key>
+					<true/>
+					<key>nsy_sync_http_user_name</key>
+					<true/>
+					<key>nsy_sync_ssh_user_name</key>
+					<true/>
+					<key>nsy_sync_user_name</key>
+					<true/>
+					<key>port</key>
+					<string>3306</string>
+					<key>savepassword</key>
+					<true/>
+					<key>savepath</key>
+					<string>/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Common/Settings/0/0/MySQL/127.0.0.1</string>
+					<key>serviceprovider</key>
+					<string>0</string>
+					<key>sessionlimit</key>
+					<integer>0</integer>
+					<key>usecompression</key>
+					<integer>0</integer>
+					<key>usecustomdblist</key>
+					<integer>0</integer>
+					<key>usehttptunnel</key>
+					<false/>
+					<key>username</key>
+					<string>root</string>
+					<key>usessl</key>
+					<false/>
+					<key>usetunnel</key>
+					<false/>
+				</dict>
 				<key>MDP</key>
 				<dict>
 					<key>ServerVersion</key>
