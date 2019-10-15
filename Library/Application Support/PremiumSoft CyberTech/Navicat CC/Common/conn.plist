@@ -113,6 +113,12 @@
 							<key>name</key>
 							<string>ocai210</string>
 						</dict>
+						<dict>
+							<key>autoopen</key>
+							<false/>
+							<key>name</key>
+							<string>mdp_test_v231</string>
+						</dict>
 					</array>
 					<key>encoding</key>
 					<integer>0</integer>

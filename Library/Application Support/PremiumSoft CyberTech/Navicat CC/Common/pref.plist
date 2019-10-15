@@ -78,6 +78,17 @@
 							</dict>
 						</dict>
 					</dict>
+					<key>127.0.0.1</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
 					<key>192.168.0.103</key>
 					<dict>
 						<key></key>
@@ -330,7 +341,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>851</integer>
+					<integer>1000</integer>
 					<key>Name</key>
 					<integer>120</integer>
 				</dict>
@@ -350,7 +361,7 @@
 					<key>Collation</key>
 					<integer>120</integer>
 					<key>Comment</key>
-					<integer>563</integer>
+					<integer>83</integer>
 					<key>Created Date</key>
 					<integer>211</integer>
 					<key>Created Time</key>
