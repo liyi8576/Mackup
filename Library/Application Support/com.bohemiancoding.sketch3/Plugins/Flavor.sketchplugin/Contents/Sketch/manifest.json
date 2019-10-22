@@ -6,39 +6,39 @@
 	"homepage": "http://www.fancynode.com.cn/pxcook",
 	"identifier": "com.fancynode.flavor",
 	"compatibleVersion": "3.6.1",
-	"version": "1.3.4",
+	"version": "1.3.6",
 	"icon": "Icons/icFlavor.png",
 	"commands": [
 		{
 			 "name": "切换显示",
 			 "identifier": "export-toggle-command",
 			 "shortcut": "",
-			 "script": "PxCookUI.framework/PxCookUI.js",
+			 "script": "./PxCookUI.js",
 			 "handler": "toggleDisplay"
 		},
 		{
 			 "name": "🚀检测更新",
 			 "identifier": "export-update-command",
 			 "shortcut": "",
-			 "script": "PxCookUI.framework/PxCookUI.js",
+			 "script": "./PxCookUI.js",
 			 "handler": "checkUpdate"
 		},
 		{
 			"name": "访问官网",
 			"identifier": "home-command",
 			"shortcut": "",
-			"script": "PxCookUI.framework/PxCookUI.js",
+			"script": "./PxCookUI.js",
 			"handler": "home"
 		},
 		{
 			"name": "关于Flavor",
 			"identifier": "about-command",
 			"shortcut": "",
-			"script": "PxCookUI.framework/PxCookUI.js",
+			"script": "./PxCookUI.js",
 			"handler": "about"
 		},
 		{
-			"script": "PxCookUI.framework/PxCookUI.js",
+			"script": "./PxCookUI.js",
 			"handlers": {
 				"actions": {
 					"Startup": "onStartup",

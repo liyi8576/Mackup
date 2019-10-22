@@ -1,6 +1,6 @@
 [user]
-name = liyi3
-email = liyi3@asiainfo.com
+	name = 李毅
+	email = liyi3@asiainfo.com
 [github]
 [core]
 excludesfile = /Users/liyi/.gitignore_global

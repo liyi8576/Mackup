@@ -1,0 +1,6 @@
+framework module PxCookUI {
+  umbrella header "PxCookUI.h"
+
+  export *
+  module * { export * }
+}
