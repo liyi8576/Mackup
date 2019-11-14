@@ -180,6 +180,18 @@
 							<key>name</key>
 							<string>mdp_test_v240</string>
 						</dict>
+						<dict>
+							<key>autoopen</key>
+							<false/>
+							<key>name</key>
+							<string>ocai201</string>
+						</dict>
+						<dict>
+							<key>autoopen</key>
+							<false/>
+							<key>name</key>
+							<string>mdp_model_test_v240</string>
+						</dict>
 					</array>
 					<key>encoding</key>
 					<integer>0</integer>
