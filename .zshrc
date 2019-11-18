@@ -80,8 +80,22 @@ function proxy_on(){
 }
 
 # 切换至本机Mac docker环境
-function docker_mac(){
-    eval $(docker-machine env -u)
+function docker_local(){
+    #eval $(docker-machine env -u)
+    export DOCKER_HOST=""
+}
+
+function docker_106(){
+   export DOCKER_HOST="tcp://10.13.6.106:2376"
+}
+function docker_103(){
+   export DOCKER_HOST="tcp://10.13.6.103:2376"
+}
+function docker_109(){
+   export DOCKER_HOST="tcp://10.13.6.109:2376"
+}
+function docker_52(){
+   export DOCKER_HOST="tcp://10.1.253.52:2376"
 }
 
 # 更新系统
@@ -192,3 +206,4 @@ export PATH="/usr/local/sbin:$JAVA_HOME/bin:$PATH"
 unsetopt correct_all  
 export REDIS_CLUSTER_IP=0.0.0.0
 source "$(navi widget zsh)"
+
