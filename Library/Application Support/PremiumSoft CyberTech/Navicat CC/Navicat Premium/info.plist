@@ -15,74 +15,7 @@
 	<key>autosaves</key>
 	<dict/>
 	<key>continues</key>
-	<dict>
-		<key>0</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant_services","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_quota_tenant_services@mdp_test_v240 (MDP)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp_test_v240</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>1</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_drag_node_model","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table mdp_drag_node_model@mdp_test_v240 (MDP)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp_test_v240</string>
-			<key>servername</key>
-			<string>MDP</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
+	<dict/>
 	<key>favorites</key>
 	<dict/>
 	<key>nsublogindata</key>
@@ -100,13 +33,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_open_api","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_drag_node","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table ai_open_api</string>
+			<string>Open Table mdp_drag_node</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -133,13 +66,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_open_api_group","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_drag_node_type","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table ai_open_api_group</string>
+			<string>Open Table mdp_drag_node_type</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -166,13 +99,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant_services","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_train_rpt_conf","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_quota_tenant_services</string>
+			<string>Open Table mdp_train_rpt_conf</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -199,13 +132,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_model_clild_task","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_train_rpt_result","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_model_clild_task</string>
+			<string>Open Table mdp_train_rpt_result</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -232,13 +165,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_model","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_train_rpt_item_conf","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_model</string>
+			<string>Open Table mdp_train_rpt_item_conf</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -265,13 +198,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_open_api","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_quota_tenant</string>
+			<string>Open Table ai_open_api</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -281,7 +214,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp_test_v240</string>
+			<string>mdp210</string>
 			<key>servername</key>
 			<string>MDP</string>
 			<key>serveruuid</key>
@@ -298,13 +231,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_role","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_drag_model","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_role</string>
+			<string>Open Table mdp_drag_model</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -331,13 +264,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_user_group","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_drag_model_task","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_user_group</string>
+			<string>Open Table mdp_drag_model_task</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -364,13 +297,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_user","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_token_conf","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_user</string>
+			<string>Open Table mdp_token_conf</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -397,13 +330,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_tenant","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_drag_flownode","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table ai_tenant</string>
+			<string>Design Table mdp_drag_flownode</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
