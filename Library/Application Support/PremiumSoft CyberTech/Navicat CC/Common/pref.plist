@@ -111,6 +111,17 @@
 							</dict>
 						</dict>
 					</dict>
+					<key>AI^2</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
 					<key>COC-FRONT</key>
 					<dict>
 						<key></key>
@@ -345,6 +356,8 @@
 				<dict>
 					<key></key>
 					<integer>1000</integer>
+					<key>Name</key>
+					<integer>120</integer>
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>
