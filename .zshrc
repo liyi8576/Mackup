@@ -159,7 +159,7 @@ export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
-export PATH=$HOME/.nvm/versions/node/v10.15.3/bin:$PATH
+export PATH=$HOME/.nvm/versions/node/v8.15.1/bin:$PATH
 #**************jenv setting***************
 # export PATH="$HOME/.jenv/bin:$PATH"
 # eval "$(jenv init -)"
