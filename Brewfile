@@ -93,7 +93,7 @@ brew "youtube-dl"
 brew "zsh"
 brew "zsh-syntax-highlighting"
 brew "c-bata/kube-prompt/kube-prompt"
-brew "denisidoro/tools/navi"
+brew "denisidoro/tools/navi", args: ["HEAD"]
 brew "garethr/kubeval/kubeval"
 brew "moncho/dry/dry"
 brew "rcmdnk/file/brew-file"

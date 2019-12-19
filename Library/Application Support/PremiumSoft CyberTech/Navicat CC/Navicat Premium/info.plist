@@ -21,15 +21,15 @@
 			<key>catalogname</key>
 			<string></string>
 			<key>conntype</key>
-			<string>MYSQL</string>
+			<string>UNKNOWN</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ftp","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
 			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
+			<string>Query</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>QueryView</string>
 			<key>name</key>
-			<string>Open table mdp_ftp@mlp-v240 (AI^2)</string>
+			<string>New query</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -39,108 +39,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mlp-v240</string>
+			<string></string>
 			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
 			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>1</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_open_service","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_open_service@mlp-v240 (AI^2)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mlp-v240</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>2</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant_services","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_quota_tenant_services@mlp-v240 (AI^2)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mlp-v240</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>3</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_expert_model","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table mdp_expert_model@mlp-v240 (AI^2)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mlp-v240</string>
-			<key>servername</key>
-			<string>AI^2</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -166,13 +67,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_expert_model","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_business_stage_trace","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_expert_model</string>
+			<string>Open Table mdp_business_stage_trace</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -199,13 +100,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant_services","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_simple_kpi","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_quota_tenant_services</string>
+			<string>Open Table mdp_model_simple_kpi</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -232,13 +133,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_open_service","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_simple_feature_kpi","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_open_service</string>
+			<string>Open Table mdp_model_simple_feature_kpi</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -265,13 +166,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ftp","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_params","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_ftp</string>
+			<string>Open Table mdp_model_params</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -292,72 +193,6 @@
 			<integer>0</integer>
 		</dict>
 		<key>4</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_expert_model","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>DesignForm</string>
-			<key>name</key>
-			<string>Design Table mdp_expert_model</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mlp-v240</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>5</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"mdp_apptopic_task","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open Table mdp_apptopic_task</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mlp-v240</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>6</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -390,6 +225,72 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
+		<key>5</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"mdp_model_optimization","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open Table mdp_model_optimization</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mlp-v240</string>
+			<key>servername</key>
+			<string>AI^2</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>6</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"mdp_model_default_config","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open Table mdp_model_default_config</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mlp-v240</string>
+			<key>servername</key>
+			<string>AI^2</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
 		<key>7</key>
 		<dict>
 			<key>catalogname</key>
@@ -397,13 +298,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_apptopic","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_confparams","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_apptopic</string>
+			<string>Open Table mdp_model_confparams</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -430,13 +331,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ds","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model_simple","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table mdp_ds</string>
+			<string>Open Table mdp_model_simple</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -463,13 +364,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"mdp_ds","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_expert_model","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table mdp_ds</string>
+			<string>Open Table mdp_expert_model</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
