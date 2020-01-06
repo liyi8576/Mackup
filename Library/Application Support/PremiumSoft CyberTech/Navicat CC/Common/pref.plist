@@ -358,6 +358,8 @@
 					<integer>1000</integer>
 					<key>Name</key>
 					<integer>120</integer>
+					<key>名</key>
+					<integer>120</integer>
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>

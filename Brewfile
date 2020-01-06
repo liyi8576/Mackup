@@ -47,7 +47,7 @@ brew "git-lfs"
 brew "gnu-sed", args: ["with-default-names"]
 brew "pkg-config"
 brew "graphviz"
-brew "grep", args: ["with-default-names"]
+brew "grep"
 brew "highlight"
 brew "httpie"
 brew "icdiff"
