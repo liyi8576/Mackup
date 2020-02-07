@@ -252,6 +252,14 @@
 					<integer>120</integer>
 				</dict>
 			</dict>
+			<key>ChartsWorkspace</key>
+			<dict>
+				<key>colwidth</key>
+				<dict>
+					<key>Name</key>
+					<integer>200</integer>
+				</dict>
+			</dict>
 			<key>Event_MYSQL</key>
 			<dict>
 				<key>colwidth</key>
