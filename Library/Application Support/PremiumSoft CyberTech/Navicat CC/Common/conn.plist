@@ -76,6 +76,18 @@
 							<key>name</key>
 							<string>mdp210</string>
 						</dict>
+						<dict>
+							<key>autoopen</key>
+							<false/>
+							<key>name</key>
+							<string>mdp_dev_v241</string>
+						</dict>
+						<dict>
+							<key>autoopen</key>
+							<false/>
+							<key>name</key>
+							<string>mdp_test_v241</string>
+						</dict>
 					</array>
 					<key>encoding</key>
 					<integer>0</integer>

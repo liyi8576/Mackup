@@ -1,0 +1,17 @@
+select *
+ FROM (select m.model_id as res_id, m.model_name as res_name, m.tenant as tenant, m.create_user as res_owner, m.model_type_id as model_scene, m.business_type as busi_type
+ FROM mdp_model m) t
+ INNER JOIN (
+ SELECT res.res_id, IF(res.res_owner = 'admin' OR auth.transfer_flag = 1, 1, -1) AS _owner, IF(grp.user_id IS NULL, -1, 1) AS _group, IF(res.tenant = 'default', 1, 0) AS _tenant, IF(auth.res_id IS NOT NULL AND auth.transfer_flag != 1, 1, -1) AS _auth
+ FROM (select m.model_id as res_id, m.model_name as res_name, m.tenant as tenant, m.create_user as res_owner, m.model_type_id as model_scene, m.business_type as busi_type
+ FROM mdp_model m) res LEFT OUTER JOIN (
+ SELECT res_id,max(transfer_flag) as transfer_flag
+ FROM ai_subject_res_permit
+ WHERE res_domain = 'MODEL' AND res_id IS NOT NULL AND valid_flag = 1 AND ( (subject_type IN (1, 3) AND subject_id = 'admin') OR (subject_type = 2 AND subject_id IN ( '1499742124740' ) ) ) GROUP BY res_id,transfer_flag ) auth
+ ON auth.res_id = RES.res_id LEFT OUTER JOIN (
+ SELECT distinct user_id
+ FROM ai_group_user_binding
+ WHERE valid_flag = 1 AND group_id IN ( '1499742124740' ) ) grp
+ ON res.res_owner = grp.user_id
+ WHERE res.tenant = 'default' OR auth.res_id IS NOT NULL OR grp.user_id IS NOT NULL ) TAR
+ ON t.res_id=TAR.res_id;
