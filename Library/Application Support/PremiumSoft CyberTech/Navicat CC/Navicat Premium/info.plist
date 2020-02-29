@@ -13,27 +13,33 @@
 		</dict>
 	</dict>
 	<key>autosaves</key>
+	<dict/>
+	<key>continues</key>
+	<dict/>
+	<key>favorites</key>
+	<dict/>
+	<key>nsublogindata</key>
+	<dict/>
+	<key>nsulogindata</key>
+	<dict/>
+	<key>nsylogindata</key>
+	<dict/>
+	<key>recents</key>
 	<dict>
-		<key>637A112C82D51DDE63B862A2C69447A1</key>
+		<key>0</key>
 		<dict>
-			<key>autosavecomplete</key>
-			<true/>
-			<key>autosaveexternalquerypath</key>
-			<string></string>
-			<key>autosavelocations</key>
-			<string>[{"key":"","path":"/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium/Profiles/AutoSave/F1F4A143-3A60-43B1-806A-513EF96E965B.bak"}]</string>
 			<key>catalogname</key>
 			<string></string>
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
+			<string>{"Name":"mdp_apptopic","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>Query</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>QueryView</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Untitled</string>
+			<string>Open Table mdp_apptopic</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -53,153 +59,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-	</dict>
-	<key>continues</key>
-	<dict>
-		<key>0</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_config_modules","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_config_modules@mdp_dev_v241 (AI^2)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp_dev_v241</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
 		<key>1</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_config_options","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_config_options@mdp_dev_v241 (AI^2)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp_dev_v241</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>2</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_quota_tenant_services","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_quota_tenant_services@mdp_dev_v241 (AI^2)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp_dev_v241</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>3</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_open_service","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_open_service@mdp_dev_v241 (AI^2)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp_dev_v241</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
-	<key>favorites</key>
-	<dict/>
-	<key>nsublogindata</key>
-	<dict/>
-	<key>nsulogindata</key>
-	<dict/>
-	<key>nsylogindata</key>
-	<dict/>
-	<key>recents</key>
-	<dict>
-		<key>0</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -232,7 +92,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>1</key>
+		<key>2</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -265,7 +125,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>2</key>
+		<key>3</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -298,7 +158,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>3</key>
+		<key>4</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -312,39 +172,6 @@
 			<string>TableView</string>
 			<key>name</key>
 			<string>Open Table ai_config_modules</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mdp_dev_v241</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>4</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_config_setting","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open Table ai_config_setting</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -387,7 +214,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>mdp_test_v241</string>
+			<string>mdp_dev_v241</string>
 			<key>servername</key>
 			<string>AI^2</string>
 			<key>serveruuid</key>
@@ -398,6 +225,39 @@
 			<integer>0</integer>
 		</dict>
 		<key>6</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"ai_config_setting","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open Table ai_config_setting</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>mdp_test_v241</string>
+			<key>servername</key>
+			<string>AI^2</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>7</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -430,7 +290,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>7</key>
+		<key>8</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -463,7 +323,7 @@
 			<key>windowlevel</key>
 			<integer>0</integer>
 		</dict>
-		<key>8</key>
+		<key>9</key>
 		<dict>
 			<key>catalogname</key>
 			<string></string>
@@ -487,39 +347,6 @@
 			<string></string>
 			<key>schemaname</key>
 			<string>mdp_test_v241</string>
-			<key>servername</key>
-			<string>AI^2</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>9</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_feature","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open Table ai_feature</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>mlp-v240</string>
 			<key>servername</key>
 			<string>AI^2</string>
 			<key>serveruuid</key>
