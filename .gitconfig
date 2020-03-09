@@ -16,8 +16,9 @@ tool = smerge
 conflictstyle = diff3
 [filter "lfs"]
 required = true
-clean = git-lfs clean %f
-smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [commit]
 template = /Users/liyi/.git_commit_template
 [diff]

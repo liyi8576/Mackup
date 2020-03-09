@@ -31,7 +31,7 @@ brew "bat"
 brew "boost"
 brew "cabextract"
 brew "ccat"
-brew "coreutils"
+brew "coreutils", link: false
 brew "ctop"
 brew "docker-clean"
 brew "expect"
