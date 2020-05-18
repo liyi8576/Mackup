@@ -52,7 +52,19 @@
 							<key></key>
 							<dict>
 								<key>serverpref</key>
-								<dict/>
+								<dict>
+									<key>markercolor</key>
+									<data>
+								BAtzdHJlYW10
+								eXBlZIHoA4QB
+								QISEhAdOU0Nv
+								bG9yAISECE5T
+								T2JqZWN0AIWE
+								AWMChARmZmZm
+								g4GAgD6DxcRE
+								PwEBhg==
+									</data>
+								</dict>
 							</dict>
 						</dict>
 					</dict>
@@ -129,7 +141,19 @@
 							<key></key>
 							<dict>
 								<key>serverpref</key>
-								<dict/>
+								<dict>
+									<key>markercolor</key>
+									<data>
+								BAtzdHJlYW10
+								eXBlZIHoA4QB
+								QISEhAdOU0Nv
+								bG9yAISECE5T
+								T2JqZWN0AIWE
+								AWMChARmZmZm
+								g7GwMD+Dv74+
+								P4PGxUU/AYY=
+									</data>
+								</dict>
 							</dict>
 						</dict>
 					</dict>
@@ -388,6 +412,8 @@
 					<key></key>
 					<integer>1000</integer>
 					<key>Name</key>
+					<integer>120</integer>
+					<key>名</key>
 					<integer>120</integer>
 				</dict>
 			</dict>
