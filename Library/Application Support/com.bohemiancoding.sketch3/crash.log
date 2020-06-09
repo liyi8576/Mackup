@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>instant HandlerLostFocus {
+    name = Normal;
+}</string>
+	<string>instant HandlerGotFocus {
+    name = Normal;
+}</string>
+	<string>instant HandlerLostFocus {
+    name = Normal;
+}</string>
+	<string>instant HandlerGotFocus {
+    name = Normal;
+}</string>
+	<string>begin SelectionChanged {
+    document = "&lt;MSDocument: 0x7fb4abfdaae0&gt;";
+    newSelection =     (
+        "&lt;MSShapePathLayer: 0x7fb4b20142f0&gt; Ant-Design (5D16B66A-A324-443B-9BD4-14F9CF4EE4C9)"
+    );
+    oldSelection =     (
+        "&lt;MSShapePathLayer: 0x7fb4b2281750&gt; Ant-Design (3B6CB8B4-0F26-4B9C-BC52-7DA73460DD4B)"
+    );
+}</string>
+	<string>finish SelectionChanged {
+    document = "&lt;MSDocument: 0x7fb4abfdaae0&gt;";
+    newSelection =     (
+        "&lt;MSShapePathLayer: 0x7fb4b20142f0&gt; Ant-Design (5D16B66A-A324-443B-9BD4-14F9CF4EE4C9)"
+    );
+    oldSelection =     (
+        "&lt;MSShapePathLayer: 0x7fb4b2281750&gt; Ant-Design (3B6CB8B4-0F26-4B9C-BC52-7DA73460DD4B)"
+    );
+}</string>
+	<string>begin SelectionChanged {
+    document = "&lt;MSDocument: 0x7fb4abfdaae0&gt;";
+    newSelection =     (
+    );
+    oldSelection =     (
+        "&lt;MSShapePathLayer: 0x7fb4b20142f0&gt; Ant-Design (5D16B66A-A324-443B-9BD4-14F9CF4EE4C9)"
+    );
+}</string>
+	<string>finish SelectionChanged {
+    document = "&lt;MSDocument: 0x7fb4abfdaae0&gt;";
+    newSelection =     (
+    );
+    oldSelection =     (
+        "&lt;MSShapePathLayer: 0x7fb4b20142f0&gt; Ant-Design (5D16B66A-A324-443B-9BD4-14F9CF4EE4C9)"
+    );
+}</string>
+	<string>instant DocumentSaved {
+    autosaved = 1;
+    document = "&lt;MSDocument: 0x7fb4abfdaae0&gt;";
+    size = 1605249;
+}</string>
+	<string>begin Log {
+    action = "&lt;MSLogAction: 0x6000004df8e0&gt;";
+    command = "&lt;MSPluginCommand: 0x600000aecf00&gt;";
+    level = error;
+    payload =     (
+        "Error: Error Domain=NSCocoaErrorDomain Code=4 \"\U201ccom.sketchapp.unsplash-plugin\U201d couldn\U2019t be removed.\" UserInfo={NSUserStringVariant=(\n    Remove\n), NSFilePath=/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn/T/com.sketchapp.unsplash-plugin, NSUnderlyingError=0x60000683a910 {Error Domain=NSPOSIXErrorDomain Code=2 \"No such file or directory\"}}"
+    );
+    stringValue = "/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:5:3229\n_@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:37:994\n__skpm_run@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:57:119\n__skpm_run@[native code]";
+}</string>
+	<string>finish Log {
+    action = "&lt;MSLogAction: 0x6000004df8e0&gt;";
+    command = "&lt;MSPluginCommand: 0x600000aecf00&gt;";
+    level = error;
+    payload =     (
+        "Error: Error Domain=NSCocoaErrorDomain Code=4 \"\U201ccom.sketchapp.unsplash-plugin\U201d couldn\U2019t be removed.\" UserInfo={NSUserStringVariant=(\n    Remove\n), NSFilePath=/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn/T/com.sketchapp.unsplash-plugin, NSUnderlyingError=0x60000683a910 {Error Domain=NSPOSIXErrorDomain Code=2 \"No such file or directory\"}}"
+    );
+    stringValue = "/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:5:3229\n_@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:37:994\n__skpm_run@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:57:119\n__skpm_run@[native code]";
+}</string>
+</array>
+</plist>
