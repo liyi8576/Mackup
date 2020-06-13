@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <data grt_format="2.0">
-  <value _ptr_="0x60000270a580" type="list" content-type="object" content-struct-name="db.mgmt.ServerInstance">
+  <value _ptr_="0x600000418120" type="list" content-type="object" content-struct-name="db.mgmt.ServerInstance">
     <value type="object" struct-name="db.mgmt.ServerInstance" id="079BC32A-BA50-4C64-9FED-D9ED80553CAE" struct-checksum="0x367436e2">
       <link type="object" struct-name="db.mgmt.Connection" key="connection">4CC31D77-D5CE-44AA-9B22-0CDC7C7B2513</link>
-      <value _ptr_="0x6000027e4360" type="dict" key="loginInfo"/>
-      <value _ptr_="0x6000027e5a40" type="dict" key="serverInfo">
+      <value _ptr_="0x6000004e5440" type="dict" key="loginInfo"/>
+      <value _ptr_="0x6000004e4fc0" type="dict" key="serverInfo">
         <value type="int" key="setupPending">1</value>
       </value>
       <value type="string" key="name">mdp_dev</value>
