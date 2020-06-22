@@ -33,13 +33,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"v_ai_permission","ObjectType":"View_MYSQL"}</string>
+			<string>{"Name":"ai_api","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>View_MYSQL</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open View v_ai_permission</string>
+			<string>Design Table ai_api</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -66,13 +66,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_resource_event","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_module","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_resource_event</string>
+			<string>Open Table ai_module</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -99,13 +99,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_resource_event_log","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_api","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_resource_event_log</string>
+			<string>Open Table ai_api</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -132,13 +132,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_domain_events","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_res_quota","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_domain_events</string>
+			<string>Open Table ai_res_quota</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -165,13 +165,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_user","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_res_quota_assign","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table ai_user</string>
+			<string>Design Table ai_res_quota_assign</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -198,13 +198,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_repo_config","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_res_quota","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>DesignForm</string>
 			<key>name</key>
-			<string>Design Table ai_repo_config</string>
+			<string>Design Table ai_res_quota</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -264,13 +264,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_res_quota_assign","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"mdp_model","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table ai_res_quota_assign</string>
+			<string>Design Table mdp_model</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -297,13 +297,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_res_quota_svc_binding","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"sic_mirror_info","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table ai_res_quota_svc_binding</string>
+			<string>Design Table sic_mirror_info</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -330,13 +330,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_res_quota_srv_binding","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"sic_service_info","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table ai_res_quota_srv_binding</string>
+			<string>Design Table sic_service_info</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>

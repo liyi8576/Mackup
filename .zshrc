@@ -56,7 +56,7 @@ POWERLEVEL9K_USER_ICON="\uF415"
 ENABLE_CORRECTION="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git python docker pip yarn)
+plugins=(git python docker pip yarn vscode node)
 #plugins=(git python docker pip yarn zsh-autosuggestions zsh-syntax-highlighting autoswitch_virtualenv)
 #*************iterm2_shell_integration******
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -209,3 +209,6 @@ unsetopt correct_all
 export REDIS_CLUSTER_IP=0.0.0.0
 #source "$(navi widget zsh)"
 
+
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1

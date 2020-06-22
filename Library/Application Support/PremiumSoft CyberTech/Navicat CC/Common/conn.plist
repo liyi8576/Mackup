@@ -27,20 +27,7 @@
 					<key>autoconnect</key>
 					<integer>0</integer>
 					<key>customdblist</key>
-					<array>
-						<dict>
-							<key>autoopen</key>
-							<false/>
-							<key>name</key>
-							<string>ai_dev_3000</string>
-						</dict>
-						<dict>
-							<key>autoopen</key>
-							<false/>
-							<key>name</key>
-							<string>ai_model_dev_3000</string>
-						</dict>
-					</array>
+					<array/>
 					<key>encoding</key>
 					<integer>0</integer>
 					<key>host</key>
@@ -74,7 +61,7 @@
 					<key>usecompression</key>
 					<integer>0</integer>
 					<key>usecustomdblist</key>
-					<integer>1</integer>
+					<integer>0</integer>
 					<key>usehttptunnel</key>
 					<false/>
 					<key>username</key>
