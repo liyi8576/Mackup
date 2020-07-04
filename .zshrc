@@ -201,7 +201,7 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 #export JAVA_HOME=$(/usr/libexec/java_home)
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home
-export CLASSPAHT=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export PATH="/usr/local/sbin:$JAVA_HOME/bin:$PATH"
 #source ~/.oh-my-zsh/plugins/incr/incr*.zsh
 

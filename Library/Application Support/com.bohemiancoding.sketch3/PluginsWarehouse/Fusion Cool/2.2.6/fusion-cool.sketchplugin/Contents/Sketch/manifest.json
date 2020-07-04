@@ -1,0 +1,32 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "script": "index.js",
+      "handlers": {
+        "actions": {
+          "SelectionChanged.finish": "onSelectionChangedFinish",
+          "CloseDocument": "onCloseDocument",
+          "OpenDocument": "onOpenDocument",
+          "Startup": "onStartup",
+          "Shutdown": "onShutdown"
+        }
+      }
+    },
+    {
+      "name": "打开/关闭面板",
+      "identifier": "com.fusioncool.debug",
+      "script": "index.js",
+      "handler": "onDebug",
+      "shortcut": "cmd option p"
+    }
+  ],
+  "version": "2.2.6",
+  "description": "The Sketch plugin for Fusion Design.",
+  "name": "Fusion Cool",
+  "identifier": "Fusion Cool",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://alifd.oss-cn-hangzhou.aliyuncs.com/sketch-fusion/appcast.xml"
+}

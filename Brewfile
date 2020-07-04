@@ -84,7 +84,7 @@ brew "tldr"
 brew "tmux"
 brew "tree"
 brew "unar"
-brew "vim", link: false
+brew "vim"
 brew "watch"
 brew "watchman"
 brew "wget"

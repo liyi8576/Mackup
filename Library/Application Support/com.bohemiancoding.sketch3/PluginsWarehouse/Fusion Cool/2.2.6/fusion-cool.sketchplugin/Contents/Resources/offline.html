@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+      .no-js-reload-button {
+        margin: 30px auto;
+        display: block;
+        color: #fff;
+        background-color: #08f;
+        border-radius: 4px;
+        padding: 0 12px;
+        height: 28px;
+        line-height: 28px;
+        border: none;
+        font-size: 12px;
+      }
+
+      .no-js-reload-button:hover {
+        background-color: #0078de;
+      }
+
+      .no-js-reload-button:focus {
+        outline: none;
+      }
+
+      .offline-html-text {
+        margin-top: 30px;
+        font-size: 12px;
+        font-family: 'system-ui';
+        text-align: center;
+      }
+    </style>
+    <title>Fusion Cool</title>
+  </head>
+  <body>
+    <script>
+      window.callNative = async (apiName, apiParam) => {
+        if (!(
+          window.webkit &&
+          window.webkit.messageHandlers &&
+          window.webkit.messageHandlers.FusionCoolMessageCenter &&
+          window.webkit.messageHandlers.FusionCoolMessageCenter.postMessage)) {
+            return false;
+        }
+        const random = [
+          +new Date(),
+          parseInt(Math.random()*1000000000, 10),
+        ].join('_');
+        const callbackKey = 'FusionCool_callback_' + random;
+        window.webkit.messageHandlers.FusionCoolMessageCenter.postMessage({
+          name: apiName,
+          param: apiParam,
+          fn: callbackKey,
+        });
+        return await new Promise((resolve) => {
+          window[callbackKey] = (res) => {
+            resolve(res);
+            window[callbackKey] = null;
+            delete window[callbackKey];
+          };
+        });
+      };
+    </script>
+    <div>
+      <p class="offline-html-text">Offline...</p>
+      <button
+        class="no-js-reload-button"
+        onclick="window.callNative('reload');"
+      >
+        Reload
+      </button>
+    </div>
+  </body>
+</html>
