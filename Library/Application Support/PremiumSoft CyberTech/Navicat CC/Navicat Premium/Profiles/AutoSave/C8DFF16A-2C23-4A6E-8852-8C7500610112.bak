@@ -1,0 +1,10 @@
+SELECT
+	u.USER_ID userId,
+	u.USER_NAME userName,
+	gub.GROUP_ID groupId 
+FROM
+	ai_group_user_binding gub
+	INNER JOIN ai_user u ON gub.USER_ID = u.USER_ID 
+WHERE
+	gub.SCOPE_ID = 'default'
+	AND gub.SCOPE_TYPE = 'TENANT'

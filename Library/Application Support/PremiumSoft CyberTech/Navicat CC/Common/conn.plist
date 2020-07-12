@@ -137,7 +137,7 @@
 					<key>ServerVersion</key>
 					<integer>50550</integer>
 					<key>ServerVersionStr</key>
-					<string>5.5.50-MariaDB</string>
+					<string>5.5.50</string>
 					<key>alt_http_proxy_user_name</key>
 					<string></string>
 					<key>alt_http_user_name</key>

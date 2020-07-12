@@ -1,69 +1,604 @@
-[2020-07-03 16:09:43.517][AI^2][163391][MYSQL][]
+[2020-07-11 17:34:57.236][10.1.235.34][488848][MYSQL][]
 SHOW VARIABLES LIKE 'lower_case_%'; SHOW VARIABLES LIKE 'sql_mode'; SELECT COUNT(*) AS support_ndb FROM information_schema.ENGINES WHERE Engine = 'ndbcluster'
 
-[2020-07-03 16:09:49.768][10.1.235.34][347143][MYSQL][]
-SHOW VARIABLES LIKE 'lower_case_%'; SHOW VARIABLES LIKE 'sql_mode'; SELECT COUNT(*) AS support_ndb FROM information_schema.ENGINES WHERE Engine = 'ndbcluster'
-
-[2020-07-03 16:09:49.822][10.1.235.34][347143][MYSQL][]
+[2020-07-11 17:34:57.35][10.1.235.34][488848][MYSQL][]
 SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
 
-[2020-07-03 16:09:50.991][10.1.235.34][347143][MYSQL][]
+[2020-07-11 17:34:57.658][AI^2][001193][MYSQL][]
+SHOW VARIABLES LIKE 'lower_case_%'; SHOW VARIABLES LIKE 'sql_mode'; SELECT COUNT(*) AS support_ndb FROM information_schema.ENGINES WHERE Engine = 'ndbcluster'
+
+[2020-07-11 17:34:57.679][10.1.235.34][488848][MYSQL][]
+SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
+
+[2020-07-11 17:34:58.922][10.1.235.34][488848][MYSQL][]
 SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'ai_dev_3001' UNION SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'ai_dev_3001' UNION SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA = 'ai_dev_3001'
 
-[2020-07-03 16:09:51.052][10.1.235.34][347143][MYSQL][]
+[2020-07-11 17:34:58.981][10.1.235.34][488848][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'ai_dev_3001' ORDER BY TABLE_SCHEMA, TABLE_TYPE
 
-[2020-07-03 16:09:51.117][10.1.235.34][347143][MYSQL][]
+[2020-07-11 17:34:59.022][10.1.235.34][488848][MYSQL][]
 SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'ai_dev_3001' ORDER BY TABLE_SCHEMA, TABLE_NAME
 
-[2020-07-03 16:09:51.381][10.1.235.34][347144][MYSQL][]
+[2020-07-11 17:34:59.174][10.1.235.34][488849][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2020-07-03 16:09:51.422][10.1.235.34][347143][MYSQL][]
+[2020-07-11 17:34:59.204][10.1.235.34][488848][MYSQL][]
 SELECT DISTINCT ROUTINE_SCHEMA, ROUTINE_NAME, PARAMS.PARAMETER FROM information_schema.ROUTINES LEFT JOIN ( SELECT SPECIFIC_SCHEMA, SPECIFIC_NAME, GROUP_CONCAT(CONCAT(DATA_TYPE, ' ', PARAMETER_NAME) ORDER BY ORDINAL_POSITION SEPARATOR ', ') PARAMETER, ROUTINE_TYPE FROM information_schema.PARAMETERS GROUP BY SPECIFIC_SCHEMA, SPECIFIC_NAME, ROUTINE_TYPE ) PARAMS ON ROUTINES.ROUTINE_SCHEMA = PARAMS.SPECIFIC_SCHEMA AND ROUTINES.ROUTINE_NAME = PARAMS.SPECIFIC_NAME AND ROUTINES.ROUTINE_TYPE = PARAMS.ROUTINE_TYPE WHERE ROUTINE_SCHEMA = 'ai_dev_3001' ORDER BY ROUTINE_SCHEMA
 
-[2020-07-03 16:09:51.483][10.1.235.34][347144][MYSQL][]
+[2020-07-11 17:34:59.25][10.1.235.34][488849][MYSQL][]
 SHOW TABLE STATUS
 
-[2020-07-03 16:09:51.835][10.1.235.34][347143][MYSQL][]
+[2020-07-11 17:34:59.697][10.1.235.34][488848][MYSQL][]
 SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2020-07-03 16:09:51.948][10.1.235.34][347143][MYSQL][]
+[2020-07-11 17:34:59.77][10.1.235.34][488848][MYSQL][]
 SHOW TABLE STATUS
 
-[2020-07-03 16:09:57.911][10.1.235.34][347143][MYSQL][]
-SELECT * FROM `ai_dev_3001`.`ai_role_permission` LIMIT 0,1000
+[2020-07-11 17:35:00.674][10.1.235.34][488848][MYSQL][]
+SELECT * FROM `ai_dev_3001`.`ai_api` LIMIT 0,1000
 
-[2020-07-03 16:09:58.005][10.1.235.34][347144][MYSQL][]
-SHOW COLUMNS FROM `ai_dev_3001`.`ai_role_permission`
+[2020-07-11 17:35:00.875][10.1.235.34][488849][MYSQL][]
+SHOW COLUMNS FROM `ai_dev_3001`.`ai_api`
 
-[2020-07-03 16:09:58.086][10.1.235.34][347143][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_role_permission'
+[2020-07-11 17:35:00.909][10.1.235.34][488848][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_api'
 
-[2020-07-03 16:09:58.126][10.1.235.34][347143][MYSQL][]
-SHOW CREATE TABLE `ai_dev_3001`.`ai_role_permission`
+[2020-07-11 17:35:00.943][10.1.235.34][488848][MYSQL][]
+SHOW CREATE TABLE `ai_dev_3001`.`ai_api`
 
-[2020-07-03 16:10:02.56][10.1.235.34][347143][MYSQL][]
-SELECT * FROM `ai_dev_3001`.`ai_role_user_binding` LIMIT 0,1000
+[2020-07-11 17:35:03.968][10.1.235.34][488848][MYSQL][]
+SELECT * FROM `ai_dev_3001`.`ai_user` LIMIT 0,1000
 
-[2020-07-03 16:10:02.629][10.1.235.34][347144][MYSQL][]
-SHOW COLUMNS FROM `ai_dev_3001`.`ai_role_user_binding`
+[2020-07-11 17:35:04.034][10.1.235.34][488849][MYSQL][]
+SHOW COLUMNS FROM `ai_dev_3001`.`ai_user`
 
-[2020-07-03 16:10:02.678][10.1.235.34][347143][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_role_user_binding'
+[2020-07-11 17:35:04.067][10.1.235.34][488848][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_user'
 
-[2020-07-03 16:10:02.731][10.1.235.34][347143][MYSQL][]
-SHOW CREATE TABLE `ai_dev_3001`.`ai_role_user_binding`
+[2020-07-11 17:35:04.101][10.1.235.34][488848][MYSQL][]
+SHOW CREATE TABLE `ai_dev_3001`.`ai_user`
 
-[2020-07-03 16:10:05.667][10.1.235.34][347143][MYSQL][]
-SELECT * FROM `ai_dev_3001`.`ai_role_operate_permit` LIMIT 0,1000
+[2020-07-11 17:39:23.101][10.1.235.34][488848][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
 
-[2020-07-03 16:10:05.788][10.1.235.34][347144][MYSQL][]
-SHOW COLUMNS FROM `ai_dev_3001`.`ai_role_operate_permit`
+[2020-07-11 17:39:23.181][10.1.235.34][488848][MYSQL][]
+SELECT TABLE_NAME, CHECK_OPTION, IS_UPDATABLE, SECURITY_TYPE, DEFINER FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'ai_dev_3001' ORDER BY TABLE_NAME ASC
 
-[2020-07-03 16:10:05.843][10.1.235.34][347143][MYSQL][]
-SHOW TABLE STATUS LIKE 'ai_role_operate_permit'
+[2020-07-11 17:39:41.408][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
 
-[2020-07-03 16:10:05.895][10.1.235.34][347143][MYSQL][]
-SHOW CREATE TABLE `ai_dev_3001`.`ai_role_operate_permit`
+[2020-07-11 17:39:41.441][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:39:41.513][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:39:41.556][10.1.235.34][488848][MYSQL][]
+(
+
+[2020-07-11 17:39:41.588][10.1.235.34][488848][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+[2020-07-11 17:40:20.712][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:40:20.747][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:40:20.816][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:40:20.855][10.1.235.34][488848][MYSQL][]
+SELECT
+		gub.scope_id AS project_id,
+		grb.role_id,
+		gub.user_id 
+	FROM
+		ai_group_role_binding grb,
+		ai_group_user_binding gub 
+	WHERE
+		grb.group_id = gub.group_id 
+		AND grb.valid_flag = 1 
+		AND gub.valid_flag = 1 
+		AND gub.scope_type = 'PROJECT' UNION
+	SELECT
+		rub.scope_id AS project_id,
+		rub.role_id,
+		rub.user_id 
+	FROM
+		ai_role_user_binding rub 
+	WHERE
+		rub.valid_flag = 1 
+		AND rub.scope_type = 'PROJECT' 
+	) T
+	INNER JOIN ai_user U ON T.user_id = U.user_id 
+	AND U.TENANT_ID = 'default'
+
+[2020-07-11 17:40:20.888][10.1.235.34][488848][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') T
+	INNER JOIN ai_user U ON T.user_id = U.user_id 
+	AND U.TENANT_ID = 'default'' at line 22
+
+[2020-07-11 17:40:52.432][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:40:52.465][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:40:52.543][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:40:52.584][10.1.235.34][488848][MYSQL][]
+SELECT
+		gub.scope_id AS project_id,
+		grb.role_id,
+		gub.user_id 
+	FROM
+		ai_group_role_binding grb,
+		ai_group_user_binding gub 
+	WHERE
+		grb.group_id = gub.group_id 
+		AND grb.valid_flag = 1 
+		AND gub.valid_flag = 1 
+		AND gub.scope_type = 'PROJECT' 
+	UNION
+	SELECT
+		rub.scope_id AS project_id,
+		rub.role_id,
+		rub.user_id 
+	FROM
+		ai_role_user_binding rub 
+	WHERE
+		rub.valid_flag = 1 
+		AND rub.scope_type = 'PROJECT'
+
+[2020-07-11 17:40:52.621][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:40:52.66][10.1.235.34][488848][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2020-07-11 17:40:52.694][10.1.235.34][488848][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001928*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=2 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2020-07-11 17:41:06.911][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:41:07.109][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:07.198][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:07.239][10.1.235.34][488848][MYSQL][]
+SELECT
+*
+FROM
+	(
+	SELECT
+		gub.scope_id AS project_id,
+		grb.role_id,
+		gub.user_id 
+	FROM
+		ai_group_role_binding grb,
+		ai_group_user_binding gub 
+	WHERE
+		grb.group_id = gub.group_id 
+		AND grb.valid_flag = 1 
+		AND gub.valid_flag = 1 
+		AND gub.scope_type = 'PROJECT' UNION
+	SELECT
+		rub.scope_id AS project_id,
+		rub.role_id,
+		rub.user_id 
+	FROM
+		ai_role_user_binding rub 
+	WHERE
+		rub.valid_flag = 1 
+		AND rub.scope_type = 'PROJECT' 
+	) T
+	INNER JOIN ai_user U ON T.user_id = U.user_id 
+	AND U.TENANT_ID = 'default'
+GROUP BY
+	project_id,
+	role_id
+
+[2020-07-11 17:41:07.283][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:07.324][10.1.235.34][488848][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2020-07-11 17:41:07.359][10.1.235.34][488848][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.001885*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=6 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2020-07-11 17:41:11.603][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:41:11.636][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:11.708][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:11.747][10.1.235.34][488848][MYSQL][]
+SELECT
+	t.project_id,
+	t.role_id,
+	GROUP_CONCAT(
+		DISTINCT t.user_id ORDER BY		t.user_id SEPARATOR ',' 	) AS user_ids,
+	GROUP_CONCAT(		DISTINCT u.user_name 	ORDER BY		u.user_id SEPARATOR ',' 	) AS user_names 
+FROM
+	(
+	SELECT
+		gub.scope_id AS project_id,
+		grb.role_id,
+		gub.user_id 
+	FROM
+		ai_group_role_binding grb,
+		ai_group_user_binding gub 
+	WHERE
+		grb.group_id = gub.group_id 
+		AND grb.valid_flag = 1 
+		AND gub.valid_flag = 1 
+		AND gub.scope_type = 'PROJECT' UNION
+	SELECT
+		rub.scope_id AS project_id,
+		rub.role_id,
+		rub.user_id 
+	FROM
+		ai_role_user_binding rub 
+	WHERE
+		rub.valid_flag = 1 
+		AND rub.scope_type = 'PROJECT' 
+	) T
+	INNER JOIN ai_user U ON T.user_id = U.user_id 
+	AND U.TENANT_ID = 'default'
+GROUP BY
+	project_id,
+	role_id
+
+[2020-07-11 17:41:11.784][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:11.823][10.1.235.34][488848][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2020-07-11 17:41:11.86][10.1.235.34][488848][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002714*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=13 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2020-07-11 17:41:13.034][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:41:13.068][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:13.142][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:13.182][10.1.235.34][488848][MYSQL][]
+SELECT
+	t.project_id,
+	t.role_id,
+	GROUP_CONCAT(
+		DISTINCT t.user_id ORDER BY		t.user_id SEPARATOR ',' 	) AS user_ids,
+	GROUP_CONCAT(		DISTINCT u.user_name 	ORDER BY		u.user_id SEPARATOR ',' 	) AS user_names 
+FROM
+	(
+	SELECT
+		gub.scope_id AS project_id,
+		grb.role_id,
+		gub.user_id 
+	FROM
+		ai_group_role_binding grb,
+		ai_group_user_binding gub 
+	WHERE
+		grb.group_id = gub.group_id 
+		AND grb.valid_flag = 1 
+		AND gub.valid_flag = 1 
+		AND gub.scope_type = 'PROJECT' UNION
+	SELECT
+		rub.scope_id AS project_id,
+		rub.role_id,
+		rub.user_id 
+	FROM
+		ai_role_user_binding rub 
+	WHERE
+		rub.valid_flag = 1 
+		AND rub.scope_type = 'PROJECT' 
+	) T
+	INNER JOIN ai_user U ON T.user_id = U.user_id 
+	AND U.TENANT_ID = 'default'
+GROUP BY
+	project_id,
+	role_id
+
+[2020-07-11 17:41:13.219][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:13.258][10.1.235.34][488848][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2020-07-11 17:41:13.293][10.1.235.34][488848][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.003586*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=20 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2020-07-11 17:41:15.186][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:41:15.22][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:15.29][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:15.329][10.1.235.34][488848][MYSQL][]
+SELECT
+	t.project_id,
+	t.role_id,
+	GROUP_CONCAT(
+		DISTINCT t.user_id ORDER BY		t.user_id SEPARATOR ',' 	) AS user_ids,
+	GROUP_CONCAT(		DISTINCT u.user_name 	ORDER BY		u.user_id SEPARATOR ',' 	) AS user_names 
+FROM
+	(
+	SELECT
+		gub.scope_id AS project_id,
+		grb.role_id,
+		gub.user_id 
+	FROM
+		ai_group_role_binding grb,
+		ai_group_user_binding gub 
+	WHERE
+		grb.group_id = gub.group_id 
+		AND grb.valid_flag = 1 
+		AND gub.valid_flag = 1 
+		AND gub.scope_type = 'PROJECT' UNION
+	SELECT
+		rub.scope_id AS project_id,
+		rub.role_id,
+		rub.user_id 
+	FROM
+		ai_role_user_binding rub 
+	WHERE
+		rub.valid_flag = 1 
+		AND rub.scope_type = 'PROJECT' 
+	) T
+	INNER JOIN ai_user U ON T.user_id = U.user_id 
+	AND U.TENANT_ID = 'default'
+GROUP BY
+	project_id,
+	role_id
+
+[2020-07-11 17:41:15.368][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:41:15.407][10.1.235.34][488848][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2020-07-11 17:41:15.442][10.1.235.34][488848][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.003863*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=27 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2020-07-11 17:42:07.901][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:42:07.935][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:42:08.006][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:42:08.046][10.1.235.34][488848][MYSQL][]
+SELECT
+	t.project_id,
+	t.role_id,
+	GROUP_CONCAT(
+		DISTINCT t.user_id 
+	ORDER BY
+		t.user_id SEPARATOR ',' 
+	) AS user_ids,
+	GROUP_CONCAT(
+		DISTINCT u.user_name 
+	ORDER BY
+		u.user_id SEPARATOR ',' 
+	) AS user_names 
+FROM
+	(
+	SELECT
+		gub.scope_id AS project_id,
+		grb.role_id,
+		gub.user_id 
+	FROM
+		ai_group_role_binding grb,
+		ai_group_user_binding gub 
+	WHERE
+		grb.group_id = gub.group_id 
+		AND grb.valid_flag = 1 
+		AND gub.valid_flag = 1 
+		AND gub.scope_type = 'PROJECT' UNION
+	SELECT
+		rub.scope_id AS project_id,
+		rub.role_id,
+		rub.user_id 
+	FROM
+		ai_role_user_binding rub 
+	WHERE
+		rub.valid_flag = 1 
+		AND rub.scope_type = 'PROJECT' 
+	) T
+	INNER JOIN ai_user U ON T.user_id = U.user_id 
+	AND U.TENANT_ID ='default'
+GROUP BY
+	project_id,
+	role_id
+
+[2020-07-11 17:42:08.083][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:42:08.12][10.1.235.34][488848][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2020-07-11 17:42:08.155][10.1.235.34][488848][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.003416*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=34 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2020-07-11 17:42:10.751][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:42:10.784][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:42:10.855][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:42:10.895][10.1.235.34][488848][MYSQL][]
+SELECT
+	t.project_id,
+	t.role_id,
+	GROUP_CONCAT(
+		DISTINCT t.user_id 
+	ORDER BY
+		t.user_id SEPARATOR ',' 
+	) AS user_ids,
+	GROUP_CONCAT(
+		DISTINCT u.user_name 
+	ORDER BY
+		u.user_id SEPARATOR ',' 
+	) AS user_names 
+FROM
+	(
+	SELECT
+		gub.scope_id AS project_id,
+		grb.role_id,
+		gub.user_id 
+	FROM
+		ai_group_role_binding grb,
+		ai_group_user_binding gub 
+	WHERE
+		grb.group_id = gub.group_id 
+		AND grb.valid_flag = 1 
+		AND gub.valid_flag = 1 
+		AND gub.scope_type = 'PROJECT' UNION
+	SELECT
+		rub.scope_id AS project_id,
+		rub.role_id,
+		rub.user_id 
+	FROM
+		ai_role_user_binding rub 
+	WHERE
+		rub.valid_flag = 1 
+		AND rub.scope_type = 'PROJECT' 
+	) T
+	INNER JOIN ai_user U ON T.user_id = U.user_id 
+	AND U.TENANT_ID ='default'
+GROUP BY
+	project_id,
+	role_id
+
+[2020-07-11 17:42:10.932][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:42:10.971][10.1.235.34][488848][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2020-07-11 17:42:11.006][10.1.235.34][488848][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.003416*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=41 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2020-07-11 17:45:54.843][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:45:54.879][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:45:54.953][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:45:54.993][10.1.235.34][488848][MYSQL][]
+SELECT t.project_id, t.role_id, GROUP_CONCAT(DISTINCT t.user_id ORDER BY t.user_id SEPARATOR ',') AS user_ids, GROUP_CONCAT(DISTINCT u.user_name ORDER BY u.user_id SEPARATOR ',') AS user_names FROM ( SELECT gub.scope_id AS project_id, grb.role_id, gub.user_id FROM ai_group_role_binding grb, ai_group_user_binding gub WHERE grb.group_id = gub.group_id AND grb.valid_flag = 1 AND gub.valid_flag = 1 AND gub.scope_type = 'PROJECT' UNION SELECT rub.scope_id AS project_id, rub.role_id, rub.user_id FROM ai_role_user_binding rub WHERE rub.valid_flag = 1 AND rub.scope_type = 'PROJECT' ) T INNER JOIN ai_user U ON T.user_id = U.user_id AND U.TENANT_ID = ? GROUP BY project_id, role_id
+
+[2020-07-11 17:45:55.027][10.1.235.34][488848][MYSQL][]
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? GROUP BY project_id, role_id' at line 1
+
+[2020-07-11 17:46:07.657][10.1.235.34][488848][MYSQL][]
+SET PROFILING = 1
+
+[2020-07-11 17:46:07.691][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:46:07.762][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:46:07.801][10.1.235.34][488848][MYSQL][]
+SELECT
+	t.project_id,
+	t.role_id,
+	GROUP_CONCAT(
+		DISTINCT t.user_id 
+	ORDER BY
+		t.user_id SEPARATOR ',' 
+	) AS user_ids,
+	GROUP_CONCAT(
+		DISTINCT u.user_name 
+	ORDER BY
+		u.user_id SEPARATOR ',' 
+	) AS user_names 
+FROM
+	(
+	SELECT
+		gub.scope_id AS project_id,
+		grb.role_id,
+		gub.user_id 
+	FROM
+		ai_group_role_binding grb,
+		ai_group_user_binding gub 
+	WHERE
+		grb.group_id = gub.group_id 
+		AND grb.valid_flag = 1 
+		AND gub.valid_flag = 1 
+		AND gub.scope_type = 'PROJECT' UNION
+	SELECT
+		rub.scope_id AS project_id,
+		rub.role_id,
+		rub.user_id 
+	FROM
+		ai_role_user_binding rub 
+	WHERE
+		rub.valid_flag = 1 
+		AND rub.scope_type = 'PROJECT' 
+	) T
+	INNER JOIN ai_user U ON T.user_id = U.user_id 
+	AND U.TENANT_ID = 'default'
+GROUP BY
+	project_id,
+	role_id
+
+[2020-07-11 17:46:07.839][10.1.235.34][488848][MYSQL][]
+SHOW STATUS
+
+[2020-07-11 17:46:07.878][10.1.235.34][488848][MYSQL][]
+SELECT QUERY_ID, SUM(DURATION) AS SUM_DURATION FROM INFORMATION_SCHEMA.PROFILING GROUP BY QUERY_ID
+
+[2020-07-11 17:46:07.914][10.1.235.34][488848][MYSQL][]
+SELECT STATE AS `Status`, ROUND(SUM(DURATION),7) AS `Duration`, CONCAT(ROUND(SUM(DURATION)/0.002210*100,3), '') AS `Percentage` FROM INFORMATION_SCHEMA.PROFILING WHERE QUERY_ID=52 GROUP BY SEQ, STATE ORDER BY SEQ
+
+[2020-07-11 18:18:49.302][10.1.235.34][489153][MYSQL][]
+SELECT * FROM `ai_dev_3001`.`ai_user_group` LIMIT 0,1000
+
+[2020-07-11 18:18:49.501][10.1.235.34][489154][MYSQL][]
+SHOW COLUMNS FROM `ai_dev_3001`.`ai_user_group`
+
+[2020-07-11 18:18:49.535][10.1.235.34][489153][MYSQL][]
+SHOW TABLE STATUS LIKE 'ai_user_group'
+
+[2020-07-11 18:18:49.57][10.1.235.34][489153][MYSQL][]
+SHOW CREATE TABLE `ai_dev_3001`.`ai_user_group`
+
+[2020-07-11 18:18:58.01][10.1.235.34][489155][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2020-07-11 18:18:58.09][10.1.235.34][489155][MYSQL][]
+SHOW TABLE STATUS
+
+[2020-07-11 19:40:21.642][10.1.235.34][489704][MYSQL][]
+SHOW FULL TABLES WHERE Table_type != 'VIEW'
+
+[2020-07-11 19:40:21.718][10.1.235.34][489704][MYSQL][]
+SHOW TABLE STATUS
 

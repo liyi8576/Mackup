@@ -29,7 +29,7 @@ brew "bat"
 brew "boost"
 brew "cabextract"
 brew "ccat"
-brew "coreutils", link: false
+brew "coreutils"
 brew "ctop"
 brew "docker-clean"
 brew "expect"
