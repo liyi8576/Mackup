@@ -13,221 +13,9 @@
 		</dict>
 	</dict>
 	<key>autosaves</key>
-	<dict>
-		<key>4AC8E6165F8FBDCB617CEE6896DD66BC</key>
-		<dict>
-			<key>autosavecomplete</key>
-			<true/>
-			<key>autosaveexternalquerypath</key>
-			<string></string>
-			<key>autosavelocations</key>
-			<string>[{"key":"","path":"/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium/Profiles/AutoSave/BD5B3F5D-80F6-4155-874A-8037F2E84B61.bak"}]</string>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
-			<key>formobjecttype</key>
-			<string>Query</string>
-			<key>formtype</key>
-			<string>QueryView</string>
-			<key>name</key>
-			<string>Untitled</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string></string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>4B4F520487916A2EBA7F1D385B8F9AEB</key>
-		<dict>
-			<key>autosavecomplete</key>
-			<true/>
-			<key>autosaveexternalquerypath</key>
-			<string></string>
-			<key>autosavelocations</key>
-			<string>[{"key":"","path":"/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium/Profiles/AutoSave/C8DFF16A-2C23-4A6E-8852-8C7500610112.bak"}]</string>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
-			<key>formobjecttype</key>
-			<string>Query</string>
-			<key>formtype</key>
-			<string>QueryView</string>
-			<key>name</key>
-			<string>Untitled</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string></string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
+	<dict/>
 	<key>continues</key>
-	<dict>
-		<key>0</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
-			<key>formobjecttype</key>
-			<string>Query</string>
-			<key>formtype</key>
-			<string>QueryView</string>
-			<key>name</key>
-			<string>New query</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string></string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>1</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
-			<key>formobjecttype</key>
-			<string>Query</string>
-			<key>formtype</key>
-			<string>QueryView</string>
-			<key>name</key>
-			<string>New query</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string></string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>2</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_route","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_route@ai_dev_3001 (10.1.235.34)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>ai_dev_3001</string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>3</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_route_service","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_route_service@ai_dev_3001 (10.1.235.34)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>ai_dev_3001</string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
+	<dict/>
 	<key>favorites</key>
 	<dict/>
 	<key>nsublogindata</key>
@@ -245,13 +33,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_user_group","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_event_subscribe","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_user_group</string>
+			<string>Open Table ai_event_subscribe</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -278,13 +66,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_user","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_event_callback_log","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_user</string>
+			<string>Open Table ai_event_callback_log</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -311,13 +99,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_api","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_event_callback","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_api</string>
+			<string>Open Table ai_event_callback</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -344,13 +132,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_route_service","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_feature_copy1","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_route_service</string>
+			<string>Open Table ai_feature_copy1</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -360,9 +148,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>ai_dev_3001</string>
+			<string>mlp_mdp</string>
 			<key>servername</key>
-			<string>10.1.235.34</string>
+			<string>10.1.251.211</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -377,13 +165,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_route","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_feature","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_route</string>
+			<string>Open Table ai_feature</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -393,9 +181,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>ai_dev_3001</string>
+			<string>mlp_mdp</string>
 			<key>servername</key>
-			<string>10.1.235.34</string>
+			<string>10.1.251.211</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -410,13 +198,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_group_role_binding","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_app_scene_demo_config","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_group_role_binding</string>
+			<string>Open Table ai_app_scene_demo_config</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -426,9 +214,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>ai_dev_3001</string>
+			<string>mlp_mdp</string>
 			<key>servername</key>
-			<string>10.1.235.34</string>
+			<string>10.1.251.211</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -443,13 +231,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_group_user_binding","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_app_scene_face_config","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_group_user_binding</string>
+			<string>Open Table ai_app_scene_face_config</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -459,7 +247,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>ai_dev_3001</string>
+			<string>ai_dev_3000</string>
 			<key>servername</key>
 			<string>10.1.235.34</string>
 			<key>serveruuid</key>
@@ -476,13 +264,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_role","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_app_scene_demo_config","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_role</string>
+			<string>Open Table ai_app_scene_demo_config</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -492,7 +280,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>ai_dev_3001</string>
+			<string>ai_dev_3000</string>
 			<key>servername</key>
 			<string>10.1.235.34</string>
 			<key>serveruuid</key>
@@ -509,13 +297,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_role_user_binding","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_app_scene_demo_config","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_role_user_binding</string>
+			<string>Open Table ai_app_scene_demo_config</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -542,13 +330,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_project","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_app_scene_face_config","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_project</string>
+			<string>Open Table ai_app_scene_face_config</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -578,12 +366,7 @@
 		<key>selectedservers</key>
 		<dict>
 			<key>MySQL</key>
-			<array>
-				<dict>
-					<key>servername</key>
-					<string>MDP</string>
-				</dict>
-			</array>
+			<array/>
 		</dict>
 	</dict>
 	<key>startups</key>
