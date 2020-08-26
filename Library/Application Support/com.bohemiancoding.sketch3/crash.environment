@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>com.sketchapp.plugins.enabled</key>
-	<string>[com.utom.measure(2.7.4), io.zeplin.sketch-plugin(1.9), Fusion Cool(1.5.4), com.lanhuSketch.smallStone(0.71), unsplash(1.0.1), com.fancynode.flavor(1.3.6)]</string>
+	<string>[com.alipay.kitchen(2.19.3), com.fancynode.flavor(1.3.6), unsplash(1.0.1), io.zeplin.sketch-plugin(1.9), com.utom.measure(2.7.4), com.lanhuSketch.smallStone(0.71), Fusion Cool(1.5.4)]</string>
 	<key>disabled</key>
 	<string>[]</string>
 </dict>

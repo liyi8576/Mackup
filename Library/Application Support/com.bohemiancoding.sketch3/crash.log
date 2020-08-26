@@ -22,26 +22,6 @@
     oldSelection =     (
     );
 }</string>
-	<string>instant HandlerLostFocus {
-    name = Normal;
-}</string>
-	<string>instant HandlerGotFocus {
-    name = Normal;
-}</string>
-	<string>begin SelectionChanged {
-    document = "&lt;MSDocument: 0x7f94dc02fcd0&gt;";
-    newSelection =     (
-    );
-    oldSelection =     (
-    );
-}</string>
-	<string>finish SelectionChanged {
-    document = "&lt;MSDocument: 0x7f94dc02fcd0&gt;";
-    newSelection =     (
-    );
-    oldSelection =     (
-    );
-}</string>
 	<string>instant CloseDocument {
     document = "&lt;MSDocument: 0x7f94dc02fcd0&gt;";
     selection =     (
@@ -62,6 +42,42 @@
     level = error;
     payload =     (
         "Error: Error Domain=NSCocoaErrorDomain Code=4 \"\U201ccom.sketchapp.unsplash-plugin\U201d couldn\U2019t be removed.\" UserInfo={NSUserStringVariant=(\n    Remove\n), NSFilePath=/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn/T/com.sketchapp.unsplash-plugin, NSUnderlyingError=0x60000bec21c0 {Error Domain=NSPOSIXErrorDomain Code=2 \"No such file or directory\"}}"
+    );
+    stringValue = "/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:5:3229\n_@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:37:994\n__skpm_run@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:57:119\n__skpm_run@[native code]";
+}</string>
+	<string>begin Log {
+    action = "&lt;MSLogAction: 0x600001764410&gt;";
+    command = "&lt;MSPluginCommand: 0x600001bbe080&gt;";
+    level = log;
+    payload =     (
+        "\Ud83d\Udc1bshutdown"
+    );
+    stringValue = "\Ud83d\Udc1bshutdown";
+}</string>
+	<string>finish Log {
+    action = "&lt;MSLogAction: 0x600001764410&gt;";
+    command = "&lt;MSPluginCommand: 0x600001bbe080&gt;";
+    level = log;
+    payload =     (
+        "\Ud83d\Udc1bshutdown"
+    );
+    stringValue = "\Ud83d\Udc1bshutdown";
+}</string>
+	<string>begin Log {
+    action = "&lt;MSLogAction: 0x600001764410&gt;";
+    command = "&lt;MSPluginCommand: 0x600001bbf400&gt;";
+    level = error;
+    payload =     (
+        "Error: Error Domain=NSCocoaErrorDomain Code=4 \"\U201ccom.sketchapp.unsplash-plugin\U201d couldn\U2019t be removed.\" UserInfo={NSUserStringVariant=(\n    Remove\n), NSFilePath=/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn/T/com.sketchapp.unsplash-plugin, NSUnderlyingError=0x600003bbef40 {Error Domain=NSPOSIXErrorDomain Code=2 \"No such file or directory\"}}"
+    );
+    stringValue = "/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:5:3229\n_@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:37:994\n__skpm_run@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:57:119\n__skpm_run@[native code]";
+}</string>
+	<string>finish Log {
+    action = "&lt;MSLogAction: 0x600001764410&gt;";
+    command = "&lt;MSPluginCommand: 0x600001bbf400&gt;";
+    level = error;
+    payload =     (
+        "Error: Error Domain=NSCocoaErrorDomain Code=4 \"\U201ccom.sketchapp.unsplash-plugin\U201d couldn\U2019t be removed.\" UserInfo={NSUserStringVariant=(\n    Remove\n), NSFilePath=/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn/T/com.sketchapp.unsplash-plugin, NSUnderlyingError=0x600003bbef40 {Error Domain=NSPOSIXErrorDomain Code=2 \"No such file or directory\"}}"
     );
     stringValue = "/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:5:3229\n_@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:37:994\n__skpm_run@/Users/liyi/CloudSync/Mackup/Library/Application Support/com.bohemiancoding.sketch3/Plugins/unsplash.sketchplugin/Contents/Sketch/DataProvider.js:57:119\n__skpm_run@[native code]";
 }</string>

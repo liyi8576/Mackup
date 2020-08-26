@@ -1,0 +1,165 @@
+{
+  "bundleVersion": 1,
+  "identifier": "com.alipay.kitchen",
+  "homepage": "https://www.yuque.com/yuque/help/kitchen-changelog",
+  "icon": "icons/logo.png",
+  "lang": "zh_cn",
+  "appcast": "https://kitchen.alipay.com/appcast.xml",
+  "commands": [
+    {
+      "script": "./__action.js",
+      "handlers": {
+        "actions": {
+          "Startup": "onStartup",
+          "Shutdown": "onShutdown",
+          "ToggleInspectorVisibility.begin": "onToggleInterface",
+          "OpenDocument": "onOpenDocument",
+          "CloseDocument": "onCloseDocument",
+          "SelectionChanged.finish": "onSelectionChanged"
+        }
+      }
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "showToolbar",
+      "name": "切换工具栏",
+      "shortcut": "ctrl alt k",
+      "handler": "onShow"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "uploadArtboards",
+      "name": "画板上传",
+      "shortcut": "ctrl alt a",
+      "handler": "onUploadArtboards"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "syncSymbols",
+      "name": "Symbol 同步",
+      "shortcut": "ctrl alt w",
+      "handler": "onSyncSymbols"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "resource",
+      "name": "Iconfont",
+      "shortcut": "ctrl alt i",
+      "handler": "onResource"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "resourceLogout",
+      "name": "取消授权",
+      "shortcut": "ctrl alt o",
+      "handler": "onResourceLogout"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "fill",
+      "name": "填充",
+      "shortcut": "ctrl alt f",
+      "handler": "onFill"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "palette",
+      "name": "色板",
+      "shortcut": "ctrl alt q",
+      "handler": "onPalette"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "component",
+      "name": "组件",
+      "shortcut": "ctrl alt d",
+      "handler": "onComponent"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "logout",
+      "name": "取消授权",
+      "handler": "onLogout"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "setting",
+      "shortcut": "ctrl alt '",
+      "name": "设置",
+      "handler": "onSetting"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "devSetting",
+      "name": "开发",
+      "handler": "onDevSetting"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "reload",
+      "name": "刷新",
+      "handler": "onReload"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "help",
+      "name": "使用文档",
+      "handler": "onHelp"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "report",
+      "name": "意见反馈",
+      "handler": "onReport"
+    },
+    {
+      "script": "./__index.js",
+      "identifier": "designAssets",
+      "name": "设计资产",
+      "shortcut": "ctrl alt r",
+      "handler": "onDesignAssets"
+    }
+  ],
+  "menu": {
+    "title": "👨🏻‍🍳‍ Kitchen",
+    "items": [
+      "showToolbar",
+      "-",
+      {
+        "title": "语雀",
+        "items": [
+          "uploadArtboards",
+          "syncSymbols",
+          "logout"
+        ]
+      },
+      {
+        "title": "图标",
+        "items": [
+          "resource",
+          "resourceLogout"
+        ]
+      },
+      "designAssets",
+      "fill",
+      "palette",
+      "component",
+      "-",
+      "setting",
+      "reload",
+      "-",
+      {
+        "title": "帮助",
+        "items": [
+          "help",
+          "report"
+        ]
+      }
+    ]
+  },
+  "name": "Kitchen",
+  "version": "2.19.3",
+  "description": "你的设计工具集",
+  "disableCocoaScriptPreprocessor": true,
+  "author": "AFX"
+}

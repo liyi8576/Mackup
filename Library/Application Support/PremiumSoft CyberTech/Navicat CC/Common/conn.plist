@@ -272,7 +272,71 @@
 			<key>Oracle</key>
 			<dict/>
 			<key>PostgreSQL</key>
-			<dict/>
+			<dict>
+				<key>10.1.241.141@postgre</key>
+				<dict>
+					<key>ServerVersion</key>
+					<integer>100013</integer>
+					<key>ServerVersionStr</key>
+					<string>100013</string>
+					<key>alt_http_proxy_user_name</key>
+					<string></string>
+					<key>alt_http_user_name</key>
+					<string></string>
+					<key>alt_ssh_user_name</key>
+					<string></string>
+					<key>alt_user_name</key>
+					<string></string>
+					<key>autoconnect</key>
+					<integer>0</integer>
+					<key>clientdriverencoding</key>
+					<string></string>
+					<key>clientencoding</key>
+					<integer>65001</integer>
+					<key>customdblist</key>
+					<array/>
+					<key>defaultdatabase</key>
+					<string>cvat</string>
+					<key>host</key>
+					<string>10.1.241.141</string>
+					<key>nsy_dirty_flag</key>
+					<false/>
+					<key>nsy_hash</key>
+					<string></string>
+					<key>nsy_id</key>
+					<string></string>
+					<key>nsy_project_uuid</key>
+					<string></string>
+					<key>nsy_sync_http_proxy_user_name</key>
+					<true/>
+					<key>nsy_sync_http_user_name</key>
+					<true/>
+					<key>nsy_sync_ssh_user_name</key>
+					<true/>
+					<key>nsy_sync_user_name</key>
+					<true/>
+					<key>port</key>
+					<string>5432</string>
+					<key>savepassword</key>
+					<true/>
+					<key>savepath</key>
+					<string>/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Common/Settings/0/0/PostgreSQL/10.1.241.141@postgre</string>
+					<key>serviceprovider</key>
+					<string>0</string>
+					<key>sessionlimit</key>
+					<integer>0</integer>
+					<key>usecustomdblist</key>
+					<integer>0</integer>
+					<key>usehttptunnel</key>
+					<false/>
+					<key>username</key>
+					<string>root</string>
+					<key>usessl</key>
+					<false/>
+					<key>usetunnel</key>
+					<false/>
+				</dict>
+			</dict>
 			<key>SQL Server</key>
 			<dict/>
 			<key>SQLite</key>
