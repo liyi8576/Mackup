@@ -23,6 +23,17 @@
 							</dict>
 						</dict>
 					</dict>
+					<key>10.1.235.31-ai_test</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
 					<key>10.1.235.34</key>
 					<dict>
 						<key></key>
@@ -331,7 +342,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>1000</integer>
+					<integer>856</integer>
 				</dict>
 			</dict>
 			<key>ChartsWorkspace</key>
@@ -477,7 +488,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>1000</integer>
+					<integer>856</integer>
 					<key>Name</key>
 					<integer>120</integer>
 					<key>名</key>
@@ -489,7 +500,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>1000</integer>
+					<integer>856</integer>
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>
@@ -497,7 +508,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>1000</integer>
+					<integer>856</integer>
 					<key>Name</key>
 					<integer>120</integer>
 					<key>名</key>
@@ -517,7 +528,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>1000</integer>
+					<integer>856</integer>
 					<key>Name</key>
 					<integer>120</integer>
 				</dict>

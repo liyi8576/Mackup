@@ -13,23 +13,27 @@
 		</dict>
 	</dict>
 	<key>autosaves</key>
-	<dict/>
-	<key>continues</key>
 	<dict>
-		<key>0</key>
+		<key>5DF5B08FB2EEAD0058B04AF1C5EC71FD</key>
 		<dict>
+			<key>autosavecomplete</key>
+			<true/>
+			<key>autosaveexternalquerypath</key>
+			<string></string>
+			<key>autosavelocations</key>
+			<string>[{"key":"","path":"/Users/liyi/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium/Profiles/AutoSave/492ADDF7-091E-42FE-B2BC-107E930E55B3.bak"}]</string>
 			<key>catalogname</key>
 			<string></string>
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_route_service_inst","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"","ObjectType":"Query","Path":"","IsExternalQuery":false}</string>
 			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
+			<string>Query</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>QueryView</string>
 			<key>name</key>
-			<string>Open table ai_route_service_inst@ai_test (10.1.235.34)</string>
+			<string>Untitled</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -39,7 +43,43 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>ai_test</string>
+			<string>mdp_dev_v3</string>
+			<key>servername</key>
+			<string>AI^2</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>continues</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"ai_apply_info","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open table ai_apply_info@ai_dev_3001 (10.1.235.34)</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>ai_dev_3001</string>
 			<key>servername</key>
 			<string>10.1.235.34</string>
 			<key>serveruuid</key>
@@ -56,13 +96,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_route_service","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_application_type","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open table ai_route_service@ai_test (10.1.235.34)</string>
+			<string>Open table ai_application_type@ai_dev_3001 (10.1.235.34)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -72,7 +112,7 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>ai_test</string>
+			<string>ai_dev_3001</string>
 			<key>servername</key>
 			<string>10.1.235.34</string>
 			<key>serveruuid</key>
@@ -89,13 +129,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_route_service","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_project_application","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open table ai_route_service@ai_dev_3001 (10.1.235.34)</string>
+			<string>Open table ai_project_application@ai_dev_3001 (10.1.235.34)</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -106,204 +146,6 @@
 			<string></string>
 			<key>schemaname</key>
 			<string>ai_dev_3001</string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>3</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_route","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_route@ai_dev_3001 (10.1.235.34)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>ai_dev_3001</string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>4</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_route","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_route@ai_test (10.1.235.34)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>ai_test</string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>5</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_route_ingress","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_route_ingress@ai_test (10.1.235.34)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>ai_test</string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>6</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_user","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table ai_user@ai_test (10.1.235.34)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>ai_test</string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>7</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"log_record","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open table log_record@ai_test (10.1.235.34)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>ai_test</string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>8</key>
-		<dict>
-			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_user","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>DesignForm</string>
-			<key>name</key>
-			<string>Design table ai_user@ai_test (10.1.235.34)</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>ai_test</string>
 			<key>servername</key>
 			<string>10.1.235.34</string>
 			<key>serveruuid</key>
@@ -327,17 +169,17 @@
 		<key>0</key>
 		<dict>
 			<key>catalogname</key>
-			<string>cvat</string>
+			<string></string>
 			<key>conntype</key>
-			<string>PGSQL</string>
+			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"engine_image","ObjectType":"TableNormal_PGSQL"}</string>
+			<string>{"Name":"result_pagetype","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>TableNormal_PGSQL</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table engine_image</string>
+			<string>Open Table result_pagetype</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -347,9 +189,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>public</string>
+			<string>mdp_dev_v3</string>
 			<key>servername</key>
-			<string>10.1.241.141@postgre</string>
+			<string>AI^2</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -360,17 +202,17 @@
 		<key>1</key>
 		<dict>
 			<key>catalogname</key>
-			<string>cvat</string>
+			<string></string>
 			<key>conntype</key>
-			<string>PGSQL</string>
+			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"engine_job","ObjectType":"TableNormal_PGSQL"}</string>
+			<string>{"Name":"result_pageitem","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>TableNormal_PGSQL</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table engine_job</string>
+			<string>Open Table result_pageitem</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -380,9 +222,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>public</string>
+			<string>mdp_dev_v3</string>
 			<key>servername</key>
-			<string>10.1.241.141@postgre</string>
+			<string>AI^2</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -393,17 +235,17 @@
 		<key>2</key>
 		<dict>
 			<key>catalogname</key>
-			<string>cvat</string>
+			<string></string>
 			<key>conntype</key>
-			<string>PGSQL</string>
+			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"engine_data","ObjectType":"TableNormal_PGSQL"}</string>
+			<string>{"Name":"result_pageinfo","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>TableNormal_PGSQL</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table engine_data</string>
+			<string>Open Table result_pageinfo</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -413,9 +255,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>public</string>
+			<string>mdp_dev_v3</string>
 			<key>servername</key>
-			<string>10.1.241.141@postgre</string>
+			<string>AI^2</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -426,17 +268,17 @@
 		<key>3</key>
 		<dict>
 			<key>catalogname</key>
-			<string>doccano</string>
+			<string></string>
 			<key>conntype</key>
-			<string>PGSQL</string>
+			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"api_project","ObjectType":"TableNormal_PGSQL"}</string>
+			<string>{"Name":"v_ai_permission","ObjectType":"View_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>TableNormal_PGSQL</string>
+			<string>View_MYSQL</string>
 			<key>formtype</key>
-			<string>TableView</string>
+			<string>DesignForm</string>
 			<key>name</key>
-			<string>Open Table api_project</string>
+			<string>Design View v_ai_permission</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -446,9 +288,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>public</string>
+			<string>mdp_test_v231</string>
 			<key>servername</key>
-			<string>10.1.241.141@postgre</string>
+			<string>AI^2</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -459,17 +301,17 @@
 		<key>4</key>
 		<dict>
 			<key>catalogname</key>
-			<string>cvat</string>
+			<string></string>
 			<key>conntype</key>
-			<string>PGSQL</string>
+			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"engine_task","ObjectType":"TableNormal_PGSQL"}</string>
+			<string>{"Name":"ai_project_application","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
-			<string>TableNormal_PGSQL</string>
+			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table engine_task</string>
+			<string>Open Table ai_project_application</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -479,9 +321,9 @@
 			<key>projectuuid</key>
 			<string></string>
 			<key>schemaname</key>
-			<string>public</string>
+			<string>ai_dev_3001</string>
 			<key>servername</key>
-			<string>10.1.241.141@postgre</string>
+			<string>10.1.235.34</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
@@ -496,13 +338,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_open_clientapp","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_application_type","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table ai_open_clientapp</string>
+			<string>Open Table ai_application_type</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -529,13 +371,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_api_user","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_apply_info","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
-			<string>DesignForm</string>
+			<string>TableView</string>
 			<key>name</key>
-			<string>Design Table ai_api_user</string>
+			<string>Open Table ai_apply_info</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -562,13 +404,13 @@
 			<key>conntype</key>
 			<string>MYSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"ai_event_callback","ObjectType":"Table_MYSQL"}</string>
+			<string>{"Name":"ai_res_quota","ObjectType":"Table_MYSQL"}</string>
 			<key>formobjecttype</key>
 			<string>Table_MYSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table ai_event_callback</string>
+			<string>Open Table ai_res_quota</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -591,50 +433,17 @@
 		<key>8</key>
 		<dict>
 			<key>catalogname</key>
-			<string></string>
-			<key>conntype</key>
-			<string>MYSQL</string>
-			<key>formobjectjson</key>
-			<string>{"Name":"ai_data_dev_task","ObjectType":"Table_MYSQL"}</string>
-			<key>formobjecttype</key>
-			<string>Table_MYSQL</string>
-			<key>formtype</key>
-			<string>TableView</string>
-			<key>name</key>
-			<string>Open Table ai_data_dev_task</string>
-			<key>projectname</key>
-			<string></string>
-			<key>projectownerid</key>
-			<string></string>
-			<key>projecttype</key>
-			<string>Local</string>
-			<key>projectuuid</key>
-			<string></string>
-			<key>schemaname</key>
-			<string>ai_dev_3001</string>
-			<key>servername</key>
-			<string>10.1.235.34</string>
-			<key>serveruuid</key>
-			<string></string>
-			<key>shouldselectholder</key>
-			<false/>
-			<key>windowlevel</key>
-			<integer>0</integer>
-		</dict>
-		<key>9</key>
-		<dict>
-			<key>catalogname</key>
 			<string>cvat</string>
 			<key>conntype</key>
 			<string>PGSQL</string>
 			<key>formobjectjson</key>
-			<string>{"Name":"engine_segment","ObjectType":"TableNormal_PGSQL"}</string>
+			<string>{"Name":"auth_user","ObjectType":"TableNormal_PGSQL"}</string>
 			<key>formobjecttype</key>
 			<string>TableNormal_PGSQL</string>
 			<key>formtype</key>
 			<string>TableView</string>
 			<key>name</key>
-			<string>Open Table engine_segment</string>
+			<string>Open Table auth_user</string>
 			<key>projectname</key>
 			<string></string>
 			<key>projectownerid</key>
@@ -647,6 +456,39 @@
 			<string>public</string>
 			<key>servername</key>
 			<string>10.1.241.141@postgre</string>
+			<key>serveruuid</key>
+			<string></string>
+			<key>shouldselectholder</key>
+			<false/>
+			<key>windowlevel</key>
+			<integer>0</integer>
+		</dict>
+		<key>9</key>
+		<dict>
+			<key>catalogname</key>
+			<string></string>
+			<key>conntype</key>
+			<string>MYSQL</string>
+			<key>formobjectjson</key>
+			<string>{"Name":"ai_project","ObjectType":"Table_MYSQL"}</string>
+			<key>formobjecttype</key>
+			<string>Table_MYSQL</string>
+			<key>formtype</key>
+			<string>TableView</string>
+			<key>name</key>
+			<string>Open Table ai_project</string>
+			<key>projectname</key>
+			<string></string>
+			<key>projectownerid</key>
+			<string></string>
+			<key>projecttype</key>
+			<string>Local</string>
+			<key>projectuuid</key>
+			<string></string>
+			<key>schemaname</key>
+			<string>ai_dev_3001</string>
+			<key>servername</key>
+			<string>10.1.235.34</string>
 			<key>serveruuid</key>
 			<string></string>
 			<key>shouldselectholder</key>
