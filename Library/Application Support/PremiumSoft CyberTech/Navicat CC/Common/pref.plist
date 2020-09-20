@@ -342,7 +342,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>856</integer>
+					<integer>831</integer>
 				</dict>
 			</dict>
 			<key>ChartsWorkspace</key>
@@ -488,7 +488,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>856</integer>
+					<integer>873</integer>
 					<key>Name</key>
 					<integer>120</integer>
 					<key>名</key>
@@ -500,7 +500,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>856</integer>
+					<integer>831</integer>
 				</dict>
 			</dict>
 			<key>Server_MYSQL</key>
@@ -508,7 +508,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>856</integer>
+					<integer>873</integer>
 					<key>Name</key>
 					<integer>120</integer>
 					<key>名</key>
@@ -528,7 +528,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>856</integer>
+					<integer>831</integer>
 					<key>Name</key>
 					<integer>120</integer>
 				</dict>
