@@ -264,6 +264,17 @@
 							</dict>
 						</dict>
 					</dict>
+					<key>浙江移动-测试@20.26.23.85</key>
+					<dict>
+						<key></key>
+						<dict>
+							<key></key>
+							<dict>
+								<key>serverpref</key>
+								<dict/>
+							</dict>
+						</dict>
+					</dict>
 				</dict>
 				<key>Oracle</key>
 				<dict>
@@ -342,7 +353,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>831</integer>
+					<integer>895</integer>
 				</dict>
 			</dict>
 			<key>ChartsWorkspace</key>
@@ -488,7 +499,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>873</integer>
+					<integer>791</integer>
 					<key>Name</key>
 					<integer>120</integer>
 					<key>名</key>
@@ -508,7 +519,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>873</integer>
+					<integer>791</integer>
 					<key>Name</key>
 					<integer>120</integer>
 					<key>名</key>
@@ -528,7 +539,7 @@
 				<key>colwidth</key>
 				<dict>
 					<key></key>
-					<integer>831</integer>
+					<integer>895</integer>
 					<key>Name</key>
 					<integer>120</integer>
 				</dict>
