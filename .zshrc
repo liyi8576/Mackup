@@ -213,3 +213,7 @@ export REDIS_CLUSTER_IP=0.0.0.0
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+
+eval "$(starship init zsh)"
+
+. /Users/liyi/Develop/z.sh
