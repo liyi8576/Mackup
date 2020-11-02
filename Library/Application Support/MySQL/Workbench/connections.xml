@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <data grt_format="2.0">
-  <value _ptr_="0x600002d45ce0" type="list" content-type="object" content-struct-name="db.mgmt.Connection">
+  <value _ptr_="0x600002e5ff00" type="list" content-type="object" content-struct-name="db.mgmt.Connection">
     <value type="object" struct-name="db.mgmt.Connection" id="4CC31D77-D5CE-44AA-9B22-0CDC7C7B2513" struct-checksum="0x96ba47d8">
       <link type="object" struct-name="db.mgmt.Driver" key="driver">com.mysql.rdbms.mysql.driver.native</link>
       <value type="string" key="hostIdentifier">Mysql@10.13.6.103:3306</value>
       <value type="int" key="isDefault">1</value>
-      <value _ptr_="0x600002d52b20" type="dict" key="modules"/>
-      <value _ptr_="0x600002d52b80" type="dict" key="parameterValues">
+      <value _ptr_="0x600002e929a0" type="dict" key="modules"/>
+      <value _ptr_="0x600002e92940" type="dict" key="parameterValues">
         <value type="string" key="DbSqlEditor:LastDefaultSchema">mdp</value>
         <value type="string" key="SQL_MODE"></value>
         <value type="string" key="hostName">10.13.6.103</value>
@@ -23,7 +23,7 @@
         <value type="string" key="userName">root</value>
       </value>
       <value type="string" key="name">mdp_dev</value>
-      <link type="object" struct-name="GrtObject" key="owner">7B69D7B7-4F81-4098-AEC4-EA5C3F6831D7</link>
+      <link type="object" struct-name="GrtObject" key="owner">357100F1-4591-4B6E-9588-DCBE899CCCBA</link>
     </value>
   </value>
 </data>

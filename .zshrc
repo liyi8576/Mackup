@@ -101,7 +101,7 @@ function docker_52(){
 # 更新系统
 function upgrade(){
    echo "upgrade oh_my_zsh"
-   upgrade_oh_my_zsh
+   omz update
    echo "::: upgrade brew :::"
    brew update && brew upgrade && brew cleanup && brew prune
    echo "::: upgrade brew cask :::"
