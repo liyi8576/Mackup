@@ -10,8 +10,10 @@
 /usr/local/Cellar|17.8472|1514988731
 /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework/Versions/A|1.72305|1508123776
 /Users/liyi/.config/wireshark|2.19691|1514856222
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp/yml|14|1604760300
 /Users/liyi/Workspace/ws_irec|170.477|1520561783
 /Users/liyi/Workspace/ws_study|43.5426|1514455051
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp/yml/logstash|12|1604760299
 /usr/local/man|16|1521290431
 /Users/liyi/.m2/repository/org/springframework/boot/spring-boot-starter-jersey/1.4.0.RELEASE|1.23418|1502174580
 /Users/liyi/.local|11.0956|1514940795
@@ -24,28 +26,32 @@
 /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home|2.06055|1512716069
 /Users/liyi/.config/yarn/global/node_modules|64.6153|1515041718
 /usr/local/Cellar/python|1.49436|1514988376
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp/mlp-gateway|4|1604670525
 /Users/liyi/Library/Containers|11.2978|1515980637
 /Users/liyi/.pyenv/versions|12.8726|1516088717
 /Users/liyi/Tools/zsh|13.7808|1521279061
+/Users/liyi/Workspace/ws_ai_mdp/data_dir/logs|4|1604479613
 /Users/liyi/Workspace/ws_temp|18.7112|1503581194
 /Users/liyi/Workspace/ws_open/react-admin/public|1.12743|1500127622
 /Users/liyi/Workspace/ws_python|18.4691|1497156947
-/Users/liyi/.docker/machine/cache|1.1741|1513914183
 /Users/liyi/CloudSync/Asiainfo/03-项目支撑/03 北京移动/北京移动/工作计划|3.03979|1506414974
+/Users/liyi/.docker/machine/cache|1.1741|1513914183
 /Users/liyi/.config/yarn/global/node_modules/gtop/bin|1.5247|1514992843
 /Users/liyi/Library/Containers/com.macpaw.WallWiz/Data|5.64887|1515980385
 /Users/liyi/Workspace/ws_open/OCSearch/ocsearch-datasource/src/main/java/com|1.35781|1506580624
 /Users/liyi/.oh-my-zsh|150.211|1603707084
+/Users/liyi/Workspace/ws_ai_mdp/data_dir/logs/gateway|172|1604727225
 /Users/liyi/.m2/repository/com/oracle/ojdbc14/10.2.0.5|5.04169|1498545229
 /Users/liyi/.config/yarn|5.49918|1514856203
 /Users/liyi/.m2/repository/org/apache/cxf/cxf-codegen-plugin/2.7.18|1.53908|1496813181
 /Users/liyi/Workspace/ws_perec/perec-web|4.32896|1502278200
 /Users/liyi/docker/hadoop/conf|10.7855|1515641136
+/Library/Application Support|6|1605319868
 /Users/liyi/Workspace/ws_perec|24.7487|1515568285
 /Users/liyi/Workspace/ws_perec/perec/imcd_perec/perec/model_apply|8.0021|1509349916
+/Users/liyi/Workspace/ws_ai_mdp/ANB|47|1604978097
 /Users/liyi/.config/yarn/global/node_modules/ijavascript|3.8117|1514993356
 /Users/liyi/Workspace/ws_perec/perec/imcd_perec|85.7486|1513935338
-/Users/liyi/Workspace/ws_ai_mdp/ANB|24|1603951865
 /Users/liyi/Workspace/ws_open/VAAS|230.909|1520044769
 /System|2.70439|1514988488
 /Users/liyi/Workspace/ws_open/OCSearch/ocsearch-datasource/src/main/java/com/asiainfo/ocsearch/datasource|1.02348|1506580619
@@ -77,9 +83,9 @@
 /Users/liyi/docker/base|25.8081|1508294143
 /Users/liyi/Study/hadoop-cluster-docker|1.53908|1492329685
 /Users/liyi/Pictures|32.4359|1515979604
-/Users/liyi/CloudSync/Mackup|4|1603935518
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp/yml/zipkin|1|1604735896
+/Users/liyi/CloudSync/Mackup|5|1604280575
 /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework|1.37846|1508123779
-/System/Library/Java|4.84005|1514106859
 /Users/liyi/.local/share/virtualenvs|66.859|1516001955
 /Users/liyi/Library/Preferences|7.77666|1500017835
 /Users/liyi/Develop/apache-tomcat-8.5.15/webapps|1.53908|1494983320
@@ -92,19 +98,20 @@
 /Users/liyi/Library/Group Containers/3L68KQB4HG.group.com.readdle.smartemail|1.88296|1515980707
 /Users/liyi/.m2/repository/org/apache/commons/commons-compress/1.14|1.15432|1498009153
 /Users/liyi/.m2/repository/org/springframework|3.54364|1514858026
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp/yml/gateway|5|1604735997
 /Users/liyi/.m2/repository/com/asiainfo|5.11746|1499652571
 /Users/liyi/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.3|2.04955|1499652972
-/|40.7547|1521277880
+/|44.7547|1605319853
 /Users/liyi/.m2/repository/org/apache/maven|2.11622|1496929100
-/Users/liyi/Workspace/ws_ai_mdp|37|1604046196
+/Users/liyi/Workspace/ws_open_gateway/youlai-mall|3|1604298138
 /Users/liyi/docker/hadoop|352.648|1515721735
 /Users|11.3095|1514297288
 /Users/liyi/Workspace/ws_ai_mdp/ai-mlp/doc|3|1603936896
+/Users/liyi/Workspace/ws_ai_mdp|77|1604889532
 /Users/liyi/.m2/repository/org/apache/maven/plugins/maven-jar-plugin/3.0.2|1.73149|1495015912
 /Users/liyi/Workspace/ws_open/OCSearch/ocsearch-datasource/src/main/java/com/asiainfo/ocsearch/datasource/hbase|1.70582|1506580615
 /System/Library/Frameworks/Python.framework|4.29291|1514988501
 /Users/liyi/CloudSync/Asiainfo/POP-R/plantuml|1.64994|1499048649
-/System/Library/Java/Support|1.21004|1514106842
 /Users/liyi/docker/docker-shell|203.042|1515721993
 /Users/liyi/Workspace/ws_perec/perec/imcd_perec/perec|8.47317|1509349930
 /Users/liyi/Workspace/ws_open/RetaredEval|346.999|1500391296
@@ -121,20 +128,22 @@
 /Users/liyi/Documents|1.13927|1508838906
 /System/Library/Frameworks/JavaVM.framework/Versions|6.39744|1514106896
 /Users/liyi/docker/hive/conf|5.96406|1493963438
+/Users/liyi/Workspace|208.174|1604284658
 /Users/liyi/.sdkman|9.46463|1521291507
-/Users/liyi/Downloads|166.589|1520823237
 /Users/liyi/Desktop|102.883|1516322295
 /Users/liyi/Library/Mobile Documents|7.95845|1515980798
 /Users/liyi/.docker/machine|9.90931|1513914184
 /Users/liyi/Workspace/ws_open/OCSearch/ocsearch-datasource/src/main|2.37111|1506580626
-/Users/liyi/Workspace|206.174|1603935142
+/Users/liyi/Downloads|170.589|1605239126
 /usr/local/Cellar/readline|3.73584|1514988618
 /Users/liyi/Library/Jupyter/kernels|3.84239|1516089752
 /usr/local/share/jupyter|1.92119|1516089635
 /Users/liyi/.docker/machine/machines|4.6612|1513914030
 /Users/liyi/Workspace/ws_perec/perec-docs|13.8207|1514902637
 /Users/liyi/Library/Jupyter|1.92119|1516089745
+/Library|6|1605319858
 /Users/liyi/Workspace/ws_open/githug/git_hug|57.9622|1498609138
+/Applications|3|1605319848
 /Users/liyi/Workspace/ws_open/OCSearch/ocsearch-datasource/src|1.35781|1506580628
 /usr/local/Cellar/boost|5.97737|1514988667
 /Users/liyi/Workspace/ws_ai_mdp/ai-mlp2|4|1604045918
@@ -173,10 +182,12 @@
 /Users/liyi/CloudSync/Backup|3.27656|1515634439
 /Users/liyi/Workspace/ws_tools|2.2198|1508290417
 /Users/liyi/Tools|175.67|1521279052
+/Applications/IntelliJ IDEA.app/Contents|2|1605319846
 /Users/liyi/.bin|6.79209|1517465318
 /Users/liyi/.docker/certs.d|2.34815|1513914174
 /usr/local/lib/node_modules|3.62489|1514855585
 /Users/liyi/.m2/repository/com/oracle/ojdbc14|2.94527|1498545254
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp/Dockerfile|26|1604819375
 /Users/liyi/.config/yarn/global|15.6269|1514856199
 /private/var|2.72933|1506679401
 /Users/liyi/Workspace/ws_perec/perec/imcd_perec/data_file|3.65529|1492918815
@@ -200,7 +211,6 @@
 /Users/liyi/Workspace/ws_open_gateway/gateway-request-recorder-starter|5|1604046511
 /usr/local/share/jupyter/kernels|3.84239|1516089626
 /Users/liyi/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations|1.27971|1499652680
-/System/Library/Java/Extensions|1.21004|1514106846
 /Users/liyi/.oh-my-zsh/templates|2.79671|1514353592
 /Users/liyi/.pyenv/shims|63.6584|1516088707
 /Users/liyi/.pyenv|25.6531|1516088715
@@ -212,6 +222,7 @@
 /Users/liyi/.docker|27.1411|1513914176
 /Users/liyi/Workspace/ws_study/redux|1.6386|1503714172
 /Users/liyi/Develop|76.1385|1603693141
+/Users/liyi/Workspace/ws_ai_mdp/data_dir|5|1604479611
 /Users/liyi/Library/Containers/it.bloop.airmail2/Data/Library/Application Support|2.70204|1506414154
 /Users/liyi/.config/brewfile/liyi8576_Brewfiles|3.44024|1515634134
 /System/Library/Frameworks/JavaVM.framework|2.08857|1508123836
@@ -220,15 +231,17 @@
 /Library/Java/JavaVirtualMachines|10.344|1509281585
 /Users/liyi/Develop/docker-volume|12.2456|1508941504
 /usr/local/bin|12.6962|1516001932
+/Users/liyi/Workspace/ws_ai_mdp/ai-web@2.3.x.x|8|1604977803
 /Users/liyi/Library/Group Containers/2E337YPCZY.airmail/Library/Application Support/it.bloop.airmail2/Airmail|1.01325|1506414161
 /Users/liyi/docker/ftp|7.70853|1513932838
 /Users/liyi/.pyenv/versions/3.6.4|1.92119|1516088720
 /Users/liyi/.cups|1.46463|1514856153
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp|858|1605264513
 /private/etc|2.34815|1513914154
 /Users/liyi/docker/hive|126.725|1508392629
 /Users/liyi/Workspace/ws_perec/perec|45.1653|1515568491
 /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs|7.73885|1515634324
-/Users/liyi/Workspace/ws_ai_mdp/ai-mlp|205|1604045815
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp/yml/gateway/k8s|16|1604735989
 /Users/liyi/Workspace/ws_imcd|82.493|1516866347
 /Users/liyi/Library/Mobile Documents/com~apple~CloudDocs/BackUp|1.73749|1515634320
 /Users/liyi/Develop/apache-tomcat-8.5.15|1.53908|1496198698
@@ -236,16 +249,19 @@
 /Users/liyi/Library/Caches/Adobe|1.47942|1514901515
 /Users/liyi/Library/Caches/Google|1.47942|1514901562
 /usr/share|5.85842|1514861460
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp/mlp-gateway/docker|3|1604670521
 /Users/liyi/.pyenv/versions/3.6.4/bin|16.3301|1516089338
 /Users/liyi/Develop/apache-tomcat-7.0.78|4.04015|1496199683
 /Users/liyi/Workspace/ws_open/OCSearch/ocsearch-datasource|1.35781|1506580629
 /Users/liyi/Develop/apache-tomcat-7.0.78/conf|2.11622|1496198854
-/Users/liyi/Workspace/ws_ai_mdp/ai-web@3.0.x.x|31|1604041385
 /Users/liyi/Workspace/ws_open|79.4345|1515979974
 /Users/liyi/Workspace/ws_study/egghead.io_idiomatic_redux_course_notes|1.27841|1503494895
 /Users/liyi/Workspace/ws_open/react-admin|6.00996|1501513704
 /Users/liyi/Tools/vagrant|32.3624|1515676868
-/Users/liyi/Workspace/ws_open_gateway|8|1604046514
+/Users/liyi/Workspace/ws_ai_mdp/ai-web@3.0.x.x|57|1605318309
+/Applications/IntelliJ IDEA.app|3|1605319847
+/Users/liyi/Workspace/ws_ai_mdp/ai-mlp/Jenkinsfile|5|1604727230
+/Users/liyi/Workspace/ws_open_gateway|19|1604818065
 /Users/liyi/Workspace/ws_perec/perec/imcd_perec/perec/mg_video|8.89992|1508487357
 /Users/liyi/.local/share|7.51837|1515034830
 /private/var/folders/h4/7n_xgfzs64b70kkkvwyc38800000gn|1.70582|1506679362
@@ -253,5 +269,5 @@
 /Users/liyi/Workspace/ws_open/githug|4.11128|1498571639
 /Users/liyi/Workspace/ws_perec/perec-offline|4.40813|1504768008
 /Users/liyi/Develop/apache-tomcat-7.0.78/bin|3.46294|1496218390
+/Users/liyi/Downloads/Backup|10|1605239377
 /Users/liyi/docker/hbase|103.12|1494235426
-/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands|2.08161|1508123857
