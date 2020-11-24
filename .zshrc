@@ -217,3 +217,4 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 eval "$(starship init zsh)"
 
 . /Users/liyi/Develop/z.sh
+
